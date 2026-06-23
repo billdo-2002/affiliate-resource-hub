@@ -1,0 +1,3470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoa Do — Marketing Executive | Portfolio</title>
+    <meta name="description" content="Portfolio of Khoa Do — Marketing Executive specializing in Partnership, Content Strategy & Automation. Firegroup Technology, Autonomous Inc.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khoado.me/"> <!-- Thay bằng link thật sau khi deploy -->
+    <meta property="og:title" content="Khoa Do — Marketing Executive | Portfolio">
+    <meta property="og:description" content="Architecting high-performance campaigns & AI-powered automation.">
+    <meta property="og:image" content="https://khoado.me/images/og-preview.png"> <!-- Ảnh demo xịn của toàn bộ trang web -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://khoado.me/">
+    <meta property="twitter:title" content="Khoa Do — Marketing Executive | Portfolio">
+    <meta property="twitter:description" content="Architecting high-performance campaigns & AI-powered automation.">
+    <meta property="twitter:image" content="https://khoado.me/images/og-preview.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ["'Instrument Serif'", "serif"],
+                        body: ["'Barlow'", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0c0906;
+            --bg2: #130e0a;
+            --gold: #c9a96e;
+            --gold-dim: #8c7048;
+            --cream: #f0e8d8;
+            --muted: rgba(240, 232, 216, 0.55);
+            --glass: rgba(201, 169, 110, 0.06);
+            --glass-border: rgba(201, 169, 110, 0.2);
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 90%; }
+
+        body {
+            background: var(--bg);
+            color: var(--cream);
+            font-family: 'Barlow', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ─── SEAMLESS SLIDE FLOW ─── */
+        hr, .gold-line { display: none !important; }
+        section, .playground-transition { 
+            border: none !important; 
+            border-top: none !important;
+            border-bottom: none !important;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 600ms ease-out, transform 600ms ease-out;
+            will-change: opacity, transform;
+        }
+        section.is-visible, .playground-transition.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section::after {
+            content: "";
+            position: absolute;
+            bottom: -2px; left: 0; width: 100%; height: 180px;
+            background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+            pointer-events: none;
+            z-index: 10;
+        }
+        section::before {
+            content: "";
+            position: absolute;
+            top: -2px; left: 0; width: 100%; height: 180px;
+            background: linear-gradient(to bottom, var(--bg) 0%, transparent 100%);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* ─── CURSOR GLOW ─── */
+        #cursor-glow {
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 65%);
+            position: fixed; top: 0; left: 0;
+            pointer-events: none; z-index: 0;
+            transform: translate(-50%,-50%);
+            will-change: transform;
+            transition: transform 0.05s linear;
+        }
+
+        /* ─── AMBIENT BLOBS ─── */
+        .blob {
+            position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
+            animation: blobAnim 25s ease-in-out infinite alternate;
+            filter: blur(100px); mix-blend-mode: screen;
+        }
+        .blob1 { width: 55vw; height: 55vw; background: radial-gradient(circle, rgba(180,120,60,0.18), transparent 70%); top: -20%; left: -10%; }
+        .blob2 { width: 45vw; height: 45vw; background: radial-gradient(circle, rgba(100,80,50,0.22), transparent 70%); bottom: -20%; right: -10%; animation-delay: 4s; }
+        .blob3 { width: 30vw; height: 30vw; background: radial-gradient(circle, rgba(201,169,110,0.1), transparent 70%); top: 40%; left: 40%; animation-delay: 8s; }
+        @keyframes blobAnim {
+            0%   { transform: translate(0,0) scale(1); }
+            33%  { transform: translate(40px,-60px) scale(1.1); }
+            66%  { transform: translate(-30px,30px) scale(0.9); }
+            100% { transform: translate(0,0) scale(1); }
+        }
+
+        /* ─── PARTICLES ─── */
+        .particle {
+            position: fixed; border-radius: 50%;
+            background: var(--gold); pointer-events: none; z-index: 0;
+            animation: floatUp linear infinite;
+        }
+        @keyframes floatUp {
+            0%   { transform: translateY(0) translateX(0);  opacity: 0; }
+            20%  { opacity: 0.6; }
+            80%  { opacity: 0.3; }
+            100% { transform: translateY(-110vh) translateX(30px); opacity: 0; }
+        }
+
+        /* ─── GLASS ─── */
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 24px 64px rgba(0,0,0,0.5);
+            transition: all 0.55s cubic-bezier(0.16,1,0.3,1);
+            position: relative; overflow: hidden;
+        }
+        .glass::after {
+            content: '';
+            position: absolute; inset: 0; top: 0; left: -100%;
+            background: linear-gradient(105deg, transparent, rgba(201,169,110,0.08), transparent);
+            transition: left 0.75s ease;
+        }
+        .glass:hover::after { left: 100%; }
+        .glass:hover {
+            border-color: rgba(201,169,110,0.45);
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+        .glass-strong {
+            background: rgba(201,169,110,0.04);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(201,169,110,0.28);
+        }
+
+        /* ─── TEXT ─── */
+        .title-gradient {
+            background: linear-gradient(170deg, #f0e8d8 20%, #c9a96e 80%);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-glow { text-shadow: 0 0 40px rgba(201,169,110,0.4); }
+
+        /* ─── NAV ─── */
+        .nav-pill {
+            background: rgba(12,9,6,0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(201,169,110,0.18);
+        }
+
+        /* ─── SCROLL REVEAL ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+        .reveal-d3 { transition-delay: 0.3s; }
+        .reveal-d4 { transition-delay: 0.4s; }
+
+        /* ─── SECTION DIVIDERS ─── */
+        .section-label {
+            font-size: 0.7rem; letter-spacing: 0.35em;
+            text-transform: uppercase; color: var(--gold-dim); font-weight: 700;
+        }
+        
+        h1, h2, h3, h4 { font-weight: 700; }
+        p, span, div { font-weight: 400; }
+        .tag, .pg-tag, .section-label { font-weight: 500; }
+        strong { font-weight: 500; }
+
+        section { position: relative; z-index: 1; }
+
+        /* ─── CARD HOVER SCALE ─── */
+        .card-hover { transition: all 0.55s cubic-bezier(0.16,1,0.3,1); }
+        .card-hover:hover { transform: translateY(-8px) scale(1.02); }
+
+        /* ─── HIDING SCROLLBAR ─── */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* ─── PHONE FRAME ─── */
+        .phone-frame {
+            border: 2px solid rgba(201,169,110,0.2);
+            border-radius: 24px; padding: 6px;
+            background: rgba(12,9,6,0.7);
+        }
+
+        /* ─── placeholder ─── */
+        .placeholder {
+            background: rgba(201,169,110,0.03);
+            border: 1px dashed rgba(201,169,110,0.25);
+            border-radius: 16px;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: rgba(201,169,110,0.4);
+            font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 0.05em; text-align: center; gap: 6px;
+        }
+
+        /* ─── REDDIT FAN ─── */
+        .reddit-fan > div {
+            position: absolute;
+            transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        /* ─── SCROLL GRID ─── */
+        .sg1 { animation: sg 28s linear infinite; }
+        .sg2 { animation: sg 35s linear infinite reverse; }
+        .sg3 { animation: sg 22s linear infinite; }
+        @keyframes sg {
+            0%   { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        /* ─── DISCORD VERTICAL SCROLL ─── */
+        .discord-scroll-up { animation: discord-up 15s linear infinite; }
+        .discord-scroll-down { animation: discord-down 15s linear infinite; }
+        
+        @keyframes discord-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        @keyframes discord-down {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0); }
+        }
+        
+        /* Pause on hover */
+        .group:hover .discord-scroll-up,
+        .group:hover .discord-scroll-down {
+            animation-play-state: paused;
+        }
+
+        /* ─── MARQUEE ─── */
+        .marquee-inner { animation: mq 30s linear infinite; white-space: nowrap; display: inline-flex; gap: 1rem; }
+        @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* ─── GRADIENT DIVIDER ─── */
+        .gold-line {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+        }
+
+        /* ─── BIG STAT ─── */
+        .stat-num {
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+            background: linear-gradient(170deg, #f0e8d8 10%, #c9a96e 100%);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        /* ─── SECTION BG ─── */
+        .bg2 { background: var(--bg2); }
+
+        /* ─── TAG ─── */
+        .tag {
+            padding: 8px 20px; border-radius: 999px;
+            background: rgba(201,169,110,0.08);
+            border: 1px solid rgba(201,169,110,0.22);
+            font-size: 0.8rem; font-weight: 500;
+            color: var(--cream); letter-spacing: 0.03em;
+            transition: all 0.3s ease;
+        }
+        .tag:hover { 
+            background: rgba(201,169,110,0.16); 
+            border-color: rgba(201,169,110,0.5);
+            transform: translateY(-2px);
+        }
+
+        /* ─── MASK ─── */
+        .fade-x {
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+        .fade-top {
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%);
+            mask-image: linear-gradient(to bottom, transparent, black 20%);
+        }
+
+        /* ─── EDITORIAL SECTION ─── */
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 2px; height: 2px;
+            background: rgba(201,169,110,0.5);
+            border-radius: 50%;
+            animation: particle-float linear infinite;
+        }
+        @keyframes particle-float {
+            0%   { transform: translateY(0) scale(1); opacity: 0; }
+            20%  { opacity: 1; }
+            80%  { opacity: 0.6; }
+            100% { transform: translateY(-80px) scale(0.5); opacity: 0; }
+        }
+
+        /* Polaroid frame (hero) */
+        .polaroid-frame {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(201,169,110,0.2);
+            border-radius: 12px;
+            padding: 6px 6px 0 6px;
+            display: flex; flex-direction: column;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+        }
+        .polaroid-label {
+            padding: 8px 6px 12px;
+            font-size: 0.65rem;
+            color: rgba(201,169,110,0.6);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        /* Polaroid avatar (influencer cards) */
+        .polaroid-avatar {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(201,169,110,0.18);
+            border-radius: 10px;
+            padding: 4px 4px 0 4px;
+            height: 90px;
+            display: flex; flex-direction: column;
+            overflow: hidden;
+        }
+        .polaroid-avatar-label {
+            padding: 4px 2px 6px;
+            font-size: 0.55rem;
+            color: rgba(201,169,110,0.5);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        /* KOL niche tag */
+        .kol-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(201,169,110,0.3);
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: rgba(201,169,110,0.07);
+        }
+
+        /* Influencer card hover */
+        .editorial-card--influencer {
+            transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
+            cursor: default;
+        }
+        .editorial-card--influencer:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,169,110,0.35), 0 0 40px rgba(201,169,110,0.1);
+        }
+        .editorial-card--influencer:hover .stat-num {
+            transform: scale(1.05);
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        /* Spinning gradient border on hover */
+        .spin-border {
+            position: absolute; inset: 0;
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 0;
+            background: conic-gradient(from 0deg, transparent 0%, rgba(201,169,110,0.6) 10%, transparent 20%);
+            animation: spin-border-rotate 3s linear infinite;
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            padding: 1px;
+        }
+        .group:hover .spin-border { opacity: 1; }
+        @keyframes spin-border-rotate {
+            from { background: conic-gradient(from 0deg, transparent 0%, rgba(201,169,110,0.7) 10%, transparent 20%); }
+            to   { background: conic-gradient(from 360deg, transparent 0%, rgba(201,169,110,0.7) 10%, transparent 20%); }
+        }
+
+        /* Editorial ticker */
+        .editorial-ticker {
+            animation: editorial-tick 12s linear infinite;
+        }
+        @keyframes editorial-tick {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        /* Editorial card entrance animation */
+        .editorial-reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .editorial-reveal.visible { opacity: 1; transform: translateY(0); }
+        .editorial-card { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+        .editorial-card.visible { opacity: 1; transform: translateY(0); }
+
+        /* ─── KOL VIDEO MODAL ─── */
+        #video-modal {
+            display: none;
+            position: fixed; inset: 0;
+            background: rgba(12, 9, 6, 0.92);
+            z-index: 9999;
+            align-items: center; justify-content: center;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            animation: modalFadeIn 0.25s ease;
+        }
+        #video-modal.active { display: flex; }
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        .modal-wrapper {
+            position: relative;
+            width: 90%; max-width: 1000px;
+        }
+        .modal-content {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border: 1px solid rgba(201,169,110,0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(201,169,110,0.1);
+        }
+        .modal-close {
+            position: absolute;
+            top: -48px; right: 0;
+            color: var(--cream); cursor: pointer;
+            font-size: 0.75rem; font-weight: 700;
+            display: flex; align-items: center; gap: 8px;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            padding: 8px 16px;
+            border: 1px solid rgba(201,169,110,0.25);
+            border-radius: 999px;
+            background: rgba(201,169,110,0.08);
+            transition: all 0.2s ease;
+        }
+        .modal-close:hover {
+            background: rgba(201,169,110,0.18);
+            border-color: rgba(201,169,110,0.5);
+        }
+        /* ─── KOL THUMBNAIL PLAY BUTTON ─── */
+        .kol-play-btn {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .kol-play-circle {
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            background: rgba(201,169,110,0.85);
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 0 8px rgba(201,169,110,0.15), 0 8px 30px rgba(0,0,0,0.5);
+            transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), background 0.25s ease, box-shadow 0.25s ease;
+            flex-shrink: 0;
+        }
+        .kol-thumb-wrap:hover .kol-play-circle {
+            transform: scale(1.18);
+            background: var(--gold);
+            box-shadow: 0 0 0 12px rgba(201,169,110,0.2), 0 12px 40px rgba(0,0,0,0.6);
+        }
+        .kol-thumb-wrap:hover img {
+            filter: brightness(1.1);
+        }
+        .kol-thumb-wrap img {
+            transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+        }
+        .kol-thumb-wrap:hover img {
+            transform: scale(1.06);
+        }
+        /* Shimmer skeleton for loading --*/
+        .kol-thumb-skeleton {
+            position: absolute; inset: 0;
+            background: linear-gradient(90deg, rgba(201,169,110,0.04) 25%, rgba(201,169,110,0.1) 50%, rgba(201,169,110,0.04) 75%);
+            background-size: 400% 100%;
+            animation: shimmer 1.8s ease infinite;
+        }
+        @keyframes shimmer {
+            0%   { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ─── THE PLAYGROUND ─── */
+
+        /* Transition block */
+        .playground-transition {
+            background: linear-gradient(180deg, var(--bg) 0%, #110e0a 60%, var(--bg) 100%);
+            border-top: 1px solid rgba(201,169,110,0.08);
+        }
+
+        /* Giant title */
+        .playground-title {
+            font-family: var(--font-heading, serif);
+            letter-spacing: -0.03em;
+        }
+
+        /* Playground section bg — slightly warmer than default */
+        .playground-section {
+            background: linear-gradient(180deg, var(--bg) 0%, #130f0b 50%, var(--bg) 100%);
+        }
+
+        /* Tag pills — lighter/more playful than kol-tag */
+        .pg-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(201,169,110,0.8);
+            background: rgba(201,169,110,0.06);
+            border: 1px solid rgba(201,169,110,0.18);
+            white-space: nowrap;
+        }
+
+        /* Project title typography */
+        .pg-project-title {
+            font-family: var(--font-heading, serif);
+            color: var(--cream);
+            font-weight: 700;
+        }
+
+        /* Hero image area — ensure the tilted card has perspective */
+        .pg-img-hero {
+            perspective: 1000px;
+        }
+
+        /* Loading Shimmer */
+        @keyframes placeholderShimmer {
+            0% { background-position: -800px 0; }
+            100% { background-position: 800px 0; }
+        }
+        .placeholder {
+            background-image: linear-gradient(to right, rgba(201,169,110,0.02) 0%, rgba(201,169,110,0.08) 20%, rgba(201,169,110,0.02) 40%, rgba(201,169,110,0.02) 100%) !important;
+            background-repeat: no-repeat !important;
+            background-size: 800px 100% !important; 
+            animation: placeholderShimmer 3s linear infinite forwards !important;
+        }
+
+        /* Playground entrance animation (separate from main .reveal) */
+        .reveal-playground {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1);
+        }
+        .pg-category-header.reveal-playground {
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+        }
+        .reveal-playground.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .pg-category-header h3 {
+            transition: all 0.3s ease;
+        }
+        .pg-category-header:hover h3 {
+            color: var(--gold);
+            background: none !important;
+            -webkit-text-fill-color: var(--gold) !important;
+        }
+
+        /* Card Hover Interactions */
+        .pg-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 40px;
+        }
+        .pg-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Hero Image Hover */
+        .pg-img-hero .absolute.inset-0 {
+            transition: transform 0.6s ease-out, box-shadow 0.6s ease-out !important;
+        }
+        .pg-card:hover .pg-img-hero .absolute.inset-0 {
+            transform: scale(1.05) !important;
+        }
+
+        /* Small thumb hover */
+        .pg-thumb {
+            transition: all 0.3s ease;
+        }
+        .pg-card:hover .pg-thumb {
+            border-color: rgba(201,169,110,0.4) !important;
+        }
+        .pg-thumb:hover {
+            transform: scale(1.1) !important;
+            border: 2px solid var(--gold) !important;
+            z-index: 10;
+        }
+
+        /* For Parallax */
+        .play-parallax {
+            transition: transform 0.1s linear;
+        }
+
+        /* ─── NAV DROPDOWN ─── */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(12,9,6,0.96);
+            border: 1px solid rgba(201,169,110,0.2);
+            border-radius: 12px;
+            padding: 8px 0;
+            min-width: 210px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 100;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+        }
+        .nav-dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 0;
+            right: 0;
+            height: 12px;
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--gold-dim);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+        .nav-dropdown-menu a:hover {
+            color: var(--gold);
+            background: rgba(201,169,110,0.08);
+        }
+        .nav-dropdown-menu a:first-child { border-radius: 12px 12px 0 0; }
+        .nav-dropdown-menu a:last-child  { border-radius: 0 0 12px 12px; }
+        .nav-chevron {
+            display: inline-block;
+            margin-left: 4px;
+            font-size: 8px;
+            transition: transform 0.2s ease;
+            vertical-align: middle;
+        }
+        .nav-dropdown:hover .nav-chevron { transform: rotate(180deg); }
+
+        /* ─── HAMBURGER ─── */
+        #nav-hamburger { display: none; }
+        #nav-mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px; left: 50%; transform: translateX(-50%);
+            background: rgba(12,9,6,0.97);
+            border: 1px solid rgba(201,169,110,0.2);
+            border-radius: 16px;
+            padding: 16px 0;
+            min-width: 240px;
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            z-index: 9999;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+        }
+        #nav-mobile-menu.open { display: block; }
+        #nav-mobile-menu a {
+            display: block;
+            padding: 12px 24px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.2s, background 0.2s;
+        }
+        #nav-mobile-menu a:hover { color: var(--gold); background: rgba(201,169,110,0.07); }
+        #nav-mobile-menu .mobile-divider {
+            height: 1px;
+            background: rgba(201,169,110,0.12);
+            margin: 8px 16px;
+        }
+        #nav-mobile-menu .mobile-hire-me {
+            margin: 8px 16px 4px;
+            display: block;
+            text-align: center;
+            background: var(--gold);
+            color: var(--bg);
+            border-radius: 999px;
+            padding: 10px 24px;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            #nav-hamburger { display: flex; }
+            .nav-desktop-items { display: none; }
+        }
+
+        /* ─── CO-MARKETING SLIDE ─── */
+        .comarketing-slide {
+            padding: clamp(60px, 8vw, 100px) clamp(24px, 5vw, 80px);
+            position: relative;
+            overflow: hidden;
+        }
+        .comarketing-slide .text-block {
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto clamp(40px, 5vw, 64px);
+        }
+        .comarketing-slide .cm-label {
+            font-family: 'Barlow', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.22em;
+            color: var(--gold-dim);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+        .comarketing-slide .cm-title {
+            font-family: 'Instrument Serif', serif;
+            font-style: italic;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            color: var(--cream);
+            background: linear-gradient(170deg, #f0e8d8 20%, #c9a96e 80%);
+            -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.15;
+            margin: 0 0 16px;
+        }
+        .comarketing-slide .cm-title em {
+            color: var(--gold);
+            -webkit-text-fill-color: var(--gold);
+        }
+        .comarketing-slide .cm-sub {
+            font-family: 'Barlow', sans-serif;
+            font-size: 1.05rem;
+            color: rgba(232,213,184,0.65);
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .logo-marquee-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(30px, 5vw, 50px);
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .logo-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            align-items: center;
+        }
+        .logo-row-static {
+            display: flex;
+            gap: clamp(40px, 8vw, 100px);
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        /* ── Logo entrance + float animations ── */
+        @keyframes logoFadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 0.75; transform: translateY(0); }
+        }
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-8px); }
+        }
+        .logo-row-static img {
+            height: clamp(80px, 10vw, 120px);
+            width: auto;
+            max-width: 240px;
+            object-fit: contain;
+            mix-blend-mode: screen;
+            filter: brightness(1.2) sepia(0.4) saturate(1.3) hue-rotate(5deg);
+            opacity: 0;
+            /* Entrance: played once on load via JS class */
+            animation: logoFloat 4s ease-in-out infinite;
+            animation-play-state: paused; /* starts after entrance */
+            transition: filter 0.5s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease;
+        }
+        /* Staggered float delays so each logo bobs at different phases */
+        .logo-row-static img:nth-child(1) { animation-delay: 0.0s; }
+        .logo-row-static img:nth-child(2) { animation-delay: 0.5s; }
+        .logo-row-static img:nth-child(3) { animation-delay: 1.0s; }
+        .logo-row-static img:nth-child(4) { animation-delay: 1.5s; }
+        /* Class added by JS after entrance completes */
+        .logo-row-static img.logos-visible {
+            opacity: 0.75;
+            animation-play-state: running;
+        }
+        .logo-row-static img:hover {
+            filter: brightness(1.5) sepia(0.7) saturate(2) hue-rotate(5deg)
+                    drop-shadow(0 0 16px rgba(201,169,110,0.8))
+                    drop-shadow(0 0 32px rgba(201,169,110,0.4));
+            opacity: 1 !important;
+            transform: translateY(-12px) scale(1.12);
+            animation-play-state: paused;
+        }
+        @media (max-width: 768px) {
+            .logo-row-static { gap: 40px; }
+            .logo-row-static img { height: 70px; }
+        }
+        /* top/bottom fade overlays for comarketing slide */
+        .comarketing-slide .cm-fade-top,
+        .comarketing-slide .cm-fade-bottom {
+            position: absolute;
+            left: 0; width: 100%;
+            height: 180px;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .comarketing-slide .cm-fade-top    { top: 0;    background: linear-gradient(to bottom, #0c0906 0%, transparent 100%); }
+        .comarketing-slide .cm-fade-bottom { bottom: 0; background: linear-gradient(to bottom, transparent 0%, #0c0906 100%); }
+
+        /* ─── GPU COMPOSITING HINTS ─── */
+        .logo-row-static,
+        .hero-portrait,
+        canvas,
+        [data-animated],
+        .discord-scroll-up,
+        .discord-scroll-down,
+        .particle,
+        .blob {
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* ─── WORK/PROJECT RESPONSIVE LAYOUT ─── */
+        .work-slide, .project-slide {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(20px, 4vw, 60px);
+            align-items: start;
+            padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 80px);
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        .work-slide img, .project-slide img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .work-featured-img {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .work-featured-img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .work-thumbs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: clamp(8px, 1.5vw, 16px);
+        }
+
+        .work-thumb {
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .work-thumb img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+        .work-text-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            min-width: 0;
+        }
+
+        .work-title {
+            font-size: clamp(20px, 3vw, 36px);
+            line-height: 1.2;
+            word-break: break-word;
+        }
+
+        .work-description {
+            font-size: clamp(13px, 1.3vw, 15px);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 860px) {
+            .work-slide, .project-slide {
+                grid-template-columns: 1fr;
+            }
+            .work-text-col { order: 1; }
+            .work-featured-img { order: 2; }
+            .work-thumbs { order: 3; grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .work-thumbs { grid-template-columns: 1fr; }
+        }
+
+        /* Prevent nav overlapping anchor targets */
+        nav, header { 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+        }
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+
+        /* ══════════════════════════════════════════════════
+           MOBILE RESPONSIVE — COMPREHENSIVE OVERRIDES
+        ══════════════════════════════════════════════════ */
+
+        /* ─── Disable heavy effects on mobile for perf ─── */
+        @media (max-width: 768px) {
+            /* Disable cursor glow on touch devices */
+            #cursor-glow { display: none; }
+
+            /* Reduce blob sizes */
+            .blob1 { width: 90vw; height: 90vw; top: -10%; left: -20%; }
+            .blob2 { width: 80vw; height: 80vw; bottom: -10%; right: -20%; }
+            .blob3 { width: 60vw; height: 60vw; }
+
+            /* Kill parallax on mobile */
+            .play-parallax { transform: none !important; }
+
+            /* Reduce glass hover on mobile */
+            .glass:hover {
+                transform: none;
+            }
+            .card-hover:hover { transform: none; }
+        }
+
+        /* ─── HERO SECTION ─── */
+        @media (max-width: 768px) {
+            #hero {
+                padding: 100px 20px 60px;
+                min-height: auto;
+            }
+            #hero .max-w-6xl {
+                gap: 40px;
+                padding-top: 0;
+            }
+            /* Portrait: shrink and center */
+            #hero .flex-shrink-0 {
+                width: 200px !important;
+                max-width: 200px !important;
+                margin: 0 auto;
+            }
+            /* Subtitle — prevent overflow */
+            #hero p.whitespace-nowrap {
+                white-space: normal !important;
+                text-align: center;
+                font-size: 0.65rem;
+                letter-spacing: 2px;
+            }
+            /* Stats row */
+            #hero .flex.gap-10 {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        /* ─── ABOUT SECTION ─── */
+        @media (max-width: 768px) {
+            #about {
+                padding: 60px 20px;
+            }
+            #about .grid {
+                gap: 40px;
+            }
+            #about h2 {
+                font-size: clamp(2.8rem, 12vw, 4rem) !important;
+            }
+            #about .glass.rounded-3xl {
+                padding: 24px;
+            }
+        }
+
+        /* ─── FIREGROUP CARD (S3) ─── */
+        @media (max-width: 768px) {
+            #firegroup {
+                padding: 80px 16px;
+                min-height: auto;
+            }
+            #firegroup .rounded-\[48px\] {
+                border-radius: 24px !important;
+                padding: 24px 20px !important;
+                flex-direction: column !important;
+            }
+            #firegroup .w-full.lg\:w-\[50\%\] {
+                width: 100% !important;
+                padding-right: 0 !important;
+            }
+            #firegroup .w-full.lg\:w-\[50\%\].mt-12 {
+                margin-top: 24px !important;
+            }
+        }
+
+        /* ─── DISCORD HERO CARD (S4 ROW 1) ─── */
+        @media (max-width: 860px) {
+            /* Discord card: reflow text + image panels as stacked column */
+            .discord-card-wrap {
+                display: flex !important;
+                flex-direction: column !important;
+                height: auto !important;
+                min-height: auto !important;
+                overflow: visible !important;
+            }
+            .discord-text-panel {
+                position: relative !important;
+                width: 100% !important;
+                height: auto !important;
+                padding: 32px 24px 24px !important;
+                order: 1;
+            }
+            .discord-image-panel {
+                position: relative !important;
+                width: 100% !important;
+                height: 300px !important;
+                border-radius: 0 0 32px 32px;
+                top: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+                overflow: hidden !important;
+                order: 2;
+            }
+        }
+
+        /* ─── BENTO GRID ROW 2 (Reddit + Affiliate) ─── */
+        @media (max-width: 768px) {
+            /* Reddit card wrapper: flex column */
+            .lg\:col-span-7.glass.rounded-\[32px\] {
+                min-height: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                overflow: visible !important;
+            }
+            /* Reddit text panel: go relative, full width, first */
+            .reddit-text-panel {
+                position: relative !important;
+                width: 100% !important;
+                height: auto !important;
+                top: auto !important; left: auto !important; bottom: auto !important;
+                padding: 28px 20px 20px !important;
+                order: 1;
+            }
+            /* Reddit image panel: fixed height showcase, below text */
+            .reddit-image-panel {
+                position: relative !important;
+                width: 100% !important;
+                height: 240px !important;
+                top: auto !important; right: auto !important; bottom: auto !important;
+                overflow: hidden !important;
+                order: 2;
+                border-radius: 0 0 32px 32px;
+            }
+            /* Affiliate card */
+            .lg\:col-span-5.glass.rounded-\[32px\] {
+                padding: 28px 20px !important;
+                min-height: auto !important;
+            }
+        }
+
+        /* ─── KOL CARDS (YouTube, S5) ─── */
+        @media (max-width: 640px) {
+            /* Stack KOL cards vertically instead of flex-row */
+            .glass.rounded-\[2rem\].flex.flex-row.h-64 {
+                flex-direction: column !important;
+                height: auto !important;
+            }
+            .glass.rounded-\[2rem\].flex.flex-row.h-64 .kol-thumb-wrap {
+                width: 100% !important;
+                height: 200px !important;
+            }
+            .glass.rounded-\[2rem\].flex.flex-row.h-64 .w-\[40\%\] {
+                width: 100% !important;
+                padding: 16px !important;
+            }
+        }
+
+        /* ─── X/TWITTER SECTION (S5 X-KOL) ─── */
+        @media (max-width: 768px) {
+            /* Phone frame row: center, reduce size, remove stagger */
+            .flex.gap-12.justify-center {
+                gap: 24px !important;
+                flex-wrap: wrap;
+            }
+            .phone-frame.w-56 {
+                width: 140px !important;
+            }
+            /* Remove the stagger offset on mobile */
+            .mt-16 { margin-top: 0 !important; }
+            /* Automation card */
+            .glass.rounded-\[40px\].p-12 {
+                padding: 24px !important;
+                border-radius: 24px !important;
+            }
+            /* n8n image */
+            .glass.rounded-2xl[style*="aspect-ratio: 16/9"] {
+                margin-top: 0;
+            }
+        }
+
+        /* ─── CO-MARKETING LOGOS (S5b) ─── */
+        @media (max-width: 640px) {
+            .logo-row-static {
+                gap: 24px !important;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .logo-row-static img {
+                height: 55px !important;
+            }
+            .comarketing-slide .cm-title {
+                font-size: clamp(2rem, 10vw, 3rem) !important;
+            }
+        }
+
+        /* ─── AUTONOMOUS SECTION (S6) ─── */
+        @media (max-width: 768px) {
+            #autonomous {
+                padding: 80px 16px;
+                min-height: auto;
+            }
+            #autonomous .rounded-\[40px\] {
+                padding: 24px 20px !important;
+                border-radius: 24px !important;
+            }
+        }
+
+        /* ─── AUTONOMOUS RESULTS (S7) ─── */
+        @media (max-width: 768px) {
+            #autonomous + section,
+            section.bg2.py-40:has(.stat-num) {
+                padding: 60px 20px;
+            }
+            .flex.flex-col.lg\:flex-row.gap-20 {
+                gap: 48px;
+            }
+            /* Map asset */
+            .lg\:max-w-\[500px\] {
+                max-width: 100% !important;
+            }
+        }
+
+        /* ─── EDITORIAL SPREAD (S8) ─── */
+        @media (max-width: 768px) {
+            #case-studies {
+                padding: 60px 16px;
+            }
+            #case-studies h2 {
+                font-size: clamp(2.5rem, 12vw, 4rem) !important;
+            }
+            /* Hero card full width */
+            .editorial-card--hero {
+                width: 100% !important;
+            }
+            /* 2x2 grid stays 2 cols but smaller */
+            .editorial-card--influencer .flex-1.min-h-\[300px\] {
+                min-height: 180px !important;
+            }
+            /* Big stat on hero card */
+            .editorial-card--hero .stat-num[style*="4.5rem"] {
+                font-size: 3rem !important;
+            }
+            /* Hero card headline */
+            .editorial-card--hero h3 {
+                font-size: clamp(2rem, 10vw, 3rem) !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* On very small screens, 2x2 becomes 1-col */
+            .grid-cols-1.sm\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* ─── PLAYGROUND CARDS (S9) ─── */
+        @media (max-width: 768px) {
+            .playground-title {
+                font-size: clamp(3.5rem, 16vw, 7rem) !important;
+            }
+            .playground-title span {
+                padding-left: clamp(1rem, 4vw, 3rem) !important;
+            }
+
+            /* pg-card: stack column, remove min-height */
+            .pg-card {
+                flex-direction: column !important;
+                min-height: auto !important;
+                gap: 24px !important;
+            }
+            /* Hero image col: full width, shorter */
+            .pg-img-hero {
+                width: 100% !important;
+                min-height: 280px !important;
+            }
+            /* Text col: remove left padding (it was lg: only) */
+            .pg-card > .flex-1 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                padding-top: 8px !important;
+                padding-bottom: 8px !important;
+            }
+
+            /* Floating accent thumbs — hide on mobile (prevent overflow) */
+            .absolute.-bottom-3.-right-3,
+            .absolute.-bottom-3.lg\:-right-8 {
+                display: none !important;
+            }
+
+            /* Thumbnails row — shrink widths */
+            .flex.gap-4.flex-wrap .relative.flex-shrink-0.w-40 {
+                width: 100px !important;
+            }
+            /* Military thumbnails (% widths) */
+            .flex.gap-2.flex-nowrap .relative.flex-shrink-0[class*="w-\[18.5%\]"] {
+                width: 18.5% !important; /* already % so keeps responsive */
+            }
+
+            /* Category header text */
+            .pg-category-header h3 {
+                font-size: clamp(1.4rem, 5vw, 2rem) !important;
+            }
+        }
+
+        /* ─── RESEARCH SECTION (S10) ─── */
+        @media (max-width: 768px) {
+            #research {
+                padding: 60px 16px;
+            }
+            #research h2 {
+                font-size: clamp(2.8rem, 12vw, 5rem) !important;
+            }
+            .glass.rounded-\[60px\] {
+                border-radius: 28px !important;
+                padding: 24px 16px !important;
+            }
+            /* Community management: stack column */
+            .flex.flex-col.md\:flex-row.items-center.gap-14 {
+                flex-direction: column !important;
+                gap: 24px !important;
+                align-items: flex-start !important;
+            }
+            .w-56.h-72.glass.rounded-\[40px\] {
+                width: 100% !important;
+                height: 240px !important;
+                max-width: 280px;
+            }
+        }
+
+        /* ─── CONTACT / CTA SECTION (S11) ─── */
+        @media (max-width: 768px) {
+            #contact {
+                padding: 100px 20px 60px;
+                min-height: auto;
+            }
+            #contact h2 {
+                font-size: clamp(2.8rem, 12vw, 6rem) !important;
+                margin-bottom: 24px !important;
+            }
+            #contact p.text-xl {
+                font-size: 1rem !important;
+                margin-bottom: 40px !important;
+            }
+            /* CTA buttons: stack on very small screens */
+            #contact .flex.flex-wrap.justify-center.gap-6 {
+                gap: 12px !important;
+            }
+            #contact a.bg-\[var\(--gold\)\],
+            #contact a.glass {
+                padding: 14px 28px !important;
+                font-size: 0.75rem !important;
+                letter-spacing: 2px !important;
+            }
+            /* Footer meta: left-align all on mobile */
+            #contact .grid.grid-cols-1.md\:grid-cols-3 > div {
+                text-align: left !important;
+            }
+            #contact .text-right { text-align: left !important; }
+            #contact .text-center { text-align: left !important; }
+            #contact .border-t {
+                padding-top: 24px !important;
+            }
+        }
+
+        /* ─── GENERAL SECTION PADDING REDUCTION ─── */
+        @media (max-width: 768px) {
+            section.py-40 { padding-top: 60px !important; padding-bottom: 60px !important; }
+            section.py-64 { padding-top: 80px !important; padding-bottom: 80px !important; }
+            section.px-8  { padding-left: 20px !important; padding-right: 20px !important; }
+            .lg\:px-24    { padding-left: 20px !important; padding-right: 20px !important; }
+            .px-8.lg\:px-24 { padding-left: 20px !important; padding-right: 20px !important; }
+
+            /* Section headings */
+            h2.text-6xl, h2.md\:text-7xl { 
+                font-size: clamp(2.2rem, 10vw, 3.5rem) !important; 
+            }
+            h2.md\:text-8xl { 
+                font-size: clamp(2.5rem, 12vw, 4.5rem) !important; 
+            }
+
+            /* Stat numbers */
+            .stat-num.text-7xl { font-size: clamp(2.5rem, 12vw, 4rem) !important; }
+            .stat-num.text-5xl { font-size: clamp(2rem, 9vw, 3rem) !important; }
+
+            /* Reduce mb for large spacers */
+            .mb-20 { margin-bottom: 40px !important; }
+            .mb-24 { margin-bottom: 48px !important; }
+
+            /* Max width containers */
+            .max-w-7xl { padding-left: 0; padding-right: 0; }
+        }
+
+        /* ─── SECTION BEFORE/AFTER fades — reduce height on mobile ─── */
+        @media (max-width: 768px) {
+            section::after, section::before {
+                height: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body class="font-body">
+
+<!-- ─── AMBIENT LAYERS ─── -->
+<div id="cursor-glow"></div>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<div id="particles"></div>
+<!-- global ambient edge particles -->
+<canvas id="ambientCanvas" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10;"></canvas>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════ -->
+<nav class="nav-pill fixed top-6 left-1/2 -translate-x-1/2 z-50 rounded-full px-3 py-1.5 flex items-center gap-1 shadow-2xl">
+
+    <!-- Desktop Items -->
+    <div class="nav-desktop-items flex items-center gap-1">
+        <a href="#hero" class="px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] hover:text-[var(--gold)] transition-colors rounded-full hover:bg-white/5">Home</a>
+
+        <a href="#about" class="px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] hover:text-[var(--gold)] transition-colors rounded-full hover:bg-white/5">About</a>
+
+        <!-- Dropdown -->
+        <div class="nav-dropdown">
+            <button class="px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] hover:text-[var(--gold)] transition-colors rounded-full hover:bg-white/5 flex items-center bg-transparent border-none cursor-pointer text-[var(--cream)]">
+                Professional Experience
+                <span class="nav-chevron">▾</span>
+            </button>
+            <div class="nav-dropdown-menu">
+                <a href="#firegroup">Firegroup Technology</a>
+                <a href="#autonomous">Autonomous Inc.</a>
+            </div>
+        </div>
+
+        <a href="#creative" class="px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] hover:text-[var(--gold)] transition-colors rounded-full hover:bg-white/5">Projects</a>
+
+        <div class="w-px h-4 bg-[var(--gold-dim)] opacity-30 mx-1"></div>
+        <a href="#contact" class="bg-[var(--gold)] text-[var(--bg)] px-6 py-2 text-xs font-bold uppercase tracking-[0.12em] rounded-full hover:opacity-90 shadow-[0_0_24px_rgba(201,169,110,0.35)] transition-all">Hire Me</a>
+    </div>
+
+    <!-- Mobile: Hamburger + Hire Me always visible -->
+    <button id="nav-hamburger" class="flex items-center justify-center w-8 h-8 rounded-full hover:bg-white/5 transition-colors" onclick="document.getElementById('nav-mobile-menu').classList.toggle('open')" aria-label="Menu">
+        <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <rect width="16" height="2" rx="1" fill="currentColor"/>
+            <rect y="6" width="12" height="2" rx="1" fill="currentColor"/>
+            <rect y="12" width="16" height="2" rx="1" fill="currentColor"/>
+        </svg>
+    </button>
+    <div class="w-px h-4 bg-[var(--gold-dim)] opacity-30 mx-1 md:hidden"></div>
+    <a href="#contact" class="md:hidden bg-[var(--gold)] text-[var(--bg)] px-5 py-2 text-xs font-bold uppercase tracking-[0.12em] rounded-full hover:opacity-90 shadow-[0_0_24px_rgba(201,169,110,0.35)] transition-all">Hire Me</a>
+
+</nav>
+
+<!-- Mobile dropdown menu -->
+<div id="nav-mobile-menu">
+    <a href="#hero" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')">Home</a>
+    <a href="#about" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')">About</a>
+    <div class="mobile-divider"></div>
+    <a href="#firegroup" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')" style="color:var(--gold-dim);font-size:10px">↳ Firegroup Technology</a>
+    <a href="#autonomous" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')" style="color:var(--gold-dim);font-size:10px">↳ Autonomous Inc.</a>
+    <div class="mobile-divider"></div>
+    <a href="#creative" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')">Projects</a>
+    <a href="#contact" class="mobile-hire-me" onclick="document.getElementById('nav-mobile-menu').classList.remove('open')">Hire Me</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S1 — HERO / COVER
+═══════════════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center px-8 lg:px-24 overflow-hidden">
+    <!-- neural network bg -->
+    <canvas id="networkCanvas" class="absolute inset-0 w-full h-full" style="z-index:0;opacity:1;"></canvas>
+    <!-- central gold orb glow -->
+    <div class="absolute pointer-events-none" style="z-index:1;top:50%;left:35%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle, rgba(201,169,110,0.12) 0%, rgba(201,169,110,0.04) 40%, transparent 70%);border-radius:50%;"></div>
+    <!-- gradient overlay -->
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1;background:radial-gradient(ellipse at bottom, rgba(8,5,2,0.85) 0%, transparent 60%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1;background:linear-gradient(to right, rgba(8,5,2,0.7) 0%, rgba(8,5,2,0.3) 50%, transparent 100%);"></div>
+
+    <div class="relative w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-16 lg:gap-24 pt-24 lg:pt-0" style="z-index:2">
+        <!-- LEFT: TEXT -->
+        <div class="flex-1 max-w-2xl text-center lg:text-left">
+
+            <div class="reveal section-label mb-8 inline-block">Creative Portfolio — Marketing Executive</div>
+
+            <h1 class="reveal reveal-d1 font-heading italic title-gradient leading-none tracking-tight"
+                style="font-size: clamp(5rem,14vw,11rem);">Khoa Do</h1>
+
+            <p class="reveal reveal-d2 mt-6 text-[var(--gold)] text-base md:text-lg lg:text-xl font-semibold uppercase tracking-[3px] whitespace-nowrap">
+                Partnership · Content Strategy · Automation
+            </p>
+
+            <p class="reveal reveal-d3 mt-8 text-[var(--muted)] text-lg md:text-xl font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Architecting high-performance campaigns, scaling global partnerships, and redefining operational efficiency through AI-powered automation.
+            </p>
+
+            <div class="reveal reveal-d4 mt-12 flex flex-wrap gap-4 justify-center lg:justify-start">
+                <a href="#firegroup" class="glass rounded-full px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] flex items-center gap-3 group">
+                    View Records
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+                <a href="#contact" class="bg-[var(--gold)] text-[var(--bg)] rounded-full px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] hover:opacity-90 shadow-[0_0_30px_rgba(201,169,110,0.25)] transition-all">
+                    Hire Me
+                </a>
+            </div>
+
+            <!-- quick stats row -->
+            <div class="reveal reveal-d4 mt-16 flex flex-wrap gap-10 justify-center lg:justify-start">
+                <div>
+                    <div class="stat-num text-4xl"><span class="counter" data-prefix="~" data-target="3">~0</span></div>
+                    <p class="text-[var(--muted)] text-xs uppercase tracking-widest mt-1">Yrs Experience</p>
+                </div>
+                <div class="w-px bg-[var(--gold-dim)] opacity-20"></div>
+                <div>
+                    <div class="stat-num text-4xl"><span class="counter" data-prefix="$" data-target="1" data-suffix="M+">$0M+</span></div>
+                    <p class="text-[var(--muted)] text-xs uppercase tracking-widest mt-1">Revenue Driven</p>
+                </div>
+                <div class="w-px bg-[var(--gold-dim)] opacity-20"></div>
+                <div>
+                    <div class="stat-num text-4xl"><span class="counter" data-prefix="~" data-target="2" data-suffix="K">~0K</span></div>
+                    <p class="text-[var(--muted)] text-xs uppercase tracking-widest mt-1">Partners Built</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: PORTRAIT -->
+        <div class="reveal flex-shrink-0 w-full max-w-[340px] lg:max-w-[420px]">
+            <div class="glass rounded-3xl p-3 rotate-3 hover:rotate-0 transition-all duration-700 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
+                <img loading="eager" decoding="async" src="images/s1_hero_portrait.png" class="w-full h-auto rounded-2xl object-cover" alt="Khoa Do Portrait">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S2 — EXECUTIVE SUMMARY & SKILLS
+═══════════════════════════════════════════════════ -->
+<section id="about" class="bg2 py-40 px-8 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-24 items-start">
+
+            <!-- LEFT -->
+            <div>
+                <p class="reveal section-label mb-6">About</p>
+                <h2 class="reveal reveal-d1 font-heading italic title-gradient text-6xl md:text-7xl leading-none mb-12">
+                    The Strategist.
+                </h2>
+                <p class="reveal reveal-d2 text-[var(--muted)] text-xl font-light leading-relaxed mb-16 max-w-lg">
+                    Marketing professional with <strong class="text-[var(--cream)] font-semibold">~3 years</strong> of experience in <strong class="text-[var(--cream)] font-semibold">B2B SaaS & E-commerce</strong> ecosystems. Proven track record in partnerships, affiliate scaling, and data-driven content strategy.
+                </p>
+                <div class="reveal reveal-d3 flex flex-wrap gap-3">
+                    <span class="tag">Market Research</span>
+                    <span class="tag">Campaign Management</span>
+                    <span class="tag">Content Strategy</span>
+                    <span class="tag">Reddit Seeding & SEO</span>
+                    <span class="tag">n8n Automation</span>
+                    <span class="tag">Google AppScript</span>
+                    <span class="tag">Data Analytics</span>
+                    <span class="tag">AI Synthesis</span>
+                </div>
+            </div>
+
+            <!-- RIGHT: Cards -->
+            <div class="flex flex-col gap-8">
+                <div class="reveal reveal-d1 glass rounded-3xl p-10">
+                    <div class="flex items-center gap-5 mb-8">
+                        <div class="w-14 h-14 glass-strong rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="trending-up" style="color:var(--gold);width:26px;height:26px"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Growth & Strategy</h3>
+                            <p class="text-[var(--muted)] text-sm">Core competencies</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">Market & Competitor Intelligence</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">Multi-channel Campaign Architecture</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">Affiliate Network Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal reveal-d2 glass rounded-3xl p-10 relative">
+                    <div class="flex items-center gap-5 mb-8">
+                        <div class="w-14 h-14 glass-strong rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="cpu" style="color:var(--gold);width:26px;height:26px"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Tech & Automation</h3>
+                            <p class="text-[var(--muted)] text-sm">Tools & platforms</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">n8n Workflow Automation</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">Google AppScript & Data Pipelines</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-base">AI Tools & Prompt Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S3 — EXPERIENCE 01: FIREGROUP
+═══════════════════════════════════════════════════ -->
+<section id="firegroup" class="relative py-64 px-8 flex items-center justify-center min-h-screen overflow-hidden">
+    <!-- BG image / placeholder -->
+    <div class="absolute inset-0 z-0">
+        <div class="placeholder w-full h-full border-none rounded-none opacity-10 filter blur-2xl">
+            <span style="font-size:1.2rem;opacity:0.5">s3_hero_dashboard.jpg</span>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/60 to-[var(--bg)]"></div>
+    </div>
+
+    <div class="reveal relative z-10 max-w-6xl w-full">
+        <!-- Main Card -->
+        <div class="rounded-[48px] p-12 md:p-16 flex flex-col lg:flex-row items-center border-[var(--gold-dim)] overflow-hidden relative shadow-2xl" style="background-color: #1e180e; border: 1px solid rgba(201,169,110,0.2)">
+            <!-- gold line top -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"></div>
+
+            <!-- Left Col (50%) -->
+            <div class="w-full lg:w-[50%] pr-0 lg:pr-12 flex flex-col justify-center text-left relative z-10">
+                <p class="section-label mb-4 text-sm tracking-[4px] text-[var(--gold-dim)]">EXPERIENCE 01</p>
+                <h2 class="font-heading italic title-gradient leading-none mb-6" style="font-size:clamp(2.5rem,5vw,3.5rem)">
+                    Firegroup Technology
+                </h2>
+                
+                <div class="mb-8 flex flex-wrap items-center gap-2">
+                    <span class="text-[var(--cream)] text-sm tracking-[2px] font-semibold">TRUEPROFIT APP</span>
+                    <span class="text-[var(--gold-dim)]">—</span>
+                    <a href="https://trueprofit.io" target="_blank" class="text-[var(--gold)] text-sm uppercase tracking-[2px] font-semibold hover:text-[var(--cream)] transition-colors" style="text-decoration:none;">TRUEPROFIT.IO</a>
+                </div>
+
+                <!-- Divider line -->
+                <div class="w-full h-px bg-[rgba(201,169,110,0.15)] mb-8"></div>
+
+                <!-- Meta items -->
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-6">
+                        <div>
+                            <p class="section-label mb-2 text-xs text-[var(--gold-dim)]">Role</p>
+                            <p class="text-base font-bold text-[var(--cream)]">Marketing Executive (Partnership)</p>
+                        </div>
+                        <div class="w-px h-10 bg-[var(--gold-dim)] opacity-20"></div>
+                        <div>
+                            <p class="section-label mb-2 text-xs text-[var(--gold-dim)]">Timeline</p>
+                            <p class="text-base font-bold text-[var(--cream)]">May 2025 – Present</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="section-label mb-2 text-xs text-[var(--gold-dim)]">Domain</p>
+                        <p class="text-base font-bold text-[var(--cream)]">B2B SaaS / E-commerce</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Col (50%) -->
+            <div class="w-full lg:w-[50%] mt-12 lg:mt-0 relative flex flex-col items-center">
+                <!-- Badge -->
+                <div class="mb-6 inline-flex items-center justify-center border border-[var(--gold)] text-[var(--gold)] uppercase tracking-[1px] font-semibold text-[11px] px-4 py-2 rounded-full text-center" style="background: transparent;">
+                    ⭐ Top #1 Profit Tracking App for Shopify Merchants
+                </div>
+
+                <!-- Wrapper for the image with border-radius, overflow, and opacity -->
+                <div class="relative w-full shadow-[0_10px_40px_rgba(0,0,0,0.5)]" style="border-radius: 10px; overflow: hidden; opacity: 0.85;">
+                    <!-- The image itself with the CSS filters -->
+                    <img loading="lazy" decoding="async" src="images/s3_hero_dashboard.jpg" class="w-full h-full object-cover block" style="filter: hue-rotate(200deg) sepia(0.4) brightness(0.7) saturate(0.5); transform: scale(1.02);">
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════════
+     S4 — FIREGROUP RESULTS (BENTO GRID)
+═══════════════════════════════════════════════════ -->
+<section class="bg2 py-40 px-8 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="reveal mb-20">
+            <p class="section-label mb-5">Impact Study · Firegroup</p>
+            <h2 class="font-heading italic title-gradient text-6xl md:text-7xl leading-none">Community Growth.</h2>
+        </div>
+
+        <!-- ROW 1: Discord (full width, hero card) -->
+        <div class="reveal mb-6">
+            <!-- DISCORD — WIDE HERO CARD -->
+            <div class="discord-card-wrap glass rounded-[32px] overflow-hidden relative group" style="height: 700px;">
+
+                <!-- RIGHT SIDE: 2-column staggered image grid — absolutely positioned, fills right 70% -->
+                <div class="discord-image-panel absolute top-0 right-0 bottom-0 overflow-hidden rounded-r-[32px]" style="width: 70%;">
+                    <div class="flex gap-4 h-full pl-20 pr-4 pt-4 pb-4">
+                        <!-- Col A: scrolls up -->
+                        <div class="flex flex-col gap-4 flex-1 discord-scroll-up">
+                            <!-- Set 1 -->
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_1.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_2.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_3.jpg')"></div>
+                            </div>
+                            <!-- Set 2 (Clone) -->
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_1.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_2.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_3.jpg')"></div>
+                            </div>
+                        </div>
+                        <!-- Col B: scrolls down -->
+                        <div class="flex flex-col gap-4 flex-1 discord-scroll-down">
+                            <!-- Set 1 -->
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_4.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_5.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_6.jpg')"></div>
+                            </div>
+                            <!-- Set 2 (Clone) -->
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_4.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_5.jpg')"></div>
+                            </div>
+                            <div class="group/img rounded-xl overflow-hidden flex-shrink-0 opacity-85 hover:opacity-100 relative z-10 hover:z-50 transition-all duration-500 hover:scale-[1.1] hover:shadow-[0_20px_50px_rgba(0,0,0,0.9)]" style="aspect-ratio:4/3; border:1px solid rgba(201,169,110,0.2)">
+                                <div class="w-full h-full bg-cover bg-left transition-transform duration-700 ease-out group-hover/img:scale-105 cursor-pointer" style="background-image:url('images/s4_discord_6.jpg')"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- LEFT SIDE: Text content — z-10 sits above images -->
+                <div class="discord-text-panel relative z-10 h-full flex flex-col justify-center pl-20 pr-10 py-12" style="width: 30%;">
+                    <p class="section-label mb-6">Discord Partnerships</p>
+                    <h3 class="text-4xl font-bold leading-tight mb-6">Closing Deals<br><em class="font-heading italic text-5xl title-gradient">at Scale.</em></h3>
+                    <p class="text-[var(--muted)] text-base leading-relaxed mb-10 max-w-sm">
+                        Closed <strong class="text-[var(--cream)]">12 high-value partners</strong> via targeted outreach in e-commerce Discord communities.
+                    </p>
+                    <!-- Big stat -->
+                    <div class="mb-8">
+                        <div class="stat-num text-7xl gold-glow leading-none"><span class="counter" data-prefix="$" data-target="8.6" data-decimals="1" data-suffix="K">$0.0K</span></div>
+                        <p class="text-[var(--gold)] text-xs font-bold uppercase tracking-[5px] mt-3">Partnership Revenue</p>
+                    </div>
+                    <!-- Proof bullets -->
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-sm">12 active partner accounts closed</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-sm">Targeted e-commerce Discord communities</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[var(--gold)] flex-shrink-0"></div>
+                            <span class="text-[var(--muted)] text-sm">Cold outreach + negotiation strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 2: Reddit (medium) + Affiliate (compact square) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            <!-- REDDIT — Showcase Grid, 7 cols -->
+            <div class="reveal lg:col-span-7 glass rounded-[32px] relative group overflow-hidden" style="min-height: 480px;">
+                <!-- LEFT PANEL: 32% text & metrics -->
+                <div class="reddit-text-panel absolute top-0 left-0 bottom-0 flex flex-col justify-center pl-10 pr-6 py-10 z-10" style="width:32%">
+                    <div class="w-12 h-12 glass-strong rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="message-square" style="color:var(--gold);width:22px;height:22px"></i>
+                    </div>
+                    <p class="section-label mb-3">Reddit Seeding</p>
+                    <h3 class="text-2xl font-bold leading-snug mb-4">Organic<br><em class="font-heading italic title-gradient text-3xl">Growth.</em></h3>
+                    <p class="text-[var(--muted)] text-sm leading-relaxed mb-8">
+                        Executed strategy with <strong class="text-[var(--cream)]">15 tactical posts</strong>. Secured <strong class="text-[var(--cream)]">#1 AI Overview (AIO)</strong> on Google.
+                    </p>
+                    <div>
+                        <div class="stat-num text-5xl gold-glow leading-none"><span class="counter" data-prefix="~" data-target="500" data-suffix="k">0k</span></div>
+                        <p class="text-[var(--gold)] text-[10px] font-bold uppercase tracking-[3px] mt-2">Organic Views</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT PANEL: 68% staggered cascade -->
+                <div class="reddit-image-panel absolute top-0 right-0 bottom-0 overflow-hidden" style="width:68%">
+                    <div class="relative w-full h-full">
+
+                        <!-- Post A: top-left, tilted left -->
+                        <div class="group/card absolute rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out z-[1] hover:z-[20] hover:scale-[1.06] hover:shadow-[0_24px_60px_rgba(0,0,0,0.9)] hover:-translate-y-2"
+                             style="width:63%; aspect-ratio:16/9; top:3%; left:1%; transform:rotate(-2deg); border:1px solid rgba(201,169,110,0.25); box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+                            <div class="w-full h-full bg-cover bg-left-top" style="background-image:url('images/s4_reddit_A.jpg')"></div>
+                        </div>
+
+                        <!-- Post B: top-right, tilted right -->
+                        <div class="group/card absolute rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out z-[2] hover:z-[20] hover:scale-[1.06] hover:shadow-[0_24px_60px_rgba(0,0,0,0.9)] hover:-translate-y-2"
+                             style="width:63%; aspect-ratio:16/9; top:7%; right:1%; transform:rotate(2deg); border:1px solid rgba(201,169,110,0.25); box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+                            <div class="w-full h-full bg-cover bg-left-top" style="background-image:url('images/s4_reddit_B.jpg')"></div>
+                        </div>
+
+                        <!-- Post C: center, featured, gold border -->
+                        <div class="group/card absolute rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out z-[5] hover:z-[20] hover:scale-[1.08] hover:shadow-[0_28px_70px_rgba(0,0,0,0.95)] hover:-translate-y-3"
+                             style="width:68%; aspect-ratio:16/9; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-1deg); border:1px solid var(--gold); box-shadow:0 12px 40px rgba(0,0,0,0.8), 0 0 20px rgba(201,169,110,0.12)">
+                            <div class="w-full h-full bg-cover bg-left-top" style="background-image:url('images/s4_reddit_C.jpg')"></div>
+                            <div class="absolute top-2 right-2 glass-strong px-2 py-1 rounded-full flex items-center gap-1 border border-[rgba(201,169,110,0.4)]">
+                                <i data-lucide="award" style="width:10px;height:10px;color:var(--gold)"></i>
+                                <span class="text-[var(--gold)] font-bold" style="font-size:0.55rem">#1 AIO</span>
+                            </div>
+                        </div>
+
+                        <!-- Post D: bottom-left -->
+                        <div class="group/card absolute rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out z-[3] hover:z-[20] hover:scale-[1.06] hover:shadow-[0_24px_60px_rgba(0,0,0,0.9)] hover:-translate-y-2"
+                             style="width:61%; aspect-ratio:16/9; bottom:4%; left:1%; transform:rotate(-2.5deg); border:1px solid rgba(201,169,110,0.25); box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+                            <div class="w-full h-full bg-cover bg-left-top" style="background-image:url('images/s4_reddit_D.jpg')"></div>
+                        </div>
+
+                        <!-- Post E: bottom-right -->
+                        <div class="group/card absolute rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out z-[4] hover:z-[20] hover:scale-[1.06] hover:shadow-[0_24px_60px_rgba(0,0,0,0.9)] hover:-translate-y-2"
+                             style="width:61%; aspect-ratio:16/9; bottom:2%; right:1%; transform:rotate(2.5deg); border:1px solid rgba(201,169,110,0.25); box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+                            <div class="w-full h-full bg-cover bg-left-top" style="background-image:url('images/s4_reddit_E.jpg')"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- AFFILIATE — compact card, 5 cols -->
+            <div class="reveal lg:col-span-5 glass rounded-[32px] p-10 flex flex-col justify-between" style="min-height: 420px;">
+                <div>
+                    <div class="w-12 h-12 glass-strong rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="users" style="color:var(--gold);width:22px;height:22px"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Affiliate Network</h3>
+                    <p class="text-[var(--muted)] text-sm leading-relaxed mb-6">
+                        Built and scaled partner programme from 0 → <strong class="text-[var(--cream)]">500+ partners</strong> across the TrueProfit affiliate ecosystem.
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-center justify-between py-3 border-b border-[rgba(201,169,110,0.12)]">
+                            <span class="text-[var(--muted)] text-sm">Total Partners</span>
+                            <span class="text-[var(--cream)] font-bold"><span class="counter" data-target="500" data-suffix="+">0+</span></span>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-[rgba(201,169,110,0.12)]">
+                            <span class="text-[var(--muted)] text-sm">Tracked Clicks</span>
+                            <span class="text-[var(--cream)] font-bold"><span class="counter" data-target="11000" data-suffix="+">0+</span></span>
+                        </div>
+                        <div class="flex items-center justify-between py-3 border-b border-[rgba(201,169,110,0.12)]">
+                            <span class="text-[var(--muted)] text-sm">Installs</span>
+                            <span class="text-[var(--cream)] font-bold"><span class="counter" data-target="550">0</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <div class="stat-num text-5xl gold-glow leading-none"><span class="counter" data-prefix="$" data-target="15" data-suffix="K+">0K+</span></div>
+                    <p class="text-[var(--gold)] text-xs font-bold uppercase tracking-[4px] mt-3">Revenue Potential</p>
+                </div>
+            </div>
+
+        </div><!-- end row 2 -->
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S5 — AUTHORITY & INFLUENCE (KOLs, YT, X)
+═══════════════════════════════════════════════════ -->
+<section class="py-40 px-8 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="reveal mb-24">
+            <p class="section-label mb-5">Ecosystem · Firegroup</p>
+            <h2 class="font-heading italic title-gradient text-6xl md:text-7xl leading-none">Authority &amp; Influence.</h2>
+        </div>
+
+        <!-- YouTube Row -->
+        <div class="reveal mb-20">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">YouTube Campaign Support</h3>
+                    <p class="text-[var(--muted)] text-base">~30 KOLs &amp; Content Creators supported</p>
+                </div>
+                <div class="text-right">
+                    <div class="stat-num text-5xl gold-glow"><span class="counter" data-target="1641102">0</span></div>
+                    <p class="text-[var(--gold)] text-sm font-bold uppercase tracking-widest mt-1">Views · +61% YoY 2025</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- KOL 1: AC Hampton -->
+                <div class="glass rounded-[2rem] overflow-hidden group flex flex-row h-64 card-hover border border-[rgba(201,169,110,0.12)]">
+                    <!-- Video Thumbnail (60%) -->
+                    <div class="kol-thumb-wrap w-[60%] relative overflow-hidden">
+                        <div class="kol-thumb-skeleton"></div>
+                        <img src="https://img.youtube.com/vi/yRRIGUSD_F8/maxresdefault.jpg"
+                             class="w-full h-full object-cover absolute inset-0"
+                             style="object-position: 75% center;"
+                             alt="AC Hampton - TrueProfit Review"
+                             onerror="this.src='https://img.youtube.com/vi/yRRIGUSD_F8/hqdefault.jpg';this.onerror=null">
+                        <!-- dark vignette -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--bg2)]/70"></div>
+                    </div>
+                    <!-- Info (40%) -->
+                    <div class="w-[40%] p-5 flex flex-col justify-center bg-[var(--bg2)]/70 backdrop-blur-xl">
+                        <div class="mb-4">
+                            <i data-lucide="quote" class="w-4 h-4 mb-2" style="color:rgba(201,169,110,0.4)"></i>
+                            <p class="text-[var(--cream)] italic text-[11px] leading-relaxed line-clamp-5">
+                                There's no room for guessing profit anymore — not in 2026. That's why you need TrueProfit.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-[rgba(201,169,110,0.12)]">
+                            <div class="flex items-center justify-between">
+                                <a href="https://www.youtube.com/watch?v=yRRIGUSD_F8&t=542s" target="_blank" class="text-[13px] font-bold text-[var(--cream)] hover:text-[var(--gold)] transition-colors">
+                                    AC Hampton
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=yRRIGUSD_F8&t=542s" target="_blank" title="Watch on YouTube" class="w-8 h-8 rounded-full bg-[var(--gold)] flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_15px_rgba(201,169,110,0.3)]">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--bg)" style="margin-left:2px"><polygon points="5,3 19,12 5,21"/></svg>
+                                </a>
+                            </div>
+                            <p class="text-[var(--gold)] text-[9px] font-bold uppercase tracking-widest mt-1">596K Subscribers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOL 2: Jordan Brown -->
+                <div class="glass rounded-[2rem] overflow-hidden group flex flex-row h-64 card-hover border border-[rgba(201,169,110,0.12)]">
+                    <!-- Video Thumbnail (60%) -->
+                    <div class="kol-thumb-wrap w-[60%] relative overflow-hidden">
+                        <div class="kol-thumb-skeleton"></div>
+                        <img src="https://img.youtube.com/vi/DfO81cOoU6I/maxresdefault.jpg"
+                             class="w-full h-full object-cover absolute inset-0"
+                             alt="Jordan Brown - TrueProfit Review"
+                             onerror="this.src='https://img.youtube.com/vi/DfO81cOoU6I/hqdefault.jpg';this.onerror=null">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--bg2)]/70"></div>
+                    </div>
+                    <!-- Info (40%) -->
+                    <div class="w-[40%] p-5 flex flex-col justify-center bg-[var(--bg2)]/70 backdrop-blur-xl">
+                        <div class="mb-4">
+                            <i data-lucide="quote" class="w-4 h-4 mb-2" style="color:rgba(201,169,110,0.4)"></i>
+                            <p class="text-[var(--cream)] italic text-[11px] leading-relaxed line-clamp-5">
+                                There really isn't a better profit tracking software that I'd recommend.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-[rgba(201,169,110,0.12)]">
+                            <div class="flex items-center justify-between">
+                                <a href="https://www.youtube.com/watch?v=DfO81cOoU6I&t=517s" target="_blank" class="text-[13px] font-bold text-[var(--cream)] hover:text-[var(--gold)] transition-colors">
+                                    Jordan Brown
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=DfO81cOoU6I&t=517s" target="_blank" title="Watch on YouTube" class="w-8 h-8 rounded-full bg-[var(--gold)] flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_15px_rgba(201,169,110,0.3)]">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--bg)" style="margin-left:2px"><polygon points="5,3 19,12 5,21"/></svg>
+                                </a>
+                            </div>
+                            <p class="text-[var(--gold)] text-[9px] font-bold uppercase tracking-widest mt-1">375K Subscribers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KOL 3: Andy Stauring -->
+                <div class="glass rounded-[2rem] overflow-hidden group flex flex-row h-64 card-hover border border-[rgba(201,169,110,0.12)]">
+                    <!-- Video Thumbnail (60%) -->
+                    <div class="kol-thumb-wrap w-[60%] relative overflow-hidden">
+                        <div class="kol-thumb-skeleton"></div>
+                        <img src="https://img.youtube.com/vi/GbdjGeUIPrk/maxresdefault.jpg"
+                             class="w-full h-full object-cover absolute inset-0"
+                             alt="Andy Stauring - TrueProfit Review"
+                             onerror="this.src='https://img.youtube.com/vi/GbdjGeUIPrk/hqdefault.jpg';this.onerror=null">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--bg2)]/70"></div>
+                    </div>
+                    <!-- Info (40%) -->
+                    <div class="w-[40%] p-5 flex flex-col justify-center bg-[var(--bg2)]/70 backdrop-blur-xl">
+                        <div class="mb-4">
+                            <i data-lucide="quote" class="w-4 h-4 mb-2" style="color:rgba(201,169,110,0.4)"></i>
+                            <p class="text-[var(--cream)] italic text-[11px] leading-relaxed line-clamp-5">
+                                TrueProfit gives you peace of mind from day one - a clear, automated view of your store's real performance.
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-[rgba(201,169,110,0.12)]">
+                            <div class="flex items-center justify-between">
+                                <a href="https://www.youtube.com/watch?v=GbdjGeUIPrk&t=435s" target="_blank" class="text-[13px] font-bold text-[var(--cream)] hover:text-[var(--gold)] transition-colors">
+                                    Andy Stauring
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=GbdjGeUIPrk&t=435s" target="_blank" title="Watch on YouTube" class="w-8 h-8 rounded-full bg-[var(--gold)] flex items-center justify-center hover:scale-110 transition-transform shadow-[0_0_15px_rgba(201,169,110,0.3)]">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--bg)" style="margin-left:2px"><polygon points="5,3 19,12 5,21"/></svg>
+                                </a>
+                            </div>
+                            <p class="text-[var(--gold)] text-[9px] font-bold uppercase tracking-widest mt-1">146K Subscribers</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gold-line my-16 reveal"></div>
+
+        <!-- X + Automation -->
+        <div class="reveal grid lg:grid-cols-2 gap-16 items-center">
+            <!-- X/Twitter -->
+            <div>
+                <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    Lead Negotiator — X (Twitter)
+                    <i data-lucide="twitter" style="width:20px;height:20px;opacity:0.5"></i>
+                </h3>
+                <p class="text-[var(--muted)] text-lg leading-relaxed mb-10 max-w-md">Directly approached and managed high-impact collaborations with e-com creators (e.g., <strong class="text-[var(--cream)]">Kuby Cazal, Greffin</strong>).</p>
+                <div class="flex gap-12 justify-center lg:justify-start items-start">
+                    <!-- KOL 1: Kuby Cazal -->
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="phone-frame w-56 skew-y-3 hover:skew-y-0 transition-transform duration-500 shadow-2xl overflow-hidden rounded-[26px] border-[rgba(201,169,110,0.4)]">
+                            <img loading="lazy" decoding="async" src="images/s5_x_exp1.jpg" class="w-full aspect-[9/16] object-cover object-left-top" alt="Kuby Cazal X Experience">
+                        </div>
+                        <div class="glass-strong px-6 py-3 rounded-2xl border border-[rgba(201,169,110,0.3)] hover:border-[rgba(201,169,110,0.6)] transition-all duration-300 text-center">
+                            <a href="https://x.com/Kubycazal" target="_blank" class="text-[var(--gold)] hover:text-[var(--cream)] transition-colors font-bold text-[10px] tracking-[0.25em] uppercase flex items-center justify-center gap-2 group">
+                                Kuby Cazal
+                                <i data-lucide="external-link" class="w-3 h-3 opacity-40 group-hover:opacity-100"></i>
+                            </a>
+                            <p class="text-[var(--muted)] text-[9px] font-bold tracking-[0.15em] mt-1.5 uppercase">8.3K Followers</p>
+                        </div>
+                    </div>
+
+                    <!-- KOL 2: Greffin -->
+                    <div class="flex flex-col items-center gap-6 mt-16">
+                        <div class="phone-frame w-56 -skew-y-3 hover:skew-y-0 transition-transform duration-500 shadow-2xl overflow-hidden rounded-[26px] border-[rgba(201,169,110,0.4)]">
+                            <img loading="lazy" decoding="async" src="images/s5_x_exp2.jpg" class="w-full aspect-[9/16] object-cover object-left-top" alt="Greffin X Experience">
+                        </div>
+                        <div class="glass-strong px-6 py-3 rounded-2xl border border-[rgba(201,169,110,0.3)] hover:border-[rgba(201,169,110,0.6)] transition-all duration-300 text-center">
+                            <a href="https://x.com/roasblender" target="_blank" class="text-[var(--gold)] hover:text-[var(--cream)] transition-colors font-bold text-[10px] tracking-[0.25em] uppercase flex items-center justify-center gap-2 group">
+                                Greffin
+                                <i data-lucide="external-link" class="w-3 h-3 opacity-40 group-hover:opacity-100"></i>
+                            </a>
+                            <p class="text-[var(--muted)] text-[9px] font-bold tracking-[0.15em] mt-1.5 uppercase">5.4K Followers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation -->
+            <div class="glass rounded-[40px] p-12" style="background:rgba(201,169,110,0.04);border-color:rgba(201,169,110,0.25)">
+                <div class="w-16 h-16 glass-strong rounded-2xl flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(201,169,110,0.2)]">
+                    <i data-lucide="git-branch" style="color:var(--gold);width:30px;height:30px"></i>
+                </div>
+                <h3 class="font-heading italic text-4xl text-[var(--cream)] mb-6">n8n Workflow Automation</h3>
+                <p class="text-[var(--muted)] text-lg font-light leading-relaxed mb-10">
+                    Engineered automated pipelines for campaign tracking, partner onboarding, and performance reporting — cutting manual overhead 70%+.
+                </p>
+                <div class="glass rounded-2xl overflow-hidden group/n8n border border-[rgba(201,169,110,0.15)] shadow-2xl transition-all duration-500 hover:border-[rgba(201,169,110,0.4)]" style="aspect-ratio: 16/9;">
+                    <div class="w-full h-full bg-contain bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover/n8n:scale-105" 
+                         style="background-image:url('images/s5_n8n.jpg'); background-color: #0c0906;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S5b — CO-MARKETING PARTNERS
+═══════════════════════════════════════════════════ -->
+<section class="comarketing-slide">
+    <!-- top/bottom fade blends -->
+    <div class="cm-fade-top"></div>
+    <div class="cm-fade-bottom"></div>
+
+    <div class="slide-inner" style="position:relative;z-index:5">
+        <!-- Text block -->
+        <div class="text-block reveal">
+            <span class="cm-label">CO-MARKETING ACTIVITIES</span>
+            <h2 class="cm-title">Partnerships That<br><em>Print Results.</em></h2>
+            <p class="cm-sub">Strategic in-app placements with top Shopify ecosystem apps — mutual exposure, shared audiences, compounding growth. No ad spend. Pure leverage.</p>
+        </div>
+
+        <!-- Static Logo Grid — 10 Unique Logos in 3 Rows -->
+        <div class="logo-marquee-wrap reveal reveal-d1">
+            <div class="logo-grid">
+                <!-- Row 1: 4 logos -->
+                <div class="logo-row-static">
+                    <img loading="lazy" decoding="async" src="images/app_1.webp" alt="Partner 1">
+                    <img loading="lazy" decoding="async" src="images/app_2.jpg"  alt="Partner 2">
+                    <img loading="lazy" decoding="async" src="images/app_3.png"  alt="Partner 3">
+                    <img loading="lazy" decoding="async" src="images/app_4.webp" alt="Partner 4">
+                </div>
+                <!-- Row 2: 3 logos -->
+                <div class="logo-row-static">
+                    <img loading="lazy" decoding="async" src="images/app_5.webp" alt="Partner 5">
+                    <img loading="lazy" decoding="async" src="images/app_6.jfif" alt="Partner 6">
+                    <img loading="lazy" decoding="async" src="images/app_7.webp" alt="Partner 7">
+                </div>
+                <!-- Row 3: 3 logos -->
+                <div class="logo-row-static">
+                    <img loading="lazy" decoding="async" src="images/app_8.webp"  alt="Partner 8">
+                    <img loading="lazy" decoding="async" src="images/app_9.webp"  alt="Partner 9">
+                    <img loading="lazy" decoding="async" src="images/app_10.webp" alt="Partner 10">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S6 — EXPERIENCE 02: AUTONOMOUS INC.
+═══════════════════════════════════════════════════ -->
+<section id="autonomous" class="relative py-64 flex items-center justify-center min-h-screen overflow-hidden">
+    <!-- Background Sketch Image -->
+    <img loading="lazy" decoding="async" src="images/autonomous.jpg" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0; filter: grayscale(1) contrast(3) brightness(1.4) invert(1); mix-blend-mode: luminosity; opacity: 0.13;" alt="">
+    
+    <!-- Color Tint Overlay -->
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1; background: rgba(12,9,3,0.6); mix-blend-mode: multiply;"></div>
+
+    <div class="reveal relative max-w-5xl w-full px-4 md:px-8 flex justify-center" style="z-index:2;">
+        <div class="rounded-[40px] px-6 py-8 md:px-[40px] md:py-[32px] text-center shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative w-full" style="background: rgba(18,13,5,0.82); backdrop-filter: blur(8px); border: 1px solid rgba(201,169,110,0.1); min-width: min(100%, 480px); max-width: 600px;">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"></div>
+
+            <p class="section-label mb-6 text-[13px]">Experience 02</p>
+            <h2 class="font-heading italic title-gradient leading-tight mb-4 text-[36px]">
+                Autonomous Inc.
+            </h2>
+            <p class="text-[var(--gold)] text-sm uppercase tracking-[4px] font-semibold mb-10">autonomous.ai — Smart Furniture</p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                <div>
+                    <p class="text-[var(--gold-dim)] uppercase tracking-[2px] mb-2 font-semibold text-[13px]">Position</p>
+                    <p class="text-base font-bold text-[var(--cream)]">Partnership Marketing</p>
+                </div>
+                <div class="w-px h-12 bg-[var(--gold-dim)] opacity-20 hidden md:block"></div>
+                <div>
+                    <p class="text-[var(--gold-dim)] uppercase tracking-[2px] mb-2 font-semibold text-[13px]">Timeline</p>
+                    <p class="text-base font-bold text-[var(--cream)]">Jul 2023 – Dec 2024</p>
+                </div>
+                <div class="w-px h-12 bg-[var(--gold-dim)] opacity-20 hidden md:block"></div>
+                <div>
+                    <p class="text-[var(--gold-dim)] uppercase tracking-[2px] mb-2 font-semibold text-[13px]">Market</p>
+                    <p class="text-base font-bold text-[var(--cream)]">Global (US/UK/EU)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S7 — AUTONOMOUS RESULTS (GLOBAL IMPACT)
+═══════════════════════════════════════════════════ -->
+<section class="bg2 py-40 px-8 lg:px-24">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+
+        <!-- Stats -->
+        <div class="flex-1">
+            <p class="reveal section-label mb-6">Global Reach · Autonomous</p>
+            <h2 class="reveal reveal-d1 font-heading italic title-gradient text-6xl md:text-7xl mb-20 leading-none">The Million Dollar Impact.</h2>
+
+            <div class="space-y-12">
+                <div class="reveal reveal-d1 flex items-start gap-8 group">
+                    <div class="text-6xl gold-glow group-hover:scale-110 transition-transform w-28 flex-shrink-0"><span class="stat-num counter" data-prefix="~$" data-target="1" data-suffix="M">0</span></div>
+                    <div class="pt-2">
+                        <h4 class="text-xl font-bold mb-2">Revenue Impact</h4>
+                        <p class="text-[var(--muted)] text-base leading-relaxed">Drove nearly $1 Million in revenue growth in 2023 through precision performance-driven campaigns and influencer ecosystems.</p>
+                    </div>
+                </div>
+                <div class="gold-line"></div>
+                <div class="reveal reveal-d2 flex items-start gap-8 group">
+                    <div class="text-6xl gold-glow group-hover:scale-110 transition-transform w-28 flex-shrink-0"><span class="stat-num counter" data-target="700" data-suffix="+">0+</span></div>
+                    <div class="pt-2">
+                        <h4 class="text-xl font-bold mb-2">Influencer Network</h4>
+                        <p class="text-[var(--muted)] text-base leading-relaxed">Built and managed a robust network of 700+ influencers across the US, UK, Canada, and EU — averaging 30 new partnerships per month.</p>
+                    </div>
+                </div>
+                <div class="gold-line"></div>
+                <div class="reveal reveal-d3 flex items-start gap-8 group">
+                    <div class="text-6xl gold-glow group-hover:scale-110 transition-transform w-28 flex-shrink-0"><span class="stat-num counter" data-target="1000" data-suffix="+">0+</span></div>
+                    <div class="pt-2">
+                        <h4 class="text-xl font-bold mb-2">Asset Distribution</h4>
+                        <p class="text-[var(--muted)] text-base leading-relaxed">Distributed 1,000+ branded content assets at high velocity to global creator audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Asset -->
+        <div class="reveal w-full lg:max-w-[500px]">
+            <div class="glass rounded-[40px] aspect-[4/3] p-4 relative shadow-2xl card-hover">
+                <div class="w-full h-full rounded-[30px] overflow-hidden">
+                    <img loading="lazy" decoding="async" src="images/s7_map_network.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="mt-6 glass rounded-2xl px-8 py-4 text-center">
+                <p class="text-[var(--gold)] font-bold text-sm uppercase tracking-[4px]">30 New Partnerships / Month</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S8 — AUTHORITY & VIRALITY (EDITORIAL SPREAD)
+═══════════════════════════════════════════════════ -->
+<section id="case-studies" class="relative py-40 px-8 lg:px-24 overflow-hidden">
+
+    <!-- Floating particle background -->
+    <div class="absolute inset-0 pointer-events-none" id="editorial-particles">
+        <div class="particle" style="left:8%;top:15%;animation-delay:0s;animation-duration:6s"></div>
+        <div class="particle" style="left:20%;top:70%;animation-delay:1.2s;animation-duration:8s"></div>
+        <div class="particle" style="left:35%;top:30%;animation-delay:2.1s;animation-duration:5s"></div>
+        <div class="particle" style="left:55%;top:80%;animation-delay:0.8s;animation-duration:7s"></div>
+        <div class="particle" style="left:70%;top:20%;animation-delay:3.3s;animation-duration:6.5s"></div>
+        <div class="particle" style="left:82%;top:55%;animation-delay:1.7s;animation-duration:9s"></div>
+        <div class="particle" style="left:92%;top:35%;animation-delay:0.4s;animation-duration:5.5s"></div>
+        <div class="particle" style="left:48%;top:50%;animation-delay:4.1s;animation-duration:7.5s"></div>
+        <div class="particle" style="left:15%;top:45%;animation-delay:2.8s;animation-duration:6s"></div>
+        <div class="particle" style="left:77%;top:88%;animation-delay:1s;animation-duration:8.5s"></div>
+    </div>
+
+    <div class="max-w-[1440px] mx-auto relative z-10">
+
+        <!-- Section header -->
+        <div class="editorial-reveal mb-20">
+            <p class="section-label mb-5">Authority & Virality · Autonomous</p>
+            <div class="flex items-end justify-between flex-wrap gap-6">
+                <h2 class="font-heading italic title-gradient leading-none" style="font-size:clamp(3.5rem,7vw,6rem)">Case Studies.</h2>
+                <p class="text-[var(--muted)] text-lg max-w-sm leading-relaxed">A high-agency editorial breakdown of the campaigns that moved markets.</p>
+            </div>
+            <div class="gold-line mt-10"></div>
+        </div>
+
+        <!-- EDITORIAL SPREAD: Hero + 2x2 Grid -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch w-full">
+
+            <!-- ═══ HERO CARD: Tier-1 PR (55% width) ═══ -->
+            <div class="editorial-card editorial-card--hero flex-none lg:w-[55%] glass rounded-[36px] overflow-hidden relative group flex flex-col">
+
+                <!-- Newspaper texture overlay -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 28px), repeating-linear-gradient(90deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 28px);"></div>
+
+                <!-- Gold top bar — newspaper dateline -->
+                <div class="relative z-10 flex items-center justify-between px-10 pt-8 pb-4 border-b border-[rgba(201,169,110,0.15)]">
+                    <!-- Ticker strip -->
+                    <div class="overflow-hidden w-full h-5">
+                        <div class="editorial-ticker flex gap-8 whitespace-nowrap text-[var(--muted)] text-[10px] uppercase tracking-[3px] w-max">
+                            <span>The Gadgeteer</span><span>·</span><span>562K Monthly Traffic</span><span>·</span><span>ErgoChair Curve</span><span>·</span>
+                            <span>The Gadgeteer</span><span>·</span><span>562K Monthly Traffic</span><span>·</span><span>ErgoChair Curve</span><span>·</span>
+                            <span>The Gadgeteer</span><span>·</span><span>562K Monthly Traffic</span><span>·</span><span>ErgoChair Curve</span><span>·</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="relative z-10 flex flex-col flex-1 p-10 pb-12">
+                    
+                    <!-- Headline — newspaper front-page style -->
+                    <h3 class="font-heading italic mb-6 leading-[0.9]" style="font-size:clamp(3rem,5vw,4.5rem);background:linear-gradient(160deg,#f0e8d8 0%,#c9a96e 60%,#8a6834 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">
+                        100+ US<br>Media Wins.
+                    </h3>
+
+                    <p class="text-[var(--muted)] text-lg leading-relaxed mb-8 max-w-lg">
+                        Secured <strong class="text-[var(--cream)]">100+ tier-1 US media placements</strong>. Featured product review for <strong class="text-[var(--cream)]">ErgoChair Curve</strong> on The Gadgeteer.
+                    </p>
+
+                    <!-- Polaroid image frame (Very tall to fit email + photo) -->
+                    <div class="flex-1 relative group/img w-full min-h-[400px]">
+                        <a href="https://the-gadgeteer.com/2024/05/04/autonomous-ergochair-curve-review-a-comfortable-seat-with-questionable-design/" target="_blank" class="polaroid-frame block w-full h-full min-h-[400px] group-hover/img:scale-[1.02] transition-transform duration-700 cursor-pointer group/link relative">
+                            <img loading="lazy" decoding="async" src="images/s8_pr_gadgeteer_article.jpg" class="absolute inset-0 w-full h-[calc(100%-48px)] object-cover rounded-t-lg rounded-bl-lg">
+                            <div class="polaroid-label absolute bottom-0 left-0 right-0 group-hover/link:underline decoration-[rgba(201,169,110,0.5)] underline-offset-4">The Gadgeteer Review · Press Coverage</div>
+                        </a>
+                        <!-- Parallax shimmer on hover -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl" style="background:linear-gradient(135deg,transparent 40%,rgba(201,169,110,0.06) 100%)"></div>
+                    </div>
+
+                    <!-- Big stat at bottom -->
+                    <div class="mt-8 flex flex-col justify-end">
+                        <div class="gold-glow leading-none flex items-baseline gap-2">
+                            <span class="stat-num counter leading-none" data-target="562" data-suffix="K" style="font-size:4.5rem">0K</span>
+                        </div>
+                        <p class="text-[var(--gold)] text-sm font-bold uppercase tracking-[5px] mt-2">Monthly Traffic</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══ RIGHT: 2x2 Influencer Grid (45% width) ═══ -->
+            <div class="flex-1 lg:w-[45%] grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                <!-- Ian Zelbo -->
+                <div class="editorial-card editorial-card--influencer glass rounded-[28px] p-6 flex flex-col justify-between relative overflow-hidden group h-full" style="--glow-color: 201,169,110">
+                    <div class="spin-border"></div>
+                    <div class="relative z-10 flex flex-col h-full w-full">
+                        <div class="mb-4">
+                            <h4 class="text-base font-bold text-[var(--cream)]">Ian Zelbo <span class="text-[var(--gold)] font-medium">· 3D Design Engineer</span></h4>
+                            <p class="text-[var(--muted)] text-sm mt-1">Desk Eureka & Chair Ergo - Review</p>
+                        </div>
+                        <div class="flex-1 min-h-[300px] mb-5 relative group-hover:border-[rgba(201,169,110,0.4)] transition-colors border border-[rgba(201,169,110,0.15)] rounded-xl overflow-hidden bg-[rgba(201,169,110,0.03)]">
+                            <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 ease-out group-hover:scale-105" style="background-image:url('images/s8_ian_post.jfif');"></div>
+                        </div>
+                        <div class="mt-auto flex items-baseline gap-2 text-[var(--gold)]">
+                            <span class="font-heading italic text-[2.5rem] leading-none gold-glow counter" data-target="310" data-suffix="K">0K</span> 
+                            <span class="font-heading italic text-3xl leading-none gold-glow">Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gav Blaxberg -->
+                <div class="editorial-card editorial-card--influencer glass rounded-[28px] p-6 flex flex-col justify-between relative overflow-hidden group h-full" style="--glow-color: 201,169,110">
+                    <div class="spin-border"></div>
+                    <div class="relative z-10 flex flex-col h-full w-full">
+                        <div class="mb-4">
+                            <h4 class="text-base font-bold text-[var(--cream)]">Gav Blaxberg <span class="text-[var(--gold)] font-medium">· Finance/Investing</span></h4>
+                            <p class="text-[var(--muted)] text-sm mt-1">Chair Ergo - Giveaway</p>
+                        </div>
+                        <div class="flex-1 min-h-[300px] mb-5 relative group-hover:border-[rgba(201,169,110,0.4)] transition-colors border border-[rgba(201,169,110,0.15)] rounded-xl overflow-hidden bg-[rgba(201,169,110,0.03)]">
+                            <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 ease-out group-hover:scale-105" style="background-image:url('images/s8_gav_post.jfif');"></div>
+                        </div>
+                        <div class="mt-auto flex items-baseline gap-2 text-[var(--gold)]">
+                            <span class="font-heading italic text-[2.5rem] leading-none gold-glow counter" data-target="420" data-suffix="K">0K</span> 
+                            <span class="font-heading italic text-3xl leading-none gold-glow">Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kevin Naughton Jr -->
+                <div class="editorial-card editorial-card--influencer glass rounded-[28px] p-6 flex flex-col justify-between relative overflow-hidden group h-full" style="--glow-color: 201,169,110">
+                    <div class="spin-border"></div>
+                    <div class="relative z-10 flex flex-col h-full w-full">
+                        <div class="mb-4">
+                            <h4 class="text-base font-bold text-[var(--cream)]">Kevin Naughton Jr <span class="text-[var(--gold)] font-medium">· SWE, Google</span></h4>
+                            <p class="text-[var(--muted)] text-sm mt-1">Desk Eureka - Review</p>
+                        </div>
+                        <div class="flex-1 min-h-[300px] mb-5 relative group-hover:border-[rgba(201,169,110,0.4)] transition-colors border border-[rgba(201,169,110,0.15)] rounded-xl overflow-hidden bg-[rgba(201,169,110,0.03)]">
+                            <div class="absolute inset-0 bg-cover bg-top transition-transform duration-700 ease-out group-hover:scale-105" style="background-image:url('images/s8_kevin_post.jfif');"></div>
+                        </div>
+                        <div class="mt-auto flex items-baseline gap-2 text-[var(--gold)]">
+                            <span class="font-heading italic text-[2.5rem] leading-none gold-glow counter" data-target="79" data-suffix="K">0K</span> 
+                            <span class="font-heading italic text-3xl leading-none gold-glow">Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rita Iglesias -->
+                <div class="editorial-card editorial-card--influencer glass rounded-[28px] p-6 flex flex-col justify-between relative overflow-hidden group h-full" style="--glow-color: 201,169,110">
+                    <div class="spin-border"></div>
+                    <div class="relative z-10 flex flex-col h-full w-full">
+                        <div class="mb-4">
+                            <h4 class="text-base font-bold text-[var(--cream)]">Rita Iglesias <span class="text-[var(--gold)] font-medium">· SWE</span></h4>
+                            <p class="text-[var(--muted)] text-sm mt-1">Chair Ergo - Controversial Hook</p>
+                        </div>
+                        <div class="flex-1 min-h-[300px] mb-5 relative group-hover:border-[rgba(201,169,110,0.4)] transition-colors border border-[rgba(201,169,110,0.15)] rounded-xl overflow-hidden bg-[rgba(201,169,110,0.03)]">
+                            <video class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105" autoplay loop muted playsinline>
+                                <source src="images/s8_rita_post.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mt-auto flex items-baseline gap-2 text-[var(--gold)]">
+                            <span class="font-heading italic text-[2.5rem] leading-none gold-glow counter" data-target="199" data-suffix="K">0K</span> 
+                            <span class="font-heading italic text-3xl leading-none gold-glow">Views</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end 2x2 grid -->
+        </div><!-- end editorial spread -->
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S9 — THE PLAYGROUND (TRANSITION + CREATIVE PROJECTS)
+═══════════════════════════════════════════════════ -->
+
+<!-- ── TRANSITION BLOCK ── -->
+<div class="playground-transition relative overflow-hidden">
+    <!-- Grain texture -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%220.07%22/></svg>');opacity:0.4;"></div>
+
+    <div class="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-24 py-32">
+        <div class="reveal-playground flex flex-col gap-6">
+            <!-- Eyebrow label -->
+            <div class="flex items-center gap-4">
+                <div class="h-px flex-1 max-w-[80px]" style="background:linear-gradient(to right,transparent,rgba(201,169,110,0.5))"></div>
+                <span class="text-[10px] font-bold uppercase tracking-[8px]" style="color:rgba(201,169,110,0.7)">Switching Frequencies</span>
+                <div class="h-px flex-1 max-w-[80px]" style="background:linear-gradient(to left,transparent,rgba(201,169,110,0.5))"></div>
+            </div>
+            <!-- Big typographic title -->
+            <div class="overflow-hidden">
+                <h2 class="playground-title font-heading italic leading-none select-none" style="font-size:clamp(5rem,14vw,12rem);background:linear-gradient(105deg,#f5ede0 0%,#c9a96e 40%,#7a5528 70%,#f5ede0 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:0.88;">The<br><span style="padding-left:clamp(2rem,8vw,8rem)">Playground.</span></h2>
+            </div>
+            <!-- Descriptor line -->
+            <p class="text-[var(--muted)] text-xl leading-relaxed max-w-2xl mt-4" style="font-style:italic;">University-era creative experiments — editorial writing, graphic design, community storytelling. Raw, human, un-corporate.</p>
+        </div>
+    </div>
+
+    <!-- Decorative diagonal rule -->
+    <div class="absolute bottom-0 left-0 right-0 h-px" style="background:linear-gradient(to right,transparent,rgba(201,169,110,0.2) 20%,rgba(201,169,110,0.5) 50%,rgba(201,169,110,0.2) 80%,transparent)"></div>
+</div>
+
+<!-- ── CREATIVE PROJECTS — 2 CATEGORIES × 2 CARDS ── -->
+<section id="creative" class="playground-section py-24 px-8 lg:px-24 relative overflow-hidden">
+    <!-- Warm paper grain bg -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22 opacity=%220.05%22/></svg>');opacity:0.6;"></div>
+
+    <div class="max-w-[1440px] mx-auto relative z-10 flex flex-col gap-24">
+
+        <!-- ════════════════════════════════════
+             CATEGORY 1: EDITORIAL WRITING
+        ════════════════════════════════════ -->
+        <div class="flex flex-col gap-16">
+
+            <!-- Category header -->
+            <div class="pg-category-header reveal-playground flex items-center gap-6">
+                <div class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold uppercase tracking-[8px]" style="color:rgba(201,169,110,0.5)">Category 01</span>
+                    <h3 class="font-heading italic leading-none" style="font-size:clamp(2rem,4vw,3.2rem);background:linear-gradient(120deg,#f5ede0,#c9a96e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Editorial Writing — Empathetic Vibe</h3>
+                </div>
+                <div class="flex-1 h-px" style="background:linear-gradient(to right,rgba(201,169,110,0.3),transparent)"></div>
+            </div>
+
+            <!-- ─── CARD 1.1: Khóc Nhè ─── -->
+            <div class="pg-card reveal-playground flex flex-col lg:flex-row gap-0 overflow-visible relative group group/thumbs" style="min-height:520px">
+                <!-- LEFT: Hero image (60%) -->
+                <div class="pg-img-hero play-parallax flex-none lg:w-[58%] relative flex items-center justify-center" style="min-height:460px">
+                    <div class="w-full relative rounded-[28px] overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02] lg:-ml-4 -rotate-1 border border-[rgba(201,169,110,0.15)] bg-[#f5f0e8] flex flex-col">
+                        <img loading="lazy" decoding="async" src="images/s9_khoc_nhe_cactus.jpg" class="w-full h-auto block m-0 p-0" style="image-rendering:high-quality;">
+                        <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(135deg,rgba(201,169,110,0.04),transparent 60%)"></div>
+                    </div>
+                    <!-- Floating accent image (hover to expand) -->
+                    <div class="absolute -bottom-3 -right-3 lg:-right-8 w-40 lg:w-48 z-20 group/float cursor-pointer hover:z-[999] rotate-3 group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300">
+                        <div class="w-full aspect-[3/4] rounded-xl overflow-hidden border-[3px] border-[#1e1812] shadow-2xl transition-all duration-300 ease-out origin-right pointer-events-none group-hover/float:scale-[1.6] group-hover/float:-rotate-3 group-hover/float:shadow-[0_24px_60px_rgba(0,0,0,0.8),0_0_0_2px_rgba(201,169,110,0.5)] bg-[#1a1410]">
+                            <img loading="lazy" decoding="async" src="images/s9_cactus_2.jpg" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT: Text + credits (40%) -->
+                <div class="flex-1 lg:pl-16 lg:pr-4 flex flex-col justify-center py-10 lg:py-14 relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="pg-tag">S Communications</span>
+                        <span class="pg-tag">UEHenter.com</span>
+                    </div>
+                    <h4 class="pg-project-title mb-5 leading-tight" style="font-size:clamp(1.6rem,3vw,2.4rem)">"Là Người Lớn, Bạn Vẫn<br>Có Thể <em style="color:#c9a96e">"Khóc Nhè""</em></h4>
+                    <p class="text-[var(--muted)] text-base leading-relaxed mb-8 max-w-sm">
+                        An empathetic editorial exploring emotional vulnerability in adulthood. Paired with whimsical cactus illustrations to balance tenderness with levity.
+                    </p>
+                    <!-- Credits — ONLY for editorial -->
+                    <div class="flex gap-8 mb-8">
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Author</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">Khoa Do</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Designer</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">Bun</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Platform</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">UEHenter.com</p>
+                        </div>
+                    </div>
+                    <!-- Supporting thumbnails — hover to 1.5x expand -->
+                    <div class="flex gap-4 flex-wrap">
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-left pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_cactus_a.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_cactus_b.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-right pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_cactus_c.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─── CARD 1.2: Tình Nguyện Mùa Tết ─── -->
+            <div class="pg-card reveal-playground flex flex-col lg:flex-row-reverse gap-0 overflow-visible relative group group/thumbs" style="min-height:520px">
+                <!-- RIGHT: Hero image (60%) -->
+                <div class="pg-img-hero play-parallax flex-none lg:w-[58%] relative flex items-center justify-center" style="min-height:460px">
+                    <div class="w-full relative rounded-[28px] overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02] lg:-mr-4 rotate-1 border border-[rgba(201,169,110,0.15)] bg-[#1a1410] flex flex-col">
+                        <div class="absolute inset-0 z-10 pointer-events-none" style="background:rgba(180,120,60,0.08)"></div>
+                        <img loading="lazy" decoding="async" src="images/s9_charity_d.jpg" class="w-full h-auto block m-0 p-0" style="image-rendering:high-quality; image-rendering:crisp-edges; object-fit:cover;">
+                        <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(135deg,rgba(201,169,110,0.04),transparent 60%)"></div>
+                    </div>
+                </div>
+                <!-- LEFT: Text + credits (40%) -->
+                <div class="flex-1 lg:pr-16 lg:pl-4 flex flex-col justify-center py-10 lg:py-14 relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="pg-tag">S Communications</span>
+                        <span class="pg-tag">UEHenter.com</span>
+                    </div>
+                    <h4 class="pg-project-title mb-5 leading-tight" style="font-size:clamp(1.6rem,3vw,2.4rem)">Tình Nguyện Mùa Tết —<br><em style="color:#c9a96e">Hành Động Nhỏ, Hạnh Phúc To</em></h4>
+                    <p class="text-[var(--muted)] text-base leading-relaxed mb-8 max-w-sm">
+                        A visual story about the quiet joy of giving — volunteer moments captured through warm documentary photography paired with earnest storytelling.
+                    </p>
+                    <!-- Credits — ONLY for editorial -->
+                    <div class="flex gap-8 mb-8">
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Author</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">Khoa Do</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Designer</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">Bao Kha</p>
+                        </div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-[4px] mb-1" style="color:rgba(201,169,110,0.45)">Platform</p>
+                            <p class="text-[var(--cream)] font-semibold text-sm">UEHenter.com</p>
+                        </div>
+                    </div>
+                    <!-- Supporting thumbnails — hover to 1.6x expand -->
+                    <div class="flex gap-4 flex-wrap">
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-left pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <div class="absolute inset-0 z-10 pointer-events-none" style="background:rgba(180,120,60,0.08)"></div>
+                                <img loading="lazy" decoding="async" src="images/S9_charity_a.jpg" class="w-full h-full object-cover object-center" style="image-rendering:high-quality; image-rendering:crisp-edges;">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <div class="absolute inset-0 z-10 pointer-events-none" style="background:rgba(180,120,60,0.08)"></div>
+                                <img loading="lazy" decoding="async" src="images/s9_charity_b.jpg" class="w-full h-full object-cover object-center" style="image-rendering:high-quality; image-rendering:crisp-edges;">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-right pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <div class="absolute inset-0 z-10 pointer-events-none" style="background:rgba(180,120,60,0.08)"></div>
+                                <img loading="lazy" decoding="async" src="images/s9_charity_c.jpg" class="w-full h-full object-cover object-center" style="image-rendering:high-quality; image-rendering:crisp-edges;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end Category 1 -->
+
+        <!-- ════ CATEGORY DIVIDER ════ -->
+        <div class="reveal-playground flex items-center gap-6 py-4">
+            <div class="flex-1 h-px" style="background:linear-gradient(to right,transparent,rgba(201,169,110,0.25))"></div>
+            <span class="text-[9px] uppercase tracking-[6px] px-4" style="color:rgba(201,169,110,0.35)">· · ·</span>
+            <div class="flex-1 h-px" style="background:linear-gradient(to left,transparent,rgba(201,169,110,0.25))"></div>
+        </div>
+
+        <!-- ════════════════════════════════════
+             CATEGORY 2: SOCIAL POST DESIGN
+        ════════════════════════════════════ -->
+        <div class="flex flex-col gap-16">
+
+            <!-- Category header -->
+            <div class="pg-category-header reveal-playground flex items-center gap-6">
+                <div class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold uppercase tracking-[8px]" style="color:rgba(201,169,110,0.5)">Category 02</span>
+                    <h3 class="font-heading italic leading-none" style="font-size:clamp(2rem,4vw,3.2rem);background:linear-gradient(120deg,#f5ede0,#c9a96e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Social Post Design — Interactive & Tech Content</h3>
+                </div>
+                <div class="flex-1 h-px" style="background:linear-gradient(to right,rgba(201,169,110,0.3),transparent)"></div>
+            </div>
+
+            <!-- ─── CARD 2.1: Military Course ─── -->
+            <div class="pg-card reveal-playground flex flex-col lg:flex-row-reverse gap-0 overflow-visible relative group group/thumbs" style="min-height:520px">
+                <!-- RIGHT: Hero image (38%) -->
+                <div class="pg-img-hero play-parallax flex-none lg:w-[38%] relative flex items-center justify-center" style="min-height:460px">
+                    <div class="w-full relative rounded-[28px] overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02] lg:-mr-4 rotate-1 border border-[rgba(201,169,110,0.15)] bg-[#1a1410] flex flex-col">
+                        <img loading="lazy" decoding="async" src="images/s9_military_a.png" class="w-full h-auto block m-0 p-0" style="image-rendering:high-quality; object-fit:cover;">
+                        <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(135deg,rgba(201,169,110,0.04),transparent 60%)"></div>
+                    </div>
+                </div>
+                <!-- LEFT: Text + credits (52%) -->
+                <div class="flex-1 lg:pr-16 lg:pl-4 flex flex-col justify-center py-10 lg:py-14 relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="pg-tag">UEHenter.com fanpage</span>
+                    </div>
+                    <h4 class="pg-project-title mb-5 leading-tight" style="font-size:clamp(1.6rem,3vw,2.4rem)">Some fun facts in<br><em style="color:#c9a96e">Military Course</em></h4>
+                    <p class="text-[var(--muted)] text-base leading-relaxed mb-8 max-w-sm">
+                        Colorful illustrated infographics breaking down relatable military training experiences — designed to entertain and educate a student audience.
+                    </p>
+                    <!-- Supporting thumbnails — hover to 1.6x expand -->
+                    <div class="flex gap-2 flex-nowrap">
+                        <div class="relative flex-shrink-0 w-[18.5%] aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-left pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_military_b.png" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-[18.5%] aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_military_c.png" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-[18.5%] aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_military_d.png" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-[18.5%] aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_military_e.png" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-[18.5%] aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-right pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_military_f.png" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─── CARD 2.2: Google Drive's Alternatives ─── -->
+            <div class="pg-card reveal-playground flex flex-col lg:flex-row gap-0 overflow-visible relative group group/thumbs" style="min-height:520px">
+                <!-- LEFT: Hero image (46%) -->
+                <div class="pg-img-hero play-parallax flex-none lg:w-[46%] relative flex items-center justify-center" style="min-height:460px">
+                    <div class="w-full relative rounded-[28px] overflow-hidden shadow-[0_24px_70px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:rotate-0 group-hover:scale-[1.02] lg:-ml-4 -rotate-1 border border-[rgba(201,169,110,0.15)] bg-[#1a1410] flex flex-col">
+                        <img loading="lazy" decoding="async" src="images/s9_drive_a.jpg" class="w-full h-auto block m-0 p-0" style="image-rendering:high-quality; object-fit:cover;">
+                        <div class="absolute inset-0 pointer-events-none" style="background:linear-gradient(135deg,rgba(201,169,110,0.04),transparent 60%)"></div>
+                    </div>
+                </div>
+                <!-- RIGHT: Text + credits (40%) -->
+                <div class="flex-1 lg:pl-16 lg:pr-4 flex flex-col justify-center py-10 lg:py-14 relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="pg-tag">UEHenter.com fanpage</span>
+                    </div>
+                    <h4 class="pg-project-title mb-5 leading-tight" style="font-size:clamp(1.6rem,3vw,2.4rem)">Google Drive's<br><em style="color:#c9a96e">Alternatives</em></h4>
+                    <p class="text-[var(--muted)] text-base leading-relaxed mb-8 max-w-sm">
+                        A vibrant tech comparison post making cloud storage alternatives accessible and understandable for everyday student users. OneDrive, Notion, Dropbox — demystified.
+                    </p>
+                    <!-- Supporting thumbnails — hover to 1.6x expand -->
+                    <div class="flex gap-4 flex-wrap">
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-left pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_drive_b.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-center pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:-rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_drive_c.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                        <div class="relative flex-shrink-0 w-40 aspect-[3/4] z-10 hover:z-[999] group-hover/thumbs:opacity-40 hover:!opacity-100 transition-opacity duration-300 group/thumb cursor-pointer -rotate-1">
+                            <div class="absolute inset-0 rounded-[10px] overflow-hidden border border-[rgba(201,169,110,0.15)] shadow-md transition-all duration-300 ease-out origin-right pointer-events-none group-hover/thumb:scale-[1.6] group-hover/thumb:rotate-1 group-hover/thumb:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_20px_rgba(201,169,110,0.3)] group-hover/thumb:border-[2px] group-hover/thumb:border-[rgba(201,169,110,0.7)] bg-[#1a1410]">
+                                <img loading="lazy" decoding="async" src="images/s9_drive_d.jpg" class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end Category 2 -->
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S10 — RESEARCH & COMMUNITY
+═══════════════════════════════════════════════════ -->
+<section id="research" class="py-40 px-8 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="reveal text-center mb-24">
+            <p class="section-label mb-5">Academic & Community</p>
+            <h2 class="font-heading italic title-gradient text-6xl md:text-8xl leading-none">The Masterpiece.</h2>
+        </div>
+
+        <div class="glass rounded-[60px] p-12 lg:p-20">
+
+            <!-- BLACKPINK Gallery -->
+            <div class="mb-20">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6 reveal">
+                    <div class="max-w-2xl">
+                        <h3 class="text-3xl font-bold mb-4">Scientific Research — BLACKPINK's Judgement</h3>
+                        <p class="text-[var(--muted)] text-lg leading-relaxed">Exploring the negative perception of BLACKPINK's music: 'Commercialization' bias. <strong class="text-[var(--cream)]">Subject: Customer Behaviour</strong>.</p>
+                    </div>
+                    <div class="flex-shrink-0 reveal">
+                        <span class="tag" style="background:#C9A84C; color:#120e0a; border-radius:20px; padding:4px 12px; font-weight:600; border:none;">UEH Research Festival</span>
+                    </div>
+                </div>
+
+                <!-- 4 Posters Gallery — Redesigned for full visibility -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+                    <div class="aspect-[9/16] bg-white/5 border border-[var(--glass-border)] rounded-3xl p-2 card-hover">
+                        <img loading="lazy" decoding="async" src="images/s10_bp_1.jpg" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <div class="aspect-[9/16] bg-white/5 border border-[var(--glass-border)] rounded-3xl p-2 card-hover">
+                        <img loading="lazy" decoding="async" src="images/s10_bp_2.png" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <div class="aspect-[9/16] bg-white/5 border border-[var(--glass-border)] rounded-3xl p-2 card-hover">
+                        <img loading="lazy" decoding="async" src="images/s10_bp_3.png" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <div class="aspect-[9/16] bg-white/5 border border-[var(--glass-border)] rounded-3xl p-2 card-hover">
+                        <img loading="lazy" decoding="async" src="images/s10_bp_4.png" class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="gold-line mb-20 reveal"></div>
+
+            <!-- Community Management -->
+            <div class="reveal flex flex-col md:flex-row items-center gap-14">
+                <div class="w-56 h-72 glass rounded-[40px] p-3 flex-shrink-0 shadow-2xl card-hover">
+                    <img loading="lazy" decoding="async" src="images/s10_kedrama.jfif" class="w-full h-full object-cover rounded-[30px]">
+                </div>
+                <div>
+                    <p class="section-label mb-5 text-[var(--gold)]" style="font-weight: 500;">Community Management</p>
+                    <h3 class="text-3xl font-bold mb-3">"Kệ Drama Tôi Đi Tìm Kệ Sách"</h3>
+                    <p class="text-[var(--muted)] text-lg mb-8 leading-relaxed max-w-xl">
+                        <strong class="text-[var(--cream)]">Subject: Digital Marketing</strong> — actively managed community strategy, organic growth, and content resonance optimization.
+                    </p>
+                    <div class="flex gap-3 flex-wrap">
+                        <span class="tag" style="background:#C9A84C; color:#120e0a; border-radius:20px; padding:4px 12px; font-weight:600; border:none;">Community Growth</span>
+                        <span class="tag" style="background:#C9A84C; color:#120e0a; border-radius:20px; padding:4px 12px; font-weight:600; border:none;">Content Strategy</span>
+                        <span class="tag" style="background:#C9A84C; color:#120e0a; border-radius:20px; padding:4px 12px; font-weight:600; border:none;">Organic Reach</span>
+                        <span class="tag" style="background:#C9A84C; color:#120e0a; border-radius:20px; padding:4px 12px; font-weight:600; border:none;">Digital Ads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     S11 — CALL TO ACTION
+═══════════════════════════════════════════════════ -->
+<section id="contact" class="relative min-h-screen flex flex-col items-center justify-center py-40 px-8 text-center overflow-hidden">
+    <!-- orbital vortex canvas bg -->
+    <canvas id="contactCanvas" class="absolute inset-0 w-full h-full" style="z-index:0;opacity:1;"></canvas>
+    <!-- central gold orb -->
+    <div class="absolute pointer-events-none" style="z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle, rgba(201,169,110,0.1) 0%, rgba(201,169,110,0.03) 45%, transparent 70%);border-radius:50%;"></div>
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1;background:radial-gradient(ellipse at top, rgba(8,5,2,0.7) 0%, transparent 55%);"></div>
+    <div class="absolute inset-0 pointer-events-none" style="z-index:1;background:radial-gradient(ellipse at bottom, rgba(8,5,2,0.8) 0%, transparent 50%);"></div>
+
+    <div class="reveal relative max-w-5xl w-full" style="z-index:2">
+        <!-- Avatar -->
+        <div class="w-44 h-44 glass rounded-full p-3 mb-16 mx-auto shadow-[0_0_80px_rgba(201,169,110,0.15)] border-[var(--gold)] card-hover" style="border-color:rgba(201,169,110,0.3)">
+            <img loading="eager" decoding="async" src="images/s1_hero_portrait.png" class="w-full h-full rounded-full object-cover" alt="Khoa Do Avatar">
+        </div>
+
+        <h2 class="font-heading italic title-gradient leading-none tracking-tight mb-10" style="font-size:clamp(4rem,11vw,10rem)">
+            Let's Build the<br/>Next Growth Engine.
+        </h2>
+
+        <p class="text-[var(--muted)] text-xl mb-20 max-w-2xl mx-auto font-light leading-relaxed">
+            Actively seeking the next room where marketing is treated as a competitive advantage — not a cost center.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6 mb-40">
+            <a href="mailto:dangkhoado2002@gmail.com" class="bg-[var(--gold)] text-[var(--bg)] px-14 py-5 rounded-full text-base font-bold uppercase tracking-[4px] hover:opacity-90 hover:scale-105 active:scale-95 transition-all shadow-[0_20px_50px_rgba(201,169,110,0.2)]">
+                Start a Conversation
+            </a>
+            <a href="#" class="glass px-14 py-5 rounded-full text-base font-bold uppercase tracking-[4px] hover:scale-105 transition-all">
+                Download CV
+            </a>
+        </div>
+
+        <!-- Footer Meta -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 pt-20 border-t border-[var(--gold-dim)]/15 w-full max-w-5xl mx-auto">
+            <div class="text-left group px-4">
+                <p class="section-label mb-3">Location</p>
+                <p class="text-base font-semibold text-[var(--cream)] group-hover:text-[var(--gold)] transition-colors">Ho Chi Minh City, Vietnam</p>
+            </div>
+            <div class="text-center group md:border-x md:border-[var(--gold-dim)]/15 px-4">
+                <p class="section-label mb-3">Email</p>
+                <a href="mailto:dangkhoado2002@gmail.com" class="text-base font-semibold text-[var(--cream)] group-hover:text-[var(--gold)] transition-colors break-all md:break-normal">dangkhoado2002@gmail.com</a>
+            </div>
+            <div class="text-right group px-4">
+                <p class="section-label mb-3">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/khoado02/" target="_blank" class="text-base font-semibold text-[var(--cream)] group-hover:text-[var(--gold)] transition-colors">linkedin.com/in/khoado02/</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════════ -->
+
+<script>
+    // ─── Initialize Lucide ───
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // ─── Mouse Glow ───
+    const glow = document.getElementById('cursor-glow');
+    let mx = 0, my = 0, cx = 0, cy = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function update() {
+        cx += (mx - cx) * 0.08;
+        cy += (my - cy) * 0.08;
+        if (glow) {
+            glow.style.left = cx + 'px';
+            glow.style.top  = cy + 'px';
+        }
+        requestAnimationFrame(update);
+    })();
+
+    // ─── Particles ───
+    const pCont = document.getElementById('particles');
+    if (pCont) {
+        const isLowEnd = navigator.hardwareConcurrency <= 4;
+        const PARTICLE_COUNT = isLowEnd ? 25 : 55;
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const s = Math.random() * 3 + 0.5;
+            Object.assign(p.style, {
+                width: s + 'px', height: s + 'px',
+                left: Math.random() * 100 + 'vw',
+                top: (20 + Math.random() * 80) + 'vh',
+                opacity: Math.random() * 0.4,
+                animationDuration: (20 + Math.random() * 30) + 's',
+                animationDelay: (Math.random() * 25) + 's',
+            });
+            pCont.appendChild(p);
+        }
+    }
+
+    // ─── Scroll Reveal ───
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // ─── Reddit Fan ───
+    const fan = document.querySelector('.reddit-fan');
+    if (fan) {
+        fan.addEventListener('mouseenter', () => {
+            const children = fan.querySelectorAll(':scope > div');
+            if (children.length >= 3) {
+                children[0].style.transform = 'translate(-100px, -20px) rotate(-25deg)';
+                children[2].style.transform = 'translate(30px, -20px) rotate(22deg)';
+            }
+        });
+        fan.addEventListener('mouseleave', () => {
+            const children = fan.querySelectorAll(':scope > div');
+            if (children.length >= 3) {
+                children[0].style.transform = 'translate(-72%, 0) rotate(-12deg)';
+                children[2].style.transform = 'translate(-28%, 0) rotate(8deg)';
+            }
+        });
+    }
+
+    // ─── Editorial Reveal ───
+    const editorialRevealObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                editorialRevealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.editorial-reveal').forEach(el => editorialRevealObs.observe(el));
+
+    // ─── Playground Reveal ───
+    const pgRevealObs = new IntersectionObserver((entries) => {
+        let currentDelay = 0;
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, currentDelay);
+                currentDelay += 100;
+                pgRevealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal-playground').forEach(el => pgRevealObs.observe(el));
+
+    // ─── Playground Parallax (Optimized) ───
+    const pgParallaxElements = document.querySelectorAll('.play-parallax');
+    if (pgParallaxElements.length > 0) {
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const winH = window.innerHeight;
+                    pgParallaxElements.forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.top < winH && rect.bottom > 0) {
+                            const yPos = (rect.top - winH / 2) * 0.08;
+                            el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+                        }
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    }
+
+    // ─── Playground Hover ───
+    document.querySelectorAll('.pg-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(201,169,110,0.07), transparent 60%)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.background = 'none';
+        });
+    });
+
+    // ─── Editorial Stagger ───
+    const editorialCardObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const siblings = Array.from(entry.target.parentElement.querySelectorAll('.editorial-card'));
+                const idx = siblings.indexOf(entry.target);
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, idx * 120);
+                editorialCardObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.editorial-card').forEach(el => editorialCardObs.observe(el));
+
+    // ─── Global Counter Animation Function ───
+    const counters = document.querySelectorAll('.counter, [data-target]');
+    const observerOptions = { threshold: 0.5 };
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            if (entry.target.dataset.animated) return; // prevent re-trigger
+            
+            entry.target.dataset.animated = 'true';
+            const el = entry.target;
+            const target = parseFloat(el.dataset.target);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const decimals = parseInt(el.dataset.decimals) || 0;
+            const duration = 1800;
+            let start = null;
+
+            const step = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - progress, 3);
+                const val = (target * ease).toFixed(decimals);
+                el.textContent = prefix + Number(val).toLocaleString() + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            };
+
+            requestAnimationFrame(step);
+            counterObserver.unobserve(el); // stop observing after triggered
+        });
+    }, observerOptions);
+
+    counters.forEach(c => {
+        c.textContent = '0'; // reset display to 0 before animation
+        counterObserver.observe(c);
+    });
+    // ─── Image Shimmer ───
+    document.querySelectorAll('.kol-thumb-wrap img').forEach(img => {
+        const skeleton = img.previousElementSibling;
+        if (img.complete) {
+            if (skeleton) skeleton.style.opacity = '0';
+        } else {
+            img.addEventListener('load', () => { if (skeleton) skeleton.style.opacity = '0'; });
+            img.addEventListener('error', () => { if (skeleton) skeleton.style.opacity = '0'; });
+        }
+    });
+
+    // ─── Section Transitions ───
+    const sectionObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                sectionObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('section, .playground-transition').forEach(sec => sectionObs.observe(sec));
+
+    // ─── Final Init ───
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+
+    // ─── Co-Marketing logos: staggered entrance then continuous float ───
+    (function() {
+        var logoWrap = document.querySelector('.logo-marquee-wrap');
+        if (!logoWrap) return;
+        var triggered = false;
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!entry.isIntersecting || triggered) return;
+                triggered = true;
+                var imgs = entry.target.querySelectorAll('.logo-row-static img');
+                imgs.forEach(function(img, i) {
+                    setTimeout(function() {
+                        img.style.opacity = '0.75';
+                        img.style.transform = 'translateY(0)';
+                        setTimeout(function() { img.classList.add('logos-visible'); }, 700);
+                    }, i * 90);
+                });
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+        observer.observe(logoWrap);
+    })();
+
+    // ─── Nav Dropdown Graceful Hover ───
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+        let timeout;
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(timeout);
+            dropdown.querySelector('.nav-dropdown-menu').style.display = 'block';
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                dropdown.querySelector('.nav-dropdown-menu').style.display = 'none';
+            }, 150);
+        });
+    });
+
+    // ─── Network Canvas Background (Enhanced) ───
+    (function() {
+        const canvas = document.getElementById('networkCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        const particles = [];
+        const ripples = [];
+        const isLowEnd = navigator.hardwareConcurrency <= 4;
+        const PARTICLE_COUNT = isLowEnd ? 55 : 110;
+        const MAX_DIST = 180;
+        const MOUSE_DIST = 260;
+        let time = 0;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.55,
+                vy: (Math.random() - 0.5) * 0.55,
+                radius: Math.random() * 2 + 1.2,
+                baseRadius: Math.random() * 2 + 1.2,
+                phase: Math.random() * Math.PI * 2
+            });
+        }
+
+        let mouse = { x: width / 2, y: height / 2 };
+        document.addEventListener('mousemove', e => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        // Click ripple
+        canvas.addEventListener('click', e => {
+            ripples.push({ x: e.clientX, y: e.clientY, r: 0, maxR: 220, alpha: 0.8 });
+        });
+
+        let isVisible = true;
+        const observer = new IntersectionObserver((entries) => {
+            isVisible = entries[0].isIntersecting;
+        });
+        const heroSection = document.getElementById('hero');
+        if (heroSection) observer.observe(heroSection);
+
+        function draw() {
+            if (!isVisible) { requestAnimationFrame(draw); return; }
+
+            ctx.clearRect(0, 0, width, height);
+            time += 0.012;
+
+            // ── 1. Ambient center glow pulse on canvas ──
+            const pulseAlpha = 0.06 + Math.sin(time) * 0.03;
+            const cx = width * 0.35, cy = height * 0.5;
+            const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 500);
+            grad.addColorStop(0, `rgba(201,169,110,${pulseAlpha})`);
+            grad.addColorStop(0.5, `rgba(201,169,110,${pulseAlpha * 0.3})`);
+            grad.addColorStop(1, 'transparent');
+            ctx.fillStyle = grad;
+            ctx.fillRect(0, 0, width, height);
+
+            // ── 2. Mouse spotlight ──
+            const spotGrad = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 280);
+            spotGrad.addColorStop(0, 'rgba(201,169,110,0.07)');
+            spotGrad.addColorStop(1, 'transparent');
+            ctx.fillStyle = spotGrad;
+            ctx.fillRect(0, 0, width, height);
+
+            // ── 3. Particles & connections ──
+            for (let i = 0; i < PARTICLE_COUNT; i++) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0 || p.x > width)  p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                // Pulsing glow radius
+                p.radius = p.baseRadius + Math.sin(time * 1.4 + p.phase) * 0.6;
+
+                // Mouse repulsion: particles gently drift away from cursor
+                const dxm = p.x - mouse.x, dym = p.y - mouse.y;
+                const dm = Math.sqrt(dxm*dxm + dym*dym);
+                if (dm < 120 && dm > 0) {
+                    const force = (120 - dm) / 120 * 0.3;
+                    p.vx += (dxm / dm) * force;
+                    p.vy += (dym / dm) * force;
+                    // clamp speed
+                    const spd = Math.sqrt(p.vx*p.vx + p.vy*p.vy);
+                    if (spd > 2) { p.vx = p.vx/spd*2; p.vy = p.vy/spd*2; }
+                }
+
+                // Draw connections between particles
+                for (let j = i + 1; j < PARTICLE_COUNT; j++) {
+                    const p2 = particles[j];
+                    const dx = p.x - p2.x, dy = p.y - p2.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < MAX_DIST) {
+                        const alpha = (1 - dist / MAX_DIST) * 0.55;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(220,185,115,${alpha})`;
+                        ctx.lineWidth = (1 - dist / MAX_DIST) * 1.4;
+                        ctx.stroke();
+                    }
+                }
+
+                // Draw connection lines to mouse
+                if (dm < MOUSE_DIST) {
+                    const alpha = (1 - dm / MOUSE_DIST) * 0.75;
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    ctx.strokeStyle = `rgba(255,215,120,${alpha})`;
+                    ctx.lineWidth = (1 - dm / MOUSE_DIST) * 2;
+                    ctx.stroke();
+                }
+
+                // Draw glowing particle dot
+                ctx.shadowBlur = 12;
+                ctx.shadowColor = 'rgba(220,175,90,0.8)';
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(240,200,130,${0.7 + Math.sin(time + p.phase)*0.2})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+
+            // ── 4. Click ripples ──
+            for (let i = ripples.length - 1; i >= 0; i--) {
+                const rp = ripples[i];
+                rp.r += 5;
+                rp.alpha -= 0.016;
+                if (rp.alpha <= 0) { ripples.splice(i, 1); continue; }
+                ctx.beginPath();
+                ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(201,169,110,${rp.alpha})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // inner ripple
+                ctx.beginPath();
+                ctx.arc(rp.x, rp.y, rp.r * 0.55, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(255,220,140,${rp.alpha * 0.4})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
+    // ─── Contact Canvas — Orbital Vortex ───
+    (function() {
+        const canvas = document.getElementById('contactCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        let W, H, cx, cy;
+        const isLowEnd = navigator.hardwareConcurrency <= 4;
+        const COUNT = isLowEnd ? 60 : 120;
+        const particles = [];
+        let time = 0;
+        let mouse = { x: -9999, y: -9999 };
+
+        function resize() {
+            W = canvas.width  = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+            cx = W / 2;
+            cy = H / 2;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Spawn particles with orbital parameters
+        for (let i = 0; i < COUNT; i++) {
+            const angle  = Math.random() * Math.PI * 2;
+            const radius = 80 + Math.random() * Math.min(W, H) * 0.42;
+            const speed  = (0.0004 + Math.random() * 0.0008) * (Math.random() < 0.5 ? 1 : -1);
+            particles.push({
+                angle, radius,
+                speed,
+                drift:  (Math.random() - 0.5) * 0.003,  // slow radial drift
+                size:   Math.random() * 2 + 0.8,
+                phase:  Math.random() * Math.PI * 2,
+                alpha:  0.4 + Math.random() * 0.5,
+            });
+        }
+
+        document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+        document.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+        let isVisible = false;
+        const section = document.getElementById('contact');
+        if (section) {
+            new IntersectionObserver(entries => {
+                isVisible = entries[0].isIntersecting;
+            }, { threshold: 0.05 }).observe(section);
+        }
+
+        function draw() {
+            if (!isVisible) { requestAnimationFrame(draw); return; }
+            ctx.clearRect(0, 0, W, H);
+            time += 1;
+
+            // — pulsing center orb
+            const pulse = 0.07 + Math.sin(time * 0.02) * 0.03;
+            const orb = ctx.createRadialGradient(cx, cy, 0, cx, cy, 380);
+            orb.addColorStop(0,   `rgba(201,169,110,${pulse})`);
+            orb.addColorStop(0.4, `rgba(201,169,110,${pulse * 0.3})`);
+            orb.addColorStop(1,   'transparent');
+            ctx.fillStyle = orb;
+            ctx.fillRect(0, 0, W, H);
+
+            // — mouse secondary glow
+            if (mouse.x > 0) {
+                const mg = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
+                mg.addColorStop(0, 'rgba(255,220,140,0.08)');
+                mg.addColorStop(1, 'transparent');
+                ctx.fillStyle = mg;
+                ctx.fillRect(0, 0, W, H);
+            }
+
+            // — orbit rings (faint)
+            [160, 280, 420].forEach((r, i) => {
+                const ringAlpha = 0.04 + Math.sin(time * 0.015 + i) * 0.02;
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(201,169,110,${ringAlpha})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            });
+
+            // — particles with positions
+            const pts = particles.map(p => {
+                p.angle  += p.speed + Math.sin(time * 0.008 + p.phase) * 0.0002;
+                p.radius += p.drift;
+                // bounce radial drift
+                const maxR = Math.min(W, H) * 0.48;
+                if (p.radius < 60 || p.radius > maxR) p.drift *= -1;
+
+                // mouse gravity pull
+                const px = cx + Math.cos(p.angle) * p.radius;
+                const py = cy + Math.sin(p.angle) * p.radius;
+                const dxm = mouse.x - px, dym = mouse.y - py;
+                const dm = Math.sqrt(dxm*dxm + dym*dym);
+                if (dm < 180 && dm > 0) {
+                    p.angle  += (dxm / dm) * 0.002;
+                    p.radius -= (180 - dm) / 180 * 0.4;
+                }
+
+                return { x: px, y: py, p };
+            });
+
+            // — draw connections
+            const LINK_DIST = 130;
+            for (let i = 0; i < pts.length; i++) {
+                for (let j = i + 1; j < pts.length; j++) {
+                    const dx = pts[i].x - pts[j].x;
+                    const dy = pts[i].y - pts[j].y;
+                    const d = Math.sqrt(dx*dx + dy*dy);
+                    if (d < LINK_DIST) {
+                        const a = (1 - d / LINK_DIST) * 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(pts[i].x, pts[i].y);
+                        ctx.lineTo(pts[j].x, pts[j].y);
+                        ctx.strokeStyle = `rgba(220,185,115,${a})`;
+                        ctx.lineWidth = (1 - d / LINK_DIST) * 1.2;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // — draw glowing dots
+            pts.forEach(({ x, y, p }) => {
+                const pulse = p.alpha + Math.sin(time * 0.05 + p.phase) * 0.15;
+                ctx.shadowBlur = 14;
+                ctx.shadowColor = 'rgba(220,175,90,0.9)';
+                ctx.beginPath();
+                ctx.arc(x, y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(240,200,130,${Math.min(1, pulse)})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                // mouse connection
+                if (mouse.x > 0) {
+                    const dxm = x - mouse.x, dym = y - mouse.y;
+                    const dm = Math.sqrt(dxm*dxm + dym*dym);
+                    if (dm < 200) {
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(255,215,120,${(1 - dm/200) * 0.6})`;
+                        ctx.lineWidth = (1 - dm/200) * 1.8;
+                        ctx.stroke();
+                    }
+                }
+            });
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
+    // ─── Global Ambient Edge Particles ───
+    (function() {
+        const canvas = document.getElementById('ambientCanvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        let W, H;
+        function resize() {
+            W = canvas.width  = window.innerWidth;
+            H = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Only spawn in edge zones (left 18% and right 18%)
+        const EDGE = 0.18;
+        const COUNT = 38;
+        const dots = [];
+        for (let i = 0; i < COUNT; i++) {
+            const side = i < COUNT / 2 ? 'left' : 'right';
+            dots.push({
+                x: side === 'left'
+                    ? Math.random() * W * EDGE
+                    : W - Math.random() * W * EDGE,
+                y: Math.random() * H,
+                vx: (Math.random() - 0.5) * 0.22,
+                vy: (Math.random() - 0.5) * 0.28,
+                r: Math.random() * 1.8 + 0.8,
+                phase: Math.random() * Math.PI * 2,
+                side
+            });
+        }
+
+        // Check if viewport center is on hero or contact (those have own canvas)
+        const heroEl    = document.getElementById('hero');
+        const contactEl = document.getElementById('contact');
+
+        function isOnSpecialSection() {
+            const mid = window.scrollY + H * 0.5;
+            for (const el of [heroEl, contactEl]) {
+                if (!el) continue;
+                const top = el.offsetTop;
+                const bot = top + el.offsetHeight;
+                if (mid >= top && mid <= bot) return true;
+            }
+            return false;
+        }
+
+        let globalAlpha = 1;
+        let time = 0;
+
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+            time += 1;
+
+            // Fade out when on hero / contact
+            const target = isOnSpecialSection() ? 0 : 1;
+            globalAlpha += (target - globalAlpha) * 0.04;
+            if (globalAlpha < 0.01) { requestAnimationFrame(draw); return; }
+
+            for (const d of dots) {
+                d.x += d.vx;
+                d.y += d.vy;
+
+                // Wrap vertically, bounce edge horizontally
+                if (d.y < -20) d.y = H + 20;
+                if (d.y > H + 20) d.y = -20;
+
+                const edgePx = W * EDGE;
+                if (d.side === 'left')  { if (d.x < 0 || d.x > edgePx) d.vx *= -1; }
+                if (d.side === 'right') { if (d.x < W - edgePx || d.x > W) d.vx *= -1; }
+            }
+
+            // Draw connection lines first (so dots render on top)
+            const LINK_DIST = 140;
+            for (let i = 0; i < dots.length; i++) {
+                for (let j = i + 1; j < dots.length; j++) {
+                    const a = dots[i], b = dots[j];
+                    if (a.side !== b.side) continue; // only connect same side
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    if (dist < LINK_DIST) {
+                        const aFadeA = Math.max(0, 1 - (a.side === 'left' ? a.x : W - a.x) / (W * EDGE));
+                        const aFadeB = Math.max(0, 1 - (b.side === 'left' ? b.x : W - b.x) / (W * EDGE));
+                        const lineAlpha = (1 - dist / LINK_DIST) * 0.22 * Math.min(aFadeA, aFadeB) * globalAlpha;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.strokeStyle = `rgba(201,169,110,${lineAlpha})`;
+                        ctx.lineWidth = (1 - dist / LINK_DIST) * 0.8;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            // Draw dots on top of lines
+            for (const d of dots) {
+                const distFromEdge = d.side === 'left' ? d.x : W - d.x;
+                const edgeFade = Math.max(0, 1 - distFromEdge / (W * EDGE));
+
+                // Pulse — much more visible now
+                const pulse = 0.32 + Math.sin(time * 0.03 + d.phase) * 0.12;
+
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = 'rgba(201,169,110,0.5)';
+                ctx.beginPath();
+                ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(220,185,115,${pulse * edgeFade * globalAlpha})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+Found 12 HTML files to inspect.
+
+==================================================
+FILE: guides\general-guide.html (3 notes)
+==================================================
+--- NOTE 1 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  📌 Remember:
+  <span class="text-emerald">
+   90%
+  </span>
+  of our customers are dropshippers who use Shopify to run their ecommerce stores. They often engage in communities on Reddit, Discord, and courses, or search for related content using specific keywords.
+ </p>
+</div>
+
+--- NOTE 2 ---
+Tag: div, Classes: ['article-note', 'warning']
+<div class="article-note warning">
+ <p>
+  First, a quick warning: spammy or vague content like "Hey, if you want to succeed/make more money, use TrueProfit—here's the link" will never work for our app.
+ </p>
+</div>
+
+--- NOTE 3 ---
+Tag: div, Classes: ['article-note', 'info']
+<div class="article-note info">
+ <p>
+  📌 These references are completely usable, but it's best to treat them as raw inspiration for how to approach our audience, then develop your own content based on what works best for your specific channels and audiences.
+ </p>
+</div>
+
+
+==================================================
+FILE: guides\tiktok-youtube-shorts.html (6 notes)
+==================================================
+--- NOTE 1 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  💡 You don't need thousands of followers. A well-structured 30–45 second video with a strong hook and clear problem can reach thousands of ecommerce viewers organically — even on a new account — because the algorithm rewards watch time, not follower count.
+ </p>
+</div>
+
+--- NOTE 2 ---
+Tag: div, Classes: ['common-mistake']
+<div class="common-mistake">
+ <strong>
+  Common Mistake:
+ </strong>
+ Saying "TrueProfit is the best profit tracking tool" — this sounds promotional and kills trust. Instead, describe what it shows you: real net profit after every cost. Let the result do the selling.
+</div>
+
+--- NOTE 3 ---
+Tag: div, Classes: ['common-mistake']
+<div class="common-mistake">
+ <strong>
+  Common Mistake:
+ </strong>
+ Leading with "Let me show you an app" — this immediately frames the video as an ad. Lead with the insight (scaling ads doesn't automatically mean more profit) and let TrueProfit appear as evidence, not the subject.
+</div>
+
+--- NOTE 4 ---
+Tag: div, Classes: ['common-mistake']
+<div class="common-mistake">
+ <strong>
+  Common Mistake:
+ </strong>
+ Spending more than 5–8 seconds talking about TrueProfit's features. The tool mention should feel like a natural part of your workflow — not a feature overview. Show clarity, not capabilities.
+</div>
+
+--- NOTE 5 ---
+Tag: div, Classes: ['article-note', 'warning']
+<div class="article-note warning">
+ <p>
+  💡 Universal Rule: Tool mention = 5–8 seconds. Always tie it to YOUR workflow. Show clarity, not features. Never say "This is the best app." Never lead with "Let me show you an app."
+ </p>
+</div>
+
+--- NOTE 6 ---
+Tag: div, Classes: ['article-note', 'info']
+<div class="article-note info">
+ <p>
+  💡 Post consistently for at least 30–60 days before evaluating results. Short-form video compounds slowly at first, then accelerates. One video earning steady commissions is worth more than 10 videos that spike once and fade.
+ </p>
+</div>
+
+
+==================================================
+FILE: resources\mcp\reddit-ready-to-post.html (2 notes)
+==================================================
+--- NOTE 1 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  <strong>
+   Angle:
+  </strong>
+  Root cause, storytelling. (r/dropship, r/ecommerce). Numbers make it real with the $340 and the 8-point margin drop are the hook. Keep the TrueProfit mention casual, not the focus.
+ </p>
+</div>
+
+--- NOTE 2 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  <strong>
+   Angle:
+  </strong>
+  Context-aware, workflow improvement. (r/entrepreneur, r/SideProject). The frustration of manual AI workflows is the hook and frame TrueProfit MCP as the fix you stumbled onto, not the point of the post.
+ </p>
+</div>
+
+
+==================================================
+FILE: resources\mcp\x-twitter-ready-to-post.html (2 notes)
+==================================================
+--- NOTE 1 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  <strong>
+   Angle:
+  </strong>
+  Video shows the actual Claude conversation pulling store data. Text sets up the relatable moment first, video does the rest.
+ </p>
+</div>
+
+--- NOTE 2 ---
+Tag: div, Classes: ['article-note', 'emerald']
+<div class="article-note emerald">
+ <p>
+  <strong>
+   Angle:
+  </strong>
+  Root cause. Hits the gap between revenue and real profit. Works as a standalone observation.
+ </p>
+</div>

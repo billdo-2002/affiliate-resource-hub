@@ -1,0 +1,87 @@
+<header id="header">
+  <div class="header-inner">
+    <div class="header-logo">
+      TR<span class="logo-u">U</span>EPROFIT
+    </div>
+    <nav class="header-nav" id="headerNav">
+      <a href="#section-start">Get Started</a>
+      <a href="#section-who">Who to Target</a>
+      <a href="#section-commission">Commission</a>
+      <a href="#section-opportunity">Opportunity</a>
+      <a href="#dashboard-setup">Dashboard Setup</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-menu">
+          <!-- Zone 1: Guides & Angles (White) -->
+          <div class="mega-zone mega-zone-1">
+            <a href="#" class="mega-pill-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              GUIDES &rarr;
+            </a>
+            
+            <div class="mega-links-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+              <a href="#" class="mega-link-item">General Guide</a>
+              <a href="#" class="mega-link-item">Discord Blueprint</a>
+              <a href="#" class="mega-link-item">TikTok &amp; YT Shorts</a>
+            </div>
+
+            <div class="mega-section-label" style="margin-top: 24px;">HIGH-CONVERTING ANGLES:</div>
+            
+            <div class="mega-gems-list">
+              <a href="#" class="mega-gem-card">
+                <div class="mega-gem-img" style="background:#0b1826;">
+                  <span style="font-size: 20px;">📈</span>
+                </div>
+                <div class="mega-gem-text">Profit &amp; Loss (PnL): An Easy Guide <span class="mega-star-icon">★</span></div>
+              </a>
+              <a href="#" class="mega-gem-card">
+                <div class="mega-gem-img" style="background:#2dd498;">
+                  <span style="font-size: 20px;">📦</span>
+                </div>
+                <div class="mega-gem-text">Scaling Margin for Dropshippers</div>
+              </a>
+              <a href="#" class="mega-gem-card">
+                <div class="mega-gem-img" style="background:#fee2e2;">
+                  <span style="font-size: 20px;">💰</span>
+                </div>
+                <div class="mega-gem-text">Hidden Fees You Are Missing</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Zone 2: Creative Assets (Navy) -->
+          <div class="mega-zone mega-zone-3">
+            <div class="mega-navy-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+              CREATIVE ASSETS
+            </div>
+
+            <div class="mega-asset-card">
+              <div class="mega-asset-content">
+                <div class="mega-asset-name">Media Kit Gallery <span class="mega-star-icon">★</span></div>
+                <div class="mega-asset-desc">Kho tài nguyên hình ảnh dashboard &amp; video b-roll.</div>
+                <a href="#" class="mega-btn" style="margin-top: 14px; text-decoration: none;">Go to Drive <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+              </div>
+            </div>
+            
+            <div class="mega-asset-card">
+              <div class="mega-asset-content">
+                <div class="mega-asset-name">App Footage &amp; B-roll <span class="mega-star-icon" style="color:#a78bfa;">✦</span></div>
+                <div class="mega-asset-desc">Ready-to-use visual assets for your content.</div>
+                <a href="#" class="mega-btn" style="margin-top: 14px; text-decoration: none;">Go to Drive <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions" id="headerActions">
+      <a href="https://app.trueprofit.io" target="_blank" class="btn-ghost">My Dashboard</a>
+      <a href="https://trueprofit.io/partner" target="_blank" class="btn-cta">Get affiliate link →</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,100 @@
+<USER_REQUEST>
+Refactor `/resources/mcp/x-twitter-ready-to-post` into a clean long-form blog article layout.
+
+Keep the same overall page style as the existing content angle pages:
+
+* hero
+* article column
+* right sticky sidebar
+* related section
+* bottom CTA
+* typography and spacing
+
+But change the article body structure so it feels like a proper blog guide, not a short resource dump.
+
+Do NOT rewrite the original ready-to-post copy blocks. Keep Hook #1 and Hook #2 copy exactly as written.
+
+New article structure:
+
+1. Why X/Twitter Works for MCP Promotion
+
+Explain briefly that X/Twitter works well for MCP because the feature is easy to frame as a short, curiosity-driven observation. The hook does not need to explain the technical setup. It only needs to show the moment where AI already understands the merchantâ€™s store data.
+
+2. How to Position MCP Naturally
+
+Explain the positioning:
+
+* Do not lead with â€œnew featureâ€
+* Lead with the merchant problem
+* Frame MCP as the reason the AI can answer using real store data
+* Mention TrueProfit only after the value is clear
+* Keep the post casual and observation-driven
+
+3. Ready-to-Post Examples
+
+Move the existing Hook #1 and Hook #2 content into this section.
+
+For each hook:
+
+* Keep the hook title.
+* Keep the Angle note.
+* Keep the Copy block exactly word-for-word.
+* Keep the Material note.
+* Style each hook as a clean blog subsection.
+
+Copy block styling:
+
+* Use a soft light background block.
+* Rounded corners.
+* Comfortable padding.
+* Normal left-aligned text.
+* Preserve line breaks.
+* Add a small â€œCopy postâ€ button in the top-right of each copy block.
+* Highlight `[your affiliate link]` in emerald code-like styling.
+
+4. Materials You Should Prepare
+
+Convert the existing Material notes into a short clean section.
+
+Include:
+
+* Real video showcasing how the MCP feature works
+* Optional screenshot or screen recording of Claude / ChatGPT pulling TrueProfit data
+* Your affiliate link
+
+5. Final Thoughts
+
+Add a short closing section:
+The strongest X/Twitter posts should feel like a real operator observation, not an app pitch. Start with the moment of surprise, show why the insight matters, then introduce TrueProfit MCP as the reason the AI can answer with real store data.
+
+Sidebar update:
+On this page links:
+
+* Why X/Twitter Works
+* How to Position MCP
+* Ready-to-Post Examples
+* Materials
+* Final Thoughts
+
+Keep hero, related section, bottom CTA, navbar, and footer unchanged.
+
+Goal:
+Make this page feel like a polished blog-style affiliate guide that teaches the strategy first, then gives the ready-to-post examples.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-06-16T14:22:25+07:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\khoadnd\Desktop\onboarding hub\style.css (LANGUAGE_CSS)
+Cursor is on line: 530
+Other open documents:
+- c:\Users\khoadnd\Desktop\onboarding hub\scratch\create_x_twitter.ps1 (LANGUAGE_POWERSHELL)
+- c:\Users\khoadnd\Desktop\onboarding hub\scratch\process_new_images.py (LANGUAGE_PYTHON)
+- c:\Users\khoadnd\Desktop\onboarding hub\scratch\analyze_all_colors.py (LANGUAGE_PYTHON)
+- c:\Users\khoadnd\Desktop\onboarding hub\scratch\extract_pngs.py (LANGUAGE_PYTHON)
+- c:\Users\khoadnd\Desktop\onboarding hub\guides\discord-blueprint.html (LANGUAGE_HTML)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 3.5 Flash (Low) to Gemini 3.5 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

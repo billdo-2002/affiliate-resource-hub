@@ -1,0 +1,30 @@
+## Angle \#1: Track Profit Like A Pro
+
+### **1\. Why does this happen? (The Pain point)**
+
+This angle can work for all types of merchants—especially those who haven’t heard of TrueProfit yet, or those who have but still need a strong reason to use it.
+
+When it comes to net profit tracking, the day-to-day pain point isn’t “whether they know they should track net profit”—don’t misunderstand this. As an ecom expert, profit is the first thing merchants think about. The real problem is *how* they’re tracking it.
+
+Right now, many merchants still rely on spreadsheets or simple calculations to estimate net profit and net margin. The upside is control, but the tradeoff often isn’t worth it: Shopify data changes every day (sometimes every hour), and spreadsheets don’t always reflect those changes. This leads to bigger issues:
+
+* Mis-tracked data that produces inaccurate net profit and net profit margin numbers  
+* To keep the sheet accurate, merchants have to spend a huge amount of time updating every cost column manually
+
+### **2\. How to pitch TrueProfit (The Solution)**
+
+TrueProfit is built to solve the problems above, so mention it naturally as an effective solution for merchants tackling net profit tracking.
+
+You can use the following hook to make your content more persuasive: *Running an ecom business is serious, and there are higher-value tasks merchants should spend time on \- like strategy, planning, and ads \- not sitting all day trying to keep a spreadsheet accurate. So isn’t it a good thing if there’s an app like TrueProfit that automates the entire tracking flow, so merchants can focus on what actually brings in the money?*
+
+### **3\. Example Content**
+
+*Hey guys, just wanted to share something I recently discovered while desperately searching for a solution for my dropshipping store.*
+
+*I started my store a few months back selling pet food. After some testing and trial and error, I managed to get it running smoothly with stable traffic and daily orders. But then I ran into another problem—figuring out exactly how much money my store was actually making.*
+
+*At first, I tried keeping it simple by checking Shopify reports for revenue and looking at my bills for costs, then calculating it in my head. But the numbers weren't matching up. So I created a spreadsheet with formulas to calculate profit. It worked, though it was still 10–15% off from what showed in my bank account. Acceptable, I guess. The real issue was the time it took—I can't sit there all day doing spreadsheets. I need to focus on strategy, planning, and ads—the stuff that actually keeps my store making money, you know?*
+
+*So I started looking for apps that could do the job for me. From all the search results, TrueProfit and TripleWhale came up the most. I tried TripleWhale but it wasn't for me, so I switched to TrueProfit—and so far it's been exactly what I needed. Revenue and orders are auto-synced, and there are features to set up COGS and shipping with custom rules (I sell globally, so shipping costs vary a lot). What's great is that I use AutoDS and Facebook Ads, and TrueProfit integrates with both platforms. Everything syncs in real-time between platforms—I just had to connect my accounts once. Can't believe I spent weeks doing everything manually in Google Sheets when apps like this exist.*
+
+*Got a link here `[place your aff link here]` if anyone's having the same issue. Really great app, honestly.*

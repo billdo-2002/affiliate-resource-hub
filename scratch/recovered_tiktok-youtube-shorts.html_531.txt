@@ -1,0 +1,91 @@
+Created At: 2026-06-18T08:35:17Z
+Completed At: 2026-06-18T08:35:17Z
+File Path: `file:///c:/Users/khoadnd/Desktop/onboarding%20hub/scratch/update_mega_menu.py`
+Total Lines: 187
+Total Bytes: 11158
+Showing lines 1 to 187
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import os
+2: 
+3: prefix_map = {
+4:     'index.html': '',
+5:     'guides.html': '',
+6:     'resources/mcp/x-twitter-ready-to-post.html': '../../',
+7:     'guides/tiktok-youtube-shorts.html': '../',
+8:     'guides/mcp-promotion-playbook.html': '../',
+9:     'guides/general-guide.html': '../',
+10:     'guides/discord-blueprint.html': '../',
+11:     'guides/angles/track-profit-like-a-pro.html': '../../',
+12:     'guides/angles/stop-losing-30-profit.html': '../../',
+13:     'guides/angles/scale-safely-with-margins.html': '../../'
+14: }
+15: 
+16: base_dir = r'c:\Users\khoadnd\Desktop\onboarding hub'
+17: 
+18: mega_menu_template = """<div class="mega-menu">
+19:           <!-- Zone 1: Guides & Angles (White) -->
+20:           <div class="mega-zone mega-zone-1">
+21:             <a class="mega-pill-badge" href="{prefix}guides.html">
+22:               <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+23:               GUIDES &rarr;
+24:             </a>
+25:             <div class="mega-links-grid">
+26:               <a class="mega-link-item" href="{prefix}guides/general-guide.html">General Guide</a>
+27:               <a class="mega-link-item" href="{prefix}guides/discord-blueprint.html">Discord Blueprint</a>
+28:               <a class="mega-link-item" href="{prefix}guides/tiktok-youtube-shorts.html">Tik
+<truncated 8432 bytes>
+34: 
+135:     print(f"Processing {rel_path}...")
+136:     with open(abs_path, 'r', encoding='utf-8') as f:
+137:         html = f.read()
+138: 
+139:     # Find the start of mega-menu
+140:     start_tag = '<div class="mega-menu">'
+141:     start_idx = html.find(start_tag)
+142:     if start_idx == -1:
+143:         print(f"Could not find {start_tag} in {rel_path}.")
+144:         continue
+145: 
+146:     # Tag counting logic to find matching closing div
+147:     depth = 0
+148:     i = start_idx
+149:     end_idx = -1
+150:     while i < len(html):
+151:         if html[i:i+4] == '<div':
+152:             depth += 1
+153:             i += 4
+154:         elif html[i:i+6] == '</div>':
+155:             depth -= 1
+156:             if depth == 0:
+157:                 end_idx = i + 6
+158:                 break
+159:             i += 6
+160:         else:
+161:             i += 1
+162: 
+163:     if end_idx == -1:
+164:         print(f"Could not find matching closing div for mega-menu in {rel_path}.")
+165:         continue
+166: 
+167:     # Generate custom mega menu for this file
+168:     custom_menu = mega_menu_template.replace('{prefix}', prefix)
+169: 
+170:     # Replace the block
+171:     new_html = html[:start_idx] + custom_menu + html[end_idx:]
+172: 
+173:     # Clean up trailing stray >> or &gt;&gt; characters right after closing div
+174:     # Check up to 10 characters after the replacement point
+175:     post_idx = start_idx + len(custom_menu)
+176:     next_chars = new_html[post_idx:post_idx+20]
+177:     if next_chars.startswith('>>'):
+178:         new_html = new_html[:post_idx] + new_html[post_idx+2:]
+179:     elif next_chars.startswith('&gt;&gt;'):
+180:         new_html = new_html[:post_idx] + new_html[post_idx+8:]
+181: 
+182:     # Write back to file
+183:     with open(abs_path, 'w', encoding='utf-8') as f:
+184:         f.write(new_html)
+185: 
+186: print("Global mega menu updates complete!")
+187: 
+The above content shows the entire, complete file contents of the requested file.

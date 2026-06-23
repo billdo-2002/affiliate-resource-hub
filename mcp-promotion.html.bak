@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promote TrueProfit MCP | Affiliate Resource Hub</title>
+<meta name="description" content="Promote TrueProfit MCP. Earn while AI takes over Ecom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+/* =========================================
+   LOCAL FONTS — Plus Jakarta Sans
+   ========================================= */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =========================================
+   DESIGN TOKENS — TrueProfit Homepage Style
+   ========================================= */
+:root {
+  --green: #1a7a5e;
+  --green-bright: #23c48c;
+  --green-light: rgba(35,196,140,0.1);
+  --green-border: rgba(35,196,140,0.25);
+
+  --navy: #0b1826;
+  --navy-mid: #0d2233;
+  --navy-teal: #0a2535;
+
+  --light: #f7f8fa;
+  --light-alt: #f0f2f5;
+  --white: #ffffff;
+
+  --text-dark: #0f1724;
+  --text-body: #374151;
+  --text-muted: #6b7280;
+  --text-light: #94a3b8;
+
+  --border-light: #e5e7eb;
+  --border-dark: rgba(255,255,255,0.08);
+
+  --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 100px;
+  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* Ping animation for live pulse dot */
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--light); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* =========================================
+   ANNOUNCEMENT BAR
+   ========================================= */
+#announce-bar {
+  background: #0a2a1e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+#announce-bar a {
+  background: var(--green-bright);
+  color: #071424;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+#announce-bar a:hover { background: #2dd498; }
+#announce-bar .close-btn {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
+  transition: var(--transition);
+}
+#announce-bar .close-btn:hover { color: #fff; }
+.announce-star { color: var(--green-bright); }
+
+/* =========================================
+   HEADER
+   ========================================= */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: block;
+}
+.header-nav {
+  display: flex;
+  gap: 2px;
+  justify-content: flex-start;
+}
+.header-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-body);
+  padding: 6px 10px;
+  border-radius: 7px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.header-nav > a:hover { background: var(--light); color: var(--text-dark); }
+.header-nav > a.active { color: #1d9e75 !important; font-weight: 700; }
+.header-nav > a.active:hover { color: #1d9e75 !important; }
+
+/* Resources Hover & Active States */
+.header-nav .nav-dropdown-trigger:hover,
+.nav-dropdown-wrapper:hover .nav-dropdown-trigger,
+.nav-dropdown-wrapper.active .nav-dropdown-trigger,
+.header-nav .nav-dropdown-trigger.active {
+  color: #1d9e75 !important;
+  font-weight: 700;
+  background: transparent;
+  text-decoration: none !important;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.btn-ghost {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: transparent;
+  border: 1.5px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn-ghost:hover { border-color: #9ca3af; background: var(--light); transform: translateY(-2px); }
+.btn-cta {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--green);
+  border: none;
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-cta:hover { background: #155f48; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26,122,94,0.3); }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* =========================================
+   HERO — LIGHT, CENTERED
+   ========================================= */
+#hero {
+  background: #051d29;
+  background-image: radial-gradient(circle at center 30%, rgba(27,139,96,0.06) 0%, transparent 70%);
+  padding: 80px 28px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px 7px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.hero-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-bright);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero-h1 {
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+}
+.hero-h1 .word-green { color: #1b8b60; }
+.hero-h1 .cursor-bar {
+  display: inline-block;
+  width: 4px;
+  height: 0.85em;
+  background: #FFFFFF;
+  vertical-align: middle;
+  margin: 0 2px;
+  border-radius: 2px;
+  animation: blink 1.1s step-end infinite;
+}
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+.hero-sub {
+  font-size: 18px;
+  color: #8fa3b8;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+.hero-sub strong { color: #1b8b60; font-weight: 600; }
+/* Typewriter line */
+.hero-typewriter {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0 auto 44px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  letter-spacing: -0.01em;
+}
+#promote-static {
+  margin-right: 6px;
+}
+#typewriter-cursor {
+  animation: blink 0.7s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #1b8b60;
+  color: #fff;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 24px rgba(27, 139, 96, 0.4);
+}
+.btn-hero-primary .btn-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.btn-hero-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(27, 139, 96, 0.5);
+}
+.btn-hero-primary:hover .btn-arrow {
+  transform: translateX(4px);
+}
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-dark);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-hero-outline:hover { border-color: #9ca3af; background: var(--light); }
+
+/* Dashboard mockup hero */
+.hero-dashboard {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -4px 40px rgba(0,0,0,0.06), var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+}
+.dash-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+.dash-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.dash-refresh { font-size: 13px; color: var(--text-muted); }
+.dash-filters { display: flex; gap: 8px; }
+.dash-filter-btn {
+  border: 1px solid var(--border-light);
+  border-radius: 7px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-body);
+  background: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid var(--border-light);
+}
+.dash-metric {
+  padding: 14px 16px;
+  border-right: 1px solid var(--border-light);
+}
+.dash-metric:last-child { border-right: none; }
+.dash-metric .m-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+.dash-metric .m-val { font-size: 15px; font-weight: 700; color: var(--text-dark); }
+.dash-metric .m-val.red { color: #ef4444; }
+.dash-body { padding: 20px; }
+.dash-perf-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; color: var(--text-dark); }
+.dash-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+/* Mini chart bars */
+.chart-area {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  overflow: hidden;
+}
+.chart-bar {
+  flex: 1;
+  border-radius: 3px 3px 0 0;
+  min-width: 6px;
+}
+
+/* =========================================
+   SECTION WRAPPER
+   ========================================= */
+.section {
+  padding: 96px 28px;
+}
+.section-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.section-tag {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--green-bright);
+}
+.section-h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+.section-h2 span { color: var(--green); }
+.section-lead {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.65;
+  margin-bottom: 52px;
+}
+
+/* Dotted bg pattern */
+.bg-dots {
+  background-color: var(--light);
+  background-image: radial-gradient(circle, #c8d0db 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.bg-dark {
+  background: var(--navy);
+  color: #fff;
+}
+.bg-dark-teal {
+  background: var(--navy-teal);
+  color: #fff;
+}
+.bg-white { background: var(--white); }
+
+/* =========================================
+   STATS ROW (like "Built for Shopify brands")
+   ========================================= */
+.stats-hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.stats-hero-left .sh-headline {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+.stats-hero-left .sh-headline .green { color: var(--green); }
+.stats-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
+}
+.stat-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.stat-icon-box {
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--border-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  background: var(--white);
+}
+.stat-item-row .stat-num {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--text-dark);
+}
+.stat-item-row .stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* =========================================
+   COMMISSION SECTION
+   ========================================= */
+.commission-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.comm-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.comm-big-num {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--green-bright);
+}
+.comm-big-label {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 6px;
+  font-weight: 500;
+}
+.comm-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.timeline-bar-wrap {
+  margin-top: 28px;
+}
+.tl-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tl-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; white-space: nowrap; }
+.tl-bar-bg {
+  background: rgba(255,255,255,0.07);
+  border-radius: 6px;
+  height: 30px;
+  overflow: hidden;
+}
+.tl-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.tl-bar-fill.m1 { width: 100%; background: var(--green-bright); color: #071424; }
+.tl-bar-fill.m2 { width: 80%; background: rgba(35,196,140,0.45); color: var(--green-bright); }
+
+/* Calculator */
+.calc-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.calc-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 22px;
+}
+.calc-field { margin-bottom: 18px; }
+.calc-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--green-bright) var(--pct,20%), rgba(255,255,255,0.12) var(--pct,20%));
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--green-bright);
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(35,196,140,0.5);
+}
+.slider-num {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--green-bright);
+  min-width: 32px;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+select.calc-select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 10px 14px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+select.calc-select option { background: var(--navy-mid); }
+.calc-results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.calc-result-tile {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.calc-result-tile .r-label { font-size: 11px; color: rgba(255,255,255,0.45); margin-bottom: 4px; }
+.calc-result-tile .r-val { font-size: 22px; font-weight: 800; color: var(--green-bright); letter-spacing: -0.03em; }
+.calc-highlight {
+  grid-column: span 2;
+  background: rgba(35,196,140,0.1);
+  border: 1px solid rgba(35,196,140,0.25);
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-bright);
+  text-align: center;
+}
+
+/* =========================================
+   WHO TO PROMOTE TO
+   ========================================= */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.compare-card {
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.compare-card.good {
+  background: rgba(35,196,140,0.04);
+  border: 1.5px solid rgba(35,196,140,0.2);
+}
+.compare-card.bad {
+  background: rgba(239,68,68,0.03);
+  border: 1.5px solid rgba(239,68,68,0.15);
+}
+.compare-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 18px;
+}
+.compare-card.good .compare-label { background: rgba(35,196,140,0.1); color: var(--green); }
+.compare-card.bad .compare-label { background: rgba(239,68,68,0.1); color: #ef4444; }
+.compare-list { list-style: none; }
+.compare-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-body);
+}
+.compare-list li:last-child { border-bottom: none; }
+.compare-card.good .compare-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
+.compare-card.bad .compare-list li::before { content: '✕'; color: #ef4444; font-weight: 700; }
+.rule-callout {
+  background: rgba(35,196,140,0.05);
+  border: 1.5px solid rgba(35,196,140,0.18);
+  border-left: 4px solid var(--green-bright);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+.rule-callout strong { color: var(--green); }
+
+/* =========================================
+   CONTENT TABS SECTION
+   ========================================= */
+.tabs-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 36px;
+  overflow-x: auto;
+}
+.tab-navbtn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 20px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition);
+  margin-bottom: -1px;
+}
+.tab-navbtn.active { color: var(--green); border-bottom-color: var(--green); }
+.tab-navbtn:hover { color: var(--text-dark); }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+.script-card {
+  background: var(--light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.script-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-light);
+  color: var(--text-body);
+  background: var(--white);
+}
+.btn-copy {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-copy:hover, .btn-copy.copied {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(35,196,140,0.05);
+}
+.script-body {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.7;
+  white-space: pre-line;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+
+/* Playbook grid */
+.playbook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.play-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: var(--transition);
+}
+.play-card:hover { border-color: var(--green-bright); box-shadow: 0 4px 20px rgba(35,196,140,0.08); transform: translateY(-2px); }
+.play-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.play-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(35,196,140,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.play-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+}
+.play-list { list-style: none; }
+.play-list li {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+.play-list li:last-child { border-bottom: none; }
+.play-list li::before { content: '→'; color: var(--green-bright); flex-shrink: 0; margin-top: 1px; }
+
+/* Steps */
+.steps-list-v { margin-top: 8px; }
+.step-row {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+.step-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--green-bright);
+  background: rgba(35,196,140,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.step-content h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.02em; }
+.step-content p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin-bottom: 12px; }
+
+/* =========================================
+   MATERIALS / ASSETS GRID
+   ========================================= */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border-light);
+  background: var(--white);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.filter-btn:hover { border-color: #9ca3af; color: var(--text-dark); }
+.filter-btn.active { background: var(--green); border-color: var(--green); color: #fff; }
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.asset-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.asset-card:hover { border-color: var(--green-bright); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.asset-thumb {
+  height: 110px;
+  background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+.asset-body { padding: 14px; }
+.asset-type {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.badge-banner { background: rgba(99,102,241,0.1); color: #6366f1; }
+.badge-video { background: rgba(249,115,22,0.1); color: #f97316; }
+.badge-logo { background: rgba(35,196,140,0.1); color: var(--green); }
+.asset-name { font-size: 13px; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
+.asset-format { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
+.btn-dl {
+  width: 100%;
+  padding: 7px;
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+.btn-dl:hover { background: var(--green); border-color: var(--green); color: #fff; }
+
+/* =========================================
+   CTA SECTION (Dark)
+   ========================================= */
+.cta-section {
+  padding: 96px 28px;
+  background: var(--navy) url('trueprofit_affiliate_background.svg') no-repeat center/cover;
+  text-align: center;
+}
+.cta-section .cta-h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.05;
+}
+.cta-section .cta-h2 span { color: var(--green-bright); }
+.cta-section .cta-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  max-width: 480px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+.cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--text-dark);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-cta-white:hover { background: #f0fdf4; transform: translateY(-1px); }
+.btn-cta-ghost-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-cta-ghost-white:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  background: #051d29;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 52px 28px 32px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin-bottom: 28px;
+}
+.footer-brand {
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-brand .green { color: var(--green-bright); }
+.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.35); max-width: 240px; line-height: 1.55; }
+.footer-links a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 9px;
+  transition: var(--transition);
+}
+.footer-links a:hover { color: var(--green-bright); }
+.footer-links h5 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.25); margin-bottom: 14px; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 900px) {
+  .stats-hero-layout,
+  .commission-layout { grid-template-columns: 1fr; gap: 40px; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .playbook-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 1100px) {
+  .header-nav { display: none; }
+  .header-actions { display: none; }
+  .hamburger { display: flex; }
+  #header.nav-open .header-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.98);
+    padding: 32px 28px;
+    gap: 8px;
+    backdrop-filter: blur(12px);
+    z-index: 999;
+    overflow-y: auto;
+  }
+  #header.nav-open .header-actions { display: flex; flex-direction: column; padding: 0 28px 28px; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); padding-top: 16px; z-index: 1000; }
+}
+@media (max-width: 768px) {
+  .section { padding: 64px 20px; }
+  .hero-h1 { font-size: 44px; }
+  .comm-cards-row { grid-template-columns: 1fr; }
+  .assets-grid { grid-template-columns: repeat(2, 1fr); }
+  .playbook-grid { grid-template-columns: 1fr; }
+  .stats-grid-2x2 { grid-template-columns: 1fr; }
+  .dash-metrics { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { flex-direction: column; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+@media (max-width: 480px) {
+  .assets-grid { grid-template-columns: 1fr; }
+  .hero-h1 { font-size: 36px; }
+}
+/* =========================================
+   MEGA MENU STYLES
+   ========================================= */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 100%;
+  min-width: unset;
+  max-width: calc(100vw - 48px);
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1001;
+  display: flex;
+  
+  overflow-x: auto;
+  padding: 0;
+}
+.nav-dropdown-wrapper:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.mega-zone {
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.mega-zone-1 {
+  background: #ffffff;
+  flex: 0 0 32%;
+  min-width: 280px;
+}
+.mega-zone-2 {
+  background: #f0fdf4;
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  flex: 0 0 26%;
+  min-width: 220px;
+}
+.mega-zone-3 {
+  background: #002d33;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 40px 40px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex: 0 0 auto;
+  flex: 1;
+  min-width: 300px;
+}
+.mega-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0a2540;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+  text-decoration: none;
+}
+.mega-pill-badge:hover {
+  border-color: #1d9e75;
+  color: #1d9e75;
+  background: #f0fdf4;
+}
+.mega-pill-badge svg {
+  color: #1d9e75;
+}
+.mega-pill-badge-dark {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.4) !important;
+}
+.mega-pill-badge-dark:hover {
+  border-color: #2dd498 !important;
+  color: #2dd498 !important;
+  background: rgba(45, 212, 152, 0.1) !important;
+}
+.mega-pill-badge-dark svg {
+  color: #ffffff !important;
+}
+.mega-pill-badge-dark:hover svg {
+  color: #2dd498 !important;
+}
+.mega-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.mega-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mega-link-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.mega-link-item:hover {
+  color: #1d9e75;
+}
+.mega-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.mega-gems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mega-gem-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+.mega-gem-card:hover .mega-gem-img {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.mega-gem-card:hover .mega-gem-text {
+  color: #1d9e75;
+}
+.mega-gem-img {
+  width: 92px;
+  height: 64px;
+  border-radius: 12px;
+  background: #e6fbf1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mega-gem-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+.mega-gem-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.mega-asset-card:hover 
+.mega-asset-card:hover 
+
+.mega-asset-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #1A3A4A;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.mega-asset-card:last-child {
+  margin-bottom: 0;
+}
+.mega-asset-card:hover {
+  filter: brightness(1.15);
+  border-color: rgba(0,200,150,0.3) !important;
+}
+.mega-asset-card::after {
+  content: "+";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+  z-index: 5;
+}
+.mega-asset-content {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.mega-asset-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 6px;
+  transition: color 0.25s ease;
+}
+.mega-asset-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.mega-asset-card:hover .mega-asset-name {
+  color: #2dd498;
+}
+.mega-asset-visual {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Featured MCP Card styling */
+.mega-mcp-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #e6fbf1;
+  border: 1px dashed #1d9e75;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+.mega-mcp-card:hover {
+  background: #d1f7e4 !important;
+  border-color: #157347 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 158, 117, 0.15);
+}
+.mega-mcp-icon {
+  color: #1d9e75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mega-mcp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mega-mcp-title {
+  color: #0f5132;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.mega-mcp-subtitle {
+  color: #157347;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .nav-dropdown-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mega-menu {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-dropdown-wrapper:hover .mega-menu {
+    display: none;
+  }
+  .nav-dropdown-wrapper.active .mega-menu {
+    display: flex;
+  }
+  .mega-zone {
+    padding: 24px 16px;
+  }
+  .mega-zone-2 {
+    border-left: none;
+    border-top: 1px solid var(--border-light);
+    flex: 0 0 26%;
+  min-width: 220px;
+}
+}
+
+/* =========================================
+   ANIMATIONS & TRANSITIONS
+   ========================================= */
+
+/* Page Load - Staggered Entrance */
+@keyframes fadeInSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.stagger-enter {
+  opacity: 0; /* hidden before animation starts */
+  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.stagger-enter-scale {
+  opacity: 0;
+  animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scroll-triggered Entrance */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ribbon Background Animation */
+@keyframes ribbonOscillate {
+  0% { transform: translateX(20px); }
+  50% { transform: translateX(-20px); }
+  100% { transform: translateX(20px); }
+}
+.hero-bg-svg path {
+  animation: ribbonOscillate 8s ease-in-out infinite;
+}
+
+/* Hover Micro-interactions - Buttons */
+.btn-cta, .btn-hero-primary, #quiz-next-btn {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn-cta:hover, .btn-hero-primary:hover, #quiz-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 200, 150, 0.3);
+}
+
+/* Hover Micro-interactions - Secondary/Outline Buttons */
+.btn-ghost {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.btn-ghost:hover {
+  border-color: #00C896;
+  color: #00C896;
+  background: transparent;
+  transform: translateY(-2px);
+}
+
+/* Hover Micro-interactions - Cards */
+.opp-node, .calc-box, #playbook-card, .footer-col {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, border-color 0.2s ease;
+}
+.calc-box:hover, #playbook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.opp-node:hover {
+  transform: translateY(-4px) scale(1) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Micro-interactions - Navbar Links */
+.header-nav > a,
+.nav-dropdown-trigger {
+  position: relative;
+}
+.header-nav > a::after,
+.nav-dropdown-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00C896;
+  transition: width 0.2s ease;
+}
+.header-nav > a:hover::after,
+.header-nav > a.active::after,
+.nav-dropdown-trigger:hover::after,
+.nav-dropdown-trigger.active::after,
+.nav-dropdown-wrapper:hover .nav-dropdown-trigger::after,
+.nav-dropdown-wrapper.active .nav-dropdown-trigger::after {
+  width: 100%;
+}
+
+/* Hover Micro-interactions - Footer Links */
+.footer-link-item {
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+.footer-link-item:hover {
+  color: #00C896 !important;
+  transform: translateX(4px);
+}
+
+/* Chart Draw Animation */
+.chart-line-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+.chart-line-draw.animated {
+  animation: drawLine 1.5s ease-in-out forwards;
+}
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+.chart-area-fill {
+  opacity: 0;
+}
+.chart-area-fill.animated {
+  animation: fadeArea 1s ease-in-out 0.3s forwards;
+}
+@keyframes fadeArea {
+  to { opacity: 0.2; }
+}
+
+/* Crossfade transitions */
+.tab-content, .ds-anim-item {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Pulse animation for badge dot */
+.badge-dot {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mega-menu {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  .mega-zone-1 {
+    flex: 0 0 30%;
+  }
+  .mega-zone-2 {
+    flex: 0 0 24%;
+  }
+  .mega-zone-3 {
+    flex: 1;
+  }
+  .mega-gem-img {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  .mega-asset-name { font-size: 13px !important; }
+  .mega-asset-desc { font-size: 11px !important; }
+  .mega-gem-text { font-size: 12px !important; }
+  .mega-link-item { font-size: 13px !important; }
+  .mega-mcp-title { font-size: 15px !important; }
+}
+
+@media (max-width: 1024px) {
+  .mega-menu {
+    flex-wrap: wrap;
+  }
+  .mega-zone-1 {
+    flex: 0 0 48%;
+  }
+  .mega-zone-2 {
+    flex: 0 0 48%;
+  }
+  .mega-zone-3 {
+    flex: 0 0 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 16px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .mega-navy-title {
+    grid-column: 1 / -1;
+  }
+  .mega-asset-card {
+    margin-bottom: 0 !important;
+  }
+}
+
+</style>
+<style>
+/* OVERRIDES FOR MCP PAGE */
+:root {
+  --primary-dark: #0D1F2D;
+  --accent-teal: #00C896;
+  --secondary-dark: #1A3A4A;
+  --text-white: #FFFFFF;
+  --text-muted: #8B9BAA;
+  --bg-light: #F8FFFE;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* Override background dots */
+.bg-dots-mcp {
+  background-color: var(--primary-dark);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+/* Override animations */
+.stagger-enter {
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Pulse dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-teal);
+  border-radius: 50%;
+  display: inline-block;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+/* Hover cards */
+.hover-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.content-card:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.2);
+}
+.btn-teal {
+  background: var(--accent-teal);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.4);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+  .mega-menu {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+  .mega-zone-1 {
+    flex: 0 0 30%;
+  }
+  .mega-zone-2 {
+    flex: 0 0 24%;
+  }
+  .mega-zone-3 {
+    flex: 1;
+  }
+  .mega-gem-img {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  .mega-asset-name { font-size: 13px !important; }
+  .mega-asset-desc { font-size: 11px !important; }
+  .mega-gem-text { font-size: 12px !important; }
+  .mega-link-item { font-size: 13px !important; }
+  .mega-mcp-title { font-size: 15px !important; }
+}
+
+@media (max-width: 1024px) {
+  .mega-menu {
+    flex-wrap: wrap;
+  }
+  .mega-zone-1 {
+    flex: 0 0 48%;
+  }
+  .mega-zone-2 {
+    flex: 0 0 48%;
+  }
+  .mega-zone-3 {
+    flex: 0 0 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 16px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .mega-navy-title {
+    grid-column: 1 / -1;
+  }
+  .mega-asset-card {
+    margin-bottom: 0 !important;
+  }
+}
+
+</style>
+</head>
+<body style="background: var(--primary-dark); color: var(--text-white);">
+<header id="header" class="stagger-enter" style="animation-delay: 0s;">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="#section-start">Get Started</a>
+      <a href="#section-who">Who to Target</a>
+      <a href="#commission">Commission</a>
+      <a href="#section-opportunity">Opportunity</a>
+      <a href="#dashboard-setup">Dashboard Setup</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="mega-menu">
+          <!-- Zone 1: Guides & Angles (White) -->
+          <div class="mega-zone mega-zone-1">
+            <a class="mega-pill-badge" href="guides.html">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              GUIDES &rarr;
+            </a>
+            <div class="mega-links-grid">
+              <a class="mega-link-item" href="guides/general-guide.html">General Guide</a>
+              <a class="mega-link-item" href="guides/discord-blueprint.html">Discord Blueprint</a>
+              <a class="mega-link-item" href="guides/tiktok-youtube-shorts.html">TikTok &amp; YouTube Shorts</a>
+            </div>
+            <div class="mega-section-label" style="margin-top: 8px;">HIGH-CONVERTING ANGLES:</div>
+            <div class="mega-gems-list">
+              <a class="mega-gem-card" href="guides/angles/track-profit-like-a-pro.html">
+                <div class="mega-gem-img" style="background: #0B1D2E;">
+                  <img src="22.svg" alt="Track Profit Like A Pro">
+                </div>
+                <div class="mega-gem-text">Track Profit Like A Pro</div>
+              </a>
+              <a class="mega-gem-card" href="guides/angles/scale-safely-with-margins.html">
+                <div class="mega-gem-img" style="background: #62BBA2;">
+                  <img src="19.svg" alt="Scale Safely with Margins">
+                </div>
+                <div class="mega-gem-text">Scale Safely with Margins</div>
+              </a>
+              <a class="mega-gem-card" href="guides/angles/stop-losing-30-profit.html">
+                <div class="mega-gem-img" style="background: #FCE1DA;">
+                  <img src="21.svg" alt="Stop Losing 30% Profit">
+                </div>
+                <div class="mega-gem-text">Stop Losing 30% Profit</div>
+              </a>
+            </div>
+          </div>
+          <!-- Zone 2: MCP Promotion (Mint) -->
+          <div class="mega-zone mega-zone-2">
+            <a class="mega-pill-badge" href="guides/mcp-promotion-playbook.html" style="border-color: #1d9e75; color: #1d9e75; background: #e6fbf1;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              MCP PROMOTION &rarr;
+              <svg fill="currentColor" height="10" style="color: #f59e0b; margin-left: 6px; vertical-align: middle;" viewbox="0 0 24 24" width="10"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </a>
+            <div class="mega-links-list" style="gap: 24px; padding-top: 0; align-items: flex-start;">
+              <a class="mega-link-item" href="guides/mcp-promotion-playbook.html">MCP Promotion Playbook</a>
+              <a class="mega-link-item" href="resources/mcp/x-twitter-ready-to-post.html">X/Twitter Ready-to-Post</a>
+              <a class="mega-link-item" href="resources/mcp/reddit-ready-to-post.html">Reddit Ready-to-Post</a>
+              <a class="mega-link-item" href="resources/mcp/short-form-video-guidelines.html">Short-Form Video Guidelines</a>
+            </div>
+          </div>
+          <!-- Zone 3: Creative Assets (Navy) -->
+          <div class="mega-zone mega-zone-3">
+            <a class="mega-pill-badge mega-pill-badge-dark" href="#" style="margin-bottom: 24px;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
+              CREATIVE ASSETS &rarr;
+            </a>
+
+          <div style="padding-top: 0; display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681fb9db2000c532b98a0" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px 0 16px 16px;
+              margin-bottom: 16px;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">Logo</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Download high-res TrueProfit logos in multiple formats. Use across your content, thumbnails, and channel art.</div>
+              </div>
+              <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" style="
+                width: 110px;
+                height: 100%;
+                min-height: 100px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 0 10px 10px 0;
+                align-self: stretch;
+                flex-shrink: 0;
+                margin-left: 12px;
+                opacity: 0.15;
+                background: linear-gradient(135deg, #1E4A6E, #0D2A40);
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681dbb776000cb2feef3f" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px 0 16px 16px;
+              margin-bottom: 16px;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">Banner</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Ready-to-use campaign banners sized for every platform. Just drop in your affiliate link and post.</div>
+              </div>
+              <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" style="
+                width: 110px;
+                height: 100%;
+                min-height: 100px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 0 10px 10px 0;
+                align-self: stretch;
+                flex-shrink: 0;
+                margin-left: 12px;
+                opacity: 0.15;
+                background: linear-gradient(135deg, #1A4A3A, #0D2A20);
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681eb8be9000c647955f8" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px 0 16px 16px;
+              margin-bottom: 0;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">App Footage</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Raw screen recordings and dashboard visuals. Use as B-roll in your videos or social content.</div>
+              </div>
+              <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" style="
+                width: 110px;
+                height: 100%;
+                min-height: 100px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 0 10px 10px 0;
+                align-self: stretch;
+                flex-shrink: 0;
+                margin-left: 12px;
+                opacity: 0.15;
+                background: linear-gradient(135deg, #3A2A4A, #1A0D2A);
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions" id="headerActions">
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-ghost">My Dashboard</a>
+      <a href="#dashboard-setup" class="btn-cta">Get affiliate link →</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- SECTION 1: HERO -->
+<section id="hero-mcp" class="bg-dots-mcp" style="position: relative; overflow: hidden; padding: 100px 24px 80px; text-align: center;">
+  <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style="position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0;" fill="none" class="hero-bg-svg">
+    <defs>
+      <linearGradient id="ribbonGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00C896" />
+        <stop offset="65%" stop-color="#0A5540" />
+        <stop offset="100%" stop-color="#031F17" />
+      </linearGradient>
+    </defs>
+    <path d="M -200 0 C 300 150, 400 150, 800 300 L 820 400 C 420 250, 320 250, -200 -100 Z" fill="url(#ribbonGrad1)" opacity="0.22" />
+  </svg>
+  
+  <div style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+    <div class="stagger-enter hero-badge" style="display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; padding: 10px 20px; font-size: 14px; color: #fff; margin-bottom: 24px; animation-delay: 0.1s; box-shadow: none;">
+      <span class="badge-label" style="font-style: italic; font-weight: 600;">TrueProfit MCP</span>
+      <span class="badge-divider" style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.6); white-space: pre;"> : </span>
+      <span class="badge-sub" style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.6);">TrueProfit x LLMs</span>
+    </div>
+    
+    <h1 class="stagger-enter" style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; animation-delay: 0.2s;">
+      Promote TrueProfit <span style="color: var(--accent-teal);">MCP</span>.<br>
+      Earn While <span style="color: var(--accent-teal);">AI</span> Takes Over Ecom.
+    </h1>
+    
+    <p class="stagger-enter" style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 40px; animation-delay: 0.3s;">
+      TrueProfit just launched MCP — a feature that connects live profit data directly to Claude and ChatGPT. It's new, it's hot, and most affiliates haven't touched it yet. That's your advantage.
+    </p>
+    
+    <div class="stagger-enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; animation-delay: 0.4s;">
+      <button class="btn-teal" onclick="document.getElementById('toolkit-section').scrollIntoView({behavior: 'smooth'})">See Promotion Toolkit ↓</button>
+      <a href="https://trueprofit.io/solutions/mcp" target="_blank" class="btn-outline">Learn About MCP →</a>
+    </div>
+    
+    <div class="stagger-enter" style="margin: 0 auto; width: 100%; max-width: 600px; height: 320px; background: var(--secondary-dark); border: 1px solid rgba(0,200,150,0.2); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0,200,150,0.1); animation-delay: 0.5s;">
+      <span style="color: var(--text-muted); font-size: 14px;">[ Illustration coming soon ]</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: WHAT IS MCP -->
+<section style="background-color: var(--bg-light); padding: 100px 24px; color: #000;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">UNDERSTAND THE FEATURE</div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.2; transition-delay: 0.1s;">Your store's profit data, inside the AI you already use</h2>
+    <p class="scroll-animate" style="font-size: 16px; color: #475569; line-height: 1.6; max-width: 700px; margin-bottom: 24px; transition-delay: 0.2s;">
+      MCP (Model Context Protocol) connects TrueProfit directly to Claude or ChatGPT. Merchants ask questions in plain language and get real answers — no dashboards, no copy-pasting numbers, no manual setup per conversation.
+    </p>
+    
+    <div class="scroll-animate" style="display: flex; gap: 24px; margin-bottom: 60px; transition-delay: 0.3s;">
+      <a href="https://trueprofit.io/solutions/mcp" target="_blank" style="color: var(--accent-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; position: relative;">Full feature details →<span style="position:absolute; bottom:-2px; left:0; width:0; height:1px; background:currentColor; transition: width 0.2s;"></span></a>
+      <a href="https://helpdesk.trueprofit.io/en/articles/14086381-trueprofit-mcp-connect-trueprofit-to-chatgpt-claude-and-openclaw-clawdbot" target="_blank" style="color: var(--accent-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; position: relative;">Setup guide →<span style="position:absolute; bottom:-2px; left:0; width:0; height:1px; background:currentColor; transition: width 0.2s;"></span></a>
+    </div>
+    
+    <div class="scroll-animate" style="position: relative; max-width: 100%; margin: 16px auto 0; padding: 40px 0; background-image: linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%); mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%); transition-delay: 0.4s;">
+      <div style="border: 1.5px solid rgba(0,0,0,0.18); border-radius: 16px; overflow: hidden; max-width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+        
+        <!-- Card 1 -->
+        <div style="background: rgba(255,255,255,0.85); border-right: 1px solid rgba(0,0,0,0.12); border-bottom: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+          <div>
+            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">1</span>
+            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Instant Answers</h3>
+          </div>
+          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Ask about profit, costs, or performance anytime — no need to open the app or pull reports manually.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+          <div>
+            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">2</span>
+            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Always Knows Your Numbers</h3>
+          </div>
+          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Connect once. After that, the AI already has your live store data loaded every time — no re-explaining needed.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background: rgba(255,255,255,0.85); border-right: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+          <div>
+            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">3</span>
+            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Finds the Root Cause</h3>
+          </div>
+          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Goes beyond 'what changed' to explain why — cross-referencing COGS, ad spend, fees, and refunds all at once.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div style="background: rgba(255,255,255,0.85); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+          <div>
+            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">4</span>
+            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Works with Claude & ChatGPT</h3>
+          </div>
+          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Not locked to one AI tool. Merchants use whichever assistant they're already on.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: WHY PROMOTE NOW -->
+<section style="background: var(--primary-dark); padding: 100px 24px;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">AFFILIATE OPPORTUNITY</div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: #fff; margin-bottom: 40px; line-height: 1.2; transition-delay: 0.1s;">Early Feature. Early Mover. More Commission.</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+      <div class="scroll-animate hover-card" style="background: var(--secondary-dark); border-left: 3px solid var(--accent-teal); border-radius: 12px; padding: 24px; transition-delay: 0.1s;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px;">Brand New Feature</h3>
+        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Most affiliates haven't promoted it yet — you can own this angle</p>
+      </div>
+      <div class="scroll-animate hover-card" style="background: var(--secondary-dark); border-left: 3px solid var(--accent-teal); border-radius: 12px; padding: 24px; transition-delay: 0.2s;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px;">Same <span class="countup-metric" data-countup="20" data-suffix="%">20%</span> Recurring</h3>
+        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Every merchant you refer keeps earning you commission month after month</p>
+      </div>
+      <div class="scroll-animate hover-card" style="background: var(--secondary-dark); border-left: 3px solid var(--accent-teal); border-radius: 12px; padding: 24px; transition-delay: 0.3s;">
+        <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px;">High Curiosity Right Now</h3>
+        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">AI + profit tracking is a hot topic. MCP content gets organic reach</p>
+      </div>
+    </div>
+    
+    <p class="scroll-animate" style="font-size: 16px; color: var(--text-muted); line-height: 1.6; max-width: 800px; transition-delay: 0.4s;">
+      MCP is the kind of feature people share because it surprises them. 'I asked Claude how my store was doing and it actually knew' is a hook that writes itself.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 4: PROMOTION TOOLKIT -->
+<section id="toolkit-section" style="background: var(--bg-light); padding: 100px 24px; color: #000;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">READY-TO-USE CONTENT</div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.2; transition-delay: 0.1s;">Pick Your Channel. Start Posting.</h2>
+    <p class="scroll-animate" style="font-size: 16px; color: #475569; line-height: 1.6; margin-bottom: 40px; transition-delay: 0.2s;">Each guide includes ready-to-post content and a short-form video script you can use immediately.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <!-- Card 1 -->
+      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.1s;">
+        <div style="flex: 1; min-width: 280px;">
+          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">X / TWITTER</div>
+          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">X/Twitter Ready-to-Post</h3>
+          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 ready-to-post content pieces crafted for X/Twitter. Copy, swap your link, post.</p>
+          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 posts ready</span>
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Copy-paste</span>
+          </div>
+          <a href="resources/mcp/x-twitter-ready-to-post.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open X/Twitter Guide →</a>
+        </div>
+        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.2s;">
+        <div style="flex: 1; min-width: 280px;">
+          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">REDDIT</div>
+          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">Reddit Ready-to-Post</h3>
+          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 Reddit posts written in native community style. Drop into r/dropship, r/shopify, or similar subreddits.</p>
+          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 posts ready</span>
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Community style</span>
+          </div>
+          <a href="resources/mcp/reddit-ready-to-post.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open Reddit Guide →</a>
+        </div>
+        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #1a0a0a, #2e1010); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
+        </div>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.3s;">
+        <div style="flex: 1; min-width: 280px;">
+          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">TIKTOK / YOUTUBE SHORTS</div>
+          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">Short-Form Video Guidelines</h3>
+          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 complete hook-to-CTA video scripts with shot directions and execution notes. Works faceless or on-camera.</p>
+          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 video scripts</span>
+            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Hook included</span>
+          </div>
+          <a href="resources/mcp/short-form-video-guidelines.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open Video Guide →</a>
+        </div>
+        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #0a0a1a, #101030); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: HOW TO TALK ABOUT MCP -->
+<section style="background: var(--primary-dark); padding: 100px 24px;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">MESSAGING GUIDE</div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: #fff; margin-bottom: 40px; line-height: 1.2; transition-delay: 0.1s;">The Angle That Works</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 40px;">
+      <!-- DO -->
+      <div class="scroll-animate" style="background: var(--secondary-dark); border-radius: 16px; padding: 32px; transition-delay: 0.2s;">
+        <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 24px;">Start with the problem</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Most merchants check revenue and think they're doing fine</span>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">They don't see the real net profit until it's too late</span>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">MCP makes that visible in seconds — just by asking</span>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Position it as a blind spot fix, not a product pitch</span>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- DON'T -->
+      <div class="scroll-animate" style="background: var(--secondary-dark); border-radius: 16px; padding: 32px; transition-delay: 0.3s;">
+        <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 24px;">Avoid these</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't lead with 'Let me show you an app'</span>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't say 'This is the best Shopify app'</span>
+          </li>
+          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't explain MCP technically — show the outcome</span>
+          </li>
+          <li style="display: flex; gap: 12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't spend more than 5–8 seconds on the tool mention</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="scroll-animate" style="background: rgba(255,255,255,0.03); border-left: 4px solid var(--accent-teal); border-radius: 8px; padding: 24px; transition-delay: 0.4s;">
+      <p style="color: #E2E8F0; font-size: 15px; line-height: 1.6; margin: 0;">
+        The hook isn't 'here's a new feature.' The hook is a problem merchants already feel: checking profit is slow, dashboards don't explain why numbers change, AI tools need manual data every time. Once they see the problem framed clearly, the solution sells itself.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CTA BLOCK -->
+<section style="background: var(--primary-dark) url('trueprofit_affiliate_background.svg') no-repeat center/cover; padding: 100px 24px; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: #fff; margin-bottom: 16px; line-height: 1.1; letter-spacing: -0.04em;">
+      Ready to promote TrueProfit <span style="color: var(--accent-teal);">MCP?</span>
+    </h2>
+    <p class="scroll-animate" style="font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 40px; transition-delay: 0.1s;">
+      You have the toolkit. Now go create content that converts.
+    </p>
+    
+    <div class="scroll-animate" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; transition-delay: 0.2s;">
+      <a href="guides.html" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--primary-dark); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;">
+        Open the Playbook →
+      </a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.2); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;">
+        Get My Affiliate Link →
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="white_horizontal.svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
+      <div class="footer-tagline">Affiliate Resource Hub — everything you need to earn with TrueProfit.</div>
+    </div>
+    <div class="footer-links">
+      <h5>Resources</h5>
+      <a href="guides.html">Guides</a>
+      <a href="#">Creative Assets</a>
+      <a href="index.html#commission">Commission Calculator</a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank">Affiliate Dashboard</a>
+    </div>
+    <div class="footer-links">
+      <h5>TrueProfit</h5>
+      <a href="https://trueprofit.io" target="_blank">Homepage</a>
+      <a href="https://trueprofit.io/blog" target="_blank">Blog</a>
+      <a href="https://trueprofit.io/partner/affiliate-program" target="_blank">Affiliate Program</a>
+      <a href="mailto:partners@trueprofit.io">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueProfit. All rights reserved.</span>
+    <span>Affiliate Resource Hub</span>
+  </div>
+</footer>
+
+<script>
+
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('header').classList.toggle('nav-open');
+  const spans = this.querySelectorAll('span');
+  if (document.getElementById('header').classList.contains('nav-open')) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.opacity = '';
+    spans[2].style.transform = '';
+  }
+});
+
+/* close nav on link click */
+document.querySelectorAll('#headerNav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('header').classList.remove('nav-open');
+    const spans = document.getElementById('hamburgerBtn').querySelectorAll('span');
+    if(spans.length >= 3){
+      spans[0].style.transform = ''; spans[1].style.opacity = ''; spans[2].style.transform = '';
+    }
+  });
+});
+
+document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const wrapper = trigger.closest('.nav-dropdown-wrapper');
+      wrapper.classList.toggle('active');
+    }
+  });
+});
+
+
+/* Scroll Animations */
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        obs.unobserve(entry.target);
+        if (entry.target.hasAttribute('data-countup') || entry.target.classList.contains('countup-metric')) {
+          startCountUp(entry.target);
+        }
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+
+  document.querySelectorAll('.scroll-animate').forEach(el => {
+    observer.observe(el);
+  });
+  
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+  
+  function startCountUp(el) {
+    if (el.dataset.countingUp === 'true') return;
+    el.dataset.countingUp = 'true';
+    
+    const endValStr = el.getAttribute('data-countup') || el.textContent.replace(/[^0-9]/g, '');
+    const endVal = parseInt(endValStr, 10);
+    if (isNaN(endVal)) {
+      el.dataset.countingUp = 'false';
+      return;
+    }
+    
+    const prefix = el.getAttribute('data-prefix') || (el.textContent.includes('$') ? '$' : '');
+    const suffix = el.getAttribute('data-suffix') || (el.textContent.includes('%') ? '%' : '');
+    const duration = 1500;
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentVal = Math.floor(endVal * easeOutCubic(progress));
+      el.textContent = prefix + currentVal.toLocaleString() + suffix;
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = prefix + endVal.toLocaleString() + suffix;
+        el.dataset.countingUp = 'false';
+      }
+    }
+    requestAnimationFrame(update);
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<div class="container" style="max-width: 1100px; margin: 0 auto;">
+    <h2 class="section-heading text-center" style="margin-bottom: 20px;">3. Short-Form Video Strategy</h2>
+    <p class="text-center" style="color: var(--text-muted); font-size: 18px; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Why Short-Form Works: It surfaces the blind spot (Revenue vs. Real Profit) in 20-40 seconds to a massive algorithmic audience.
+    </p>
+    
+    <div class="grid-3-col">
+      <!-- Hook 1 -->
+      <div class="hook-card">
+        <div class="hook-number">01</div>
+        <h3 class="hook-title">"Revenue Looks Good. Profit Doesn't."</h3>
+        <p class="hook-desc">Start by showing a massive Shopify dashboard with $10k revenue, then reveal the actual net profit is $400. This pattern interrupt hooks dropshippers instantly.</p>
+      </div>
+      <!-- Hook 2 -->
+      <div class="hook-card">
+        <div class="hook-number">02</div>
+        <h3 class="hook-title">"Scaling Doesn't Always Mean More Profit"</h3>
+        <p class="hook-desc">Explain the trap of scaling too fast without tracking COGS and shipping. Frame TrueProfit as the 'safety net' before touching the scale button.</p>
+      </div>
+      <!-- Hook 3 -->
+      <div class="hook-card">
+        <div class="hook-number">03</div>
+        <h3 class="hook-title">"Before I Scale, I Check This One Number."</h3>
+        <p class="hook-desc">Build curiosity. What is the one number? Net Profit Margin. Show exactly where to find it on the TrueProfit mobile app dashboard.</p>
+      </div>
+    </div>
+    
+    <div class="universal-rule">
+      <span class="rule-icon">ðŸ’¡</span>
+      <div>
+        <strong>Universal Rule:</strong> Keep tool mentions under 5-8 seconds, tied to a personal workflow. Don't make it an ad; make it a 'behind-the-scenes' look at your business.
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+/* Guide Page Specific Styles */
+html { scroll-behavior: smooth; }
+
+.cat-pill {
+  background: var(--white);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+}
+.cat-pill:hover {
+  background: var(--light);
+  color: var(--text-dark);
+}
+.cat-pill.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.content-block {
+  margin-bottom: 40px;
+}
+.content-block h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy-mid);
+  margin-bottom: 16px;
+}
+.content-block p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+}
+.styled-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  font-size: 17px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+.styled-list li::before {
+  content: "â€¢";
+  color: var(--green-bright);
+  font-weight: bold;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .grid-2-col { grid-template-columns: 1fr; }
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+  .grid-3-col { grid-template-columns: 1fr; }
+}
+
+.mockup-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+.mockup-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.mockup-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--green-bright);
+  border-radius: 50%;
+}
+.mockup-name { font-weight: 700; color: var(--navy); font-size: 15px; }
+.mockup-time { font-size: 12px; color: var(--text-muted); }
+.mockup-body {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+  background: var(--light-alt);
+  padding: 16px;
+  border-radius: 8px;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+.mockup-footer {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--green);
+  text-align: right;
+}
+
+.hook-card {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hook-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--green-border);
+}
+.hook-number {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--green-light);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  line-height: 1;
+}
+.hook-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+}
+.hook-desc {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+.universal-rule {
+  background: var(--navy);
+  color: #fff;
+  padding: 24px 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.rule-icon { font-size: 32px; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const pills = document.querySelectorAll('.cat-pill');
+  const sections = document.querySelectorAll('.guide-section');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop;
+      if (scrollY >= secTop - 200) {
+        current = sec.getAttribute('id');
+      }
+    });
+    
+    pills.forEach(pill => {
+      pill.classList.remove('active');
+      if (pill.getAttribute('href') === '#' + current) {
+        pill.classList.add('active');
+      }
+    });
+  });
+});
+</script>
+
+<!-- ==============================
+     FOOTER
+     ============================== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="white_horizontal.svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
+      <div class="footer-tagline">Affiliate Resource Hub — everything you need to earn with TrueProfit.</div>
+    </div>
+    

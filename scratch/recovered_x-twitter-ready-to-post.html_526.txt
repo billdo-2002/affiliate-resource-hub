@@ -1,0 +1,59 @@
+Created At: 2026-06-18T08:08:35Z
+Completed At: 2026-06-18T08:08:35Z
+File Path: `file:///c:/Users/khoadnd/Desktop/onboarding%20hub/mcp-promotion.html`
+Total Lines: 2732
+Total Bytes: 97733
+Showing lines 2160 to 2220
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+2160:               <a class="mega-link-item" href="resources/mcp/x-twitter-ready-to-post.html">X/Twitter Ready-to-Post</a>
+2161:               <a class="mega-link-item" href="resources/mcp/reddit-ready-to-post.html">Reddit Ready-to-Post</a>
+2162:               <a class="mega-link-item" href="resources/mcp/short-form-video-guidelines.html">Short-Form Video Guidelines</a>
+2163:             </div>
+2164:           </div>
+2165:           <!-- Zone 3: Creative Assets (Navy) -->
+2166:           <div class="mega-zone mega-zone-3">
+2167:             <a class="mega-pill-badge mega-pill-badge-dark" href="#" style="margin-bottom: 24px;">
+2168:               <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
+2169:               CREATIVE ASSETS &rarr;
+2170:             </a>
+2171: 
+2172:           <div style="padding-top: 0; display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+2173:             <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681fb9db2000c532b98a0" target="_blank" class="mega-asset-card" style="
+2174:               display: flex;
+2175:               flex-direction: row;
+2176:               justify-content: space-between;
+2177:               align-items: center;
+2178:      
+<truncated 642 bytes>
+ <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Download high-res TrueProfit logos in multiple formats. Use across your content, thumbnails, and channel art.</div>
+2191:               </div>
+2192:               <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" style="
+2193:                 width: 110px;
+2194:                 height: 100%;
+2195:                 min-height: 100px;
+2196:                 object-fit: cover;
+2197:                 object-position: center;
+2198:                 border-radius: 0 10px 10px 0;
+2199:                 align-self: stretch;
+2200:                 flex-shrink: 0;
+2201:                 margin-left: 12px;
+2202:                 opacity: 0.15;
+2203:                 background: linear-gradient(135deg, #1E4A6E, #0D2A40);
+2204:               ">
+2205:               <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+2206:             </a>
+2207: 
+2208:             <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681dbb776000cb2feef3f" target="_blank" class="mega-asset-card" style="
+2209:               display: flex;
+2210:               flex-direction: row;
+2211:               justify-content: space-between;
+2212:               align-items: center;
+2213:               background: #1A3A4A;
+2214:               border: 1px solid rgba(255,255,255,0.08);
+2215:               border-radius: 12px;
+2216:               padding: 16px 0 16px 16px;
+2217:               margin-bottom: 16px;
+2218:               text-decoration: none;
+2219:               position: relative;
+2220:               cursor: pointer;
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

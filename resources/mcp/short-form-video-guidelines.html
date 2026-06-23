@@ -1,0 +1,2763 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short-Form Video Guidelines — TrueProfit Affiliate Resource Hub</title>
+<meta name="description" content="Two ready-to-use short-form video hooks, visual scripts, and execution guidelines for promoting TrueProfit MCP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+   LOCAL FONTS — Plus Jakarta Sans
+   ========================================= */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =========================================
+   DESIGN TOKENS
+   ========================================= */
+:root {
+  --green: #1a7a5e;
+  --green-bright: #23c48c;
+  --green-light: rgba(35,196,140,0.1);
+  --green-border: rgba(35,196,140,0.25);
+  --navy: #0b1826;
+  --navy-mid: #0d2233;
+  --navy-teal: #0a2535;
+  --light: #f7f8fa;
+  --light-alt: #f0f2f5;
+  --white: #ffffff;
+  --text-dark: #0f1724;
+  --text-body: #374151;
+  --text-muted: #6b7280;
+  --text-light: #94a3b8;
+  --border-light: #e5e7eb;
+  --border-dark: rgba(255,255,255,0.08);
+  --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 100px;
+  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* =========================================
+   RESET & BASE
+   ========================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body {
+  font-family: var(--font);
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--light); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* =========================================
+   ANNOUNCEMENT BAR
+   ========================================= */
+#announce-bar {
+  background: #0a2a1e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+#announce-bar a {
+  background: var(--green-bright);
+  color: #071424;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+#announce-bar a:hover { background: #2dd498; }
+#announce-bar .close-btn {
+  position: absolute;
+  right: 16px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
+  transition: var(--transition);
+}
+#announce-bar .close-btn:hover { color: #fff; }
+.announce-star { color: var(--green-bright); }
+
+/* =========================================
+   HEADER
+   ========================================= */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.header-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-logo { display: flex; align-items: center; flex-shrink: 0; text-decoration: none; }
+.logo-img { height: 42px; width: auto; object-fit: contain; background-color: transparent !important; border: none !important; box-shadow: none !important; display: block; }
+.header-nav { display: flex; gap: 2px; justify-content: flex-start; }
+.header-nav a { font-size: 14px; font-weight: 500; color: var(--text-body); padding: 6px 10px; border-radius: 7px; transition: var(--transition); white-space: nowrap; }
+.header-nav > a:hover { background: var(--light); color: var(--text-dark); }
+.header-nav > a.active { color: #1d9e75 !important; font-weight: 700; }
+.header-nav .nav-dropdown-trigger:hover,
+.nav-dropdown-wrapper:hover .nav-dropdown-trigger,
+.nav-dropdown-wrapper.active .nav-dropdown-trigger { color: #1d9e75 !important; font-weight: 700; background: transparent; }
+.header-actions { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-shrink: 0; }
+.btn-ghost {
+  font-family: var(--font); font-size: 14px; font-weight: 600; color: var(--text-dark);
+  background: transparent; border: 1.5px solid var(--border-light); padding: 8px 16px;
+  border-radius: var(--radius); cursor: pointer; transition: var(--transition); white-space: nowrap;
+}
+.btn-ghost:hover { border-color: #9ca3af; background: var(--light); transform: translateY(-2px); }
+.btn-cta {
+  font-family: var(--font); font-size: 14px; font-weight: 700; color: #fff;
+  background: var(--green); border: none; padding: 9px 18px; border-radius: var(--radius);
+  cursor: pointer; transition: var(--transition); white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-cta:hover { background: #155f48; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26,122,94,0.3); }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; margin-left: auto; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: var(--transition); }
+
+/* =========================================
+   MEGA MENU STYLES
+   ========================================= */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 1280px;
+  max-width: calc(100vw - 48px);
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1001;
+  display: grid;
+  grid-template-columns: 35% 25% 40%;
+  
+  overflow: hidden;
+  padding: 0;
+}
+.nav-dropdown-wrapper:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.mega-zone {
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.mega-zone-1 {
+  background: #ffffff;
+}
+.mega-zone-2 {
+  background: #f0fdf4;
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+}
+.mega-zone-3 {
+  background: #002d33;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 40px 40px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.mega-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0a2540;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+  text-decoration: none;
+}
+.mega-pill-badge:hover {
+  border-color: #1d9e75;
+  color: #1d9e75;
+  background: #f0fdf4;
+}
+.mega-pill-badge svg {
+  color: #1d9e75;
+}
+.mega-pill-badge-dark {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.4) !important;
+}
+.mega-pill-badge-dark:hover {
+  border-color: #2dd498 !important;
+  color: #2dd498 !important;
+  background: rgba(45, 212, 152, 0.1) !important;
+}
+.mega-pill-badge-dark svg {
+  color: #ffffff !important;
+}
+.mega-pill-badge-dark:hover svg {
+  color: #2dd498 !important;
+}
+.mega-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.mega-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mega-link-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.mega-link-item:hover {
+  color: #1d9e75;
+}
+.mega-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.mega-gems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mega-gem-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+.mega-gem-card:hover .mega-gem-img {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.mega-gem-card:hover .mega-gem-text {
+  color: #1d9e75;
+}
+.mega-gem-img {
+  width: 92px;
+  height: 64px;
+  border-radius: 12px;
+  background: #e6fbf1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mega-gem-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+.mega-gem-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.mega-asset-card:hover 
+.mega-asset-card:hover 
+
+.mega-asset-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #1A3A4A;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+  text-decoration: none;
+  box-sizing: border-box;
+  width: 100%;}
+.mega-asset-card:last-child {
+  margin-bottom: 0;
+}
+.mega-asset-card:hover {
+  filter: brightness(1.15);
+  border-color: rgba(0,200,150,0.3) !important;
+}
+.mega-asset-card::after {
+  content: "+";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1;
+  z-index: 5;
+}
+.mega-asset-content {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.mega-asset-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 6px;
+  transition: color 0.25s ease;
+}
+.mega-asset-desc {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;}
+.mega-asset-card:hover .mega-asset-name {
+  color: #2dd498;
+}
+.mega-asset-visual {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Featured MCP Card styling */
+.mega-mcp-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #e6fbf1;
+  border: 1px dashed #1d9e75;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+.mega-mcp-card:hover {
+  background: #d1f7e4 !important;
+  border-color: #157347 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 158, 117, 0.15);
+}
+.mega-mcp-icon {
+  color: #1d9e75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mega-mcp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mega-mcp-title {
+  color: #0f5132;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.mega-mcp-subtitle {
+  color: #157347;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .nav-dropdown-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mega-menu {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-dropdown-wrapper:hover .mega-menu {
+    display: none;
+  }
+  .nav-dropdown-wrapper.active .mega-menu {
+    display: grid;
+  grid-template-columns: 35% 25% 40%;
+  }
+  .mega-zone {
+    padding: 24px 16px;
+  }
+  .mega-zone-2 {
+    border-left: none;
+    border-top: 1px solid var(--border-light);
+  }
+}
+
+/* =========================================
+   HEADER NAV UNDERLINE ANIMATION
+   ========================================= */
+.header-nav > a, .nav-dropdown-trigger { position: relative; }
+.header-nav > a::after, .nav-dropdown-trigger::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px;
+  background-color: #00C896; transition: width 0.2s ease;
+}
+.header-nav > a:hover::after, .header-nav > a.active::after,
+.nav-dropdown-trigger:hover::after, .nav-dropdown-wrapper:hover .nav-dropdown-trigger::after { width: 100%; }
+
+/* =========================================
+   HERO SECTION — Light sage editorial style
+   ========================================= */
+.guide-hero {
+  background: #e8efec;
+  position: relative;
+  overflow: hidden;
+  padding: 56px 28px 64px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.guide-hero-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 64px;
+  align-items: center;
+  min-height: 340px;
+}
+.guide-hero-left {}
+.guide-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+.guide-breadcrumb a {
+  color: #4b9e7a;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.guide-breadcrumb a:hover { color: var(--green); }
+.guide-breadcrumb .sep {
+  color: #9ca3af;
+  font-size: 12px;
+  margin: 0 2px;
+}
+.guide-breadcrumb .current { color: #374151; font-weight: 600; }
+.guide-hero-title {
+  font-size: clamp(34px, 5.5vw, 56px);
+  font-weight: 900;
+  color: #0f1724;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+.guide-hero-subtitle {
+  font-size: 17px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+.guide-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.guide-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: rgba(26,122,94,0.09);
+  border: 1px solid rgba(26,122,94,0.2);
+  color: #1a7a5e;
+}
+.guide-hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.hero-btn-angles {
+  background: var(--green);
+  color: #ffffff;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(26,122,94,0.18);
+}
+.hero-btn-angles:hover {
+  background: #155f48;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,122,94,0.3);
+}
+.hero-btn-angles:hover .hero-btn-arrow { transform: translateX(4px); }
+.hero-btn-arrow { transition: transform 0.2s ease; }
+
+/* Hero illustration placeholder */
+.guide-hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.guide-hero-illus-placeholder {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.55);
+  border: 1.5px dashed rgba(26,122,94,0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.guide-hero-illus-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(35,196,140,0.07) 0%, transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(26,122,94,0.05) 0%, transparent 45%);
+  pointer-events: none;
+}
+.illus-placeholder-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(26,122,94,0.1);
+  border: 1.5px solid rgba(26,122,94,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a7a5e;
+  position: relative;
+  z-index: 1;
+}
+.illus-placeholder-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.04em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.illus-placeholder-sublabel {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   GUIDE BODY LAYOUT — 2 COLUMN
+   ========================================= */
+.guide-body {
+  background: var(--white);
+  padding: 80px 32px 96px; /* Hero -> Article space 80px, bottom padding 96px */
+}
+.guide-body-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* =========================================
+   BLOG ARTICLE LAYOUT
+   ========================================= */
+.guide-content {
+  max-width: 900px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #2D3748;
+  line-height: 1.8;
+}
+
+.article-top-label {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 24px;
+}
+
+.article-section {
+  margin-bottom: 80px; /* reduced from 120px */
+}
+
+.article-h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.025em;
+  margin: 56px 0 28px; /* reduced from 80px 0 36px */
+  line-height: 1.25;
+}
+.article-section:first-of-type .article-h2 {
+  margin-top: 0;
+}
+
+.article-h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 48px 0 20px; /* reduced from 64px 0 28px */
+  line-height: 1.3;
+}
+
+.article-p {
+  margin-bottom: 24px; /* reduced from 40px */
+}
+
+/* Unified Callout / Note Boxes in "Quick Recap" Style */
+.callout-box {
+  border-left: 4px solid var(--green, #10b981);
+  padding-left: 32px;
+  margin: 36px 0;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.callout-box.emerald {
+  border-left-color: var(--green, #10b981);
+}
+.callout-box.warning,
+.callout-box.mistake {
+  border-left-color: #f97316;
+}
+.callout-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green, #10b981);
+  margin-bottom: 18px;
+  font-family: var(--font-family, inherit);
+}
+.callout-box.warning .callout-title,
+.callout-box.mistake .callout-title {
+  color: #ea580c;
+}
+.callout-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.callout-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.callout-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--green, #10b981);
+  color: var(--green, #10b981);
+  margin-top: 2px;
+  box-sizing: border-box;
+}
+.callout-box.warning .callout-icon,
+.callout-box.mistake .callout-icon {
+  border-color: #f97316;
+  color: #f97316;
+}
+.callout-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.callout-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-color, #334155);
+}
+@media (max-width: 768px) {
+  .callout-box {
+    padding-left: 24px;
+  }
+  .callout-title {
+    font-size: 18px;
+  }
+  .callout-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .callout-bullets {
+    gap: 16px;
+  }
+}
+
+/* Fix content hidden under sticky header */
+.article-section, [id] { scroll-margin-top: 120px; }
+
+
+/* Lists */
+.article-list {
+  margin: 40px 0 48px 40px;
+  list-style-type: disc;
+}
+.article-list li {
+  margin-bottom: 20px;
+  padding-left: 8px;
+  font-size: 22px;
+  line-height: 1.8;
+}
+.article-list li::marker {
+  color: var(--green);
+}
+
+/* Editorial Pull Quote */
+.article-pullquote {
+  font-size: 28px; /* decreased from 32px to prevent wrapping */
+  font-weight: 400;
+  font-style: italic;
+  color: #0F172A;
+  line-height: 1.5;
+  margin: 80px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  border-left: none;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Angle Links */
+.article-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 48px 0;
+}
+.article-link-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  padding: 0 28px;
+  background: #f7f8fa;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.article-link-row:hover {
+  background: var(--white);
+  border-color: var(--green-bright);
+  box-shadow: 0 8px 24px rgba(35,196,140,0.08);
+  transform: translateY(-2px);
+}
+.article-link-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.article-link-text strong {
+  flex-shrink: 0;
+}
+.article-link-text span {
+  font-weight: 400;
+  color: var(--text-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.article-link-arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 32px;
+  flex-shrink: 0;
+}
+.article-link-arrow {
+  color: var(--green);
+  transition: transform 0.2s;
+}
+.article-link-row:hover .article-link-arrow {
+  transform: translateX(4px);
+}
+
+/* Image Placeholders */
+.article-image-placeholder {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  background: #f0f2f5;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0;
+  color: #9ca3af;
+  font-size: 14px;
+  border: 1px dashed #cbd5e1;
+}
+.article-image-placeholder.wide-banner {
+  aspect-ratio: 21/9;
+  background: #0b1826;
+  border-color: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.4);
+}
+.text-emerald {
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* =========================================
+   STICKY SIDEBAR (Right)
+   ========================================= */
+.guide-sidebar {
+  position: sticky;
+  top: 110px;
+}
+.sidebar-card {
+  background: var(--white);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px; /* increased padding */
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+}
+.sidebar-card-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.sidebar-toc { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.sidebar-toc li { border-bottom: 1px solid var(--border-light); }
+.sidebar-toc li:last-child { border-bottom: none; }
+.sidebar-toc a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-body);
+  height: 48px; /* TOC height ~48px */
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.sidebar-toc a:hover, .sidebar-toc a.active {
+  color: var(--green);
+  font-weight: 600; /* active state semibold */
+}
+.sidebar-toc a::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border-light);
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+.sidebar-toc a:hover::before, .sidebar-toc a.active::before { background: var(--green-bright); }
+.sidebar-cta-text {
+  font-size: 16px; /* 16-17px */
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.sidebar-btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px; /* button height 52-56px */
+  background: var(--green);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-bottom: 14px;
+}
+.sidebar-btn-primary:hover { background: #155f48; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(26,122,94,0.3); }
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--green);
+  text-decoration: none;
+  transition: gap 0.18s ease;
+}
+.sidebar-link:hover { gap: 10px; }
+
+/* Progress bar mini indicator */
+.sidebar-progress {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px; /* increased padding by ~15% */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(35,196,140,0.15);
+}
+.sidebar-progress-icon { color: var(--green-bright); flex-shrink: 0; }
+.sidebar-progress-text {
+  font-size: 18px; /* 18px semibold */
+  font-weight: 600;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.35;
+}
+.sidebar-progress-text span {
+  color: var(--green-bright);
+  display: block;
+  font-size: 14px; /* 14-15px meta text */
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* =========================================
+   RELATED GUIDES
+   ========================================= */
+.related-section {
+  background: var(--light-alt);
+  padding: 80px 28px 80px; /* rhythm: Article -> More Playbooks 80px, bottom padding 80px to prevent card overflow */
+  border-top: 1px solid var(--border-light);
+}
+.related-inner {
+  max-width: 1280px; /* increased to match guide-body-inner width */
+  margin: 0 auto;
+}
+.related-header {
+  margin-bottom: 48px;
+}
+.related-label {
+  font-size: 14px; /* increased from 12px */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 12px;
+}
+.related-title {
+  font-size: 36px; /* increased from 28px */
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px; /* increased grid gap to 32px */
+}
+.related-card {
+  background: var(--white);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px; /* increased card padding to ~32px */
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
+}
+.related-card:hover {
+  border-color: var(--green-bright);
+  box-shadow: 0 12px 32px rgba(35,196,140,0.1);
+  transform: translateY(-4px);
+}
+.related-card:hover .related-card-arrow { transform: translateX(4px); }
+.related-card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: 100px;
+  padding: 3px 10px;
+  align-self: flex-start;
+}
+.related-card-title {
+  font-size: 28px; /* card titles 28-30px */
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+.related-card-desc {
+  font-size: 16px; /* card description 16-17px */
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+.related-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+.related-card-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.related-card-arrow { transition: transform 0.2s ease; }
+
+/* =========================================
+   BOTTOM CTA
+   ========================================= */
+.guide-cta-section {
+  background-color: #051d29;
+  background-image: linear-gradient(rgba(5, 29, 41, 0.6), rgba(5, 29, 41, 0.6)), url('../../10.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px 28px; /* rhythm: More Playbooks -> CTA: 80px, CTA -> Footer: 80px */
+  text-align: center;
+  overflow: hidden;
+}
+.guide-cta-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.guide-cta-h2 {
+  font-size: 48px; /* headline size 48-56px */
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+.guide-cta-h2 span { color: var(--green-bright); }
+.guide-cta-sub {
+  font-size: 18px; /* subheadline 18-20px */
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+.guide-cta-btns { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+.btn-cta-white {
+  background: #fff; color: var(--navy); font-weight: 700;
+  height: 56px; display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 32px;
+  border-radius: var(--radius); transition: var(--transition);
+  font-family: var(--font); font-size: 16px;
+}
+.btn-cta-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,255,255,0.2); }
+.btn-cta-ghost {
+  background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3);
+  font-weight: 700; height: 56px; display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 32px; border-radius: var(--radius);
+  transition: var(--transition);
+  font-family: var(--font); font-size: 16px;
+}
+.btn-cta-ghost:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-2px); }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+  background: #051d29;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 52px 28px 32px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 40px; flex-wrap: wrap;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 28px;
+}
+.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.35); max-width: 240px; line-height: 1.55; }
+.footer-links a { display: block; font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 9px; transition: var(--transition); }
+.footer-links a:hover { color: var(--green-bright); transform: translateX(4px); }
+.footer-links h5 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.25); margin-bottom: 14px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* =========================================
+   SCROLL ANIMATIONS
+   ========================================= */
+.scroll-animate { opacity: 0; transform: translateY(24px); }
+.scroll-animate.animated { opacity: 1; transform: translateY(0); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.stagger-enter { opacity: 0; animation: fadeInSlideUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards; }
+@keyframes fadeInSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1100px) {
+  .header-nav { display: none; }
+  .header-actions { display: none; }
+  .hamburger { display: flex; }
+  #header.nav-open .header-nav {
+    display: flex; flex-direction: column; position: fixed;
+    top: 64px; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.98);
+    padding: 32px 28px; gap: 8px; backdrop-filter: blur(12px);
+    z-index: 999; overflow-y: auto;
+  }
+  #header.nav-open .header-actions {
+    display: flex; flex-direction: column; padding: 0 28px 28px;
+    position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light);
+    padding-top: 16px; z-index: 1000;
+  }
+}
+@media (max-width: 1024px) {
+  .guide-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .guide-hero-visual { max-width: 500px; }
+  .guide-body-inner { grid-template-columns: 1fr; }
+  .guide-sidebar { position: static; top: auto; }
+  .audience-block { grid-template-columns: 1fr; }
+  .audience-visual { order: -1; }
+  .info-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .guide-hero { padding: 48px 20px 56px; }
+  .guide-body { padding: 52px 20px 80px; }
+  .related-grid { grid-template-columns: 1fr; }
+  .guide-cta-btns { flex-direction: column; align-items: center; }
+  .footer-inner { flex-direction: column; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .angle-card { flex-wrap: wrap; }
+}
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+/* Mobile Dropdown styles (outside media query so JS can toggle it safely, or inside media query) */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 64px; /* Adjust based on new header height 12px*2 + 40px = 64px */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #0D1F2D;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+.mobile-menu-dropdown.active {
+  display: block;
+}
+.mobile-menu-dropdown a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.mobile-menu-dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-dropdown a.mobile-btn-cta {
+  background: #00C896;
+  color: #0D1F2D;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px 20px;
+  padding: 14px 20px;
+  border-bottom: none;
+}
+.mobile-menu-dropdown a.mobile-btn-cta:hover {
+  background: #00B085;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+
+
+/* Hook visual panels styling */
+.hook-visual-panel {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 32px;
+  background: #f0fdf4;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 32px;
+  margin: 32px 0;
+  overflow: hidden;
+  align-items: center;
+}
+.hook-panel-img-col {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hook-panel-img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  max-height: 340px;
+}
+.hook-panel-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hook-panel-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1d9e75;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hook-panel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+.hook-panel-body {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+}
+.hook-panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+.hook-panel-tag {
+  background: #fff;
+  border: 1px solid #d1fae5;
+  color: #065f46;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+@media (max-width: 768px) {
+  .hook-visual-panel {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 24px;
+  }
+  .hook-panel-img-col img {
+    max-height: 240px;
+  }
+}
+
+/* Responsive and premium tables styling */
+.article-table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid #DDE4F0;
+  margin: 24px 0 40px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  background: #ffffff;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
+}
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  min-width: 900px;
+}
+.article-table thead tr {
+  background: #E9EDF7 !important;
+}
+.article-table th {
+  background: #E9EDF7 !important;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 18px 22px;
+  text-align: left;
+  border-bottom: 2px solid #DDE4F0;
+  white-space: nowrap;
+}
+.article-table td {
+  padding: 18px 22px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+  line-height: 1.65;
+  color: #374151;
+}
+.article-table tr:last-child td { border-bottom: none; }
+.article-table tbody tr:hover td { background: #f0fdf4; }
+.article-table td:first-child, .article-table th:first-child {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Scrollbar styling */
+.article-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.article-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.article-table-wrapper::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+/* TikTok Mockup iframe styling */
+.tiktok-video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 36px auto;
+  max-width: 300px;
+}
+.tiktok-video-placeholder {
+  display: block;
+  position: relative;
+  width: 300px;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.tiktok-video-placeholder:hover {
+  transform: scale(1.025);
+  border-color: rgba(16, 185, 129, 0.65);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
+}
+.tiktok-video-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  filter: none;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.03);
+}
+.tiktok-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: rgba(16, 185, 129, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.tiktok-video-placeholder:hover .tiktok-play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: rgba(16, 185, 129, 0.95);
+}
+.tiktok-caption-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  color: var(--green);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+.tiktok-caption-link:hover {
+  text-decoration: underline;
+  gap: 10px;
+}
+.video-intro-line {
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .video-intro-line {
+    white-space: nowrap;
+    font-size: 19px;
+  }
+}
+@media (max-width: 1023px) {
+  .video-intro-line {
+    white-space: normal;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ==============================
+     ANNOUNCEMENT BAR
+     ============================== -->
+<div id="announce-bar">
+  <span class="announce-star">&#9733;</span>
+  <span>Earn 100% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
+  <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
+  <span class="announce-star">&#9733;</span>
+  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">&times;</button>
+</div>
+
+<!-- ==============================
+     HEADER (with prefix ../../)
+     ============================== -->
+<header id="header" class="stagger-enter" style="animation-delay: 0s;">
+  <div class="header-inner">
+    <a href="../../index.html" class="header-logo">
+      <img src="../../logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="../../index.html#section-start">Get Started</a>
+      <a href="../../index.html#section-who">Who to Target</a>
+      <a href="../../index.html#commission">Commission</a>
+      <a href="../../index.html#section-opportunity">Opportunity</a>
+      <a href="../../index.html#dashboard-setup">Dashboard Setup</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="#resources" class="nav-dropdown-trigger active">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-menu">
+          <!-- Zone 1: Guides & Angles (White) -->
+          <div class="mega-zone mega-zone-1">
+            <a class="mega-pill-badge" href="../../guides.html">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewBox="0 0 24 24" width="14"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              GUIDES &rarr;
+            </a>
+            <div class="mega-links-grid">
+              <a class="mega-link-item" href="../../guides/general-guide.html">General Guide</a>
+              <a class="mega-link-item" href="../../guides/discord-blueprint.html">Discord Blueprint</a>
+              <a class="mega-link-item" href="../../guides/tiktok-youtube-shorts.html">TikTok &amp; YouTube Shorts</a>
+            </div>
+            <div class="mega-section-label" style="margin-top: 8px;">HIGH-CONVERTING ANGLES:</div>
+            <div class="mega-gems-list">
+              <a class="mega-gem-card" href="../../guides/angles/track-profit-like-a-pro.html">
+                <div class="mega-gem-img" style="background: #0B1D2E;">
+                  <img src="../../images/22.svg" alt="Track Profit Like A Pro">
+                </div>
+                <div class="mega-gem-text">Track Profit Like A Pro</div>
+              </a>
+              <a class="mega-gem-card" href="../../guides/angles/scale-safely-with-margins.html">
+                <div class="mega-gem-img" style="background: #62BBA2;">
+                  <img src="../../images/19.svg" alt="Scale Safely with Margins">
+                </div>
+                <div class="mega-gem-text">Scale Safely with Margins</div>
+              </a>
+              <a class="mega-gem-card" href="../../guides/angles/stop-losing-30-profit.html">
+                <div class="mega-gem-img" style="background: #FCE1DA;">
+                  <img src="../../images/21.svg" alt="Stop Losing 30% Profit">
+                </div>
+                <div class="mega-gem-text">Stop Losing 30% Profit</div>
+              </a>
+            </div>
+          </div>
+          <!-- Zone 2: MCP Promotion (Mint) -->
+          <div class="mega-zone mega-zone-2">
+            <a class="mega-pill-badge" href="../../mcp-promotion.html" style="border-color: #1d9e75; color: #1d9e75; background: #e6fbf1;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 4px;" viewBox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              MCP PROMOTION &rarr;
+              <svg fill="currentColor" height="10" style="color: #f59e0b; margin-left: 6px; vertical-align: middle;" viewBox="0 0 24 24" width="10"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </a>
+            <div class="mega-links-list" style="margin-top: 24px; gap: 24px;">
+              <a class="mega-link-item" href="../../mcp-promotion.html">MCP Promotion Hub</a>
+              <a class="mega-link-item" href="../../resources/mcp/x-twitter-ready-to-post.html">X/Twitter Ready-to-Post</a>
+              <a class="mega-link-item" href="../../resources/mcp/reddit-ready-to-post.html">Reddit Ready-to-Post</a>
+              <a class="mega-link-item" href="../../resources/mcp/short-form-video-guidelines.html">Short-Form Video Guidelines</a>
+            </div>
+            <!-- Featured MCP Card inside menu -->
+            <a class="mega-mcp-card" href="../../mcp-promotion.html">
+              <div class="mega-mcp-icon">
+                <svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div class="mega-mcp-info">
+                <span class="mega-mcp-title">TrueProfit MCP</span>
+                <span class="mega-mcp-subtitle">TrueProfit x LLMs</span>
+              </div>
+            </a>
+          </div>
+          <!-- Zone 3: Creative Assets (Navy) -->
+          <div class="mega-zone mega-zone-3">
+            <a class="mega-pill-badge mega-pill-badge-dark" href="#" style="margin-bottom: 24px;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewBox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
+              CREATIVE ASSETS &rarr;
+            </a>
+
+            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681fb9db2000c532b98a0" target="_blank" rel="noopener noreferrer">
+              <div class="mega-asset-content">
+                <div class="mega-asset-name">Logo Kit</div>
+                <div class="mega-asset-desc">Download high-res TrueProfit logos in multiple formats.</div>
+              </div>
+              <span class="mega-asset-plus">+</span>
+              <img src="../../images/36.svg" alt="" class="mega-asset-svg">
+            </a>
+
+            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681dbb776000cb2feef3f" target="_blank" rel="noopener noreferrer">
+              <div class="mega-asset-content">
+                <div class="mega-asset-name">Campaign Banners</div>
+                <div class="mega-asset-desc">Ready-to-use campaign banners sized for every platform.</div>
+              </div>
+              <span class="mega-asset-plus">+</span>
+              <img src="../../images/37.svg" alt="" class="mega-asset-svg">
+            </a>
+
+            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681eb8be9000c647955f8" target="_blank" rel="noopener noreferrer" style="margin-bottom: 0;">
+              <div class="mega-asset-content">
+                <div class="mega-asset-name">App Footages</div>
+                <div class="mega-asset-desc">Raw screen recordings and dashboard visuals for B-roll.</div>
+              </div>
+              <span class="mega-asset-plus">+</span>
+              <img src="../../images/35.svg" alt="" class="mega-asset-svg">
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions" id="headerActions">
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-ghost">My Dashboard</a>
+      <a href="../../index.html#dashboard-setup" class="btn-cta">Get affiliate link &rarr;</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==============================
+     HERO SECTION
+     ============================== -->
+<!-- ==============================
+     HERO SECTION
+     ============================== -->
+<section class="guide-hero">
+  <div class="guide-hero-inner">
+    <div class="guide-hero-left stagger-enter" style="animation-delay: 0.1s;">
+      <!-- Breadcrumb -->
+      <div class="guide-breadcrumb">
+        <a href="../../index.html">Home</a><span class="sep">›</span><a href="../../guides.html">Guides</a><span class="sep">›</span><span class="current">TikTok &amp; YouTube Shorts</span>
+      </div>
+      <!-- Title -->
+      <h1 class="guide-hero-title">TikTok &amp; YouTube Shorts</h1>
+      <!-- Subtitle -->
+      <p class="guide-hero-subtitle">Create short-form content that drives views, builds trust, and converts without sounding promotional.</p>
+      <!-- Tags -->
+      <div class="guide-tags">
+        <span class="guide-tag">Video</span>
+        <span class="guide-tag">Short-Form</span>
+        <span class="guide-tag">Content Angles</span>
+        <span class="guide-tag">Creator Workflow</span>
+      </div>
+      <!-- CTA Button -->
+      <div class="guide-hero-btns">
+        <a class="hero-btn-angles" href="#section-3">View content angles <svg class="hero-btn-arrow" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="16"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+    <!-- Hero Illustration -->
+    <div class="guide-hero-visual stagger-enter" style="animation-delay: 0.2s;">
+      <img src="../../images/3.svg" alt="TikTok &amp; YouTube Shorts" style="max-width: 440px; height: auto; object-fit: contain; background: transparent; border: none; box-shadow: none;">
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     GUIDE BODY LAYOUT — 2 COLUMN
+     ============================== -->
+<section class="guide-body">
+  <div class="guide-body-inner">
+    
+    <!-- Left Column: Article Content -->
+    <div class="guide-content">
+      <article class="article-body">
+        <div class="article-top-label">
+          Short-Form Video Strategy
+        </div>
+
+        <section class="article-section" id="why-it-works">
+          <h2 class="article-h2">Why Short-Form Works for TrueProfit MCP</h2>
+          <p class="article-p">MCP is a feature most merchants haven't heard of. "AI connected to your profit data" sounds abstract until someone sees it in action. Short-form video closes that gap in 30–40 seconds by showing a real use case, not explaining a concept.</p>
+          
+          <div class="hook-visual-panel">
+            <div class="hook-panel-text-col">
+              <div class="hook-panel-eyebrow">Visual Demonstration</div>
+              <div class="hook-panel-title">AI connected to your profit data</div>
+              <div class="hook-panel-body">
+                Showing a real Claude conversation pulling store data makes the abstract value concrete in seconds.
+              </div>
+              <div class="hook-panel-tags">
+                <span class="hook-panel-tag">Show Outcome</span>
+                <span class="hook-panel-tag">AI Chat View</span>
+              </div>
+            </div>
+            <div class="hook-panel-img-col">
+              <div class="tiktok-video-wrapper" style="margin: 0;">
+                <div class="tiktok-video-placeholder" style="width: 200px; height: 355px; border-radius: 16px;">
+                  <img src="../../images/revenue_vs_profit.png" alt="Claude Chat Preview" class="tiktok-video-img">
+                  <div class="tiktok-play-icon" style="width: 48px; height: 48px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="article-p">The hook isn't "here's a new feature." The hook is a problem merchants already feel: checking profit is slow, dashboards don't explain why numbers change, AI tools need manual data every time. Once they see the problem framed clearly, the solution sells itself.</p>
+        </section>
+
+        <section class="article-section" id="hook-1">
+          <h2 class="article-h2">Hook #1: "I Asked AI How My Store Was Doing. It Actually Knew."</h2>
+          <p class="article-p" style="font-size: 17px; color: var(--text-muted); margin-bottom: 24px;">This angle reframes store performance tracking around the surprising moment where AI already understands the store’s data with no setup or copy paste needed. It taps into the relatable late night "how is my store actually doing?" anxiety.</p>
+          
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>What to Say (Script Guide)</th>
+                  <th>What to Show</th>
+                  <th>Execution Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Hook (0–3s)</strong></td>
+                  <td>"I asked Claude how my store was doing this week and it actually knew."</td>
+                  <td>Face-on. No caption needed.</td>
+                  <td>Slight pause after "actually knew." Let curiosity land before moving on.</td>
+                </tr>
+                <tr>
+                  <td><strong>Problem (3–12s)</strong></td>
+                  <td>"Usually I'd open TrueProfit, check revenue, cross-reference ad spend, do the math myself. Every. Single. Time."</td>
+                  <td>Quick cuts: Shopify tab &rarr; ads dashboard &rarr; spreadsheet</td>
+                  <td>Keep energy slightly frustrated. Relatable, not dramatic.</td>
+                </tr>
+                <tr>
+                  <td><strong>Insight (12–25s)</strong></td>
+                  <td>"TrueProfit has an MCP integration now. Connect once, and your AI already has your live profit data loaded: every conversation, automatically."</td>
+                  <td>Screen recording: Claude chat open, typing the question, answer appearing</td>
+                  <td>Show the actual AI response. Blur store name/revenue if needed. This is the proof moment, slow down slightly.</td>
+                </tr>
+                <tr>
+                  <td><strong>Mention TrueProfit MCP (25–35s)</strong></td>
+                  <td>Primary: "I've been using TrueProfit for profit tracking, this just made it way more useful."<br><br>Softer: "Didn't even know this was possible until I set it up."</td>
+                  <td>3–5s dashboard clip. Blur specific numbers.</td>
+                  <td>Don't zoom in on pricing or features. Just enough to show it's real.</td>
+                </tr>
+                <tr>
+                  <td><strong>CTA (35–40s)</strong></td>
+                  <td>"Install it from the Shopify App Store and the link's in the description, and connect it to whatever AI you're already using."</td>
+                  <td>Caption: <em>Link below</em></td>
+                  <td>Neutral tone. No urgency, no pressure.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section" id="hook-2">
+          <h2 class="article-h2">Hook #2: "My Revenue Was Up. My Profit Wasn't. Here's How I Found Out Why."</h2>
+          <p class="article-p" style="font-size: 17px; color: var(--text-muted); margin-bottom: 24px;">This angle targets the specific pain of revenue-profit mismatch, one of the most common and frustrating ecom moments. The AI enters as the tool that found the root cause fast.</p>
+          
+          <div class="article-table-wrapper">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Section</th>
+                  <th>What to Say</th>
+                  <th>What to Show</th>
+                  <th>Execution Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Hook (0–3s)</strong></td>
+                  <td>"Last month my revenue was up 18%. My actual profit was down $600. And I had no idea why."</td>
+                  <td>Face-on. Bold caption: <strong>Revenue &ne; Profit</strong></td>
+                  <td>Say it matter-of-fact. The numbers do the work, don't over-emote.</td>
+                </tr>
+                <tr>
+                  <td><strong>Problem (3–15s)</strong></td>
+                  <td>"ROAS looked fine. Refunds were normal. Ad spend was actually lower. I went through everything manually and still couldn't find it."</td>
+                  <td>Text overlays: ROAS &check; Refunds &check; Ad spend &check; &rarr; then a question mark</td>
+                  <td>Faster pace. Keep the energy of someone genuinely confused, not panicking.</td>
+                </tr>
+                <tr>
+                  <td><strong>Insight (15–28s)</strong></td>
+                  <td>"I opened Claude, asked it why my margin dropped last month, it pulled my TrueProfit data and cross-referenced everything. Flagged a shipping cost I'd had wrong for weeks. $340 in avoidable losses."</td>
+                  <td>Screen recording: the actual AI response with root cause visible</td>
+                  <td>This is the <em>aha</em> moment. Slow down. Let the number ($340) land before moving on.</td>
+                </tr>
+                <tr>
+                  <td><strong>Mention TrueProfit MCP (28–38s)</strong></td>
+                  <td>Primary: "TrueProfit connects to Claude or ChatGPT directly before I touch the ad budget, I ask it first."<br><br>Softer: "It's like having someone who already knows all your numbers."</td>
+                  <td>Product-level profit view. Show one SKU breakdown.</td>
+                  <td>Position as your standard operating practice, not a recommendation.</td>
+                </tr>
+                <tr>
+                  <td><strong>CTA (38–45s)</strong></td>
+                  <td>"It's on the Shopify App Store, grab it and connect it to your AI. Link in the description."</td>
+                  <td>Caption: <em>Link in description</em></td>
+                  <td>Confident, not pushy. One sentence, no elaboration needed.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="article-section">
+          <div class="callout-box warning" style="border-left-color: #EF4444;">
+            <div class="callout-title" style="color: #EF4444;">Universal Mention Rules (Common Mistakes to Avoid)</div>
+            <div class="callout-bullets">
+              <div class="callout-row">
+                <div class="callout-icon" style="border-color: #EF4444; color: #EF4444;">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="callout-text">Tool mention must be &le; 5–8 seconds. Keep it short.</div>
+              </div>
+              <div class="callout-row">
+                <div class="callout-icon" style="border-color: #EF4444; color: #EF4444;">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="callout-text">Always tie it to <strong>your workflow</strong>, not as a direct recommendation. Frame it as: "This is how I operate."</div>
+              </div>
+              <div class="callout-row">
+                <div class="callout-icon" style="border-color: #EF4444; color: #EF4444;">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="callout-text">Never say: "This is the best app" or "Let me show you an app." Focus on demonstrating clarity, not listing features.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section" id="creator-approaches">
+          <h2 class="article-h2">Creator Approaches</h2>
+          
+          <h3 class="article-h3">If you already have a channel</h3>
+          <ul class="article-list">
+            <li>Keep your existing format — tutorials, ad breakdowns, ecommerce insights.</li>
+            <li>Integrate TrueProfit naturally into your workflow instead of creating a standalone app review.</li>
+            <li>If you use screen recordings, show how you analyze real profit.</li>
+            <li>Show your face when possible — personal authority builds trust and improves conversion.</li>
+          </ul>
+
+          <h3 class="article-h3">If you're building a channel from scratch</h3>
+          <ul class="article-list">
+            <li>Stay niche: Shopify, dropshipping, ecommerce metrics.</li>
+            <li>Focus on short, insight-driven content.</li>
+            <li>Start faceless if you're not comfortable on camera.</li>
+            <li>Prioritize clarity over production quality.</li>
+          </ul>
+
+          <h3 class="article-h3">Using AI to support production</h3>
+          <p class="article-p">AI can speed up content creation without replacing your expertise. You can use:</p>
+          <ul class="article-list">
+            <li>AI avatar tools (like HeyGen) if you don't want to film yourself.</li>
+            <li>AI voiceover tools for faceless videos.</li>
+            <li>CapCut AI features or Descript for editing.</li>
+            <li>Auto-caption tools to improve retention.</li>
+            <li>AI assistance for drafting scripts before recording.</li>
+          </ul>
+          <p class="article-p" style="font-style: italic; color: var(--text-muted);">AI should optimize your workflow, not replace your thinking.</p>
+        </section>
+      </article>
+
+
+    </div>
+
+    <!-- Right Column: Sticky Sidebar -->
+    <div class="guide-sidebar">
+      <!-- Progress Bar -->
+      <div class="sidebar-progress">
+        <div class="sidebar-progress-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="sidebar-progress-text">
+          TikTok &amp; YouTube Shorts
+          <span>4 sections &middot; ~10 min read</span>
+        </div>
+      </div>
+
+      <!-- TOC Menu -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">On this page</div>
+        <ul class="sidebar-toc">
+          <li><a href="#section-1" class="active">Example</a></li>
+          <li><a href="#section-2">Why Short-Form Works</a></li>
+          <li><a href="#section-3">Content Angles</a></li>
+          <li><a href="#section-4">Creator Approaches</a></li>
+        </ul>
+      </div>
+
+      <!-- CTA Card -->
+      <div class="sidebar-card" style="background: #e6fbf1; border-color: rgba(35,196,140,0.3);">
+        <div class="sidebar-card-title" style="color: #047857;">Start Earning</div>
+        <p class="sidebar-cta-text">Get your affiliate link and start promoting TrueProfit today.</p>
+        <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" class="sidebar-btn-primary">Get affiliate link</a>
+        <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="sidebar-link">Affiliate Dashboard &rarr;</a>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="related-section">
+  <div class="related-inner">
+    <div class="related-header">
+      <div class="related-label">More Playbooks</div>
+      <h2 class="related-title">Continue with another guide</h2>
+    </div>
+    <div class="related-grid">
+      <a class="related-card scroll-animate" href="general-guide.html" style="transition-delay: 0.1s;">
+        <span class="related-card-tag">Core Path</span>
+        <h3 class="related-card-title">General Affiliate Guide</h3>
+        <p class="related-card-desc">The foundational playbook. Learn the core product value, who to target, and how to start making your first commissions.</p>
+        <div class="related-card-footer">
+          <div class="related-card-link">
+            Read playbook
+            <svg class="related-card-arrow" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+      <a class="related-card scroll-animate" href="discord-blueprint.html" style="transition-delay: 0.2s;">
+        <span class="related-card-tag">Community</span>
+        <h3 class="related-card-title">Discord &amp; Community Blueprint</h3>
+        <p class="related-card-desc">Monetize Discord servers, Facebook groups, or ecommerce communities with natural mentions and AMAs.</p>
+        <div class="related-card-footer">
+          <div class="related-card-link">
+            Read playbook
+            <svg class="related-card-arrow" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="guide-cta-section">
+  <div class="guide-cta-inner">
+    <h2 class="guide-cta-h2">Ready to create your first <span>short-form</span> affiliate content?</h2>
+    <p class="guide-cta-sub">Start with one clear problem, turn it into a simple hook, and introduce TrueProfit naturally.</p>
+    <div class="guide-cta-btns">
+      <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" class="btn-cta-white">Get affiliate link &rarr;</a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-cta-ghost">Go to Dashboard</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     FOOTER
+     ============================= -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <img src="../../images/white_horizontal.svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
+      <div class="footer-tagline">Affiliate Resource Hub — everything you need to earn with TrueProfit.</div>
+    </div>
+    <div class="footer-links">
+      <h5>Resources</h5>
+      <a href="../../guides.html">Guides</a>
+      <a href="#">Creative Assets</a>
+      <a href="../../index.html#commission">Commission Calculator</a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank">Affiliate Dashboard</a>
+    </div>
+    <div class="footer-links">
+      <h5>TrueProfit</h5>
+      <a href="https://trueprofit.io" target="_blank">Homepage</a>
+      <a href="https://trueprofit.io/blog" target="_blank">Blog</a>
+      <a href="https://trueprofit.io/partner/affiliate-program" target="_blank">Affiliate Program</a>
+      <a href="mailto:partners@trueprofit.io">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 TrueProfit. All rights reserved.</span>
+    <span>Affiliate Resource Hub</span>
+  </div>
+</footer>
+
+<script>
+/* =========================================
+   SCROLL INTERSECTION OBSERVER
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+
+  const scrollTargets = document.querySelectorAll('.scroll-animate');
+  scrollTargets.forEach(el => observer.observe(el));
+  
+  /* =========================================
+     STICKY TOC LINK HIGHLIGHTING
+     ========================================= */
+  const sections = document.querySelectorAll('.article-section');
+  const tocLinks = document.querySelectorAll('.sidebar-toc a');
+  
+  function highlightTOC() {
+    let scrollPos = window.scrollY || document.documentElement.scrollTop;
+    
+    // Add offset for sticky header
+    scrollPos += 150;
+    
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute('id');
+      
+      if (scrollPos >= top && scrollPos < top + height) {
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', highlightTOC);
+  highlightTOC();
+});
+</script>
+
+</body>
+</html>

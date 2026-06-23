@@ -1,0 +1,666 @@
+=== INTRO SENTENCE PARAGRAPH ===
+<div class="guide-body">
+ <div class="guide-body-inner">
+  <!-- LEFT: GUIDE CONTENT -->
+  <main class="guide-content">
+   <!-- ======== SECTION 1: Example ======== -->
+   <div class="article-section scroll-animate" id="example">
+    <h2 class="article-h2">
+     1. Example
+    </h2>
+    <p class="article-p">
+     Short-form video is one of the most powerful free channels for affiliate promotion — if you know how to structure it. The goal is not to promote TrueProfit directly. The goal is to surface a blind spot your audience already has and introduce TrueProfit as the tool that fixes it.
+    </p>
+    <p class="article-p">
+     One of our partners created this video, and it earns him hundreds in monthly commission. ?
+    </p>
+    <!-- TikTok-style vertical video placeholder -->
+    <a class="tiktok-video-placeholder" href="https://www.tiktok.com/@whatifhoot/video/7601991913104755999" rel="noopener noreferrer" target="_blank">
+     <img alt="TikTok thumbnail" class="tiktok-video-img" src="../15.svg"/>
+     <div class="tiktok-play-icon">
+      <svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22">
+       <polygon points="5 3 19 12 5 21 5 3">
+       </polygon>
+      </svg>
+     </div>
+    </a>
+    <a class="tiktok-caption-link" href="https://www.tiktok.com/@whatifhoot/video/7601991913104755999" rel="noopener noreferrer" target="_blank">
+     Watch original TikTok
+     <span class="arrow">
+      →
+     </span>
+    </a>
+    <p class="article-p">
+     Notice what he does: he opens with a problem statement, not a product pitch. He explains why the problem matters in concrete terms (revenue vs. actual profit). Then he shows TrueProfit as the tool he personally uses to fix it — and the affiliate link is in the bio, mentioned naturally at the end.
+    </p>
+    <p class="article-p">
+     This structure is repeatable. You don't need a viral video. You need a clear hook, a real problem, and a genuine recommendation.
+    </p>
+   </div>
+   <!-- ======== SECTION 2: Why Short-Form Works for TrueProfit ======== -->
+   <div class="article-section scroll-animate" id="why-short-form-works-for-trueprofit">
+    <h2 class="article-h2">
+     2. Why Short-Form Works for TrueProfit
+    </h2>
+    <p class="article-p">
+     Short-form video surfaces problems fast. You have 3 seconds to hook someone — which forces you to lead with the exact pain your audience feels. For TrueProfit, that pain is clear: most Shopify merchants don't know their real net profit.
+    </p>
+    <p class="article-p">
+     Revenue looks good. Ads are running. Orders are coming in. But after COGS, shipping, fees, refunds, and ad spend — the actual margin is a fraction of what people assume. This disconnect is exactly what TrueProfit solves, and it's the kind of insight that stops someone mid-scroll.
+    </p>
+    <div class="callout-box emerald">
+     <div class="callout-title">
+      Quick Tip:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         You don't need
+        </strong>
+        thousands of followers. A well-structured 30–45 second video with a strong hook and clear problem can reach thousands of ecommerce viewers organically — even on a new account — because the algorithm rewards watch time, not follower count.
+       </div>
+      </div>
+     </div>
+    </div>
+    <p class="article-p">
+     The other reason short-form works: the tool mention is brief. You're not doing a product review. You're solving a problem in the video itself, and TrueProfit is the natural next step for anyone who wants to go further. That positioning converts much better than a direct promotion.
+    </p>
+   </div>
+   <!-- ======== SECTION 3: Content Angles You Could Use ======== -->
+   <div class="article-section scroll-animate" id="content-angles-you-could-use">
+    <h2 class="article-h2">
+     3. Content Angles You Could Use
+    </h2>
+    <p class="article-p">
+     These are three proven hook structures that work well for promoting TrueProfit on TikTok and YouTube Shorts. Each one targets a slightly different viewer mindset. Start with whichever matches your style — you can rotate through all three over time.
+    </p>
+    <!-- Hook 1 -->
+    <div class="hook-visual-panel">
+     <div class="hook-panel-img-col">
+      <img alt="Revenue Looks Good. Profit Doesn't." class="hook-panel-img" src="../hook_1_revenue_profit (1).svg"/>
+     </div>
+     <div class="hook-panel-text-col">
+      <div class="hook-panel-eyebrow">
+       Hook 1
+      </div>
+      <div class="hook-panel-title">
+       Surface metric vs real profit
+      </div>
+      <div class="hook-panel-body">
+       This hook works because it challenges the revenue number most merchants trust, then reframes net profit as the number that actually matters.
+      </div>
+      <div class="hook-panel-tags">
+       <span class="hook-panel-tag">
+        Beginners
+       </span>
+       <span class="hook-panel-tag">
+        30–40s
+       </span>
+       <span class="hook-panel-tag">
+        Calm but corrective
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="article-table-wrapper">
+     <table class="article-table">
+      <thead>
+       <tr>
+        <th>
+         Section
+        </th>
+        <th>
+         What to Say / Script Guide
+        </th>
+        <th>
+         What to Show
+        </th>
+        <th>
+         Execution Notes
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Hook (0–3s)
+        </td>
+        <td>
+         "Your Shopify revenue went up this month. But do you actually know your profit?"
+        </td>
+        <td>
+         Face-on. No caption needed.
+        </td>
+        <td>
+         Slight pause after "profit?". Let curiosity land before moving on.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Problem (3–15s)
+        </td>
+        <td>
+         Explain that Shopify revenue doesn't subtract ad spend, COGS, shipping costs, refunds, or payment fees. Most merchants are looking at gross revenue and calling it profit.
+        </td>
+        <td>
+         Quick cuts: Shopify tab ? ads dashboard.
+        </td>
+        <td>
+         Keep energy slightly frustrated. Relatable, not dramatic.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Tension (15–25s)
+        </td>
+        <td>
+         "I've seen stores doing $80K/month in revenue — with $3K in actual profit. They had no idea."
+        </td>
+        <td>
+         Focus on the speaker.
+        </td>
+        <td>
+         Emphasize the gap between $80K and $3K.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Solution (25–38s)
+        </td>
+        <td>
+         Introduce TrueProfit: a dashboard that pulls in every cost automatically and shows real net profit per order, per product, per day.
+        </td>
+        <td>
+         Show a 3–5 second clip of the TrueProfit dashboard.
+        </td>
+        <td>
+         Blur specific numbers. Show clarity, not capabilities.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         CTA (38–45s)
+        </td>
+        <td>
+         "I use it to check my margins before I scale anything. Link in bio if you want to try it."
+        </td>
+        <td>
+         Caption:
+         <em>
+          Link in bio
+         </em>
+        </td>
+        <td>
+         Neutral tone. No urgency, no pressure.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="callout-box mistake">
+     <div class="callout-title">
+      Common Mistake:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         Saying "TrueProfit is the best profit tracking tool"
+        </strong>
+        — this sounds promotional and kills trust. Instead, describe what it shows you: real net profit after every cost. Let the result do the selling.
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Hook 2 -->
+    <div class="hook-visual-panel">
+     <div class="hook-panel-img-col">
+      <img alt="Scaling Doesn't Always Mean More Profit" class="hook-panel-img" src="../hook_2_ad_spend_margin.svg"/>
+     </div>
+     <div class="hook-panel-text-col">
+      <div class="hook-panel-eyebrow">
+       Hook 2
+      </div>
+      <div class="hook-panel-title">
+       Scaling can hide margin problems
+      </div>
+      <div class="hook-panel-body">
+       This hook works for merchants running ads because it connects growth with cost pressure and makes profit tracking feel like an operator habit.
+      </div>
+      <div class="hook-panel-tags">
+       <span class="hook-panel-tag">
+        Paid ads operators
+       </span>
+       <span class="hook-panel-tag">
+        35–45s
+       </span>
+       <span class="hook-panel-tag">
+        Analytical
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="article-table-wrapper">
+     <table class="article-table">
+      <thead>
+       <tr>
+        <th>
+         Section
+        </th>
+        <th>
+         What to Say / Script Guide
+        </th>
+        <th>
+         What to Show
+        </th>
+        <th>
+         Execution Notes
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Hook (0–3s)
+        </td>
+        <td>
+         "Scaling your ad spend doesn't automatically mean you're making more money."
+        </td>
+        <td>
+         Face-on. Direct eye contact.
+        </td>
+        <td>
+         Confident delivery.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Problem (3–20s)
+        </td>
+        <td>
+         Explain that when you scale, costs scale too — higher ad CPM, more returns, more payment fees, thinner margins per unit. Many merchants track ROAS but miss net margin. ROAS going up while profit stays flat is a sign something is wrong.
+        </td>
+        <td>
+         B-roll of scaling ads or looking at a spreadsheet.
+        </td>
+        <td>
+         Build the tension around hidden costs.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Personal moment (20–30s)
+        </td>
+        <td>
+         "I doubled my ad spend one month. Revenue went up 80%. Profit went up 12%. That's when I realized I had a margin problem, not a traffic problem."
+        </td>
+        <td>
+         Face-on.
+        </td>
+        <td>
+         Speak from personal experience.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Solution (30–42s)
+        </td>
+        <td>
+         Show how TrueProfit reveals margin per product, so you know which SKUs are worth scaling and which ones are eating into your profit even when ROAS looks fine.
+        </td>
+        <td>
+         Show TrueProfit product profit view.
+        </td>
+        <td>
+         Highlight the per-product margin.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         CTA (42–50s)
+        </td>
+        <td>
+         "If you're scaling without checking your actual margin, you're flying blind. Link in bio."
+        </td>
+        <td>
+         Text overlay:
+         <em>
+          Link in bio
+         </em>
+        </td>
+        <td>
+         Firm, advisory tone.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="callout-box mistake">
+     <div class="callout-title">
+      Common Mistake:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         Leading with "Let me show you an app"
+        </strong>
+        — this immediately frames the video as an ad. Lead with the insight (scaling ads doesn't automatically mean more profit) and let TrueProfit appear as evidence, not the subject.
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Hook 3 -->
+    <div class="hook-visual-panel">
+     <div class="hook-panel-img-col">
+      <img alt="Before I Scale, I Check This One Number." class="hook-panel-img" src="../hook_3_net_profit.svg"/>
+     </div>
+     <div class="hook-panel-text-col">
+      <div class="hook-panel-eyebrow">
+       Hook 3
+      </div>
+      <div class="hook-panel-title">
+       Check the number before scaling
+      </div>
+      <div class="hook-panel-body">
+       This hook positions TrueProfit as part of a smarter decision-making workflow, not as a random app recommendation.
+      </div>
+      <div class="hook-panel-tags">
+       <span class="hook-panel-tag">
+        Experienced operators
+       </span>
+       <span class="hook-panel-tag">
+        30–35s
+       </span>
+       <span class="hook-panel-tag">
+        Instructional
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="article-table-wrapper">
+     <table class="article-table">
+      <thead>
+       <tr>
+        <th>
+         Section
+        </th>
+        <th>
+         What to Say / Script Guide
+        </th>
+        <th>
+         What to Show
+        </th>
+        <th>
+         Execution Notes
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         Hook (0–3s)
+        </td>
+        <td>
+         "Before I scale any product, I check this one number."
+        </td>
+        <td>
+         Face-on. Pointing at screen.
+        </td>
+        <td>
+         Hook them with a secret.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Build curiosity (3–12s)
+        </td>
+        <td>
+         "It's not ROAS. It's not conversion rate. It's net profit margin per order — after every single cost is accounted for."
+        </td>
+        <td>
+         Text popping up: Not ROAS. Not CR.
+        </td>
+        <td>
+         Fast pacing to keep attention.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Why it matters (12–22s)
+        </td>
+        <td>
+         "If my margin is below a certain threshold, scaling just loses money faster. Most people find this out too late — after they've already spent the budget."
+        </td>
+        <td>
+         Face-on.
+        </td>
+        <td>
+         Serious, cautionary tone.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Tool reveal (22–30s)
+        </td>
+        <td>
+         "I use TrueProfit to check this automatically. It pulls in Shopify data, ad spend, COGS, fees — everything — and shows me the real number in one place."
+        </td>
+        <td>
+         Screen recording of TrueProfit dashboard syncing data.
+        </td>
+        <td>
+         Focus on the automation aspect.
+        </td>
+       </tr>
+       <tr>
+        <td>
+         CTA (30–35s)
+        </td>
+        <td>
+         "Link in bio if you want to see what your actual margin looks like before your next scale."
+        </td>
+        <td>
+         Text overlay:
+         <em>
+          Link in bio
+         </em>
+        </td>
+        <td>
+         Confident recommendation.
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="callout-box mistake">
+     <div class="callout-title">
+      Common Mistake:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         Spending more than 5–8 seconds
+        </strong>
+        talking about TrueProfit's features. The tool mention should feel like a natural part of your workflow — not a feature overview. Show clarity, not capabilities.
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="callout-box warning">
+     <div class="callout-title">
+      Universal Rule:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         Tool mention = 5–8 seconds.
+        </strong>
+        Always tie it to YOUR workflow. Show clarity, not features. Never say "This is the best app." Never lead with "Let me show you an app."
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- ======== SECTION 4: Creator Approaches ======== -->
+   <div class="article-section scroll-animate" id="creator-approaches">
+    <h2 class="article-h2">
+     4. Creator Approaches
+    </h2>
+    <h3 class="article-h3">
+     Already have a channel
+    </h3>
+    <p class="article-p">
+     Keep your existing format. Don't change your style to accommodate TrueProfit — instead, find the natural moment where profit tracking fits your existing content. If you already talk about Shopify, scaling, or ecommerce tools, you can introduce one of the hooks above as a standalone video or weave it into a broader "tools I use" type of content.
+    </p>
+    <p class="article-p">
+     The key is to show how you actually use TrueProfit to analyze real profit — not just name the tool. Showing your dashboard, even briefly, adds far more credibility than describing it.
+    </p>
+    <h3 class="article-h3">
+     Building from scratch
+    </h3>
+    <p class="article-p">
+     Stay niche: focus on Shopify and dropshipping. This audience is large, active, and constantly looking for practical insights. You don't need to be an expert — you need to be one step ahead of your viewer on a specific problem they're dealing with right now.
+    </p>
+    <p class="article-p">
+     Start with short insight-driven content: one problem, one insight, one solution per video. If you're not comfortable on camera, start faceless — screen recordings with a voiceover work just as well for this type of content, and sometimes better because the focus stays on the data.
+    </p>
+    <div class="callout-box emerald">
+     <div class="callout-title">
+      Quick Tip:
+     </div>
+     <div class="callout-bullets">
+      <div class="callout-row">
+       <div class="callout-icon">
+        <svg viewbox="0 0 24 24">
+         <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+         </path>
+        </svg>
+       </div>
+       <div class="callout-text">
+        <strong>
+         Post consistently
+        </strong>
+        for at least 30–60 days before evaluating results. Short-form video compounds slowly at first, then accelerates. One video earning steady commissions is worth more than 10 videos that spike once and fade.
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </main>
+  <!-- RIGHT: STICKY SIDEBAR -->
+  <aside class="guide-sidebar">
+   <!-- Progress hint -->
+   <div class="sidebar-progress scroll-animate">
+    <div class="sidebar-progress-icon">
+     <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="20">
+      <polygon points="23 7 16 12 23 17 23 7">
+      </polygon>
+      <rect height="14" rx="2" ry="2" width="15" x="1" y="5">
+      </rect>
+     </svg>
+    </div>
+    <div class="sidebar-progress-text">
+     TikTok &amp; YouTube Shorts
+     <span>
+      4 sections  ~10 min read
+     </span>
+    </div>
+   </div>
+   <!-- Table of contents -->
+   <div class="sidebar-card scroll-animate" style="transition-delay: 0.1s;">
+    <div class="sidebar-card-title">
+     On this page
+    </div>
+    <ul class="sidebar-toc">
+     <li>
+      <a href="#example">
+       Example
+      </a>
+     </li>
+     <li>
+      <a href="#why-short-form-works-for-trueprofit">
+       Why Short-Form Works for TrueProfit
+      </a>
+     </li>
+     <li>
+      <a href="#content-angles-you-could-use">
+       Content Angles You Could Use
+      </a>
+     </li>
+     <li>
+      <a href="#creator-approaches">
+       Creator Approaches
+      </a>
+     </li>
+    </ul>
+   </div>
+   <!-- CTA card -->
+   <div class="sidebar-card scroll-animate" style="transition-delay: 0.2s;">
+    <div class="sidebar-card-title">
+     Ready to start?
+    </div>
+    <p class="sidebar-cta-text">
+     Get your affiliate link and start creating short-form content today.
+    </p>
+    <a class="sidebar-btn-primary" href="https://affiliate.trueprofit.io/sign-up" target="_blank">
+     Get affiliate link →
+    </a>
+    <a class="sidebar-link" href="#content-angles-you-could-use">
+     View content angles
+     <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14">
+      <path d="M5 12h14">
+      </path>
+      <path d="M12 5l7 7-7 7">
+      </path>
+     </svg>
+    </a>
+   </div>
+  </aside>
+ </div>
+</div>
+
+
+=== VIDEO VISUAL CONTAINER ===
+<a class="tiktok-video-placeholder" href="https://www.tiktok.com/@whatifhoot/video/7601991913104755999" rel="noopener noreferrer" target="_blank">
+ <img alt="TikTok thumbnail" class="tiktok-video-img" src="../15.svg"/>
+ <div class="tiktok-play-icon">
+  <svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22">
+   <polygon points="5 3 19 12 5 21 5 3">
+   </polygon>
+  </svg>
+ </div>
+</a>

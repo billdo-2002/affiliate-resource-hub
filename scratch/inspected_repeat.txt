@@ -1,0 +1,1116 @@
+<h1 class="stagger-enter" style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; animation-delay: 0.2s;">
+      Promote TrueProfit <span style="color: var(--accent-teal);">MCP</span>.<br>
+      Earn While <span style="color: var(--accent-teal);">AI</span> Takes Over Ecom.
+    </h1>
+    
+    <p class="stagger-enter" style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 40px; animation-delay: 0.3s;">
+      TrueProfit just launched MCP — a feature that connects live profit data directly to Claude and ChatGPT. It's new, it's hot, and most affiliates haven't touched it yet. That's your advantage.
+    </p>
+    
+    <div class="stagger-enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; animation-delay: 0.4s;">
+      <button class="btn-teal" onclick="document.getElementById('toolkit-section').scrollIntoView({behavior: 'smooth'})">See Promotion Toolkit ↓</button>
+      <a href="https://trueprofit.io/solutions/mcp" target="_blank" class="btn-outline">Learn About MCP →</a>
+    </div>
+    
+    <div class="stagger-enter" style="margin: 0 auto; width: 100%; max-width: 600px; height: 320px; background: var(--secondary-dark); border: 1px solid rgba(0,200,150,0.2); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0,200,150,0.1); animation-delay: 0.5s;">
+      <span style="color: var(--text-muted); font-size: 14px;">[ Illustration coming soon ]</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: WHAT IS MCP -->
+<section style="background-color: var(--bg-light); padding: 100px 24px; color: #000;">
+  <div style="max-width: 1000px; margin: 0 auto;">
+    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">UNDERSTAND THE FEATURE</div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.2; transition-delay: 0.1s;">Your store's profit data, inside the AI you already use</h2>
+    <p class="scroll-animate" style="font-size: 16px; color: #475569; line-height: 1.6; max-width: 700px; margin-bottom: 24px; transition-delay: 0.2s;">
+      MCP (Model Context Protocol) connects TrueProfit directly to Claude or ChatGPT. Merchants ask questions in plain language and get real answers — no dashboards, no copy-pasting numbers, no manual setup per conversation.
+    </p>
+    
+    <div class="scroll-animate" style="display: flex; gap: 24px; margin-bottom: 60px; transition-delay: 0.3s;">
+      <a href="https://trueprofit.io/solutions/mcp" target="_blank" style="color: var(--accent-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; position: relative;">Full feature details →<span style="position:absolute; bottom:-2px; left:0; width:0; height:1px; background:currentColor; transition: width 0.2s;"></span></a>
+      <a href="https://helpdesk.trueprofit.io/en/articles/14086381-trueprofit-mcp-connect-trueprofit-to-chatgpt-claude-and-openclaw-clawdbot" target="_blank" style="color: var(--accent-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; position: relative;">Setup guide →<span style="position:absolute; bottom:-2px; left:0; width:0; height:1px; background:currentColor; transition: width 0.2s;"></span></a>
+    </div>
+    
+    
+    <div class="scroll-animate" style="position: relative; max-width: 100%; margin: 16px auto 0; padding: 60px 40px; background-color: #f2fcf8; border-radius: 32px; overflow: hidden; transition-delay: 0.4s;">
+      <!-- Lighter subtle grid backdrop over the pale mint container -->
+      <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none;"></div>
+      
+      <div class="mcp-step-panel" style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; background: #ffffff; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 24px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); display: grid; grid-template-columns: repeat(2, 1fr); overflow: hidden;">
+        
+        <!-- Cell 1 -->
+        <div class="mcp-step-cell cell-1" style="padding: 56px; background: #ffffff; border-right: 1px solid rgba(15, 23, 42, 0.06); border-bottom: 1px solid rgba(15, 23, 42, 0.06);">
+          <div class="mcp-step-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div class="mcp-step-badge" style="width: 38px; height: 38px; border-radius: 10px; background: rgba(0, 200, 150, 0.1); color: #00C896; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">1</div>
+            <h3 class="mcp-step-title" style="font-size: 21px; font-weight: 800; color: #0D1F2D; margin: 0; letter-spacing: -0.01em;">Instant Answers</h3>
+          </div>
+          <p class="mcp-step-desc" style="font-size: 16px; line-height: 1.65; color: #6b7280; margin: 0; max-width: 420px;">Ask about profit, costs, or performance anytime &mdash; no need to open the app or pull reports manually.</p>
+        </div>
+
+        <!-- Cell 2 -->
+        <div class="mcp-step-cell cell-2" style="padding: 56px; background: #ffffff; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">
+          <div class="mcp-step-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div class="mcp-step-badge" style="width: 38px; height: 38px; border-radius: 10px; background: rgba(0, 200, 150, 0.1); color: #00C896; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">2</div>
+            <h3 class="mcp-step-title" style="font-size: 21px; font-weight: 800; color: #0D1F2D; margin: 0; letter-spacing: -0.01em;">Always Knows Your Numbers</h3>
+          </div>
+          <p class="mcp-step-desc" style="font-size: 16px; line-height: 1.65; color: #6b7280; margin: 0; max-width: 420px;">Connect once. After that, the AI already has your live store data loaded every time &mdash; no re-explaining needed.</p>
+        </div>
+
+        <!-- Cell 3 -->
+        <div class="mcp-step-cell cell-3" style="padding: 56px; background: #ffffff; border-right: 1px solid rgba(15, 23, 42, 0.06);">
+          <div class="mcp-step-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div class="mcp-step-badge" style="width: 38px; height: 38px; border-radius: 10px; background: rgba(0, 200, 150, 0.1); color: #00C896; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">3</div>
+            <h3 class="mcp-step-title" style="font-size: 21px; font-weight: 800; color: #0D1F2D; margin: 0; letter-spacing: -0.01em;">Finds the Root Cause</h3>
+          </div>
+          <p class="mcp-step-desc" style="font-size: 16px; line-height: 1.65; color: #6b7280; margin: 0; max-width: 420px;">Goes beyond "what changed" to explain why &mdash; cross-referencing COGS, ad spend, fees, and refunds all at once.</p>
+        </div>
+
+        <!-- Cell 4 -->
+        <div class="mcp-step-cell cell-4" style="padding: 56px; background: #ffffff;">
+          <div class="mcp-step-header" style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+            <div class="mcp-step-badge" style="width: 38px; height: 38px; border-radius: 10px; background: rgba(0, 200, 150, 0.1); color: #00C896; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">4</div>
+            <h3 class="mcp-step-title" style="font-size: 21px; font-weight: 800; color: #0D1F2D; margin: 0; letter-spacing: -0.01em;">Works with Claude & ChatGPT</h3>
+          </div>
+          <p class="mcp-step-desc" style="font-size: 16px; line-height: 1.65; color: #6b7280; margin: 0; max-width: 420px;">Not locked to one AI tool. Merchants use whichever assistant they're already on.</p>
+        </div>
+
+      </div>
+
+<style>
+@media (max-width: 768px) {
+  .mcp-step-panel {
+    grid-template-columns: 1fr !important;
+  }
+  .mcp-step-cell {
+    padding: 40px 32px !important;
+  }
+  .mcp-step-cell.cell-1,
+  .mcp-step-cell.cell-3 {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+  }
+  .mcp-step-cell.cell-2 {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+  }
+}
+</style>
+<style>
+/* OVERRIDES FOR MCP PAGE */
+:root {
+  --primary-dark: #0D1F2D;
+  --accent-teal: #00C896;
+  --secondary-dark: #1A3A4A;
+  --text-white: #FFFFFF;
+  --text-muted: #8B9BAA;
+  --bg-light: #F8FFFE;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* Override background dots */
+.bg-dots-mcp {
+  background-color: var(--primary-dark);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+/* Override animations */
+.stagger-enter {
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Pulse dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-teal);
+  border-radius: 50%;
+  display: inline-block;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+/* Hover cards */
+.hover-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.content-card:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.2);
+}
+.btn-teal {
+  background: var(--accent-teal);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.4);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+  transform: translateY(-2px);
+}
+
+
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+/* Mobile Dropdown styles (outside media query so JS can toggle it safely, or inside media query) */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 64px; /* Adjust based on new header height 12px*2 + 40px = 64px */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #0D1F2D;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+.mobile-menu-dropdown.active {
+  display: block;
+}
+.mobile-menu-dropdown a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.mobile-menu-dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-dropdown a.mobile-btn-cta {
+  background: #00C896;
+  color: #0D1F2D;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px 20px;
+  padding: 14px 20px;
+  border-bottom: none;
+}
+.mobile-menu-dropdown a.mobile-btn-cta:hover {
+  background: #00B085;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+/* Mobile Dropdown styles (outside media query so JS can toggle it safely, or inside media query) */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 64px; /* Adjust based on new header height 12px*2 + 40px = 64px */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #0D1F2D;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+.mobile-menu-dropdown.active {
+  display: block;
+}
+.mobile-menu-dropdown a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.mobile-menu-dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-dropdown a.mobile-btn-cta {
+  background: #00C896;
+  color: #0D1F2D;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px 20px;
+  padding: 14px 20px;
+  border-bottom: none;
+}
+.mobile-menu-dropdown a.mobile-btn-cta:hover {
+  background: #00B085;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+/* Mobile Dropdown styles (outside media query so JS can toggle it safely, or inside media query) */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 64px; /* Adjust based on new header height 12px*2 + 40px = 64px */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #0D1F2D;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+.mobile-menu-dropdown.active {
+  display: block;
+}
+.mobile-menu-dropdown a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.mobile-menu-dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-dropdown a.mobile-btn-cta {
+  background: #00C896;
+  color: #0D1F2D;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px 20px;
+  padding: 14px 20px;
+  border-bottom: none;
+}
+.mobile-menu-dropdown a.mobile-btn-cta:hover {
+  background: #00B085;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+</style>
+<style>
+/* OVERRIDES FOR MCP PAGE */
+:root {
+  --primary-dark: #0D1F2D;
+  --accent-teal: #00C896;
+  --secondary-dark: #1A3A4A;
+  --text-white: #FFFFFF;
+  --text-muted: #8B9BAA;
+  --bg-light: #F8FFFE;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* Override background dots */
+.bg-dots-mcp {
+  background-color: var(--primary-dark);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+/* Override animations */
+.stagger-enter {
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Pulse dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-teal);
+  border-radius: 50%;
+  display: inline-block;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+/* Hover cards */
+.hover-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.content-card:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.2);
+}
+.btn-teal {
+  background: var(--accent-teal);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn-teal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 200, 150, 0.4);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+  transform: translateY(-2px);
+}
+
+
+
+
+@media (max-width: 1023px) {
+  /* Hide all nav links and buttons in navbar */
+  nav .nav-links,
+  nav .nav-items,
+  nav ul,
+  nav a:not(.logo-link),
+  nav button:not(.hamburger-btn):not(.get-affiliate-btn),
+  .navbar-menu,
+  .nav-center,
+  [class*="nav-link"],
+  [class*="menu-item"],
+  .header-nav,
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Navbar layout */
+  nav, header, .navbar, .header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+    overflow: hidden !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Keep only logo visible on left */
+  .logo, .navbar-logo, [class*="logo"], .header-logo {
+    display: flex !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger button — show on right */
+  .hamburger-btn, .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 8px !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+  .hamburger span {
+    display: none;
+  }
+  .hamburger::before {
+    content: "☰";
+  }
+
+  /* Hide "Get affiliate link" button in navbar on mobile */
+  .get-affiliate-btn, .btn-cta, .btn-ghost {
+    display: none !important;
+  }
+}
+
+/* Mobile Dropdown styles (outside media query so JS can toggle it safely, or inside media query) */
+.mobile-menu-dropdown {
+  display: none;
+  position: fixed;
+  top: 64px; /* Adjust based on new header height 12px*2 + 40px = 64px */
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #0D1F2D;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-sizing: border-box;
+}
+.mobile-menu-dropdown.active {
+  display: block;
+}
+.mobile-menu-dropdown a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s;
+}
+.mobile-menu-dropdown a:hover {
+  background: rgba(255,255,255,0.05);
+}
+.mobile-menu-dropdown a.mobile-btn-cta {
+  background: #00C896;
+  color: #0D1F2D;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 8px;
+  margin: 16px 20px;
+  padding: 14px 20px;
+  border-bottom: none;
+}
+.mobile-menu-dropdown a.mobile-btn-cta:hover {
+  background: #00B085;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+  .header-inner {
+    position: relative !important;
+  }
+  .nav-dropdown-wrapper {
+    position: static !important;
+  }
+  .mega-menu {
+    position: absolute !important;
+    top: 100% !important; /* adjust if needed */
+    left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important;
+    min-width: unset !important;
+  }
+  .mega-zone-1 {
+    flex: 0 0 35% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-2 {
+    flex: 0 0 25% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-zone-3 {
+    flex: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    min-width: 0 !important;
+  }
+  .mega-asset-card {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow: hidden !important;
+  }
+  .mega-asset-desc {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+}
+
+</style>
+</head>
+<body style="background: var(--primary-dark); color: var(--text-white);">
+<header id="header" class="stagger-enter" style="animation-delay: 0s;">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="#section-start">Get Started</a>
+      <a href="#section-who">Who to Target</a>
+      <a href="#commission">Commission</a>
+      <a href="#section-opportunity">Opportunity</a>
+      <a href="#dashboard-setup">Dashboard Setup</a>
+      <div class="nav-dropdown-wrapper">
+        <a href="#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                        <div class="mega-menu">
+          <!-- Zone 1: Guides & Angles (White) -->
+          <div class="mega-zone mega-zone-1">
+            <a class="mega-pill-badge" href="guides.html">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              GUIDES &rarr;
+            </a>
+            <div class="mega-links-grid">
+              <a class="mega-link-item" href="guides/general-guide.html">General Guide</a>
+              <a class="mega-link-item" href="guides/discord-blueprint.html">Discord Blueprint</a>
+              <a class="mega-link-item" href="guides/tiktok-youtube-shorts.html">TikTok &amp; YouTube Shorts</a>
+            </div>
+            <div class="mega-section-label" style="margin-top: 8px;">HIGH-CONVERTING ANGLES:</div>
+            <div class="mega-gems-list">
+              <a class="mega-gem-card" href="guides/angles/track-profit-like-a-pro.html">
+                <div class="mega-gem-img" style="background: #0B1D2E;">
+                  <img src="22.svg" alt="Track Profit Like A Pro">
+                </div>
+                <div class="mega-gem-text">Track Profit Like A Pro</div>
+              </a>
+              <a class="mega-gem-card" href="guides/angles/scale-safely-with-margins.html">
+                <div class="mega-gem-img" style="background: #62BBA2;">
+                  <img src="19.svg" alt="Scale Safely with Margins">
+                </div>
+                <div class="mega-gem-text">Scale Safely with Margins</div>
+              </a>
+              <a class="mega-gem-card" href="guides/angles/stop-losing-30-profit.html">
+                <div class="mega-gem-img" style="background: #FCE1DA;">
+                  <img src="21.svg" alt="Stop Losing 30% Profit">
+                </div>
+                <div class="mega-gem-text">Stop Losing 30% Profit</div>
+              </a>
+            </div>
+          </div>
+          <!-- Zone 2: MCP Promotion (Mint) -->
+          <div class="mega-zone mega-zone-2">
+            <a class="mega-pill-badge" href="guides/mcp-promotion-playbook.html" style="border-color: #1d9e75; color: #1d9e75; background: #e6fbf1;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              MCP PROMOTION &rarr;
+              <svg fill="currentColor" height="10" style="color: #f59e0b; margin-left: 6px; vertical-align: middle;" viewbox="0 0 24 24" width="10"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </a>
+            <div class="mega-links-list" style="gap: 24px; padding-top: 0; align-items: flex-start;">
+              <a class="mega-link-item" href="guides/mcp-promotion-playbook.html">MCP Promotion Playbook</a>
+              <a class="mega-link-item" href="resources/mcp/x-twitter-ready-to-post.html">X/Twitter Ready-to-Post</a>
+              <a class="mega-link-item" href="resources/mcp/reddit-ready-to-post.html">Reddit Ready-to-Post</a>
+              <a class="mega-link-item" href="resources/mcp/short-form-video-guidelines.html">Short-Form Video Guidelines</a>
+            </div>
+          </div>
+          <!-- Zone 3: Creative Assets (Navy) -->
+          <div class="mega-zone mega-zone-3">
+            <a class="mega-pill-badge mega-pill-badge-dark" href="#" style="margin-bottom: 24px;">
+              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
+              CREATIVE ASSETS &rarr;
+            </a>
+
+          <div style="padding-top: 0; display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681fb9db2000c532b98a0" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px;
+              margin-bottom: 16px;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">Logo Kit</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Download high-res TrueProfit logos in multiple formats. Use across your content, thumbnails, and channel art.</div>
+              </div>
+              <img src="35.svg" alt="" style="
+                width: 500px;
+                height: 500px;
+                object-fit: contain;
+                align-self: center;
+                flex-shrink: 0;
+                margin-left: 16px;
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681dbb776000cb2feef3f" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px;
+              margin-bottom: 16px;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">Campaign Banners</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Ready-to-use campaign banners sized for every platform. Just drop in your affiliate link and post.</div>
+              </div>
+              <img src="36.svg" alt="" style="
+                width: 500px;
+                height: 500px;
+                object-fit: contain;
+                align-self: center;
+                flex-shrink: 0;
+                margin-left: 16px;
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+
+            <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681eb8be9000c647955f8" target="_blank" class="mega-asset-card" style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              background: #1A3A4A;
+              border: 1px solid rgba(255,255,255,0.08);
+              border-radius: 12px;
+              padding: 16px;
+              margin-bottom: 0;
+              text-decoration: none;
+              position: relative;
+              cursor: pointer;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+            ">
+              <div style="flex: 1; padding-right: 8px;">
+                <div style="color: #fff; font-weight: 700; font-size: 14px; margin-bottom: 6px;">App Footages</div>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; white-space: normal !important; word-wrap: break-word !important; overflow-wrap: break-word !important; overflow: visible; width: auto;">Raw screen recordings and dashboard visuals. Use as B-roll in your videos or social content.</div>
+              </div>
+              <img src="37.svg" alt="" style="
+                width: 500px;
+                height: 500px;
+                object-fit: contain;
+                align-self: center;
+                flex-shrink: 0;
+                margin-left: 16px;
+              ">
+              <span style="position:absolute; top:10px; right:12px; color:rgba(255,255,255,0.3); font-size:13px;">+</span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-actions" id="headerActions">
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-ghost">My Dashboard</a>
+      <a href="#dashboard-setup" class="btn-cta">Get affiliate link →</a>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+    

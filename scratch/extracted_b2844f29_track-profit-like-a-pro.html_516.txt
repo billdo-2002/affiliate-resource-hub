@@ -1,0 +1,1 @@
+"    <!-- Hero illustration placeholder -->\n    <div class=\"guide-hero-visual stagger-enter\" style=\"animation-delay: 0.2s;\">\n      <img src=\"../../18.svg\" alt=\"Angle Hero\" style=\"width: 112%; max-width: none;\">\n    </div>"

@@ -1,0 +1,235 @@
+﻿
+$path = "c:\Users\khoadnd\Desktop\onboarding hub\index.html"
+$content = Get-Content -Raw -Encoding UTF8 $path
+
+$headerStart = '<header id="header">'
+$heroStart = '<!-- ==============================
+     HERO
+     ============================== -->'
+
+$split1 = $content.Split([string[]]@($headerStart), 2, [System.StringSplitOptions]::None)
+if ($split1.Length -ne 2) { Write-Host "Failed 1"; exit 1 }
+
+$split2 = $split1[1].Split([string[]]@($heroStart), 2, [System.StringSplitOptions]::None)
+if ($split2.Length -ne 2) { Write-Host "Failed 2"; exit 1 }
+
+$newHeader = Get-Content -Raw -Encoding UTF8 "c:\Users\khoadnd\Desktop\onboarding hub\new_header.txt"
+$newHeader = $newHeader + "`r`n`r`n"
+
+$newContent = $split1[0] + $newHeader + $heroStart + $split2[1]
+Set-Content -Path $path -Value $newContent -Encoding UTF8
+Write-Host "Success"
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>X/Twitter Ready-to-Post â€” TrueProfit</title>
+<meta content="Two ready-to-use MCP promotion angles for short, punchy X/Twitter content." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+/* =========================================
+   LOCAL FONTS â€” Plus Jakarta Sans
+   ========================================= */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =========================================
+   DESIGN TOKENS
+   ==
+<truncated 21313 bytes>
+:   line-height: 1.8;
+}
+.article-note p { margin: 0; }
+.article-note.emerald {
+  background: rgba(35,196,140,0.08);
+  border-left: 4px solid var(--green-bright);
+  color: #0f4a38;
+}
+.article-note.warning {
+  background: rgba(245,158,11,0.08);
+  border-left: 4px solid #f59e0b;
+  color: #78350f;
+}
+.article-note.info {
+  background: rgba(59,130,246,0.08);
+  border-left: 4px solid #3b82f6;
+  color: #1e3a8a;
+}
+
+/* Lists */
+.article-list {
+  margin: 40px 0 48px 40px;
+  list-style-type: disc;
+}
+.article-list li {
+  margin-bottom: 20px;
+  padding-left: 8px;
+  font-size: 22px;
+  line-height: 1.8;
+}
+.article-list li::marker {
+  color: var(--green);
+}
+
+/* Editorial Pull Quote */
+.article-pullquote {
+  font-size: 28px; /* decreased from 32px to prevent wrapping */
+  font-weight: 400;
+  font-style: italic;
+  color: #0F172A;
+  line-height: 1.5;
+  margin: 80px 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  border-left: none;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.article-example-block {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  margin: 40px 0;
+}
+.article-example-block .article-p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  font-style: normal;
+}
+.article-example-block .article-p:last-child {
+  margin-bottom: 0;
+}
+
+/* Angle Links */
+.article-links {
+  display: flex;
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>X/Twitter Ready-to-Post â€” TrueProfit</title>
+<meta content="Two ready-to-use MCP promotion angles for short, punchy X/Twitter content." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+/* =========================================
+   LOCAL FONTS â€” Plus Jakarta Sans
+   ========================================= */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =========================================
+   DESIGN TOKENS
+   ==
+<truncated 6099 bytes>
+osition: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 1100px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1001;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 1.05fr;
+  overflow: hidden;
+  padding: 0;
+}
+.nav-dropdown-wrapper:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.mega-zone {
+  padding: 32px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.mega-zone-1 {
+  background: #ffffff;
+}
+.mega-zone-2 {
+  background: #f0fdf4;
+  border-left: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+}
+.mega-zone-3 {
+  background: #002d33;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 32px 40px 32px;
+  box-sizing: border-box;
+}
+.mega-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0a2540;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+  text-decoration: none;
+}
+.mega-pill-badge:hover {
+  border-color: #1d9e75;
+  color: #1d9e75;
+  background: #f0fdf4;
+
