@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Promote TrueProfit MCP | Affiliate Resource Hub</title>
 <meta name="description" content="Promote TrueProfit MCP. Earn while AI takes over Ecom.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <style>
+
+/* Global Font Override to enforce Plus Jakarta Sans */
+body, h1, h2, h3, h4, h5, h6, input, button, select, textarea, span, p, a, div, li, ul, ol, th, td, label {
+  font-family: 'Plus Jakarta Sans', 'Plus_Jakarta_Sans', sans-serif !important;
+}
 /* =========================================
    LOCAL FONTS — Plus Jakarta Sans
    ========================================= */
@@ -1772,9 +1774,7 @@ footer {
   --text-muted: #8B9BAA;
   --bg-light: #F8FFFE;
 }
-body {
-  font-family: 'Inter', sans-serif;
-}
+
 /* Override background dots */
 .bg-dots-mcp {
   background-color: var(--primary-dark);
@@ -1804,6 +1804,42 @@ body {
   display: inline-block;
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
+.section-title-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.section-title-badge::before,
+.section-title-badge::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+}
+.section-title-badge::before {
+  margin-bottom: 8px;
+}
+.section-title-badge::after {
+  margin-top: 8px;
+}
+.section-title-badge.light::before,
+.section-title-badge.light::after {
+  opacity: 0.22;
+}
+.section-title-badge.dark::before,
+.section-title-badge.dark::after {
+  opacity: 0.45;
+}
+.section-title-badge span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
 /* Hover cards */
 .hover-card {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
@@ -1819,7 +1855,7 @@ body {
 .btn-teal {
   background: var(--accent-teal);
   color: #fff;
-  border: none;
+  border: 1px solid transparent;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: 600;
@@ -1829,6 +1865,9 @@ body {
   gap: 8px;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
   text-decoration: none;
+  font-size: 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 .btn-teal:hover {
   transform: translateY(-2px);
@@ -1847,6 +1886,9 @@ body {
   gap: 8px;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
+  font-size: 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 .btn-outline:hover {
   border-color: var(--accent-teal);
@@ -2058,10 +2100,8 @@ body {
   </svg>
   
   <div style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
-    <div class="stagger-enter hero-badge" style="display: inline-flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; padding: 10px 20px; font-size: 14px; color: #fff; margin-bottom: 24px; animation-delay: 0.1s; box-shadow: none;">
-      <span class="badge-label" style="font-style: italic; font-weight: 600;">TrueProfit MCP</span>
-      <span class="badge-divider" style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.6); white-space: pre;"> : </span>
-      <span class="badge-sub" style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.6);">TrueProfit x LLMs</span>
+    <div class="stagger-enter section-title-badge dark" style="color: #fff; margin-bottom: 24px; animation-delay: 0.1s;">
+      <span>TrueProfit MCP: TrueProfit x LLMs</span>
     </div>
     
     <h1 class="stagger-enter" style="font-size: clamp(40px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 24px; animation-delay: 0.2s;">
@@ -2085,9 +2125,11 @@ body {
 </section>
 
 <!-- SECTION 2: WHAT IS MCP -->
-<section style="background-color: var(--bg-light); padding: 100px 24px; color: #000;">
+<section style="background-color: #FFFFFF; padding: 100px 24px; color: #000;">
   <div style="max-width: 1000px; margin: 0 auto;">
-    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">UNDERSTAND THE FEATURE</div>
+    <div class="scroll-animate section-title-badge light" style="color: var(--accent-teal); margin-bottom: 12px;">
+      <span>UNDERSTAND THE FEATURE</span>
+    </div>
     <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.2; transition-delay: 0.1s;">Your store's profit data, inside the AI you already use</h2>
     <p class="scroll-animate" style="font-size: 16px; color: #475569; line-height: 1.6; max-width: 700px; margin-bottom: 24px; transition-delay: 0.2s;">
       MCP (Model Context Protocol) connects TrueProfit directly to Claude or ChatGPT. Merchants ask questions in plain language and get real answers — no dashboards, no copy-pasting numbers, no manual setup per conversation.
@@ -2098,43 +2140,43 @@ body {
       <a href="https://helpdesk.trueprofit.io/en/articles/14086381-trueprofit-mcp-connect-trueprofit-to-chatgpt-claude-and-openclaw-clawdbot" target="_blank" style="color: var(--accent-teal); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; text-decoration: none; position: relative;">Setup guide →<span style="position:absolute; bottom:-2px; left:0; width:0; height:1px; background:currentColor; transition: width 0.2s;"></span></a>
     </div>
     
-    <div class="scroll-animate" style="position: relative; max-width: 100%; margin: 16px auto 0; padding: 40px 0; background-image: linear-gradient(rgba(0,0,0,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.07) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%); mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 100%); transition-delay: 0.4s;">
-      <div style="border: 1.5px solid rgba(0,0,0,0.18); border-radius: 16px; overflow: hidden; max-width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+    <div class="scroll-animate" style="position: relative; max-width: 100%; margin: 16px auto 0; padding: 20px 0; transition-delay: 0.4s;">
+      <div style="border: 3px solid #0D1F2D; border-radius: 16px; overflow: hidden; max-width: 100%; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; box-shadow: 0 10px 30px rgba(13,31,45,0.08);">
         
         <!-- Card 1 -->
-        <div style="background: rgba(255,255,255,0.85); border-right: 1px solid rgba(0,0,0,0.12); border-bottom: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+        <div style="background: #FFFFFF; border-right: 2.5px solid #0D1F2D; border-bottom: 2.5px solid #0D1F2D; padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
           <div>
-            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">1</span>
-            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Instant Answers</h3>
+            <span style="font-size: 24px; font-weight: 800; color: var(--green, #1a7a5e); display: inline-block; margin-right: 12px; vertical-align: middle;">1</span>
+            <h3 style="font-weight: 700; font-size: 19px; color: #0D1F2D; display: inline; vertical-align: middle;">Instant Answers</h3>
           </div>
-          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Ask about profit, costs, or performance anytime — no need to open the app or pull reports manually.</p>
+          <p style="margin-top: 12px; font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.7; margin-bottom: 0;">Ask about profit, costs, or performance anytime — no need to open the app or pull reports manually.</p>
         </div>
 
         <!-- Card 2 -->
-        <div style="background: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+        <div style="background: #FFFFFF; border-bottom: 2.5px solid #0D1F2D; padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
           <div>
-            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">2</span>
-            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Always Knows Your Numbers</h3>
+            <span style="font-size: 24px; font-weight: 800; color: var(--green, #1a7a5e); display: inline-block; margin-right: 12px; vertical-align: middle;">2</span>
+            <h3 style="font-weight: 700; font-size: 19px; color: #0D1F2D; display: inline; vertical-align: middle;">Always Knows Your Numbers</h3>
           </div>
-          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Connect once. After that, the AI already has your live store data loaded every time — no re-explaining needed.</p>
+          <p style="margin-top: 12px; font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.7; margin-bottom: 0;">Connect once. After that, the AI already has your live store data loaded every time — no re-explaining needed.</p>
         </div>
 
         <!-- Card 3 -->
-        <div style="background: rgba(255,255,255,0.85); border-right: 1px solid rgba(0,0,0,0.12); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+        <div style="background: #FFFFFF; border-right: 2.5px solid #0D1F2D; padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
           <div>
-            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">3</span>
-            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Finds the Root Cause</h3>
+            <span style="font-size: 24px; font-weight: 800; color: var(--green, #1a7a5e); display: inline-block; margin-right: 12px; vertical-align: middle;">3</span>
+            <h3 style="font-weight: 700; font-size: 19px; color: #0D1F2D; display: inline; vertical-align: middle;">Finds the Root Cause</h3>
           </div>
-          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Goes beyond 'what changed' to explain why — cross-referencing COGS, ad spend, fees, and refunds all at once.</p>
+          <p style="margin-top: 12px; font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.7; margin-bottom: 0;">Goes beyond 'what changed' to explain why — cross-referencing COGS, ad spend, fees, and refunds all at once.</p>
         </div>
 
         <!-- Card 4 -->
-        <div style="background: rgba(255,255,255,0.85); padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
+        <div style="background: #FFFFFF; padding: 36px 40px; min-height: 180px; word-wrap: break-word;">
           <div>
-            <span style="font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.3); display: inline-block; margin-right: 12px; vertical-align: middle;">4</span>
-            <h3 style="font-weight: 700; font-size: 17px; color: #0D1F2D; display: inline; vertical-align: middle;">Works with Claude & ChatGPT</h3>
+            <span style="font-size: 24px; font-weight: 800; color: var(--green, #1a7a5e); display: inline-block; margin-right: 12px; vertical-align: middle;">4</span>
+            <h3 style="font-weight: 700; font-size: 19px; color: #0D1F2D; display: inline; vertical-align: middle;">Works with Claude & ChatGPT</h3>
           </div>
-          <p style="margin-top: 12px; font-size: 14px; color: rgba(0,0,0,0.55); line-height: 1.7; margin-bottom: 0;">Not locked to one AI tool. Merchants use whichever assistant they're already on.</p>
+          <p style="margin-top: 12px; font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.7; margin-bottom: 0;">Not locked to one AI tool. Merchants use whichever assistant they're already on.</p>
         </div>
 
       </div>
@@ -2145,7 +2187,9 @@ body {
 <!-- SECTION 3: WHY PROMOTE NOW -->
 <section style="background: var(--primary-dark); padding: 100px 24px;">
   <div style="max-width: 1000px; margin: 0 auto;">
-    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">AFFILIATE OPPORTUNITY</div>
+    <div class="scroll-animate section-title-badge dark" style="color: var(--accent-teal); margin-bottom: 12px;">
+      <span>AFFILIATE OPPORTUNITY</span>
+    </div>
     <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: #fff; margin-bottom: 40px; line-height: 1.2; transition-delay: 0.1s;">Early Feature. Early Mover. More Commission.</h2>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
@@ -2170,128 +2214,392 @@ body {
 </section>
 
 <!-- SECTION 4: PROMOTION TOOLKIT -->
-<section id="toolkit-section" style="background: var(--bg-light); padding: 100px 24px; color: #000;">
-  <div style="max-width: 1000px; margin: 0 auto;">
-    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">READY-TO-USE CONTENT</div>
-    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: var(--primary-dark); margin-bottom: 16px; line-height: 1.2; transition-delay: 0.1s;">Pick Your Channel. Start Posting.</h2>
-    <p class="scroll-animate" style="font-size: 16px; color: #475569; line-height: 1.6; margin-bottom: 40px; transition-delay: 0.2s;">Each guide includes ready-to-post content and a short-form video script you can use immediately.</p>
+<section id="toolkit-section" style="background: #061422; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 20px 20px; padding: 100px 24px; color: #fff; overflow: hidden;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="scroll-animate section-title-badge dark" style="color: var(--green-bright, #23c48c); margin-bottom: 12px;">
+      <span>READY-TO-USE CONTENT</span>
+    </div>
+    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.2;">Pick Your Channel. Start Posting.</h2>
+    <p class="scroll-animate" style="font-size: 16px; color: #94a3b8; line-height: 1.6; margin-bottom: 40px; max-width: 600px;">Each guide includes ready-to-post content and a short-form video script you can use immediately.</p>
     
-    <div style="display: flex; flex-direction: column; gap: 24px;">
-      <!-- Card 1 -->
-      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.1s;">
-        <div style="flex: 1; min-width: 280px;">
-          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">X / TWITTER</div>
-          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">X/Twitter Ready-to-Post</h3>
-          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 ready-to-post content pieces crafted for X/Twitter. Copy, swap your link, post.</p>
-          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 posts ready</span>
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Copy-paste</span>
-          </div>
-          <a href="resources/mcp/x-twitter-ready-to-post.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open X/Twitter Guide →</a>
-        </div>
-        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
+    <div class="showcase-container scroll-animate" style="display: flex; gap: 48px; align-items: center; margin-top: 40px; flex-wrap: wrap;">
+      <!-- LEFT VISUAL PANEL -->
+      <div class="showcase-visual" style="width: 480px; height: 340px; max-width: 100%; flex-shrink: 0; background: #0f2436; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 24px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 16px 16px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(35, 196, 140, 0.06);">
+        <div class="showcase-visual-crop" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; overflow: visible;">
+          <img id="showcase-img" src="images/39.svg" alt="Showcase Visual" style="width: auto; height: auto; min-width: 520px; max-width: none; max-height: none; transform: scale(1.55) translate(18px, 6px); transform-origin: center; object-fit: contain; transition: opacity 0.3s ease, transform 0.3s ease;">
         </div>
       </div>
-      
-      <!-- Card 2 -->
-      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.2s;">
-        <div style="flex: 1; min-width: 280px;">
-          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">REDDIT</div>
-          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">Reddit Ready-to-Post</h3>
-          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 Reddit posts written in native community style. Drop into r/dropship, r/shopify, or similar subreddits.</p>
-          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 posts ready</span>
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Community style</span>
-          </div>
-          <a href="resources/mcp/reddit-ready-to-post.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open Reddit Guide →</a>
+
+      <!-- RIGHT TEXT LIST -->
+      <div class="showcase-list" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+        
+        <style>
+          .showcase-item {
+            padding: 24px 0;
+            cursor: pointer;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            opacity: 0.4;
+            transition: all 0.3s ease;
+          }
+          .showcase-item:last-child {
+            border-bottom: none;
+          }
+          .showcase-item:hover {
+            opacity: 0.7;
+          }
+          .showcase-item.active {
+            opacity: 1;
+          }
+          .item-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+            margin-top: 0;
+          }
+          .item-desc {
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.5;
+            margin: 0;
+          }
+          .item-cta {
+            display: none;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--green-bright, #23c48c);
+            text-decoration: none;
+            margin-top: 12px;
+          }
+          .showcase-item.active .item-cta {
+            display: inline-flex;
+          }
+          .item-cta:hover {
+            text-decoration: underline;
+          }
+          .progress-bar-bg {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: transparent;
+          }
+          .showcase-item:not(:last-child) .progress-bar-bg {
+            background: rgba(255,255,255,0.05);
+          }
+          .progress-bar {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--green-bright, #23c48c);
+            transition: width 0.1s linear;
+          }
+          @media (max-width: 768px) {
+            .showcase-container {
+              flex-direction: column;
+            }
+          }
+        </style>
+
+        <!-- ITEM 1 -->
+        <div class="showcase-item active" data-index="0">
+          <h3 class="item-title">X/Twitter Ready-to-Post</h3>
+          <p class="item-desc">2 ready-to-post content pieces crafted for X/Twitter. Copy, swap your link, post.</p>
+          <a class="item-cta" href="resources/mcp/x-twitter-ready-to-post.html">Open X/Twitter Guide &rarr;</a>
+          <div class="progress-bar-bg"></div>
+          <div class="progress-bar"></div>
         </div>
-        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #1a0a0a, #2e1010); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
+
+        <!-- ITEM 2 -->
+        <div class="showcase-item" data-index="1">
+          <h3 class="item-title">Reddit Ready-to-Post</h3>
+          <p class="item-desc">Longer, story-based MCP post angles for Reddit and ecommerce communities.</p>
+          <a class="item-cta" href="resources/mcp/reddit-ready-to-post.html">Open Reddit Guide &rarr;</a>
+          <div class="progress-bar-bg"></div>
+          <div class="progress-bar"></div>
         </div>
-      </div>
-      
-      <!-- Card 3 -->
-      <div class="scroll-animate hover-card content-card" style="background: #fff; border: 1px solid #E0F5EE; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: center; transition-delay: 0.3s;">
-        <div style="flex: 1; min-width: 280px;">
-          <div style="display: inline-block; background: var(--primary-dark); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 16px; letter-spacing: 0.05em;">TIKTOK / YOUTUBE SHORTS</div>
-          <h3 style="font-size: 24px; font-weight: 700; color: var(--primary-dark); margin-bottom: 12px;">Short-Form Video Guidelines</h3>
-          <p style="color: #475569; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">2 complete hook-to-CTA video scripts with shot directions and execution notes. Works faceless or on-camera.</p>
-          <div style="display: flex; gap: 8px; margin-bottom: 24px;">
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">2 video scripts</span>
-            <span style="background: #F1F5F9; color: #475569; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 100px;">Hook included</span>
-          </div>
-          <a href="resources/mcp/short-form-video-guidelines.html" class="btn-teal" style="padding: 10px 20px; font-size: 14px;">Open Video Guide →</a>
+
+        <!-- ITEM 3 -->
+        <div class="showcase-item" data-index="2">
+          <h3 class="item-title">Short-Form Video Guidelines</h3>
+          <p class="item-desc">Visual hook templates and exact scripts for TikTok, Reels, and YouTube Shorts.</p>
+          <a class="item-cta" href="resources/mcp/short-form-video-guidelines.html">Open Video Guide &rarr;</a>
+          <div class="progress-bar-bg"></div>
+          <div class="progress-bar"></div>
         </div>
-        <div style="width: 200px; height: 140px; border-radius: 12px; background: linear-gradient(135deg, #0a0a1a, #101030); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-          <span style="color: rgba(255,255,255,0.4); font-size: 13px;">[ Thumbnail ]</span>
-        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5: HOW TO TALK ABOUT MCP -->
-<section style="background: var(--primary-dark); padding: 100px 24px;">
-  <div style="max-width: 1000px; margin: 0 auto;">
-    <div class="scroll-animate" style="font-size: 12px; font-weight: 700; color: var(--accent-teal); text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.1em;">MESSAGING GUIDE</div>
-    <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 42px); font-weight: 800; color: #fff; margin-bottom: 40px; line-height: 1.2; transition-delay: 0.1s;">The Angle That Works</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 40px;">
-      <!-- DO -->
-      <div class="scroll-animate" style="background: var(--secondary-dark); border-radius: 16px; padding: 32px; transition-delay: 0.2s;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 24px;">Start with the problem</h3>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Most merchants check revenue and think they're doing fine</span>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">They don't see the real net profit until it's too late</span>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">MCP makes that visible in seconds — just by asking</span>
-          </li>
-          <li style="display: flex; gap: 12px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Position it as a blind spot fix, not a product pitch</span>
-          </li>
-        </ul>
-      </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('#toolkit-section .showcase-item');
+    const imgElement = document.getElementById('showcase-img');
+    const visuals = ['images/39.svg', 'images/40.svg', 'images/38.svg'];
+    let currentIndex = 0;
+    let rotationInterval;
+    let progressInterval;
+    const duration = 8500; // 8.5 seconds
+    const updateRate = 50;
+
+    function activateItem(index) {
+      items.forEach((item, i) => {
+        const bar = item.querySelector('.progress-bar');
+        if (i === index) {
+          item.classList.add('active');
+          bar.style.width = '0%';
+        } else {
+          item.classList.remove('active');
+          bar.style.width = '0%';
+        }
+      });
       
-      <!-- DON'T -->
-      <div class="scroll-animate" style="background: var(--secondary-dark); border-radius: 16px; padding: 32px; transition-delay: 0.3s;">
-        <h3 style="font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 24px;">Avoid these</h3>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't lead with 'Let me show you an app'</span>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't say 'This is the best Shopify app'</span>
-          </li>
-          <li style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't explain MCP technically — show the outcome</span>
-          </li>
-          <li style="display: flex; gap: 12px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span style="color: var(--text-muted); font-size: 15px; line-height: 1.5;">Don't spend more than 5–8 seconds on the tool mention</span>
-          </li>
-        </ul>
-      </div>
-    </div>
+      if (imgElement) {
+        imgElement.style.opacity = '0';
+        setTimeout(() => {
+          imgElement.src = visuals[index];
+          if (index === 0) {
+            imgElement.style.transform = 'scale(1.55) translate(18px, 6px)';
+          } else if (index === 1) {
+            imgElement.style.transform = 'scale(1.55) translate(-6px, 4px)';
+          } else if (index === 2) {
+            imgElement.style.transform = 'scale(1.55) translate(-5px, 4px)';
+          }
+          imgElement.style.opacity = '1';
+        }, 150);
+      }
+      
+      currentIndex = index;
+      startProgress();
+    }
+
+    function startProgress() {
+      clearInterval(progressInterval);
+      clearInterval(rotationInterval);
+      
+      const activeBar = items[currentIndex].querySelector('.progress-bar');
+      let elapsed = 0;
+      
+      progressInterval = setInterval(() => {
+        elapsed += updateRate;
+        const percent = Math.min((elapsed / duration) * 100, 100);
+        if(activeBar) activeBar.style.width = percent + '%';
+        if (elapsed >= duration) {
+          clearInterval(progressInterval);
+        }
+      }, updateRate);
+      
+      rotationInterval = setInterval(() => {
+        let nextIndex = (currentIndex + 1) % items.length;
+        activateItem(nextIndex);
+      }, duration);
+    }
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        if (currentIndex !== index) {
+          activateItem(index);
+        }
+      });
+    });
+
+    if(items.length > 0) {
+        activateItem(0);
+    }
+  });
+</script>
+
+<!-- SECTION 5: FAQ -->
+<section style="background: #ffffff; padding: 100px 24px; color: #0f1724; border-top: 1px solid #e5e7eb;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; gap: 64px; flex-wrap: wrap;">
     
-    <div class="scroll-animate" style="background: rgba(255,255,255,0.03); border-left: 4px solid var(--accent-teal); border-radius: 8px; padding: 24px; transition-delay: 0.4s;">
-      <p style="color: #E2E8F0; font-size: 15px; line-height: 1.6; margin: 0;">
-        The hook isn't 'here's a new feature.' The hook is a problem merchants already feel: checking profit is slow, dashboards don't explain why numbers change, AI tools need manual data every time. Once they see the problem framed clearly, the solution sells itself.
+    <!-- LEFT COLUMN -->
+    <div style="flex: 1 1 350px; min-width: 280px;">
+      <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 40px); font-weight: 800; color: #0f1724; line-height: 1.2; margin-bottom: 20px; font-family: var(--font);">Frequently asked questions</h2>
+      <p class="scroll-animate" style="font-size: 16px; color: #4b5563; line-height: 1.6; margin: 0; font-family: var(--font);">
+        Everything affiliates need to know before promoting TrueProfit MCP. Use these answers to keep your content clear, helpful, and non-promotional.
       </p>
+    </div>
+
+    <!-- RIGHT COLUMN (FAQ Accordion) -->
+    <div style="flex: 1.5 1 500px; min-width: 300px;">
+      <style>
+        .faq-item {
+          border-bottom: 1px solid #e5e7eb;
+          padding: 20px 0;
+          font-family: var(--font);
+        }
+        .faq-item:first-child {
+          padding-top: 0;
+        }
+        .faq-item:last-child {
+          border-bottom: none;
+        }
+        .faq-question {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          width: 100%;
+          background: none;
+          border: none;
+          text-align: left;
+          padding: 0;
+          color: #0f1724;
+          font-size: 18px;
+          font-weight: 500;
+          transition: color 0.2s ease;
+        }
+        .faq-question:hover {
+          color: var(--green-bright, #23c48c);
+        }
+        .faq-item.active .faq-question {
+          font-weight: 700;
+        }
+        .faq-chevron {
+          transition: transform 0.3s ease;
+          flex-shrink: 0;
+          margin-left: 16px;
+          color: #9ca3af;
+        }
+        .faq-item.active .faq-chevron {
+          transform: rotate(180deg);
+          color: var(--green-bright, #23c48c);
+        }
+        .faq-answer-wrapper {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+        .faq-answer {
+          padding-top: 12px;
+          font-size: 15px;
+          color: #4b5563;
+          line-height: 1.6;
+        }
+      </style>
+
+      <!-- FAQ ITEM 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What is the best way to promote MCP as an affiliate?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            Lead with a merchant problem, not the feature. Show the moment where a store owner asks AI a real profit question and gets an answer from TrueProfit data. Once the value is clear, mention TrueProfit naturally.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Should I explain MCP technically?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            No. Most affiliate content should avoid technical explanations. You only need to show the outcome: AI can understand store profit data without manual copy-paste. If someone asks for setup details, send them to the MCP guide.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Which channels work best for MCP content?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            X/Twitter works well for short insight-driven posts, Reddit works well for longer merchant stories, and short-form video works well when you can show the AI answer moment clearly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>How should I mention TrueProfit naturally?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            Mention it after the problem is clear. Frame it as the tool that gives AI access to real profit data, not as a random app recommendation.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 5 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Where should I add my affiliate link?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            Add it after the value is obvious: at the end of the post, in a comment, in your video description, or behind a soft CTA like “grab it here.”
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 6 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>What should I avoid when promoting MCP?</span>
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer-wrapper">
+          <div class="faq-answer">
+            Avoid saying “best app,” “let me show you an app,” or over-explaining the technology. Focus on the merchant outcome: faster answers, clearer profit visibility, and less manual checking.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const wrapper = item.querySelector('.faq-answer-wrapper');
+        const isActive = item.classList.contains('active');
+        
+        if (isActive) {
+          item.classList.remove('active');
+          wrapper.style.maxHeight = '0';
+        } else {
+          item.classList.add('active');
+          wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
+        }
+      });
+    });
+  });
+</script>
 
 <!-- SECTION 6: CTA BLOCK -->
 <section style="background: var(--primary-dark) url('trueprofit_affiliate_background.svg') no-repeat center/cover; padding: 100px 24px; text-align: center;">
@@ -2304,7 +2612,7 @@ body {
     </p>
     
     <div class="scroll-animate" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; transition-delay: 0.2s;">
-      <a href="guides.html" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--primary-dark); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;">
+      <a href="#toolkit-section" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--primary-dark); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;">
         Open the Playbook →
       </a>
       <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.2); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;">
@@ -2434,3 +2742,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+

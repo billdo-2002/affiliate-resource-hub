@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TrueProfit Affiliate Resource Hub</title>
 <meta name="description" content="Everything you need to earn big as a TrueProfit affiliate partner. Commission details, content scripts, materials library, and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
 <style>
+
+/* Global Font Override to enforce Plus Jakarta Sans */
+body, h1, h2, h3, h4, h5, h6, input, button, select, textarea, span, p, a, div, li, ul, ol, th, td, label {
+  font-family: 'Plus Jakarta Sans', 'Plus_Jakarta_Sans', sans-serif !important;
+}
 /* =========================================
    LOCAL FONTS — Plus Jakarta Sans
    ========================================= */
@@ -512,6 +514,42 @@ img { max-width: 100%; display: block; }
   width: 20px;
   height: 1.5px;
   background: var(--green-bright);
+}
+.section-title-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.section-title-badge::before,
+.section-title-badge::after {
+  content: '';
+  display: block;
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+}
+.section-title-badge::before {
+  margin-bottom: 8px;
+}
+.section-title-badge::after {
+  margin-top: 8px;
+}
+.section-title-badge.light::before,
+.section-title-badge.light::after {
+  opacity: 0.22;
+}
+.section-title-badge.dark::before,
+.section-title-badge.dark::after {
+  opacity: 0.45;
+}
+.section-title-badge span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
 }
 .section-h2 {
   font-size: clamp(28px, 3.5vw, 42px);
@@ -1957,9 +1995,8 @@ footer {
           fill="url(#ribbonGrad2)" opacity="0.22" />
   </svg>
 
-  <div class="hero-badge stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.1s;">
-    <span class="badge-dot"></span>
-    Used by 1,000+ affiliates
+  <div class="stagger-enter section-title-badge dark" style="position: relative; z-index: 2; animation-delay: 0.1s; color: #e2e8f0; margin-bottom: 28px;">
+    <span>Used by 1,000+ affiliates</span>
   </div>
   <h1 class="hero-h1 stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.2s;">
     TrueProfit's Affiliate<br>
@@ -2242,9 +2279,8 @@ footer {
 
       <!-- LEFT COLUMN -->
       <div>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-          <div style="width: 24px; height: 2px; background: #1d9e75;"></div>
-          <span style="font-size: 11px; color: #1d9e75; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">WHY IT SELLS ITSELF</span>
+        <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
+          <span>WHY IT SELLS ITSELF</span>
         </div>
         <h2 style="font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.2; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: var(--primary);">painful gap</span> in the market</h2>
         <p style="font-size: 16px; color: #6b7a90; line-height: 1.7; margin-bottom: 32px;">Most Shopify merchants only see revenue — but revenue isn't profit. A store doing $120K/month could be making just $1,000 after costs — and they wouldn't know it without TrueProfit.</p>
@@ -2525,9 +2561,8 @@ footer {
     
     <!-- HEADLINE BLOCK -->
     <div style="text-align: left; margin-bottom: 40px;">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <div style="width: 24px; height: 2px; background: #1d9e75;"></div>
-        <span style="font-size: 11px; color: #1d9e75; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">TARGETING</span>
+      <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
+        <span>TARGETING</span>
       </div>
       <h2 style="font-size: clamp(24px, 4vw, 32px); font-weight: 700; color: #0a2540; margin-bottom: 12px; letter-spacing: -0.02em;">Is your audience a good fit?</h2>
       <p style="font-size: 16px; color: #8fa3b8; max-width: 600px; line-height: 1.6; margin: 0;">Answer 3 quick questions to find out if your audience will convert — and how to position TrueProfit to them.</p>
@@ -2916,9 +2951,8 @@ footer {
 <section class="section bg-dark" id="commission">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:60px;">
-      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
-        <div style="width: 24px; height: 2px; background: #1d9e75;"></div>
-        <span style="font-size: 11px; color: #1d9e75; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">How you earn</span>
+      <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
+        <span>How you earn</span>
       </div>
       <h2 class="section-h2" style="color:#fff;">Commission Structure</h2>
       <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">One of the most generous programs in the Shopify app ecosystem.</p>
@@ -3168,9 +3202,8 @@ footer {
 ">
   <!-- Headline Block -->
   <div style="text-align: center; margin-bottom: 64px;" class="opp-headline">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px;">
-      <div style="width: 24px; height: 2px; background: #1d9e75;"></div>
-      <span style="font-size: 11px; color: #1d9e75; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700;">IS IT ACTUALLY EASY TO EARN?</span>
+    <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
+      <span>IS IT ACTUALLY EASY TO EARN?</span>
     </div>
     <h2 style="font-size: 40px; font-weight: 700; color: #fff; letter-spacing: -0.03em; line-height: 1.2; margin: 0 0 16px 0;">
       The market is <span style="color: #1d9e75;">wide open.</span>
@@ -3822,9 +3855,8 @@ footer {
     
     <!-- Header -->
     <div class="ds-header">
-      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <div style="width: 24px; height: 2px; background: #1d9e75;"></div>
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1d9e75;">DASHBOARD SETUP</div>
+      <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
+        <span>DASHBOARD SETUP</span>
       </div>
       <h2 style="font-size: 32px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Getting to Know Your Affiliate Dashboard</h2>
       <p style="font-size: 16px; color: #8fa3b8; margin: 0;">Once you've signed up, here are a few things you need to know.</p>
@@ -4562,4 +4594,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
