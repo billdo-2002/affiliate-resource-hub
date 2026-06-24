@@ -1852,6 +1852,16 @@ footer {
   border-color: var(--accent-teal);
   box-shadow: 0 0 15px rgba(0, 200, 150, 0.2);
 }
+.mcp-bottom-cta-primary:hover {
+  background: #e6fbf1 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.12);
+}
+.mcp-bottom-cta-secondary:hover {
+  border-color: #fff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-2px);
+}
 .btn-teal {
   background: var(--accent-teal);
   color: #fff;
@@ -2602,7 +2612,7 @@ footer {
 </script>
 
 <!-- SECTION 6: CTA BLOCK -->
-<section style="background: var(--primary-dark) url('trueprofit_affiliate_background.svg') no-repeat center/cover; padding: 100px 24px; text-align: center;">
+<section style="background: linear-gradient(rgba(13,31,45,0.6), rgba(13,31,45,0.6)), var(--primary-dark) url('images/41.svg') no-repeat center/cover; padding: 100px 24px; text-align: center;">
   <div style="max-width: 800px; margin: 0 auto;">
     <h2 class="scroll-animate" style="font-size: clamp(32px, 4vw, 52px); font-weight: 900; color: #fff; margin-bottom: 16px; line-height: 1.1; letter-spacing: -0.04em;">
       Ready to promote TrueProfit <span style="color: var(--accent-teal);">MCP?</span>
@@ -2612,10 +2622,10 @@ footer {
     </p>
     
     <div class="scroll-animate" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; transition-delay: 0.2s;">
-      <a href="#toolkit-section" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--primary-dark); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease;">
+      <a href="#toolkit-section" class="mcp-bottom-cta-primary" style="display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--primary-dark); font-weight: 700; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;">
         Open the Playbook →
       </a>
-      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.2); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease;">
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="mcp-bottom-cta-secondary" style="display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,0.2); color: #fff; font-weight: 600; font-size: 14px; padding: 12px 26px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;">
         Get My Affiliate Link →
       </a>
     </div>
@@ -2631,7 +2641,7 @@ footer {
     <div class="footer-links">
       <h5>Resources</h5>
       <a href="guides.html">Guides</a>
-      <a href="#">Creative Assets</a>
+      <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer">Creative Assets</a>
       <a href="index.html#commission">Commission Calculator</a>
       <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank">Affiliate Dashboard</a>
     </div>
@@ -2742,4 +2752,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
 
