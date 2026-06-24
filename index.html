@@ -1211,7 +1211,7 @@ footer {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: 100%;
+  width: 1160px;
   min-width: unset;
   max-width: calc(100vw - 48px);
   background: var(--white);
@@ -1221,10 +1221,9 @@ footer {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-  z-index: 1001;
+  z-index: 99999;
   display: flex;
-  
-  overflow-x: auto;
+  overflow: hidden; /* overflow: hidden only on the card itself */
   padding: 0;
 }
 .nav-dropdown-wrapper:hover .mega-menu {
@@ -1240,28 +1239,22 @@ footer {
 }
 .mega-zone-1 {
   background: #ffffff;
-  flex: 0 0 32%;
-  min-width: 280px;
+  flex: 0 0 35%;
+  min-width: 0;
 }
 .mega-zone-2 {
   background: #f0fdf4;
   border-left: 1px solid var(--border-light);
   border-right: 1px solid var(--border-light);
-  flex: 0 0 26%;
-  min-width: 220px;
+  flex: 0 0 25%;
+  min-width: 0;
 }
 .mega-zone-3 {
   background: #002d33;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 32px 40px 40px 40px;
-  box-sizing: border-box;
-  overflow: hidden;
-  flex: 0 0 auto;
   flex: 1;
-  min-width: 300px;
+  min-width: 0;
+  padding: 32px 40px 40px 40px;
 }
 .mega-pill-badge {
   display: inline-flex;
@@ -1311,7 +1304,7 @@ footer {
 .mega-links-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .mega-link-item {
   font-size: 14px;
@@ -1383,16 +1376,12 @@ footer {
   gap: 6px;
   transition: color 0.2s ease;
 }
-
-.mega-asset-card:hover 
-.mega-asset-card:hover 
-
 .mega-asset-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: #1A3A4A;
+  background: #1a3a4a;
   border: 1px solid transparent;
   border-radius: 12px;
   padding: 16px 20px;
@@ -1449,15 +1438,6 @@ footer {
 .mega-asset-card:hover .mega-asset-name {
   color: #2dd498;
 }
-.mega-asset-visual {
-  width: 72px;
-  height: 72px;
-  border-radius: 10px;
-  flex-shrink: 0;
-  z-index: 2;
-}
-
-/* Featured MCP Card styling */
 .mega-mcp-card {
   display: flex;
   align-items: center;
@@ -1503,37 +1483,76 @@ footer {
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+/* Viewport-relative centering desktop layout overlay rules */
+@media (min-width: 1101px) {
+  .header-inner {
+    position: relative !important;
+  }
   .nav-dropdown-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
+    position: static !important;
   }
   .mega-menu {
-    position: static;
-    transform: none;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    
-    display: none;
-    opacity: 1;
-    visibility: visible;
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(10px) !important;
+    width: 1160px !important;
   }
   .nav-dropdown-wrapper:hover .mega-menu {
-    display: none;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+}
+
+/* Mobile & Tablet stacked dropdown layout rules */
+@media (max-width: 1100px) {
+  .nav-dropdown-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+  .mega-menu {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    flex-direction: column !important;
+    overflow-y: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  .nav-dropdown-wrapper:hover .mega-menu {
+    display: none !important;
   }
   .nav-dropdown-wrapper.active .mega-menu {
-    display: flex;
+    display: flex !important;
   }
   .mega-zone {
-    padding: 24px 16px;
+    width: 100% !important;
+    padding: 24px 16px !important;
+    background: transparent !important;
+    border: none !important;
+  }
+  .mega-zone-1 {
+    background: #ffffff !important;
   }
   .mega-zone-2 {
-    border-left: none;
-    border-top: 1px solid var(--border-light);
-    flex: 0 0 26%;
-  min-width: 220px;
-}
+    background: #f0fdf4 !important;
+    border-top: 1px solid var(--border-light) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  .mega-zone-3 {
+    background: #002d33 !important;
+    color: #ffffff !important;
+  }
 }
 
 /* =========================================
@@ -1815,7 +1834,7 @@ footer {
               MCP PROMOTION &rarr;
               <svg fill="currentColor" height="10" style="color: #f59e0b; margin-left: 6px; vertical-align: middle;" viewbox="0 0 24 24" width="10"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
             </a>
-            <div class="mega-links-list" style="margin-top: 24px; gap: 24px;">
+            <div class="mega-links-list" style="margin-top: 0; gap: 16px;">
               <a class="mega-link-item" href="mcp-promotion.html">MCP Promotion Hub</a>
               <a class="mega-link-item" href="resources/mcp/x-twitter-ready-to-post.html">X/Twitter Ready-to-Post</a>
               <a class="mega-link-item" href="resources/mcp/reddit-ready-to-post.html">Reddit Ready-to-Post</a>
@@ -1824,7 +1843,7 @@ footer {
           </div>
           <!-- Zone 3: Creative Assets (Navy) -->
           <div class="mega-zone mega-zone-3">
-            <a class="mega-pill-badge mega-pill-badge-dark" href="#" style="margin-bottom: 24px;">
+            <a class="mega-pill-badge mega-pill-badge-dark" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer">
               <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
               CREATIVE ASSETS &rarr;
             </a>
@@ -4139,7 +4158,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="white_horizontal.svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
+      <img src="images/white_horizontal (1).svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
       <div class="footer-tagline">Affiliate Resource Hub — everything you need to earn with TrueProfit.</div>
     </div>
     <div class="footer-links">
