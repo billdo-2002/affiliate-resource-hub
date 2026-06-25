@@ -1809,7 +1809,7 @@ footer {
      ============================== -->
 <div id="announce-bar">
   <span class="announce-star">✦</span>
-  <span>Earn 100% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
+  <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
   <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
   <span class="announce-star">✦</span>
   <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">×</button>
@@ -2032,7 +2032,7 @@ footer {
     <div style="position: absolute; right: -60px; top: 40px; display: flex; gap: 16px; z-index: 20;">
       <!-- Card 1 -->
       <div class="stagger-enter-scale" style="background: #1A3040; border: 1px solid rgba(0, 200, 150, 0.3); border-radius: 12px; padding: 12px 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: rotate(-2deg); animation-delay: 0.6s;">
-        <div style="font-size: 28px; font-weight: 800; color: #00c896; line-height: 1;">100%</div>
+        <div style="font-size: 28px; font-weight: 800; color: #00c896; line-height: 1;">50%</div>
         <div style="font-size: 12px; color: #94a3b8; font-weight: 600; margin-top: 6px;">Commission</div>
         <div style="font-size: 10px; color: #64748b; font-weight: 500;">Month 1</div>
       </div>
@@ -2960,9 +2960,9 @@ footer {
 
     <div class="comm-cards-row">
       <div class="comm-card" style="text-align:center;">
-        <div class="comm-big-num countup-metric" data-countup="100" data-suffix="%">100%</div>
+        <div class="comm-big-num countup-metric" data-countup="50" data-suffix="%">50%</div>
         <div class="comm-big-label">Commission — Month 1</div>
-        <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.35);">Full first month's subscription</div>
+        <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.35);">Half of first month's subscription</div>
       </div>
       <div class="comm-card" style="text-align:center;">
         <div class="comm-big-num countup-metric" data-countup="20" data-suffix="%">20%</div>
@@ -2982,7 +2982,7 @@ footer {
       </div>
       <div class="tl-row">
         <span class="tl-label">Month 1</span>
-        <div class="tl-bar-bg"><div class="tl-bar-fill m1">100% commission</div></div>
+        <div class="tl-bar-bg"><div class="tl-bar-fill m1">50% commission</div></div>
       </div>
       <div class="tl-row">
         <span class="tl-label">Months 2–12</span>
@@ -3055,14 +3055,14 @@ footer {
         <div class="calc-results-grid">
           <div class="calc-result-tile">
             <div class="r-label">Month 1 earnings</div>
-            <div class="r-val" id="result-month1">$590</div>
+            <div class="r-val" id="result-month1">$300</div>
           </div>
           <div class="calc-result-tile">
             <div class="r-label">Monthly recurring</div>
-            <div class="r-val" id="result-monthly">$118</div>
+            <div class="r-val" id="result-monthly">$120</div>
           </div>
           <div class="calc-highlight" id="calc-highlight">
-            10 merchants on Growth → <strong>$1,652/year</strong>
+            10 merchants on Advanced → <strong>$1,620/year</strong>
           </div>
         </div>
       </div>
@@ -4357,7 +4357,7 @@ function calcUpdate() {
   const plan = parseInt(planSelect.value);
   sliderDisplay.textContent = merchants;
 
-  const month1 = merchants * plan;
+  const month1 = merchants * plan * 0.5;
   const monthlyRecurring = Math.round(merchants * plan * 0.20);
   const yearTotal = month1 + (monthlyRecurring * 11);
 
@@ -4485,7 +4485,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   // Find stat badges in top-right of mockup
-  const percentBadges = Array.from(document.querySelectorAll('.stagger-enter-scale div')).filter(div => div.textContent === '100%' || div.textContent === '20%');
+  const percentBadges = Array.from(document.querySelectorAll('.stagger-enter-scale div')).filter(div => div.textContent === '50%' || div.textContent === '20%');
   percentBadges.forEach(el => {
     el.setAttribute('data-countup', el.textContent.replace('%', ''));
     el.setAttribute('data-suffix', '%');
@@ -4550,7 +4550,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const plan = parseInt(planSelect.value);
       sliderDisplay.textContent = merchants;
 
-      const month1 = merchants * plan;
+      const month1 = merchants * plan * 0.5;
       const monthlyRecurring = Math.round(merchants * plan * 0.20);
       const yearTotal = month1 + (monthlyRecurring * 11);
 

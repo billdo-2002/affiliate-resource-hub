@@ -1569,7 +1569,7 @@ h2[id], h3[id], div[id], section[id] {
      ============================== -->
 <div id="announce-bar">
 <span class="announce-star">&#9733;</span>
-<span>Earn 100% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
+<span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
 <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
 <span class="announce-star">&#9733;</span>
 <button aria-label="Close" class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'">&times;</button>
