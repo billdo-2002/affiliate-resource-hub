@@ -1781,6 +1781,39 @@ footer {
   background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+#hero-mcp {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 1120px;
+  box-sizing: border-box;
+  padding: 40px 24px 80px !important;
+  background-color: #051822 !important;
+}
+#hero-mcp::before {
+  content: "";
+  position: absolute;
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 240px);
+  background-image: linear-gradient(to bottom, #051822 0%, rgba(5,24,34,0.45) 30%, transparent 100%), url('images/mcp-hero-bg.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  #hero-mcp {
+    min-height: 920px;
+    padding: 20px 24px 60px !important;
+  }
+  #hero-mcp::before {
+    top: 290px;
+    height: calc(100% - 290px);
+  }
+}
 /* Override animations */
 .stagger-enter {
   opacity: 0;
@@ -1866,7 +1899,7 @@ footer {
   background: var(--accent-teal);
   color: #fff;
   border: 1px solid transparent;
-  padding: 12px 24px;
+  padding: 18px 36px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -1875,7 +1908,7 @@ footer {
   gap: 8px;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.2;
   box-sizing: border-box;
 }
@@ -1887,7 +1920,7 @@ footer {
   background: transparent;
   color: var(--text-white);
   border: 1px solid rgba(255,255,255,0.2);
-  padding: 12px 24px;
+  padding: 18px 36px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -1896,7 +1929,7 @@ footer {
   gap: 8px;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.2;
   box-sizing: border-box;
 }
@@ -2097,19 +2130,8 @@ footer {
 </header>
 
 <!-- SECTION 1: HERO -->
-<section id="hero-mcp" class="bg-dots-mcp" style="position: relative; overflow: hidden; padding: 100px 24px 80px; text-align: center;">
-  <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style="position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0;" fill="none" class="hero-bg-svg">
-    <defs>
-      <linearGradient id="ribbonGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#00C896" />
-        <stop offset="65%" stop-color="#0A5540" />
-        <stop offset="100%" stop-color="#031F17" />
-      </linearGradient>
-    </defs>
-    <path d="M -200 0 C 300 150, 400 150, 800 300 L 820 400 C 420 250, 320 250, -200 -100 Z" fill="url(#ribbonGrad1)" opacity="0.22" />
-  </svg>
-  
-  <div style="position: relative; z-index: 2; max-width: 800px; margin: 0 auto;">
+<section id="hero-mcp" class="bg-dots-mcp">
+  <div style="position: relative; z-index: 2; max-width: 1080px; margin: 0 auto; padding-top: 20px;">
     <div class="stagger-enter section-title-badge dark" style="color: #fff; margin-bottom: 24px; animation-delay: 0.1s;">
       <span>TrueProfit MCP: TrueProfit x LLMs</span>
     </div>
@@ -2119,17 +2141,13 @@ footer {
       Earn While <span style="color: var(--accent-teal);">AI</span> Takes Over Ecom.
     </h1>
     
-    <p class="stagger-enter" style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 40px; animation-delay: 0.3s;">
-      TrueProfit just launched MCP — a feature that connects live profit data directly to Claude and ChatGPT. It's new, it's hot, and most affiliates haven't touched it yet. That's your advantage.
+    <p class="stagger-enter" style="font-size: 18px; color: var(--text-muted); line-height: 1.6; margin-bottom: 56px; animation-delay: 0.3s;">
+      TrueProfit MCP connects live profit data to Claude and ChatGPT — a fresh angle most affiliates haven’t used yet.
     </p>
     
     <div class="stagger-enter" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; animation-delay: 0.4s;">
       <button class="btn-teal" onclick="document.getElementById('toolkit-section').scrollIntoView({behavior: 'smooth'})">See Promotion Toolkit ↓</button>
       <a href="https://trueprofit.io/solutions/mcp" target="_blank" class="btn-outline">Learn About MCP →</a>
-    </div>
-    
-    <div class="stagger-enter" style="margin: 0 auto; width: 100%; max-width: 600px; height: 320px; background: var(--secondary-dark); border: 1px solid rgba(0,200,150,0.2); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(0,200,150,0.1); animation-delay: 0.5s;">
-      <span style="color: var(--text-muted); font-size: 14px;">[ Illustration coming soon ]</span>
     </div>
   </div>
 </section>
