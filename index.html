@@ -1768,11 +1768,36 @@ footer {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .hero-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    transform: skewX(-20deg);
+    animation: glossySheen 6s infinite;
+  }
+  @keyframes glossySheen {
+    0% { left: -150%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
   }
   .hero-feature-card:hover {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(29,158,117,0.3);
-    transform: translateY(-2px);
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(29,158,117,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.1);
   }
   .feature-graphic {
     width: 100px;
@@ -1793,31 +1818,53 @@ footer {
   .hub-directory-card {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
-    border-right: 4px solid transparent;
     border-radius: 20px;
-    padding: 40px;
+    padding: 48px;
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     opacity: 0;
-    transform: translateY(30px);
     text-align: left;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  }
+  .hub-directory-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 0;
+    width: 4px;
+    background: #1d9e75;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 4px 0 0 4px;
+  }
+  .hub-directory-card:hover::after {
+    opacity: 1;
+  }
+  .hub-directory-card.slide-left {
+    transform: translateX(-50px);
+  }
+  .hub-directory-card.slide-right {
+    transform: translateX(50px);
   }
   .hub-directory-card.animated {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0) !important;
   }
-  .hub-directory-card:hover, .hub-directory-card.active {
-    border-right-color: #1d9e75;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  .hub-directory-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-color: #cbd5e1;
   }
   .directory-graphic {
-    width: 240px;
-    height: 160px;
+    width: 320px;
+    height: 200px;
     background: #fff;
     border: 1px dashed #e2e8f0;
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1826,6 +1873,40 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     flex-shrink: 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .proof-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+  }
+  .proof-chip svg { color: #1d9e75; }
+
+  .comm-stat-block {
+    text-align: center;
+    padding: 24px;
+  }
+  .comm-stat-value {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1d9e75;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .comm-stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
 /* Prefers Reduced Motion */
@@ -2092,12 +2173,15 @@ footer {
     TrueProfit's Affiliate<br>
     <span class="word-green">Resource Hub</span>
   </h1>
-  <p class="hero-sub stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.3s; color: #8fa3b8; max-width: 720px; margin: 0 auto 40px; font-size: 18px; line-height: 1.6;">
+  <p class="hero-sub stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.3s; color: #8fa3b8; max-width: 780px; margin: 0 auto 40px; font-size: 18px; line-height: 1.6;">
     Everything affiliates need to promote TrueProfit faster — guides, content angles, ready-to-post scripts, MCP playbooks, creative assets, and dashboard setup in one place.
   </p>
-  <div class="hero-ctas stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.4s; display: flex; justify-content: center;">
-    <a href="guides.html" class="btn-hero-primary" target="_blank" rel="noopener noreferrer" style="font-size: 18px; padding: 18px 44px; min-width: 280px; justify-content: center;">
-      Start Promoting Faster →
+  <div class="hero-ctas stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.4s; display: flex; justify-content: center; gap: 16px;">
+    <a href="guides.html" class="btn-hero-primary" target="_blank" rel="noopener noreferrer">
+      Start with Guides →
+    </a>
+    <a href="mcp-promotion.html" class="btn-cta-ghost-white" target="_blank" rel="noopener noreferrer" style="font-size: 14px; padding: 12px 26px; border-width: 1.5px; border-color: rgba(255,255,255,0.3); color: #fff;">
+      Explore MCP Promotion →
     </a>
   </div>
 
@@ -2108,56 +2192,56 @@ footer {
     <div class="hero-feature-card">
       <div style="flex: 1; padding-right: 20px;">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-          <div style="width: 28px; height: 28px; background: rgba(29,158,117,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2dd498;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin: 0;">Who it’s for</h4>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">Who it’s for</h4>
         </div>
-        <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
       </div>
-      <div class="feature-graphic">[ Graphic ]</div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
     </div>
 
     <!-- Card 2: What’s inside -->
     <div class="hero-feature-card">
       <div style="flex: 1; padding-right: 20px;">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-          <div style="width: 28px; height: 28px; background: rgba(29,158,117,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2dd498;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
           </div>
-          <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin: 0;">What’s inside</h4>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">What’s inside</h4>
         </div>
-        <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0;">Guides, scripts, content angles, MCP promotion ideas, creative assets, and setup resources.</p>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Playbooks, content angles, swipe copy, MCP promotion ideas, and creative assets.</p>
       </div>
-      <div class="feature-graphic">[ Graphic ]</div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
     </div>
 
     <!-- Card 3: How to use it -->
     <div class="hero-feature-card">
       <div style="flex: 1; padding-right: 20px;">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-          <div style="width: 28px; height: 28px; background: rgba(29,158,117,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2dd498;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin: 0;">How to use it</h4>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">How to use it</h4>
         </div>
-        <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
       </div>
-      <div class="feature-graphic">[ Graphic ]</div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
     </div>
 
     <!-- Card 4: Best starting point -->
     <div class="hero-feature-card">
       <div style="flex: 1; padding-right: 20px;">
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-          <div style="width: 28px; height: 28px; background: rgba(29,158,117,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #2dd498;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <h4 style="font-size: 16px; font-weight: 700; color: #fff; margin: 0;">Best starting point</h4>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">Best starting point</h4>
         </div>
-        <p style="font-size: 14px; color: #94a3b8; line-height: 1.5; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
       </div>
-      <div class="feature-graphic">[ Graphic ]</div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
     </div>
   </div>
 
@@ -2175,50 +2259,50 @@ footer {
       <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
         <span>DIRECTORY</span>
       </div>
-      <h2 style="font-size: 42px; font-weight: 800; color: #0a2540; margin-bottom: 16px; letter-spacing: -0.03em;">Hub Directory</h2>
-      <p style="font-size: 18px; color: #6b7a90; max-width: 640px; margin: 0 auto; line-height: 1.6;">A quick map of every resource inside the hub, so affiliates can jump to the right place fast.</p>
+      <h2 style="font-size: 42px; font-weight: 800; color: #0a2540; margin-bottom: 16px; letter-spacing: -0.03em;">What you’ll find inside</h2>
+      <p style="font-size: 18px; color: #6b7a90; max-width: 640px; margin: 0 auto; line-height: 1.6;">A quick map of the resources available, so you can jump to the right place without guessing.</p>
     </div>
 
-    <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; flex-direction: column; gap: 32px; max-width: 1000px; margin: 0 auto;">
 
       <!-- Card 1: Affiliate Guides -->
-      <div class="hub-directory-card scroll-animate">
+      <div class="hub-directory-card slide-left scroll-animate">
         <div style="flex: 1;">
-          <h3 style="font-size: 24px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Affiliate Guides</h3>
-          <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">Step-by-step playbooks that help affiliates understand the product angle, choose the right audience, and promote TrueProfit without sounding salesy. Includes general guidance, Discord/community strategy, and short-form content direction.</p>
-          <a href="guides.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 6px;">View guides →</a>
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Guides</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Step-by-step playbooks for learning the product angle, choosing the right audience, and promoting without sounding salesy.</p>
+          <a href="guides.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">View guides →</a>
         </div>
-        <div class="directory-graphic">[ Graphic ]</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
-      <!-- Card 2: TrueProfit MCP -->
-      <div class="hub-directory-card scroll-animate" style="flex-direction: row-reverse;">
+      <!-- Card 2: MCP Promotion -->
+      <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
         <div style="flex: 1;">
-          <h3 style="font-size: 24px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">New Feature Promotion — TrueProfit MCP</h3>
-          <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">A focused promotion kit for TrueProfit MCP, the new feature that connects live profit data to Claude and ChatGPT. Includes ready-to-post X/Twitter copy, Reddit story angles, and short-form video scripts.</p>
-          <a href="mcp-promotion.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 6px;">Explore MCP playbook →</a>
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">MCP Promotion</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Ready-to-use content for promoting TrueProfit MCP across X/Twitter, Reddit, and short-form video.</p>
+          <a href="mcp-promotion.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Explore MCP →</a>
         </div>
-        <div class="directory-graphic">[ Graphic ]</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
       <!-- Card 3: Creative Assets -->
-      <div class="hub-directory-card scroll-animate">
+      <div class="hub-directory-card slide-left scroll-animate">
         <div style="flex: 1;">
-          <h3 style="font-size: 24px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Creative Assets</h3>
-          <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">Logos, banners, screenshots, and app footage affiliates can use to make their content look more polished and trustworthy. Best for creators, agencies, and campaign builders.</p>
-          <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 6px;">Open assets →</a>
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Creative Assets</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Logos, banners, screenshots, and app footage affiliates can use in content or campaigns.</p>
+          <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open assets →</a>
         </div>
-        <div class="directory-graphic">[ Graphic ]</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
       <!-- Card 4: Affiliate Dashboard -->
-      <div class="hub-directory-card scroll-animate" style="flex-direction: row-reverse;">
+      <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
         <div style="flex: 1;">
-          <h3 style="font-size: 24px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Affiliate Dashboard</h3>
-          <p style="font-size: 16px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">The place to grab your affiliate link, complete payout setup, and track clicks, referrals, commissions, and performance once your content starts driving traffic.</p>
-          <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 6px;">Open dashboard →</a>
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Dashboard</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Set up your payout details, grab your affiliate link, and track performance from the dashboard.</p>
+          <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open dashboard →</a>
         </div>
-        <div class="directory-graphic">[ Graphic ]</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
     </div>
@@ -2242,8 +2326,23 @@ footer {
         <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
           <span>WHY IT SELLS ITSELF</span>
         </div>
-        <h2 style="font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.2; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: var(--primary);">painful gap</span> in the market</h2>
-        <p style="font-size: 16px; color: #6b7a90; line-height: 1.7; margin-bottom: 32px;">Most Shopify merchants only see revenue — but revenue isn't profit. A store doing $120K/month could be making just $1,000 after costs — and they wouldn't know it without TrueProfit.</p>
+        <h2 style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: #1d9e75;">painful gap</span> in the market</h2>
+        <p style="font-size: 18px; color: #475569; line-height: 1.65; margin-bottom: 24px;">Most Shopify merchants only see revenue — but revenue isn’t profit. A store doing $120K/month could be making just $1,000 after costs, and they wouldn’t know it without TrueProfit.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Tracks all core costs
+          </div>
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Built for Shopify merchants
+          </div>
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Reveals real net profit
+          </div>
+        </div>
 
         <!-- Tab Switcher -->
         <div id="cost-tabs-container">
@@ -2521,29 +2620,32 @@ footer {
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:60px;">
       <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
-        <span>RECURRING REVENUE</span>
+        <span>COMMISSION STRUCTURE</span>
       </div>
-      <h2 class="section-h2" style="color:#fff;">How the commission works</h2>
-      <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">Simple structure, clear payout logic, and recurring upside for every referred merchant.</p>
+      <h2 class="section-h2" style="color:#fff;">Commission Structure</h2>
+      <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">Earn 50% on the first month, then 20% recurring for months 2–12.</p>
     </div>
 
     <!-- Simplified Commission Card -->
-    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 48px; margin-bottom: 60px;">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; margin-bottom: 40px;">
-        <div>
-          <div class="countup-metric" data-countup="50" data-suffix="%" style="font-size: 56px; font-weight: 800; color: #1d9e75; line-height: 1;">50%</div>
-          <div style="font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">First month commission</div>
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 60px 48px; margin-bottom: 60px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
+        <div class="comm-stat-block">
+          <div class="comm-stat-value">50%</div>
+          <div class="comm-stat-label">Commission — Month 1</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Half of first month's subscription</div>
         </div>
-        <div style="border-left: 1px solid rgba(255,255,255,0.08); border-right: 1px solid rgba(255,255,255,0.08);">
-          <div class="countup-metric" data-countup="20" data-suffix="%" style="font-size: 56px; font-weight: 800; color: #1d9e75; line-height: 1;">20%</div>
-          <div style="font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Recurring monthly commission</div>
+        <div class="comm-stat-block" style="border-left: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06);">
+          <div class="comm-stat-value">20%</div>
+          <div class="comm-stat-label">Recurring — Months 2–12</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Every month for up to a year</div>
         </div>
-        <div>
-          <div class="countup-metric" data-countup="12" style="font-size: 56px; font-weight: 800; color: #1d9e75; line-height: 1;">12 months</div>
-          <div style="font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Maximum earning duration</div>
+        <div class="comm-stat-block">
+          <div class="comm-stat-value">12</div>
+          <div class="comm-stat-label">Months max duration</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Per referred merchant</div>
         </div>
       </div>
-      <div style="text-align: center; font-size: 16px; color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+      <div style="text-align: center; font-size: 16px; color: rgba(255,255,255,0.6); max-width: 640px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px;">
         You earn 50% of the merchant’s first month, then 20% recurring from months 2–12 while the referral stays active.
       </div>
     </div>
@@ -2551,25 +2653,23 @@ footer {
     <div class="commission-layout">
       <div>
         <!-- Opportunity Box (Merged) -->
-        <div style="background: rgba(29, 158, 117, 0.05); border: 1px solid rgba(29, 158, 117, 0.2); border-radius: 16px; padding: 24px; margin-bottom: 40px;">
-          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 12px;">Why the opportunity is still early</h4>
-          <p style="font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 16px;">
-            Most Shopify merchants still rely on revenue, ROAS, or spreadsheets instead of true net profit. That gives affiliates a clear education-first angle: help merchants understand what they are really making, then introduce TrueProfit naturally.
-          </p>
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
-            <li style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #1d9e75; font-weight: 600;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Large ecommerce audience
-            </li>
-            <li style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #1d9e75; font-weight: 600;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Profit tracking is still underused
-            </li>
-            <li style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #1d9e75; font-weight: 600;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Helpful content converts better than hard selling
-            </li>
-          </ul>
+        <div style="background: rgba(29, 158, 117, 0.05); border: 1px solid rgba(29, 158, 117, 0.2); border-radius: 16px; padding: 28px; margin-bottom: 40px;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">The market is still early</h4>
+          <p style="font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Most Shopify merchants still don’t track real profit properly. That gives affiliates a clear, useful angle to own.</p>
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Millions of Shopify stores</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">The audience is large, active, and constantly looking for better ways to run ecommerce.</p>
+            </div>
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Profit tracking is underused</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Many merchants still rely on revenue, ROAS, or spreadsheets instead of true net profit.</p>
+            </div>
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Helpful content wins</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Affiliates can lead with education, real pain points, and practical examples instead of hard selling.</p>
+            </div>
+          </div>
         </div>
 
         <h3 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.02em;">Payment details</h3>
@@ -3327,8 +3427,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="guides.html" class="btn-cta-white" target="_blank" rel="noopener noreferrer">
         View Guides →
       </a>
-      <a href="#dashboard-setup" class="btn-cta-ghost-white">
-        Get My Affiliate Link →
+      <a href="https://affiliate.trueprofit.io/sign-up" class="btn-cta-ghost-white" target="_blank" rel="noopener noreferrer">
+        Get affiliate link →
       </a>
     </div>
   </div>
@@ -3365,25 +3465,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script>
-/* =========================================
-   CHART RENDER
-   ========================================= */
-(function() {
-  const heights = [35,55,45,70,50,65,80,60,75,55,85,70,60,90,75,65,80,55,70,85,60,75,50,65,80,70,90,75,55,85];
-  const colors = ['#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a',
-                  '#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a',
-                  '#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a'];
-  const area = document.getElementById('chartArea');
-  if(area) {
-    heights.forEach((h,i) => {
-      const bar = document.createElement('div');
-      bar.className = 'chart-bar';
-      bar.style.cssText = `height:${h}%;background:${colors[i]};opacity:${colors[i]==='#23c48c'?'0.7':'0.4'}`;
-      area.appendChild(bar);
-    });
-  }
-})();
-
 /* =========================================
    HAMBURGER MENU
    ========================================= */
@@ -3564,39 +3645,6 @@ document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
 
 </script>
 <script>
-/* =========================================
-   HERO TYPEWRITER ANIMATION
-   ========================================= */
-document.addEventListener('DOMContentLoaded', function() {
-  const words = ['Scripts', 'Discord hooks', 'TikTok angles', 'Ready-to-post content'];
-  const el = document.getElementById('typewriter-word');
-  if (!el) return;
-  let wordIndex = 0, charIndex = 0, isDeleting = false;
-
-  function tick() {
-    const current = words[wordIndex];
-    if (!isDeleting) {
-      el.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        isDeleting = true;
-        setTimeout(tick, 1200);
-        return;
-      }
-    } else {
-      el.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-    }
-    setTimeout(tick, isDeleting ? 50 : 80);
-  }
-
-  tick();
-});
-
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -3606,12 +3654,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animated');
 
-        // Emerald highlight for directory cards
-        if (entry.target.classList.contains('hub-directory-card')) {
-          entry.target.classList.add('active');
-        } else {
-          obs.unobserve(entry.target);
-        }
+        obs.unobserve(entry.target);
         
         // Trigger CountUp if it's a number element
         if (entry.target.hasAttribute('data-countup') || entry.target.classList.contains('countup-metric')) {
