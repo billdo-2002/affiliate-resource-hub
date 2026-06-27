@@ -1773,15 +1773,17 @@ footer {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 32px;
-    padding-right: 40%;
+    border-radius: 20px;
+    padding: 40px;
+    padding-right: 42%;
     text-align: left;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    min-height: 220px;
+    min-height: 280px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.05);
   }
   .hero-feature-card > div:first-child {
@@ -1817,12 +1819,12 @@ footer {
     box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 20px rgba(35,196,140,0.1);
   }
   .feature-graphic {
-    width: 38%;
-    height: 82%;
+    width: 32%;
+    height: 68%;
     background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
-    border-top: 1px solid rgba(35, 196, 140, 0.3);
-    border-left: 1px solid rgba(35, 196, 140, 0.3);
-    border-radius: 22px 0 0 0;
+    border: 1px solid rgba(35, 196, 140, 0.2);
+    border-right: none;
+    border-radius: 24px 0 0 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1833,8 +1835,8 @@ footer {
     flex-shrink: 0;
     position: absolute;
     right: 0;
-    bottom: 0;
-    transform: rotate(-2deg) translate(6%, 6%);
+    top: 50%;
+    transform: translateY(-50%) rotate(-2deg) translate(6%, 0);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
 
@@ -1857,14 +1859,25 @@ footer {
     position: absolute;
     top: 20px;
     bottom: 20px;
-    right: 0;
     width: 4px;
-    background: #1d9e75;
+    background: #1b8b60;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+  /* Odd cards: highlight on RIGHT */
+  .hub-directory-card:nth-child(odd)::after {
+    right: 0;
     border-radius: 4px 0 0 4px;
   }
-  .hub-directory-card:hover::after {
+  /* Even cards: highlight on LEFT */
+  .hub-directory-card:nth-child(even)::after {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+  }
+  /* Reveal on hover OR when card is animated/active */
+  .hub-directory-card:hover::after,
+  .hub-directory-card.animated::after {
     opacity: 1;
   }
   .hub-directory-card.slide-left {
