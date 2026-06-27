@@ -2377,39 +2377,42 @@ footer {
   "></div>
 
   <div class="section-inner" style="
-    max-width: 1160px;
+    max-width: 1240px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    padding: 60px;
     position: relative;
     z-index: 1;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 24px;
   ">
-    <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 40px;">
+    <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 48px;">
       <span>WHAT IS TRUEPROFIT</span>
     </div>
-    <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: center;" class="why-tp-grid">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="why-tp-grid">
 
       <!-- Left Column: Dashboard Visual -->
       <div class="tp-dashboard-visual-wrapper">
-        <div class="tp-dashboard-visual" style="padding: 0; border: none; background: transparent; box-shadow: none; width: 100%;">
-          <img src="images/affiliate-program.png" alt="TrueProfit Dashboard" style="width: 125%; height: auto; border-radius: 16px; display: block; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); margin-left: -12.5%;">
+        <div class="tp-dashboard-visual" style="position: relative; width: 100%;">
+          <img src="images/dashboard-new.png" alt="TrueProfit Dashboard" style="
+            width: 115%;
+            height: auto;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            margin-left: -7.5%;
+          ">
         </div>
       </div>
 
       <!-- Right Column: Content -->
-      <div>
+      <div class="why-tp-content">
         <h2 style="
-          font-size: clamp(32px, 4vw, 48px);
+          font-size: clamp(32px, 3.5vw, 38px);
           font-weight: 800;
           color: #fff;
-          line-height: 1.1;
+          line-height: 1.2;
           margin-bottom: 40px;
-          letter-spacing: -0.02em;
-        ">The profit tracking tool built for Shopify merchants</h2>
+          letter-spacing: -0.01em;
+          max-width: 540px;
+        ">Real profit tracking for Shopify merchants</h2>
 
         <!-- Numbered List -->
         <div class="tp-numbered-list">
@@ -2459,10 +2462,10 @@ footer {
     position: relative;
     width: 100%;
     border-radius: 24px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(35, 196, 140, 0.1);
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
   }
 
   .tp-section-eyebrow {
@@ -2525,11 +2528,11 @@ footer {
     font-weight: 800;
     color: #2dd498;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .tp-number-underline {
-    width: 44px;
+    width: 24px;
     height: 2px;
     background: #2dd498;
     border-radius: 2px;
