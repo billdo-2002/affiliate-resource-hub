@@ -1238,12 +1238,13 @@ footer {
     grid-template-columns: 1fr !important;
   }
   .hero-feature-card {
-    flex-direction: column;
+    grid-template-columns: 1fr !important;
     align-items: flex-start !important;
     gap: 20px;
   }
   .feature-graphic {
     width: 100% !important;
+    transform: none !important;
   }
   .section { padding: 64px 20px; }
   .hero-h1 { font-size: 44px; }
@@ -1769,7 +1770,9 @@ footer {
     border-radius: 16px;
     padding: 32px;
     text-align: left;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 24px;
     align-items: center;
     transition: all 0.3s ease;
     position: relative;
@@ -1805,22 +1808,21 @@ footer {
     box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 20px rgba(35,196,140,0.1);
   }
   .feature-graphic {
-    width: 140px;
-    height: 100px;
-    background: rgba(255,255,255,0.05);
-    border: 1px dashed rgba(255,255,255,0.1);
-    border-radius: 8px;
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 10px;
-    color: rgba(255,255,255,0.2);
+    color: rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     flex-shrink: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    transform: rotate(-3deg) translateX(10px) translateY(10px);
   }
 
   .hub-directory-card {
@@ -2178,7 +2180,7 @@ footer {
     <span>USED BY 1,000+ AFFILIATES</span>
   </div>
   <h1 class="hero-h1 stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.2s;">
-    TrueProfit's Affiliate Resource Hub
+    TrueProfit's Affiliate<br><span style="font-weight: 900; color: #1b8b60;">Resource Hub</span>
   </h1>
   <div class="hero-typewriter stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.3s;">
     Promote with <span id="typewriter-text" class="typewriter-phrase"></span><span id="typewriter-cursor">|</span>
@@ -2194,7 +2196,7 @@ footer {
 
     <!-- Card 1: Who it's for -->
     <div class="hero-feature-card">
-      <div style="flex: 1; padding-right: 20px;">
+      <div>
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -2203,12 +2205,12 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
       </div>
-      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ GRAPHIC ]</div>
+      <div class="feature-graphic">[ GRAPHIC ]</div>
     </div>
 
     <!-- Card 2: What’s inside -->
     <div class="hero-feature-card">
-      <div style="flex: 1; padding-right: 20px;">
+      <div>
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
@@ -2217,12 +2219,12 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Playbooks, content angles, swipe copy, MCP promotion ideas, and creative assets.</p>
       </div>
-      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ GRAPHIC ]</div>
+      <div class="feature-graphic">[ GRAPHIC ]</div>
     </div>
 
     <!-- Card 3: How to use it -->
     <div class="hero-feature-card">
-      <div style="flex: 1; padding-right: 20px;">
+      <div>
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -2231,12 +2233,12 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
       </div>
-      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ GRAPHIC ]</div>
+      <div class="feature-graphic">[ GRAPHIC ]</div>
     </div>
 
     <!-- Card 4: Best starting point -->
     <div class="hero-feature-card">
-      <div style="flex: 1; padding-right: 20px;">
+      <div>
         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
           <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -2245,7 +2247,7 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
       </div>
-      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ GRAPHIC ]</div>
+      <div class="feature-graphic">[ GRAPHIC ]</div>
     </div>
   </div>
 
