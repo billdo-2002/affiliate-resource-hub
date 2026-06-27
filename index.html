@@ -2359,304 +2359,172 @@ footer {
      SECTION B: WHAT IS TRUEPROFIT
      ============================== -->
 <section id="why-trueprofit" style="
-  background: #fff;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.035) 1px, transparent 1px);
-  background-size: 26px 26px;
-  padding: 60px 0;
+  background: linear-gradient(135deg, #051d29 0%, #0a2535 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px;
 ">
-  <div class="section-inner">
-    <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 60px; align-items: center;">
+  <!-- Dotted Background Texture -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(35, 196, 140, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+  "></div>
 
-      <!-- LEFT COLUMN -->
+  <div class="section-inner" style="
+    max-width: 1160px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 60px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  ">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;" class="why-tp-grid">
+
+      <!-- Left Column: Content -->
       <div>
-        <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
-          <span>WHY IT SELLS ITSELF</span>
-        </div>
-        <h2 style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: #1d9e75;">painful gap</span> in the market</h2>
-        <p style="font-size: 18px; color: #475569; line-height: 1.65; margin-bottom: 24px;">Most Shopify merchants only see revenue — but revenue isn’t profit. A store doing $120K/month could be making just $1,000 after costs, and they wouldn’t know it without TrueProfit.</p>
-
-        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
-          <div class="proof-chip">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Tracks all core costs
-          </div>
-          <div class="proof-chip">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Built for Shopify merchants
-          </div>
-          <div class="proof-chip">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Reveals real net profit
-          </div>
-        </div>
-
-        <!-- Tab Switcher -->
-        <div id="cost-tabs-container">
-
-          <!-- Tab Pills -->
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-            <button class="cost-tab cost-tab-active" data-tab="cogs" onclick="switchCostTab(this)" style="font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #1a7f5a;background:#1a7f5a;color:#fff;cursor:pointer;transition:all 0.15s ease;font-family:inherit;font-weight:600;">COGS</button>
-            <button class="cost-tab" data-tab="shipping" onclick="switchCostTab(this)" style="font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #e2e8f0;background:#f8f9fa;color:#666;cursor:pointer;transition:all 0.15s ease;font-family:inherit;">Shipping</button>
-            <button class="cost-tab" data-tab="adspend" onclick="switchCostTab(this)" style="font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #e2e8f0;background:#f8f9fa;color:#666;cursor:pointer;transition:all 0.15s ease;font-family:inherit;">Ad spend</button>
-            <button class="cost-tab" data-tab="fees" onclick="switchCostTab(this)" style="font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #e2e8f0;background:#f8f9fa;color:#666;cursor:pointer;transition:all 0.15s ease;font-family:inherit;">Fees</button>
-            <button class="cost-tab" data-tab="taxes" onclick="switchCostTab(this)" style="font-size:12px;padding:6px 14px;border-radius:20px;border:1px solid #e2e8f0;background:#f8f9fa;color:#666;cursor:pointer;transition:all 0.15s ease;font-family:inherit;">Taxes</button>
-          </div>
-
-          <!-- Content Panel -->
-          <div id="cost-tab-panel" style="background:#f8fdf9;border:1px solid #e8f5ee;border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:16px;">
-            <div id="cost-tab-icon" style="width:44px;height:44px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2.5px 2.5px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <div>
-              <div id="cost-tab-title" style="font-size:14px;font-weight:600;color:#0a2540;margin-bottom:6px;">Cost of goods sold (COGS)</div>
-              <div id="cost-tab-desc" style="font-size:13px;color:#666;line-height:1.6;">The actual cost of each product you sell, synced automatically per SKU, no manual entry needed.</div>
-            </div>
-          </div>
-
-        </div>
-
-        <style>
-          .cost-tab:not(.cost-tab-active):hover {
-            background: #f0faf6 !important;
-            border-color: #1a7f5a !important;
-            color: #1a7f5a !important;
-          }
-        
-@media (max-width: 1200px) {
-  .mega-menu {
-    padding: 20px 16px;
-    gap: 16px;
-  }
-  .mega-zone-1 {
-    flex: 0 0 30%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 24%;
-  }
-  .mega-zone-3 {
-    flex: 1;
-  }
-  .mega-gem-img {
-    width: 64px !important;
-    height: 64px !important;
-  }
-  .mega-asset-name { font-size: 13px !important; }
-  .mega-asset-desc { font-size: 11px !important; }
-  .mega-gem-text { font-size: 12px !important; }
-  .mega-link-item { font-size: 13px !important; }
-  .mega-mcp-title { font-size: 15px !important; }
-}
-
-@media (max-width: 1024px) {
-  .mega-menu {
-    flex-wrap: wrap;
-  }
-  .mega-zone-1 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-3 {
-    flex: 0 0 100%;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 16px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-  }
-  .mega-navy-title {
-    grid-column: 1 / -1;
-  }
-  .mega-asset-card {
-    margin-bottom: 0 !important;
-  }
-}
-
-</style>
-
-        <script>
-          var costTabData = {
-            cogs:     { icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>', title: 'Cost of goods sold (COGS)', desc: 'The actual cost of each product you sell, synced automatically per SKU, no manual entry needed.' },
-            shipping: { icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>', title: 'Shipping & fulfillment costs', desc: 'Every fulfillment cost tracked per order from carrier fees to 3PL charges.' },
-            adspend:  { icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="M18.1 8.6a2 2 0 1 1-3.6-1.2"/><path d="M18 8c0 .36-.08.7-.22 1.02m.22-1.02c1.78.6 3 2.29 3 4.25s-1.22 3.65-3 4.25M11.35 11.6 2 14.75v-10.5L11.35 7.4c2.3.8 4.65 1.6 7 2.4a2 2 0 0 1 1.65 2v0a2 2 0 0 1-1.65 2c-2.35.8-4.7 1.6-7 2.4Z"/></svg>', title: 'Ad spend (Facebook, Google, TikTok)', desc: 'All ad platforms in one place. See true ROAS after every cost is deducted, not just revenue.' },
-            fees:     { icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>', title: 'Payment processing & transaction fees', desc: 'Stripe, PayPal, Shopify Payments, every gateway fee automatically deducted from profit.' },
-            taxes:    { icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"></path><path d="M16 8H8M16 12H8M13 16H8"></path></svg>', title: 'Taxes & additional expenses', desc: 'Custom costs, VAT, import duties, anything that eats into your margin, tracked in one place.' }
-          };
-
-          function switchCostTab(el) {
-            // Reset all tabs
-            var tabs = document.querySelectorAll('.cost-tab');
-            tabs.forEach(function(t) {
-              t.classList.remove('cost-tab-active');
-              t.style.background = '#f8f9fa';
-              t.style.color = '#666';
-              t.style.borderColor = '#e2e8f0';
-              t.style.fontWeight = '';
-            });
-            // Activate clicked tab
-            el.classList.add('cost-tab-active');
-            el.style.background = '#1a7f5a';
-            el.style.color = '#fff';
-            el.style.borderColor = '#1a7f5a';
-            el.style.fontWeight = '600';
-            // Update panel content
-            var key = el.getAttribute('data-tab');
-            var data = costTabData[key];
-            document.getElementById('cost-tab-icon').innerHTML = data.icon;
-            document.getElementById('cost-tab-title').textContent = data.title;
-            document.getElementById('cost-tab-desc').textContent = data.desc;
-          }
-        </script>
-      </div>
-
-      <!-- RIGHT COLUMN: Visual -->
-      <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 420px; margin: 0 auto;">
-        <div id="dashboard-mockup" class="dashboard-float" style="
-          opacity: 0;
-          transform: translateY(20px);
-          transition: opacity 0.7s ease, transform 0.7s ease;
-          background: #fff;
-          border-radius: 16px;
-          border: 1px solid rgba(0,0,0,0.06);
-          box-shadow: 0 8px 40px rgba(0,0,0,0.08);
-          padding: 32px;
-          width: 100%;
-          min-height: 320px;
-          position: relative;
+        <div style="
+          font-size: 12px;
+          font-weight: 700;
+          color: #2dd498;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          margin-bottom: 16px;
           display: flex;
-          flex-direction: column;
           align-items: center;
-          justify-content: center;
+          gap: 10px;
         ">
-          <!-- Background Revenue Text -->
-          <div style="position: absolute; top: 36px; left: 0; width: 100%; text-align: center; z-index: 1;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px;">
-              <div style="height: 1px; width: 30px; background: #e2e8f0;"></div>
-              <div style="font-size: 12px; font-weight: 600; color: #cbd5e1; text-transform: uppercase; letter-spacing: 0.05em;">Revenue</div>
-              <div style="height: 1px; width: 30px; background: #e2e8f0;"></div>
-            </div>
-            <div style="font-size: 64px; font-weight: 800; color: #e2e8f0; line-height: 1; letter-spacing: -0.04em;">$120,000</div>
-          </div>
+          <span style="width: 24px; height: 1px; background: #2dd498;"></span>
+          WHAT IS TRUEPROFIT
+        </div>
+        <h2 style="
+          font-size: clamp(32px, 4vw, 48px);
+          font-weight: 800;
+          color: #fff;
+          line-height: 1.1;
+          margin-bottom: 24px;
+          letter-spacing: -0.02em;
+        ">A real profit problem merchants already feel</h2>
+        <p style="
+          font-size: 18px;
+          color: #94a3b8;
+          line-height: 1.7;
+          margin: 0;
+        ">TrueProfit helps Shopify merchants see actual net profit — not just revenue. That gives affiliates a clear, helpful angle: hidden costs, margin leaks, and profit clarity.</p>
+      </div>
 
-          <!-- Magnifying Glass Container -->
-          <div style="position: relative; z-index: 2; margin-top: 65px; transform: translateX(35px);">
-            <!-- Handle -->
-            <div style="position: absolute; top: 130px; left: 130px; width: 100px; height: 18px; transform: rotate(38deg); transform-origin: left center; z-index: 1; display: flex; align-items: center;">
-              <div style="width: 12px; height: 14px; background: #cbd5e1; border-radius: 2px; border-right: 2px solid #94a3b8;"></div>
-              <div style="flex: 1; height: 100%; background: linear-gradient(to bottom, #475569, #1e293b); border-radius: 0 9px 9px 0; box-shadow: 3px 5px 10px rgba(0,0,0,0.2);"></div>
-            </div>
-            
-            <!-- Glass Circle -->
-            <div style="width: 160px; height: 160px; background: #fff; border-radius: 50%; box-shadow: 0 12px 30px rgba(0,0,0,0.12), inset 0 0 0 2px #f1f5f9, inset 0 0 0 5px #cbd5e1, inset 0 0 0 8px #f8fafc; position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-              
-              <!-- Sparkles -->
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="position: absolute; top: 25px; right: 35px;">
-                <path d="M12 4L12 8M18 12L20 12M16 8L18 6M6 12L8 12" stroke="#1a7f5a" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-
-              <div style="font-size: 14px; color: #666; font-weight: 600; margin-bottom: 4px;">Actual Net Profit</div>
-              <div style="font-size: 36px; font-weight: 800; color: #1a7f5a; line-height: 1;">$1,120</div>
-              
-              <!-- Green underline swoop -->
-              <svg width="50" height="8" viewBox="0 0 60 10" fill="none" style="margin-top: 6px;">
-                <path d="M2 8C20 2 40 2 58 8" stroke="#1a7f5a" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
+      <!-- Right Column: Checklist -->
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 24px; height: 24px; background: rgba(35, 196, 140, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #2dd498; flex-shrink: 0; margin-top: 2px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
-
-          <!-- Caption -->
-          <div style="margin-top: 36px; font-size: 15px; font-weight: 500; color: #0a2540; text-align: center; z-index: 2; font-style: italic; line-height: 1.6;">
-            Most merchants see revenue.<br>
-            TrueProfit reveals what <span style="position: relative; display: inline-block; color: #1a7f5a;">really matters.<svg width="100%" height="4" viewBox="0 0 100 4" preserveAspectRatio="none" style="position: absolute; bottom: -2px; left: 0; stroke: #1a7f5a; stroke-width: 1.5; fill: none; stroke-linecap: round;"><path d="M0 2Q50 0 100 2"/></svg></span>
+          <span style="font-size: 16px; color: #e2e8f0; font-weight: 500; line-height: 1.5;">Tracks COGS, shipping, ad spend, fees, and taxes</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 24px; height: 24px; background: rgba(35, 196, 140, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #2dd498; flex-shrink: 0; margin-top: 2px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </div>
+          <span style="font-size: 16px; color: #e2e8f0; font-weight: 500; line-height: 1.5;">Reveals actual net profit automatically</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 24px; height: 24px; background: rgba(35, 196, 140, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #2dd498; flex-shrink: 0; margin-top: 2px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <span style="font-size: 16px; color: #e2e8f0; font-weight: 500; line-height: 1.5;">Built for Shopify and ecommerce merchants</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 24px; height: 24px; background: rgba(35, 196, 140, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #2dd498; flex-shrink: 0; margin-top: 2px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <span style="font-size: 16px; color: #e2e8f0; font-weight: 500; line-height: 1.5;">Easy to explain through real business pain points</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <div style="width: 24px; height: 24px; background: rgba(35, 196, 140, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #2dd498; flex-shrink: 0; margin-top: 2px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <span style="font-size: 16px; color: #e2e8f0; font-weight: 500; line-height: 1.5;">Works for guides, Reddit posts, videos, and community content</span>
         </div>
       </div>
-
-      <style>
-        @keyframes dashboardFloat {
-          0%   { transform: translateY(0px); }
-          100% { transform: translateY(-6px); }
-        }
-        .dashboard-float.is-visible {
-          animation: dashboardFloat 3s ease-in-out infinite alternate;
-        }
-      
-@media (max-width: 1200px) {
-  .mega-menu {
-    padding: 20px 16px;
-    gap: 16px;
-  }
-  .mega-zone-1 {
-    flex: 0 0 30%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 24%;
-  }
-  .mega-zone-3 {
-    flex: 1;
-  }
-  .mega-gem-img {
-    width: 64px !important;
-    height: 64px !important;
-  }
-  .mega-asset-name { font-size: 13px !important; }
-  .mega-asset-desc { font-size: 11px !important; }
-  .mega-gem-text { font-size: 12px !important; }
-  .mega-link-item { font-size: 13px !important; }
-  .mega-mcp-title { font-size: 15px !important; }
-}
-
-@media (max-width: 1024px) {
-  .mega-menu {
-    flex-wrap: wrap;
-  }
-  .mega-zone-1 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-3 {
-    flex: 0 0 100%;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 16px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-  }
-  .mega-navy-title {
-    grid-column: 1 / -1;
-  }
-  .mega-asset-card {
-    margin-bottom: 0 !important;
-  }
-}
-
-</style>
-        <script>
-          (function() {
-            var el = document.getElementById('dashboard-mockup');
-            var observer = new IntersectionObserver(function(entries) {
-              entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                  el.style.opacity = '1';
-                  el.style.transform = 'translateY(0)';
-                  setTimeout(function() { el.classList.add('is-visible'); }, 700);
-                  observer.unobserve(el);
-                }
-              });
-            }, { threshold: 0.2 });
-            observer.observe(el);
-          })();
-        </script>
-      </div>
-
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    #why-trueprofit {
+      padding: 40px 16px !important;
+    }
+    #why-trueprofit .section-inner {
+      padding: 40px 24px !important;
+    }
+    .why-tp-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .mega-menu {
+      padding: 20px 16px;
+      gap: 16px;
+    }
+    .mega-zone-1 {
+      flex: 0 0 30%;
+    }
+    .mega-zone-2 {
+      flex: 0 0 24%;
+    }
+    .mega-zone-3 {
+      flex: 1;
+    }
+    .mega-gem-img {
+      width: 64px !important;
+      height: 64px !important;
+    }
+    .mega-asset-name { font-size: 13px !important; }
+    .mega-asset-desc { font-size: 11px !important; }
+    .mega-gem-text { font-size: 12px !important; }
+    .mega-link-item { font-size: 13px !important; }
+    .mega-mcp-title { font-size: 15px !important; }
+  }
+
+  @media (max-width: 1024px) {
+    .mega-menu {
+      flex-wrap: wrap;
+    }
+    .mega-zone-1 {
+      flex: 0 0 48%;
+    }
+    .mega-zone-2 {
+      flex: 0 0 48%;
+    }
+    .mega-zone-3 {
+      flex: 0 0 100%;
+      border-left: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 16px;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .mega-navy-title {
+      grid-column: 1 / -1;
+    }
+    .mega-asset-card {
+      margin-bottom: 0 !important;
+    }
+  }
+</style>
 
 
 <!-- ==============================
