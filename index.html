@@ -642,69 +642,367 @@ img { max-width: 100%; display: block; }
 }
 
 /* =========================================
-   COMMISSION SECTION
+   COMMISSION REDESIGN - PREMIUM SaaS
    ========================================= */
-.commission-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
+
+#commission {
+  background: #051d29;
+  background-image: radial-gradient(circle at 50% 20%, rgba(35, 196, 140, 0.08) 0%, transparent 70%);
+  padding: 100px 24px;
 }
-.comm-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg);
-  padding: 32px;
+
+#commission .section-inner {
+  max-width: 1180px;
 }
-.comm-big-num {
-  font-size: 72px;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 1;
-  color: var(--green-bright);
+
+/* Header */
+.comm-header {
+  text-align: center;
+  margin-bottom: 64px;
 }
-.comm-big-label {
-  font-size: 15px;
-  color: rgba(255,255,255,0.6);
-  margin-top: 6px;
-  font-weight: 500;
-}
-.comm-cards-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 40px;
-}
-.timeline-bar-wrap {
-  margin-top: 28px;
-}
-.tl-row {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.tl-label { font-size: 12px; color: rgba(255,255,255,0.5); font-weight: 600; white-space: nowrap; }
-.tl-bar-bg {
-  background: rgba(255,255,255,0.07);
-  border-radius: 6px;
-  height: 30px;
-  overflow: hidden;
-}
-.tl-bar-fill {
-  height: 100%;
-  border-radius: 6px;
+
+.comm-label-wrap {
   display: flex;
   align-items: center;
-  padding: 0 14px;
-  font-size: 13px;
-  font-weight: 700;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
 }
-.tl-bar-fill.m1 { width: 100%; background: var(--green-bright); color: #071424; }
-.tl-bar-fill.m2 { width: 80%; background: rgba(35,196,140,0.45); color: var(--green-bright); }
 
-/* Calculator */
+.comm-label-wrap::before,
+.comm-label-wrap::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #1d9e75;
+  opacity: 0.4;
+}
+
+.comm-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #1d9e75;
+  line-height: 1;
+}
+
+.comm-h2 {
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Top Row Layout */
+.comm-top-row {
+  display: grid;
+  grid-template-columns: 38% 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.comm-card-glass {
+  background: linear-gradient(135deg, rgba(13, 34, 51, 0.6) 0%, rgba(10, 37, 53, 0.6) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), inset 0 0 20px rgba(35, 196, 140, 0.03);
+  padding: 40px;
+}
+
+.comm-panel-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 32px;
+}
+
+/* Timeline Left Panel */
+.comm-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.comm-tl-line {
+  position: absolute;
+  top: 10px;
+  left: 17px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #1d9e75, transparent);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.comm-tl-item {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  z-index: 2;
+}
+
+.comm-tl-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #051d29;
+  border: 1.5px solid #1d9e75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1d9e75;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(29, 158, 117, 0.2);
+}
+
+.comm-tl-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+
+.comm-tl-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.comm-tl-highlight {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2dd498;
+  letter-spacing: -0.01em;
+}
+
+.comm-tl-desc {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Calculator Right Panel Overrides */
+.comm-calc-card .calc-box {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.comm-calc-card .calc-field label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.comm-calc-card .slider-num {
+  font-size: 24px;
+}
+
+.comm-calc-card .calc-results-grid {
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.comm-calc-card .calc-result-tile {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px;
+}
+
+.comm-calc-card .r-val {
+  font-size: 28px;
+}
+
+.comm-calc-card .calc-highlight {
+  padding: 20px;
+  background: rgba(35, 196, 140, 0.08);
+  border: 1px solid rgba(35, 196, 140, 0.15);
+  font-size: 16px;
+}
+
+/* Middle Insight Strip */
+.comm-insight-strip {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 16px;
+  align-items: stretch;
+}
+
+.comm-insight-label-panel {
+  padding: 32px;
+  background: rgba(35, 196, 140, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.comm-insight-icon {
+  color: #2dd498;
+  opacity: 0.8;
+}
+
+.comm-insight-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.comm-insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 32px 40px;
+}
+
+.comm-insight-item {
+  padding: 0 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.comm-insight-item:last-child {
+  border-right: none;
+}
+
+.comm-insight-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.comm-insight-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1d9e75;
+}
+
+.comm-insight-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.comm-insight-desc {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Payment Strip */
+.comm-payment-strip {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 24px 40px;
+}
+
+.comm-payment-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.comm-payment-grid {
+  display: flex;
+  gap: 48px;
+  flex: 1;
+}
+
+.comm-payment-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.comm-payment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2dd498;
+  flex-shrink: 0;
+}
+
+.comm-payment-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.comm-payment-desc {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Mobile Responsive Overrides for Redesign */
+@media (max-width: 1024px) {
+  .comm-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comm-insight-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .comm-insight-label-panel {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 32px;
+  }
+
+  .comm-insight-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .comm-insight-item {
+    border-right: none;
+    padding: 0;
+  }
+
+  .comm-payment-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .comm-payment-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Backwards compatibility for existing calc logic classes if needed */
 .calc-box {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.1);
@@ -2617,135 +2915,170 @@ footer {
 
 
 <!-- ==============================
-     COMMISSION STRUCTURE (Dark)
+     COMMISSION STRUCTURE (Dark Redesign)
      ============================== -->
-<section class="section bg-dark" id="commission">
+<section id="commission">
   <div class="section-inner">
-    <div style="text-align:center;margin-bottom:60px;">
-      <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
-        <span>COMMISSION STRUCTURE</span>
+    <div class="comm-header">
+      <div class="comm-label-wrap">
+        <span class="comm-label">COMMISSION STRUCTURE</span>
       </div>
-      <h2 class="section-h2" style="color:#fff;">Commission Structure</h2>
-      <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">Earn 50% on the first month, then 20% recurring for months 2–12.</p>
+      <h2 class="comm-h2">Earn upfront, then keep earning monthly</h2>
     </div>
 
-    <!-- Simplified Commission Card -->
-    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 60px 48px; margin-bottom: 60px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
-        <div class="comm-stat-block">
-          <div class="comm-stat-value">50%</div>
-          <div class="comm-stat-label">Commission — Month 1</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Half of first month's subscription</div>
-        </div>
-        <div class="comm-stat-block" style="border-left: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06);">
-          <div class="comm-stat-value">20%</div>
-          <div class="comm-stat-label">Recurring — Months 2–12</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Every month for up to a year</div>
-        </div>
-        <div class="comm-stat-block">
-          <div class="comm-stat-value">12</div>
-          <div class="comm-stat-label">Months max duration</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Per referred merchant</div>
+    <div class="comm-top-row">
+      <!-- Left Panel: Vertical Timeline -->
+      <div class="comm-card-glass">
+        <div class="comm-panel-title">HOW YOU EARN</div>
+        <div class="comm-timeline">
+          <div class="comm-tl-line"></div>
+
+          <div class="comm-tl-item">
+            <div class="comm-tl-badge">01</div>
+            <div class="comm-tl-content">
+              <div class="comm-tl-header">
+                <span class="comm-tl-title">Month 1</span>
+                <span class="comm-tl-highlight">50% commission</span>
+              </div>
+              <p class="comm-tl-desc">Earn half of the first month’s subscription.</p>
+            </div>
+          </div>
+
+          <div class="comm-tl-item">
+            <div class="comm-tl-badge">02</div>
+            <div class="comm-tl-content">
+              <div class="comm-tl-header">
+                <span class="comm-tl-title">Months 2–12</span>
+                <span class="comm-tl-highlight">20% recurring</span>
+              </div>
+              <p class="comm-tl-desc">Keep earning monthly while the referral stays active.</p>
+            </div>
+          </div>
+
+          <div class="comm-tl-item">
+            <div class="comm-tl-badge">03</div>
+            <div class="comm-tl-content">
+              <div class="comm-tl-header">
+                <span class="comm-tl-title">Max duration</span>
+                <span class="comm-tl-highlight">12 months</span>
+              </div>
+              <p class="comm-tl-desc">Maximum commission duration per referred merchant.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div style="text-align: center; font-size: 16px; color: rgba(255,255,255,0.6); max-width: 640px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px;">
-        You earn 50% of the merchant’s first month, then 20% recurring from months 2–12 while the referral stays active.
+
+      <!-- Right Panel: Calculator -->
+      <div class="comm-card-glass comm-calc-card">
+        <div class="comm-panel-title">CALCULATE YOUR EARNINGS</div>
+        <div class="calc-box">
+          <div class="calc-field">
+            <label>Merchants you refer</label>
+            <div class="slider-row">
+              <input type="range" id="merchant-slider" min="1" max="50" value="10" aria-label="Number of merchants">
+              <span class="slider-num" id="slider-display">10</span>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label>Plan</label>
+            <div class="custom-select-wrapper" id="plan-custom-select">
+              <div class="custom-select-trigger">
+                <span class="custom-select-text">Advanced ($60/mo)</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C896" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="select-icon"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+              <div class="custom-options">
+                <div class="custom-option" data-value="35">Basic ($35/mo)</div>
+                <div class="custom-option selected" data-value="60">Advanced ($60/mo)</div>
+                <div class="custom-option" data-value="100">Ultimate ($100/mo)</div>
+                <div class="custom-option" data-value="200">Enterprise ($200/mo)</div>
+              </div>
+            </div>
+            <select id="plan-select" class="calc-select" style="display: none;" aria-label="Select plan">
+              <option value="35">Basic ($35/mo)</option>
+              <option value="60" selected>Advanced ($60/mo)</option>
+              <option value="100">Ultimate ($100/mo)</option>
+              <option value="200">Enterprise ($200/mo)</option>
+            </select>
+          </div>
+          <div class="calc-results-grid">
+            <div class="calc-result-tile">
+              <div class="r-label">Month 1 earnings</div>
+              <div class="r-val" id="result-month1">$300</div>
+            </div>
+            <div class="calc-result-tile">
+              <div class="r-label">Monthly recurring</div>
+              <div class="r-val" id="result-monthly">$120</div>
+            </div>
+            <div class="calc-highlight" id="calc-highlight">
+              10 merchants on Advanced → <strong>$1,620/year</strong>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="commission-layout">
-      <div>
-        <!-- Opportunity Box (Merged) -->
-        <div style="background: rgba(29, 158, 117, 0.05); border: 1px solid rgba(29, 158, 117, 0.2); border-radius: 16px; padding: 28px; margin-bottom: 40px;">
-          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">The market is still early</h4>
-          <p style="font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Most Shopify merchants still don’t track real profit properly. That gives affiliates a clear, useful angle to own.</p>
-          <div style="display: flex; flex-direction: column; gap: 24px;">
-            <div>
-              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Millions of Shopify stores</h5>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">The audience is large, active, and constantly looking for better ways to run ecommerce.</p>
-            </div>
-            <div>
-              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Profit tracking is underused</h5>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Many merchants still rely on revenue, ROAS, or spreadsheets instead of true net profit.</p>
-            </div>
-            <div>
-              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Helpful content wins</h5>
-              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Affiliates can lead with education, real pain points, and practical examples instead of hard selling.</p>
-            </div>
-          </div>
+    <!-- Middle Insight Strip -->
+    <div class="comm-card-glass comm-insight-strip">
+      <div class="comm-insight-label-panel">
+        <div class="comm-insight-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
         </div>
-
-        <h3 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.02em;">Payment details</h3>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px;">
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;">
-            <div style="width:42px;height:42px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            </div>
-            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;">Monthly</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.4);">Payment schedule</div>
+        <div class="comm-insight-label">WHY THIS IS<br>STILL EARLY</div>
+      </div>
+      <div class="comm-insight-grid">
+        <div class="comm-insight-item">
+          <div class="comm-insight-header">
+            <div class="comm-insight-dot"></div>
+            <div class="comm-insight-title">Millions of Shopify stores</div>
           </div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;">
-            <div style="width:42px;height:42px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-            </div>
-            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;">PayPal Only</div>
-            <div style="font-size:11px;color:rgba(255,255,255,.4);line-height:1.2;">Bank transfer temporarily disabled</div>
+          <p class="comm-insight-desc">A large, active ecommerce audience with huge potential.</p>
+        </div>
+        <div class="comm-insight-item">
+          <div class="comm-insight-header">
+            <div class="comm-insight-dot"></div>
+            <div class="comm-insight-title">Profit tracking is underused</div>
           </div>
-          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;">
-            <div style="width:42px;height:42px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
-            </div>
-            <div class="countup-metric" data-prefix="$" data-countup="100" data-suffix=" Min" style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px;">$100 Min</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.4);">Rolls over if under</div>
+          <p class="comm-insight-desc">Most merchants rely on revenue, ROAS, or spreadsheets instead of true net profit.</p>
+        </div>
+        <div class="comm-insight-item">
+          <div class="comm-insight-header">
+            <div class="comm-insight-dot"></div>
+            <div class="comm-insight-title">Helpful content wins</div>
           </div>
+          <p class="comm-insight-desc">Education-first promotion works better and builds more trust than hard selling.</p>
         </div>
       </div>
-      <div class="calc-box">
-        <div class="calc-title" style="display:flex;align-items:center;gap:10px;">
-          <div style="width:34px;height:34px;background:#fff;border:1.5px solid #0a2540;border-radius:6px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;color:#0a2540;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
+    </div>
+
+    <!-- Bottom Payment Strip -->
+    <div class="comm-card-glass comm-payment-strip">
+      <div class="comm-payment-label">PAYMENT DETAILS</div>
+      <div class="comm-payment-grid">
+        <div class="comm-payment-item">
+          <div class="comm-payment-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
           </div>
-          <span>Calculate Your Earnings</span>
+          <div class="comm-payment-content">
+            <div class="comm-payment-title">Monthly payment</div>
+            <div class="comm-payment-desc">Paid on a monthly basis.</div>
+          </div>
         </div>
-        <div class="calc-field">
-          <label>Merchants you refer</label>
-          <div class="slider-row">
-            <input type="range" id="merchant-slider" min="1" max="50" value="10" aria-label="Number of merchants">
-            <span class="slider-num" id="slider-display">10</span>
+        <div class="comm-payment-item">
+          <div class="comm-payment-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          </div>
+          <div class="comm-payment-content">
+            <div class="comm-payment-title">PayPal only</div>
+            <div class="comm-payment-desc">Bank transfer temporarily disabled.</div>
           </div>
         </div>
-        <div class="calc-field">
-          <label>Plan</label>
-          <div class="custom-select-wrapper" id="plan-custom-select">
-            <div class="custom-select-trigger">
-              <span class="custom-select-text">Advanced ($60/mo)</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C896" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="select-icon"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-            <div class="custom-options">
-              <div class="custom-option" data-value="35">Basic ($35/mo)</div>
-              <div class="custom-option selected" data-value="60">Advanced ($60/mo)</div>
-              <div class="custom-option" data-value="100">Ultimate ($100/mo)</div>
-              <div class="custom-option" data-value="200">Enterprise ($200/mo)</div>
-            </div>
+        <div class="comm-payment-item">
+          <div class="comm-payment-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
           </div>
-          <select id="plan-select" class="calc-select" style="display: none;" aria-label="Select plan">
-            <option value="35">Basic ($35/mo)</option>
-            <option value="60" selected>Advanced ($60/mo)</option>
-            <option value="100">Ultimate ($100/mo)</option>
-            <option value="200">Enterprise ($200/mo)</option>
-          </select>
-        </div>
-        <div class="calc-results-grid">
-          <div class="calc-result-tile">
-            <div class="r-label">Month 1 earnings</div>
-            <div class="r-val" id="result-month1">$300</div>
-          </div>
-          <div class="calc-result-tile">
-            <div class="r-label">Monthly recurring</div>
-            <div class="r-val" id="result-monthly">$120</div>
-          </div>
-          <div class="calc-highlight" id="calc-highlight">
-            10 merchants on Advanced → <strong>$1,620/year</strong>
+          <div class="comm-payment-content">
+            <div class="comm-payment-title">$100 minimum</div>
+            <div class="comm-payment-desc">Payments roll over if under the minimum.</div>
           </div>
         </div>
       </div>
@@ -2753,9 +3086,6 @@ footer {
   </div>
 </section>
 
-<!-- ==============================
-     OPPORTUNITY SECTION (Redesigned)
-     ============================== -->
 <style>
   /* Custom Select Dropdown */
   .custom-select-wrapper { position: relative; width: 100%; user-select: none; }
