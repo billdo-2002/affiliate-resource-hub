@@ -1228,11 +1228,17 @@ footer {
 @media (max-width: 768px) {
     .hub-directory-card {
       flex-direction: column !important;
-      padding: 32px 20px;
-      gap: 24px;
+      padding: 0 !important;
+      gap: 0 !important;
+    }
+    .hub-directory-content {
+      padding: 32px 24px !important;
     }
     .directory-graphic {
       width: 100% !important;
+      height: 180px !important;
+      border: none !important;
+      border-top: 1px solid #e2e8f0 !important;
     }
   #hero-cards {
     grid-template-columns: 1fr !important;
@@ -1844,40 +1850,47 @@ footer {
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 20px;
-    padding: 48px;
+    padding: 0;
     display: flex;
-    align-items: center;
-    gap: 60px;
+    align-items: stretch;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     opacity: 0;
     text-align: left;
     position: relative;
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .hub-directory-content {
+    flex: 1.8;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
   }
   .hub-directory-card::after {
     content: '';
     position: absolute;
-    top: 20px;
-    bottom: 20px;
+    top: 0;
+    bottom: 0;
     width: 4px;
     background: #1b8b60;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 2;
+    z-index: 5;
   }
   /* Odd cards: highlight on RIGHT */
   .hub-directory-card:nth-child(odd)::after {
     right: 0;
-    border-radius: 4px 0 0 4px;
   }
   /* Even cards: highlight on LEFT */
   .hub-directory-card:nth-child(even)::after {
     left: 0;
-    border-radius: 0 4px 4px 0;
   }
-  /* Reveal on hover OR when card is animated/active */
+  /* Reveal on hover OR when card is active */
   .hub-directory-card:hover::after,
-  .hub-directory-card.animated::after {
+  .hub-directory-card.active-card::after {
     opacity: 1;
   }
   .hub-directory-card.slide-left {
@@ -1896,20 +1909,21 @@ footer {
     border-color: #cbd5e1;
   }
   .directory-graphic {
-    width: 320px;
-    height: 200px;
-    background: #fff;
-    border: 1px dashed #e2e8f0;
-    border-radius: 16px;
+    flex: 1.2;
+    background: #f1f5f9;
+    border-left: 1px solid #e2e8f0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 11px;
-    color: #cbd5e1;
+    color: #94a3b8;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    flex-shrink: 0;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+    font-weight: 600;
+  }
+  .hub-directory-card:nth-child(even) .directory-graphic {
+    border-left: none;
+    border-right: 1px solid #e2e8f0;
   }
 
   .proof-chip {
@@ -2299,42 +2313,42 @@ footer {
 
       <!-- Card 1: Affiliate Guides -->
       <div class="hub-directory-card slide-left scroll-animate">
-        <div style="flex: 1;">
+        <div class="hub-directory-content">
           <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Guides</h3>
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Step-by-step playbooks for learning the product angle, choosing the right audience, and promoting without sounding salesy.</p>
           <a href="guides.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">View guides →</a>
         </div>
-        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic">[ Graphic Placeholder ]</div>
       </div>
 
-      <!-- Card 2: MCP Promotion -->
+      <!-- Card 2: New Feature Promotion - TrueProfit MCP -->
       <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
-        <div style="flex: 1;">
-          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">MCP Promotion</h3>
+        <div class="hub-directory-content">
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">New Feature Promotion - TrueProfit MCP</h3>
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Ready-to-use content for promoting TrueProfit MCP across X/Twitter, Reddit, and short-form video.</p>
           <a href="mcp-promotion.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Explore MCP →</a>
         </div>
-        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic">[ Graphic Placeholder ]</div>
       </div>
 
       <!-- Card 3: Creative Assets -->
       <div class="hub-directory-card slide-left scroll-animate">
-        <div style="flex: 1;">
+        <div class="hub-directory-content">
           <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Creative Assets</h3>
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Logos, banners, screenshots, and app footage affiliates can use in content or campaigns.</p>
           <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open assets →</a>
         </div>
-        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic">[ Graphic Placeholder ]</div>
       </div>
 
       <!-- Card 4: Affiliate Dashboard -->
       <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
-        <div style="flex: 1;">
+        <div class="hub-directory-content">
           <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Dashboard</h3>
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Set up your payout details, grab your affiliate link, and track performance from the dashboard.</p>
           <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open dashboard →</a>
         </div>
-        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic">[ Graphic Placeholder ]</div>
       </div>
 
     </div>
@@ -3701,6 +3715,14 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollTargets.forEach(el => {
     el.classList.add('scroll-animate');
     observer.observe(el);
+  });
+
+  // Handle Hub Directory Card active state on click
+  document.querySelectorAll('.hub-directory-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.hub-directory-card').forEach(c => c.classList.remove('active-card'));
+      card.classList.add('active-card');
+    });
   });
   
   // Observe mockup path lines
