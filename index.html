@@ -1222,6 +1222,25 @@ footer {
   #header.nav-open .header-actions { display: flex; flex-direction: column; padding: 0 28px 28px; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); padding-top: 16px; z-index: 1000; }
 }
 @media (max-width: 768px) {
+    .hub-directory-card {
+      flex-direction: column !important;
+      padding: 32px 20px;
+      gap: 24px;
+    }
+    .directory-graphic {
+      width: 100% !important;
+    }
+  #hero-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-feature-card {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 20px;
+  }
+  .feature-graphic {
+    width: 100% !important;
+  }
   .section { padding: 64px 20px; }
   .hero-h1 { font-size: 44px; }
   .comm-cards-row { grid-template-columns: 1fr; }
@@ -1738,6 +1757,158 @@ footer {
   animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+  .hero-feature-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .hero-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      transparent
+    );
+    transform: skewX(-20deg);
+    animation: glossySheen 6s infinite;
+  }
+  @keyframes glossySheen {
+    0% { left: -150%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
+  }
+  .hero-feature-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(29,158,117,0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.1);
+  }
+  .feature-graphic {
+    width: 100px;
+    height: 80px;
+    background: rgba(255,255,255,0.05);
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+
+  .hub-directory-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  }
+  .hub-directory-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 0;
+    width: 4px;
+    background: #1d9e75;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 4px 0 0 4px;
+  }
+  .hub-directory-card:hover::after {
+    opacity: 1;
+  }
+  .hub-directory-card.slide-left {
+    transform: translateX(-50px);
+  }
+  .hub-directory-card.slide-right {
+    transform: translateX(50px);
+  }
+  .hub-directory-card.animated {
+    opacity: 1;
+    transform: translateX(0) !important;
+  }
+  .hub-directory-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-color: #cbd5e1;
+  }
+  .directory-graphic {
+    width: 320px;
+    height: 200px;
+    background: #fff;
+    border: 1px dashed #e2e8f0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .proof-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+  }
+  .proof-chip svg { color: #1d9e75; }
+
+  .comm-stat-block {
+    text-align: center;
+    padding: 24px;
+  }
+  .comm-stat-value {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1d9e75;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .comm-stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
 /* Prefers Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
@@ -1824,10 +1995,10 @@ footer {
       <img src="logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
     </a>
     <nav class="header-nav" id="headerNav">
-      <a href="#section-start">Get Started</a>
-      <a href="#section-who">Who to Target</a>
+      <a href="#hero">Get Started</a>
+      <a href="#hub-directory">Hub Directory</a>
+      <a href="#why-trueprofit">Why TrueProfit</a>
       <a href="#commission">Commission</a>
-      <a href="#section-opportunity">Opportunity</a>
       <a href="#dashboard-setup">Dashboard Setup</a>
       <div class="nav-dropdown-wrapper">
         <a href="#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
@@ -2002,263 +2173,136 @@ footer {
     TrueProfit's Affiliate<br>
     <span class="word-green">Resource Hub</span>
   </h1>
-  <p class="hero-typewriter stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.3s;">
-    <span id="promote-static">Promote with </span><span id="typewriter-word" style="color: #1a9e6e;"></span><span id="typewriter-cursor" style="color: #1a9e6e;">|</span>
+  <p class="hero-sub stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.3s; color: #8fa3b8; max-width: 780px; margin: 0 auto 40px; font-size: 18px; line-height: 1.6;">
+    Everything affiliates need to promote TrueProfit faster — guides, content angles, ready-to-post scripts, MCP playbooks, creative assets, and dashboard setup in one place.
   </p>
-  <div class="hero-ctas stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.4s;">
+  <div class="hero-ctas stagger-enter" style="position: relative; z-index: 2; animation-delay: 0.4s; display: flex; justify-content: center; gap: 16px;">
     <a href="guides.html" class="btn-hero-primary" target="_blank" rel="noopener noreferrer">
-      See What's Inside <span class="btn-arrow">→</span>
+      Start with Guides →
+    </a>
+    <a href="mcp-promotion.html" class="btn-cta-ghost-white" target="_blank" rel="noopener noreferrer" style="font-size: 14px; padding: 12px 26px; border-width: 1.5px; border-color: rgba(255,255,255,0.3); color: #fff;">
+      Explore MCP Promotion →
     </a>
   </div>
 
-  <!-- Dashboard decorative wrapper -->
-  <div class="stagger-enter" style="position: relative; max-width: 1100px; margin: 0 auto; padding: 60px 140px; background-image: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 24px 24px; z-index: 1; animation-delay: 0.5s;">
+  <!-- Resource Hub Overview Cards -->
+  <div id="hero-cards" class="stagger-enter" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1040px; margin: 60px auto 0; position: relative; z-index: 2; animation-delay: 0.5s;">
 
-    <!-- Dashboard Emerald Glow -->
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 60%; background: radial-gradient(ellipse at center, rgba(27,139,96,0.25) 0%, transparent 70%); filter: blur(50px); z-index: 1; pointer-events: none;"></div>
-
-    <!-- ===== SPARKLES ===== -->
-    <div style="position: absolute; right: 140px; top: -10px; z-index: 11; width: 26px; height: 26px; color: #00c896; pointer-events: none;">
-      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"/></svg>
-    </div>
-    <div style="position: absolute; left: 80px; top: 310px; z-index: 11; width: 22px; height: 22px; color: #00c896; pointer-events: none;">
-      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"/></svg>
-    </div>
-    <div style="position: absolute; right: 130px; top: 290px; z-index: 11; width: 20px; height: 20px; color: #0a2540; pointer-events: none;">
-      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2 C12,7.5 16.5,12 22,12 C16.5,12 12,16.5 12,22 C12,16.5 7.5,12 2,12 C7.5,12 12,7.5 12,2 Z"/></svg>
-    </div>
-
-    <!-- 2 Stat Cards (Top-Right) -->
-    <div style="position: absolute; right: -60px; top: 40px; display: flex; gap: 16px; z-index: 20;">
-      <!-- Card 1 -->
-      <div class="stagger-enter-scale" style="background: #1A3040; border: 1px solid rgba(0, 200, 150, 0.3); border-radius: 12px; padding: 12px 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: rotate(-2deg); animation-delay: 0.6s;">
-        <div style="font-size: 28px; font-weight: 800; color: #00c896; line-height: 1;">50%</div>
-        <div style="font-size: 12px; color: #94a3b8; font-weight: 600; margin-top: 6px;">Commission</div>
-        <div style="font-size: 10px; color: #64748b; font-weight: 500;">Month 1</div>
-      </div>
-      <!-- Card 2 -->
-      <div class="stagger-enter-scale" style="background: #1A3040; border: 1px solid rgba(0, 200, 150, 0.3); border-radius: 12px; padding: 12px 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transform: rotate(2deg); margin-top: 20px; animation-delay: 0.7s;">
-        <div style="font-size: 28px; font-weight: 800; color: #00c896; line-height: 1;">20%</div>
-        <div style="font-size: 12px; color: #94a3b8; font-weight: 600; margin-top: 6px;">Recurring</div>
-        <div style="font-size: 10px; color: #64748b; font-weight: 500;">Every Month</div>
-      </div>
-    </div>
-
-    <!-- Badge Left (Bottom-Left) -->
-    <div class="stagger-enter-scale" style="position: absolute; left: -30px; bottom: 80px; background: #1A3040; border: 1px solid rgba(0, 200, 150, 0.3); border-radius: 999px; padding: 10px 18px; color: #fff; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 10; animation-delay: 0.8s;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00c896" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-      Real-time Tracking
-    </div>
-
-    <!-- Badge Right (Bottom-Right) -->
-    <div class="stagger-enter-scale" style="position: absolute; right: -30px; bottom: 100px; background: #1A3040; border: 1px solid rgba(0, 200, 150, 0.3); border-radius: 999px; padding: 10px 18px; color: #fff; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 10; animation-delay: 0.9s;">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00c896" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-      Dedicated Support
-    </div>
-
-    <!-- ===== NEW: AFFILIATE PERFORMANCE DASHBOARD CARD ===== -->
-    <div style="max-width: 860px; margin: 0 auto; background: #0f1e2d; border-radius: 16px; box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06); padding: 28px; position: relative; z-index: 2; font-family: var(--font), sans-serif;">
-
-      <!-- Card Header with live pulse dot -->
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 24px;">
-        <span style="position: relative; display: inline-flex; width: 10px; height: 10px;">
-          <span style="position: absolute; display: inline-flex; border-radius: 50%; height: 100%; width: 100%; background-color: #00c896; opacity: 0.75; animation: ping 1.4s cubic-bezier(0,0,0.2,1) infinite;"></span>
-          <span style="position: relative; display: inline-flex; border-radius: 50%; height: 10px; width: 10px; background-color: #00c896;"></span>
-        </span>
-        <span style="font-size: 13px; font-weight: 600; color: #94a3b8; letter-spacing: 0.04em; text-transform: uppercase;">Your Affiliate Performance</span>
-      </div>
-
-      <!-- 4 Metric Cards in 1 row -->
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px;">
-
-        <!-- Clicks -->
-        <div style="background: #162232; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07); padding: 18px 16px;">
-          <div style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;">Clicks</div>
-          <div class="countup-metric" data-countup="2847" style="font-size: 26px; font-weight: 800; color: #f0f6ff; letter-spacing: -0.02em; margin-bottom: 10px;">2,847</div>
-          <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(0,200,150,0.15); color: #00c896; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(0,200,150,0.25);">↑ +23%</span>
-        </div>
-
-        <!-- Conversions -->
-        <div style="background: #162232; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07); padding: 18px 16px;">
-          <div style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;">Conversions</div>
-          <div class="countup-metric" data-countup="312" style="font-size: 26px; font-weight: 800; color: #f0f6ff; letter-spacing: -0.02em; margin-bottom: 10px;">312</div>
-          <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(0,200,150,0.15); color: #00c896; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(0,200,150,0.25);">↑ +18%</span>
-        </div>
-
-        <!-- Revenue -->
-        <div style="background: #162232; border-radius: 12px; border: 1px solid rgba(255,255,255,0.07); padding: 18px 16px;">
-          <div style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;">Revenue</div>
-          <div class="countup-metric" data-countup="18400" data-prefix="$" style="font-size: 26px; font-weight: 800; color: #f0f6ff; letter-spacing: -0.02em; margin-bottom: 10px;">$18,400</div>
-          <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(0,200,150,0.15); color: #00c896; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(0,200,150,0.25);">↑ +31%</span>
-        </div>
-
-        <!-- Payout (highlighted in teal) -->
-        <div style="background: rgba(0,200,150,0.08); border-radius: 12px; border: 1px solid rgba(0,200,150,0.2); padding: 18px 16px;">
-          <div style="font-size: 11px; font-weight: 600; color: #5eead4; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;">Payout</div>
-          <div class="countup-metric" data-countup="3240" data-prefix="$" style="font-size: 30px; font-weight: 800; color: #00c896; letter-spacing: -0.02em; margin-bottom: 10px;">$3,240</div>
-          <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(0,200,150,0.2); color: #00c896; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(0,200,150,0.3);">↑ +28%</span>
-        </div>
-
-      </div>
-
-      <!-- Area Chart: Multi-metric performance -->
-      <div style="background: #0a1520; border-radius: 10px; padding: 16px 16px 10px; border: 1px solid rgba(255,255,255,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-          <div style="font-size: 11px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em;">Performance Overview</div>
-          
-          <!-- Chart Legend -->
-          <div style="display: flex; gap: 12px; font-size: 10px; font-weight: 600; color: #94a3b8;">
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: #00c896;"></span> Payout
-            </div>
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; border: 1px solid #00c896; background: transparent;"></span> Revenue
-            </div>
-            <div style="display: flex; align-items: center; gap: 4px;">
-              <span style="width: 8px; height: 8px; border-radius: 50%; background: #F5A623;"></span> Conversions
-            </div>
+    <!-- Card 1: Who it's for -->
+    <div class="hero-feature-card">
+      <div style="flex: 1; padding-right: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">Who it’s for</h4>
         </div>
-        
-        <svg width="100%" height="140" viewBox="0 0 800 140" preserveAspectRatio="none" style="display: block;">
-          <defs>
-            <linearGradient id="payoutGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#00c896" stop-opacity="0.20"/>
-              <stop offset="100%" stop-color="#00c896" stop-opacity="0.0"/>
-            </linearGradient>
-          </defs>
-
-          <!-- Conversions Line -->
-          <path class="chart-line-draw scroll-animate" d="M0,80 C50,85 100,75 150,70 C200,65 250,80 300,65 C350,50 400,60 450,55 C500,50 550,45 600,35 C650,25 700,30 750,20 C780,18 790,15 800,15" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          
-          <!-- Revenue Line (Dashed) -->
-          <path class="chart-line-draw scroll-animate" d="M0,115 C50,110 100,100 150,95 C200,90 250,105 300,85 C350,65 400,75 450,60 C500,45 550,40 600,30 C650,20 700,35 750,15 C780,10 790,5 800,5" fill="none" stroke="rgba(0, 200, 150, 0.5)" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- Payout Area & Line -->
-          <path class="chart-area-fill scroll-animate" d="M0,140 L0,125 C50,120 100,115 150,105 C200,100 250,115 300,95 C350,80 400,90 450,75 C500,65 550,55 600,45 C650,35 700,50 750,30 C780,25 790,20 800,20 L800,140 Z" fill="url(#payoutGrad)"/>
-          <path class="chart-line-draw scroll-animate" d="M0,125 C50,120 100,115 150,105 C200,100 250,115 300,95 C350,80 400,90 450,75 C500,65 550,55 600,45 C650,35 700,50 750,30 C780,25 790,20 800,20" fill="none" stroke="#00c896" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- Payout Highlight Dot -->
-          <circle cx="800" cy="20" r="4" fill="#00c896"/>
-          <circle cx="800" cy="20" r="8" fill="rgba(0,200,150,0.2)"/>
-        </svg>
-        <div style="display: flex; justify-content: space-between; margin-top: 6px;">
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Jan</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Feb</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Mar</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Apr</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">May</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Jun</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Jul</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Aug</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Sep</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Oct</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Nov</span>
-          <span style="font-size: 9px; color: #475569; font-weight: 500;">Dec</span>
-        </div>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
       </div>
-
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
     </div>
-    <!-- end affiliate dashboard card -->
 
+    <!-- Card 2: What’s inside -->
+    <div class="hero-feature-card">
+      <div style="flex: 1; padding-right: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+          </div>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">What’s inside</h4>
+        </div>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Playbooks, content angles, swipe copy, MCP promotion ideas, and creative assets.</p>
+      </div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
+    </div>
+
+    <!-- Card 3: How to use it -->
+    <div class="hero-feature-card">
+      <div style="flex: 1; padding-right: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">How to use it</h4>
+        </div>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
+      </div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
+    </div>
+
+    <!-- Card 4: Best starting point -->
+    <div class="hero-feature-card">
+      <div style="flex: 1; padding-right: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+          <div style="width: 32px; height: 32px; background: rgba(29,158,117,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #2dd498; box-shadow: 0 4px 10px rgba(29,158,117,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: -0.01em;">Best starting point</h4>
+        </div>
+        <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
+      </div>
+      <div class="feature-graphic" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; width: 120px; height: 90px;">[ Graphic ]</div>
+    </div>
   </div>
-  <!-- end decorative wrapper -->
+
+  <!-- Spacing for bottom of hero -->
+  <div style="height: 100px;"></div>
 
 </section>
+
 <!-- ==============================
-     SECTION A: STATS BAR
+     HUB DIRECTORY SECTION
      ============================== -->
-<section id="section-stats-bar" style="
-  background: #f8f9fa;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.045) 1px, transparent 1px);
-  background-size: 22px 22px;
-  border-top: 1px solid rgba(0,0,0,0.07);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-  padding: 48px 0;
-">
-  <div class="section-inner">
-    <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 32px;">
+<section id="hub-directory" style="background: #fff; padding: 120px 24px;">
+  <div class="section-inner" style="max-width: 1000px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 80px;">
+      <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
+        <span>DIRECTORY</span>
+      </div>
+      <h2 style="font-size: 42px; font-weight: 800; color: #0a2540; margin-bottom: 16px; letter-spacing: -0.03em;">What you’ll find inside</h2>
+      <p style="font-size: 18px; color: #6b7a90; max-width: 640px; margin: 0 auto; line-height: 1.6;">A quick map of the resources available, so you can jump to the right place without guessing.</p>
+    </div>
 
-      <div style="text-align: center; flex: 1; min-width: 140px;">
-        <div style="
-          width: 52px;
-          height: 52px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 10px;
-          box-shadow: 2.5px 2.5px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 16px;
-        ">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/><path d="M12 2a6 6 0 0 1 6 6c0 3.3-3 6-6 6s-6-2.7-6-6a6 6 0 0 1 6-6z"/></svg>
+    <div style="display: flex; flex-direction: column; gap: 32px; max-width: 1000px; margin: 0 auto;">
+
+      <!-- Card 1: Affiliate Guides -->
+      <div class="hub-directory-card slide-left scroll-animate">
+        <div style="flex: 1;">
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Guides</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Step-by-step playbooks for learning the product angle, choosing the right audience, and promoting without sounding salesy.</p>
+          <a href="guides.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">View guides →</a>
         </div>
-        <div class="countup-metric" data-prefix="#" data-countup="1" style="font-size: 42px; font-weight: 800; color: #0a2540; line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;">#1</div>
-        <div style="font-size: 13px; color: #6b7a90; font-weight: 500; max-width: 120px; margin: 0 auto; line-height: 1.4;">profit tracking app in its category</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
-      <div style="width: 1px; height: 60px; background: rgba(0,0,0,0.09); flex-shrink: 0;"></div>
-
-      <div style="text-align: center; flex: 1; min-width: 140px;">
-        <div style="
-          width: 52px;
-          height: 52px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 10px;
-          box-shadow: 2.5px 2.5px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 16px;
-        ">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <!-- Card 2: MCP Promotion -->
+      <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
+        <div style="flex: 1;">
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">MCP Promotion</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Ready-to-use content for promoting TrueProfit MCP across X/Twitter, Reddit, and short-form video.</p>
+          <a href="mcp-promotion.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Explore MCP →</a>
         </div>
-        <div class="countup-metric" data-countup="1000" data-suffix="+" style="font-size: 42px; font-weight: 800; color: #0a2540; line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;">1,000+</div>
-        <div style="font-size: 13px; color: #6b7a90; font-weight: 500; max-width: 120px; margin: 0 auto; line-height: 1.4;">active affiliate partners</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
-      <div style="width: 1px; height: 60px; background: rgba(0,0,0,0.09); flex-shrink: 0;"></div>
-
-      <div style="text-align: center; flex: 1; min-width: 160px;">
-        <div style="
-          width: 52px;
-          height: 52px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 10px;
-          box-shadow: 2.5px 2.5px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 16px;
-        ">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v12"/></svg>
+      <!-- Card 3: Creative Assets -->
+      <div class="hub-directory-card slide-left scroll-animate">
+        <div style="flex: 1;">
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Creative Assets</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Logos, banners, screenshots, and app footage affiliates can use in content or campaigns.</p>
+          <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open assets →</a>
         </div>
-        <div style="font-size: 42px; font-weight: 800; color: #0a2540; line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;"><span class="countup-metric" data-prefix="$" data-countup="800">800</span>–<span class="countup-metric" data-prefix="$" data-countup="1" data-suffix="K">1K</span></div>
-        <div style="font-size: 13px; color: #6b7a90; font-weight: 500; max-width: 130px; margin: 0 auto; line-height: 1.4;">avg. monthly earnings</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
-      <div style="width: 1px; height: 60px; background: rgba(0,0,0,0.09); flex-shrink: 0;"></div>
-
-      <div style="text-align: center; flex: 1; min-width: 140px;">
-        <div style="
-          width: 52px;
-          height: 52px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 10px;
-          box-shadow: 2.5px 2.5px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 16px;
-        ">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.5-2 3.5s2.24-.5 3.5-2"/><path d="M12 12l9-9"/><path d="M9 15l-3-3"/><path d="M18.5 5.5c1.5-1.5 3-1.5 3-1.5s0 1.5-1.5 3L13 14H9v-4l7-7z"/></svg>
+      <!-- Card 4: Affiliate Dashboard -->
+      <div class="hub-directory-card slide-right scroll-animate" style="flex-direction: row-reverse;">
+        <div style="flex: 1;">
+          <h3 style="font-size: 26px; font-weight: 700; color: #0a2540; margin-bottom: 16px;">Affiliate Dashboard</h3>
+          <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Set up your payout details, grab your affiliate link, and track performance from the dashboard.</p>
+          <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open dashboard →</a>
         </div>
-        <div class="countup-metric" data-prefix="~" data-countup="1" data-suffix=" Year" style="font-size: 42px; font-weight: 800; color: #0a2540; line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px;">~1 Year</div>
-        <div style="font-size: 13px; color: #6b7a90; font-weight: 500; max-width: 120px; margin: 0 auto; line-height: 1.4;">since launch &amp; growing fast</div>
+        <div class="directory-graphic" style="background: #f8fafc; border: 1px dashed #cbd5e1;">[ Graphic Placeholder ]</div>
       </div>
 
     </div>
@@ -2268,11 +2312,11 @@ footer {
 <!-- ==============================
      SECTION B: WHAT IS TRUEPROFIT
      ============================== -->
-<section id="section-start" style="
+<section id="why-trueprofit" style="
   background: #fff;
   background-image: radial-gradient(circle, rgba(0,0,0,0.035) 1px, transparent 1px);
   background-size: 26px 26px;
-  padding: 80px 0;
+  padding: 60px 0;
 ">
   <div class="section-inner">
     <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 60px; align-items: center;">
@@ -2282,8 +2326,23 @@ footer {
         <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
           <span>WHY IT SELLS ITSELF</span>
         </div>
-        <h2 style="font-size: clamp(26px, 3vw, 38px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.2; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: var(--primary);">painful gap</span> in the market</h2>
-        <p style="font-size: 16px; color: #6b7a90; line-height: 1.7; margin-bottom: 32px;">Most Shopify merchants only see revenue — but revenue isn't profit. A store doing $120K/month could be making just $1,000 after costs — and they wouldn't know it without TrueProfit.</p>
+        <h2 style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 800; color: #0a2540; letter-spacing: -0.03em; line-height: 1.1; margin: 0 0 20px 0;">TrueProfit fills a real, <span style="color: #1d9e75;">painful gap</span> in the market</h2>
+        <p style="font-size: 18px; color: #475569; line-height: 1.65; margin-bottom: 24px;">Most Shopify merchants only see revenue — but revenue isn’t profit. A store doing $120K/month could be making just $1,000 after costs, and they wouldn’t know it without TrueProfit.</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px;">
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Tracks all core costs
+          </div>
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Built for Shopify merchants
+          </div>
+          <div class="proof-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Reveals real net profit
+          </div>
+        </div>
 
         <!-- Tab Switcher -->
         <div id="cost-tabs-container">
@@ -2553,397 +2612,6 @@ footer {
   </div>
 </section>
 
-<!-- ==============================
-     WHO TO PROMOTE TO (QUIZ)
-     ============================== -->
-<section id="section-who" class="quiz-section-container" style="background: #ffffff; background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px); background-size: 24px 24px;">
-  <div class="section-inner" style="max-width: 1160px; margin: 0 auto;">
-    
-    <!-- HEADLINE BLOCK -->
-    <div style="text-align: left; margin-bottom: 40px;">
-      <div class="section-title-badge light" style="color: #1d9e75; margin-bottom: 12px;">
-        <span>TARGETING</span>
-      </div>
-      <h2 style="font-size: clamp(24px, 4vw, 32px); font-weight: 700; color: #0a2540; margin-bottom: 12px; letter-spacing: -0.02em;">Is your audience a good fit?</h2>
-      <p style="font-size: 16px; color: #8fa3b8; max-width: 600px; line-height: 1.6; margin: 0;">Answer 3 quick questions to find out if your audience will convert — and how to position TrueProfit to them.</p>
-    </div>
-
-    <!-- QUIZ CARD -->
-    <div id="quiz-card" style="max-width: 680px; margin: 0 auto; background: white; border: 0.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); overflow: hidden; position: relative;">
-      
-      <!-- PROGRESS BAR -->
-      <div style="height: 3px; background: #f1f5f9; width: 100%;">
-        <div id="quiz-progress" style="height: 100%; background: #1d9e75; width: 0%; transition: width 0.4s ease;"></div>
-      </div>
-
-      <!-- QUIZ INNER -->
-      <div id="quiz-inner" style="transition: opacity 200ms ease;">
-        <!-- Filled by JS -->
-      </div>
-    </div>
-
-    <!-- RULE OF THUMB -->
-    <div style="max-width: 680px; margin: 24px auto 0; border-left: 3px solid #1d9e75; border-radius: 0 10px 10px 0; background: rgba(29,158,117,0.04); padding: 16px 20px;">
-      <div style="font-size: 14px; color: #64748b; line-height: 1.6;">
-        <span style="font-weight: 700; color: #0a2540;">Rule of thumb: </span>
-        Anyone selling on Shopify → a potential TrueProfit user. Anyone selling on Shopify <span style="font-style: italic;">and doing serious volume</span> → they <span style="color: #1d9e75; font-weight: 500;">really need TrueProfit.</span>
-      </div>
-    </div>
-
-  </div>
-
-  <style>
-    /* Desktop default padding & layout styles */
-    .quiz-section-container {
-      padding: 96px 64px;
-    }
-    #quiz-inner {
-      padding: 32px;
-    }
-    
-    /* Option Styles */
-    .quiz-option {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      border: 0.5px solid #e2e8f0;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      background: #fff;
-    }
-    .quiz-option:hover {
-      border-color: #1d9e75;
-      background: rgba(29,158,117,0.04);
-    }
-    .quiz-option.selected {
-      border-color: #1d9e75;
-      background: rgba(29,158,117,0.08);
-    }
-    .quiz-icon-wrap {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      background: #fff;
-      border: 1.5px solid #0a2540;
-      box-shadow: 2px 2px 0 0 #cbd5e1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0a2540;
-      flex-shrink: 0;
-      transition: all 0.15s ease;
-    }
-    .quiz-option.selected .quiz-icon-wrap {
-      background: #1d9e75;
-      border-color: #1d9e75;
-      box-shadow: 2px 2px 0 0 rgba(29,158,117,0.2);
-      color: white;
-    }
-    
-    /* Tags */
-    .result-tag {
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .result-tag.green {
-      background: #e1f5ee;
-      color: #0f6e56;
-    }
-    .result-tag.red {
-      background: #fef2f2;
-      color: #991b1b;
-    }
-
-    /* Responsive Queries */
-    @media (max-width: 768px) {
-      .quiz-section-container {
-        padding: 64px 20px;
-      }
-      #quiz-inner {
-        padding: 24px 16px;
-      }
-      .quiz-option {
-        padding: 12px 14px;
-        gap: 12px;
-      }
-      .quiz-icon-wrap {
-        width: 34px;
-        height: 34px;
-      }
-    }
-  
-@media (max-width: 1200px) {
-  .mega-menu {
-    padding: 20px 16px;
-    gap: 16px;
-  }
-  .mega-zone-1 {
-    flex: 0 0 30%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 24%;
-  }
-  .mega-zone-3 {
-    flex: 1;
-  }
-  .mega-gem-img {
-    width: 64px !important;
-    height: 64px !important;
-  }
-  .mega-asset-name { font-size: 13px !important; }
-  .mega-asset-desc { font-size: 11px !important; }
-  .mega-gem-text { font-size: 12px !important; }
-  .mega-link-item { font-size: 13px !important; }
-  .mega-mcp-title { font-size: 15px !important; }
-}
-
-@media (max-width: 1024px) {
-  .mega-menu {
-    flex-wrap: wrap;
-  }
-  .mega-zone-1 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-3 {
-    flex: 0 0 100%;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 16px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-  }
-  .mega-navy-title {
-    grid-column: 1 / -1;
-  }
-  .mega-asset-card {
-    margin-bottom: 0 !important;
-  }
-}
-
-</style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const questions = [
-        {
-          q: "Where does your audience primarily sell?",
-          options: [
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>', label: "Shopify stores", sub: "Dropshippers, DTC brands, print-on-demand", score: 2 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>', label: "Other platforms", sub: "WooCommerce, Etsy, Amazon, etc.", score: 0 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="20" x2="22" y2="20"/><line x1="12" y1="17" x2="12" y2="20"/></svg>', label: "Mix of platforms", sub: "Shopify + other channels", score: 1 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>', label: "Not sure / general audience", sub: "Broad make-money-online niche", score: 0 }
-          ]
-        },
-        {
-          q: "How would you describe their business stage?",
-          options: [
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.5-2 3.5s2.24-.5 3.5-2"/><path d="M12 12l9-9"/><path d="M9 15l-3-3"/><path d="M18.5 5.5c1.5-1.5 3-1.5 3-1.5s0 1.5-1.5 3L13 14H9v-4l7-7z"/></svg>', label: "Running paid ads", sub: "Meta, Google, TikTok campaigns", score: 2 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>', label: "Scaling — doing $10K+ monthly revenue", sub: "Focused on margins and profitability", score: 2 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58 1 9.35A7.003 7.003 0 0 1 11 20z"/><path d="M9 22L11 20"/></svg>', label: "Just starting out", sub: "Learning ecommerce basics", score: 0 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>', label: "Curious about ecommerce", sub: "Not yet selling anything", score: 0 }
-          ]
-        },
-        {
-          q: "What content do you create for them?",
-          options: [
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>', label: "Profit, ROAS, scaling strategies", sub: "Data-driven ecom content", score: 2 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>', label: "Dropshipping & product research", sub: "Finding winning products", score: 2 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>', label: "General make-money-online", sub: "Side hustles, passive income", score: 0 },
-            { icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>', label: "Ecommerce education for beginners", sub: "How to start a store from scratch", score: 1 }
-          ]
-        }
-      ];
-
-      let currentQ = 1;
-      let scores = [];
-      let selectedOptionIndex = null;
-
-      function getElements() {
-        return {
-          quizInner: document.getElementById("quiz-inner"),
-          quizProgress: document.getElementById("quiz-progress")
-        };
-      }
-
-      function render() {
-        const elements = getElements();
-        if (!elements.quizInner || !elements.quizProgress) return;
-
-        selectedOptionIndex = null;
-        elements.quizProgress.style.width = ((currentQ - 1) / 3 * 100) + "%";
-        
-        const qData = questions[currentQ - 1];
-        
-        let html = `
-          <div style="font-size: 12px; color: #8fa3b8; font-weight: 600; margin-bottom: 8px;">Question <span style="color: #1d9e75; font-weight: 700;">${currentQ}</span> of 3</div>
-          <div style="font-size: 18px; font-weight: 500; color: #0a2540; margin-bottom: 24px;">${qData.q}</div>
-          <div style="display: flex; flex-direction: column; gap: 10px;" id="quiz-options">
-        `;
-
-        qData.options.forEach((opt, idx) => {
-          html += `
-            <div class="quiz-option" data-idx="${idx}">
-              <div class="quiz-icon-wrap">${opt.icon}</div>
-              <div>
-                <div style="font-size: 14px; font-weight: 500; color: #0a2540; line-height: 1.2;">${opt.label}</div>
-                <div style="font-size: 12px; color: #8fa3b8; margin-top: 2px;">${opt.sub}</div>
-              </div>
-            </div>
-          `;
-        });
-
-        html += `
-          </div>
-          <div style="text-align: right; margin-top: 24px;">
-            <button id="quiz-next-btn" style="padding: 10px 24px; background: #1d9e75; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; opacity: 0.35; pointer-events: none; transition: all 0.2s; cursor: pointer;">
-              ${currentQ === 3 ? 'See result →' : 'Next →'}
-            </button>
-          </div>
-        `;
-
-        elements.quizInner.style.opacity = 0;
-        setTimeout(() => {
-          elements.quizInner.innerHTML = html;
-          elements.quizInner.style.opacity = 1;
-          
-          // Attach events
-          const options = document.querySelectorAll(".quiz-option");
-          const nextBtn = document.getElementById("quiz-next-btn");
-
-          if (options && nextBtn) {
-            options.forEach(opt => {
-              opt.addEventListener("click", function() {
-                options.forEach(o => o.classList.remove("selected"));
-                this.classList.add("selected");
-                selectedOptionIndex = parseInt(this.getAttribute("data-idx"));
-                
-                nextBtn.style.opacity = 1;
-                nextBtn.style.pointerEvents = "auto";
-                nextBtn.onmouseover = () => nextBtn.style.background = "#0f6e56";
-                nextBtn.onmouseout = () => nextBtn.style.background = "#1d9e75";
-              });
-            });
-
-            nextBtn.addEventListener("click", () => {
-              if (selectedOptionIndex !== null) {
-                scores.push(qData.options[selectedOptionIndex].score);
-                currentQ++;
-                if (currentQ > 3) {
-                  renderResult();
-                } else {
-                  render();
-                }
-              }
-            });
-          }
-
-        }, 200);
-      }
-
-      function renderResult() {
-        const elements = getElements();
-        if (!elements.quizInner || !elements.quizProgress) return;
-
-        elements.quizProgress.style.width = "100%";
-        const totalScore = scores.reduce((a, b) => a + b, 0);
-        
-        let iconHtml, titleHtml, bodyHtml, tagsHtml;
-
-        if (totalScore >= 4) {
-          // GREAT FIT
-          iconHtml = `<div style="width: 56px; height: 56px; border-radius: 50%; background: #e1f5ee; display: flex; align-items: center; justify-content: center; color: #0f6e56; font-size: 24px; font-weight: bold; margin-bottom: 20px;">✓</div>`;
-          titleHtml = `<div style="font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Great fit — high conversion potential</div>`;
-          bodyHtml = `<div style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">Your audience is exactly who TrueProfit is built for. Shopify sellers running ads and scaling are the ones who feel the pain of not knowing their real profit — and will pay to solve it.</div>`;
-          tagsHtml = `
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="result-tag green">Shopify sellers</span>
-              <span class="result-tag green">Paid ads users</span>
-              <span class="result-tag green">Scaling brands</span>
-              <span class="result-tag green">High intent</span>
-            </div>
-          `;
-        } else if (totalScore >= 2) {
-          // DECENT FIT
-          iconHtml = `<div style="width: 56px; height: 56px; border-radius: 50%; background: #fef3c7; display: flex; align-items: center; justify-content: center; color: #d97706; font-size: 24px; font-weight: bold; margin-bottom: 20px;">✓</div>`;
-          titleHtml = `<div style="font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Decent fit — worth trying</div>`;
-          bodyHtml = `<div style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">Your audience has some overlap with TrueProfit's ideal user. Focus your content on Shopify-specific pain points — profit visibility, cost tracking, ad efficiency — to attract the right subset.</div>`;
-          tagsHtml = `
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="result-tag green">Some Shopify sellers</span>
-              <span class="result-tag red">Needs targeting</span>
-            </div>
-          `;
-        } else {
-          // NOT A FIT
-          iconHtml = `<div style="width: 56px; height: 56px; border-radius: 50%; background: #fef2f2; display: flex; align-items: center; justify-content: center; color: #dc2626; font-size: 24px; font-weight: bold; margin-bottom: 20px;">✗</div>`;
-          titleHtml = `<div style="font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 12px;">Not an ideal fit — low conversion expected</div>`;
-          bodyHtml = `<div style="font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 24px;">Your audience likely doesn't have an active Shopify store or isn't focused on profitability yet. TrueProfit solves a specific problem — if your audience isn't feeling that problem, conversions will be low.</div>`;
-          tagsHtml = `
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span class="result-tag red">No Shopify store</span>
-              <span class="result-tag red">Beginners</span>
-              <span class="result-tag red">Low purchase intent</span>
-            </div>
-          `;
-        }
-
-        let html = `
-          ${iconHtml}
-          ${titleHtml}
-          ${bodyHtml}
-          ${tagsHtml}
-          <div style="margin-top: 32px; padding-top: 24px;">
-            <button id="quiz-retake-btn" style="padding: 8px 16px; background: white; color: #64748b; border: 0.5px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s;">
-              ← Retake quiz
-            </button>
-          </div>
-        `;
-
-        elements.quizInner.style.opacity = 0;
-        setTimeout(() => {
-          elements.quizInner.innerHTML = html;
-          elements.quizInner.style.opacity = 1;
-          
-          const retakeBtn = document.getElementById("quiz-retake-btn");
-          if (retakeBtn) {
-            retakeBtn.addEventListener("mouseover", function() {
-              this.style.borderColor = "#1d9e75";
-              this.style.color = "#1d9e75";
-            });
-            retakeBtn.addEventListener("mouseout", function() {
-              this.style.borderColor = "#e2e8f0";
-              this.style.color = "#64748b";
-            });
-            retakeBtn.addEventListener("click", () => {
-              currentQ = 1;
-              scores = [];
-              render();
-            });
-          }
-        }, 200);
-      }
-
-      // Initialize
-      render();
-
-      // Fallback: if the quiz inner div is empty after 100ms, call render() again
-      setTimeout(function() {
-        const inner = document.getElementById('quiz-inner');
-        if (inner && inner.children.length === 0) {
-          render();
-        }
-      }, 100);
-    });
-  </script>
-</section>
 
 <!-- ==============================
      COMMISSION STRUCTURE (Dark)
@@ -2952,46 +2620,58 @@ footer {
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:60px;">
       <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
-        <span>How you earn</span>
+        <span>COMMISSION STRUCTURE</span>
       </div>
       <h2 class="section-h2" style="color:#fff;">Commission Structure</h2>
-      <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">One of the most generous programs in the Shopify app ecosystem.</p>
+      <p class="section-lead" style="color:rgba(255,255,255,0.5);margin:0 auto;">Earn 50% on the first month, then 20% recurring for months 2–12.</p>
     </div>
 
-    <div class="comm-cards-row">
-      <div class="comm-card" style="text-align:center;">
-        <div class="comm-big-num countup-metric" data-countup="50" data-suffix="%">50%</div>
-        <div class="comm-big-label">Commission — Month 1</div>
-        <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.35);">Half of first month's subscription</div>
+    <!-- Simplified Commission Card -->
+    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 24px; padding: 60px 48px; margin-bottom: 60px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px;">
+        <div class="comm-stat-block">
+          <div class="comm-stat-value">50%</div>
+          <div class="comm-stat-label">Commission — Month 1</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Half of first month's subscription</div>
+        </div>
+        <div class="comm-stat-block" style="border-left: 1px solid rgba(255,255,255,0.06); border-right: 1px solid rgba(255,255,255,0.06);">
+          <div class="comm-stat-value">20%</div>
+          <div class="comm-stat-label">Recurring — Months 2–12</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Every month for up to a year</div>
+        </div>
+        <div class="comm-stat-block">
+          <div class="comm-stat-value">12</div>
+          <div class="comm-stat-label">Months max duration</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px;">Per referred merchant</div>
+        </div>
       </div>
-      <div class="comm-card" style="text-align:center;">
-        <div class="comm-big-num countup-metric" data-countup="20" data-suffix="%">20%</div>
-        <div class="comm-big-label">Recurring — Months 2–12</div>
-        <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.35);">Every month for up to a year</div>
-      </div>
-      <div class="comm-card" style="text-align:center;">
-        <div class="comm-big-num countup-metric" data-countup="12">12</div>
-        <div class="comm-big-label">Months max duration</div>
-        <div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.35);">Per referred merchant</div>
-      </div>
-    </div>
-
-    <div class="timeline-bar-wrap" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);padding:28px;margin-bottom:32px;">
-      <div style="display:flex;justify-content:space-between;margin-bottom:16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.35);">
-        <span>Commission Timeline</span><span>Month 1 → Month 12</span>
-      </div>
-      <div class="tl-row">
-        <span class="tl-label">Month 1</span>
-        <div class="tl-bar-bg"><div class="tl-bar-fill m1">50% commission</div></div>
-      </div>
-      <div class="tl-row">
-        <span class="tl-label">Months 2–12</span>
-        <div class="tl-bar-bg"><div class="tl-bar-fill m2">20% recurring each month</div></div>
+      <div style="text-align: center; font-size: 16px; color: rgba(255,255,255,0.6); max-width: 640px; margin: 0 auto; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 32px;">
+        You earn 50% of the merchant’s first month, then 20% recurring from months 2–12 while the referral stays active.
       </div>
     </div>
 
     <div class="commission-layout">
       <div>
+        <!-- Opportunity Box (Merged) -->
+        <div style="background: rgba(29, 158, 117, 0.05); border: 1px solid rgba(29, 158, 117, 0.2); border-radius: 16px; padding: 28px; margin-bottom: 40px;">
+          <h4 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px;">The market is still early</h4>
+          <p style="font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px;">Most Shopify merchants still don’t track real profit properly. That gives affiliates a clear, useful angle to own.</p>
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Millions of Shopify stores</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">The audience is large, active, and constantly looking for better ways to run ecommerce.</p>
+            </div>
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Profit tracking is underused</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Many merchants still rely on revenue, ROAS, or spreadsheets instead of true net profit.</p>
+            </div>
+            <div>
+              <h5 style="color: #2dd498; font-size: 15px; margin-bottom: 4px;">Helpful content wins</h5>
+              <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5;">Affiliates can lead with education, real pain points, and practical examples instead of hard selling.</p>
+            </div>
+          </div>
+        </div>
+
         <h3 style="font-size:20px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.02em;">Payment details</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px;">
           <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);padding:18px;text-align:center;display:flex;flex-direction:column;align-items:center;">
@@ -3097,46 +2777,6 @@ footer {
   .custom-option:hover { background: #0F3528; color: #00C896; }
   .custom-option.selected { background: #0F3528; border-left: 2px solid #00C896; color: #00C896; }
 
-  /* Opportunity Section */
-  #section-opportunity { overflow: hidden; }
-  .opp-node {
-    opacity: 0;
-    transform: scale(0.85);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  .opp-node.visible { opacity: 1; transform: scale(1); }
-  .opp-center-node {
-    animation: oppPulse 2s ease-in-out infinite;
-  }
-  @keyframes oppPulse {
-    0%   { box-shadow: 0 0 0 0 rgba(29,158,117,0.4), 0 12px 40px rgba(0,0,0,0.3); }
-    70%  { box-shadow: 0 0 0 12px rgba(29,158,117,0), 0 12px 40px rgba(0,0,0,0.3); }
-    100% { box-shadow: 0 0 0 0 rgba(29,158,117,0), 0 12px 40px rgba(0,0,0,0.3); }
-  }
-  .opp-stat-item {
-    border-left: 3px solid #1d9e75;
-    padding: 12px 0 12px 20px;
-    margin-bottom: 24px;
-    border-radius: 0 8px 8px 0;
-    transition: background 0.2s ease, border-left-color 0.2s ease;
-    opacity: 0;
-    transform: translateX(-24px);
-    transition: opacity 0.4s ease, transform 0.4s ease, background 0.2s ease, border-left-color 0.2s ease;
-  }
-  .opp-stat-item.visible { opacity: 1; transform: translateX(0); }
-  .opp-stat-item:hover { background: rgba(29,158,117,0.06); border-left-color: #5dcaa5; }
-  .opp-flow-line {
-    stroke: #1d9e75;
-    stroke-width: 1.5;
-    fill: none;
-    opacity: 0.6;
-    stroke-dasharray: 6 4;
-    animation: flowDash 3s linear infinite;
-  }
-  @keyframes flowDash {
-    to { stroke-dashoffset: -50; }
-  }
-
 @media (max-width: 1200px) {
   .mega-menu {
     padding: 20px 16px;
@@ -3190,399 +2830,6 @@ footer {
 }
 
 </style>
-
-<section id="section-opportunity" style="
-  background: #0a1628;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-  padding: 96px 64px;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-">
-  <!-- Headline Block -->
-  <div style="text-align: center; margin-bottom: 64px;" class="opp-headline">
-    <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 12px;">
-      <span>IS IT ACTUALLY EASY TO EARN?</span>
-    </div>
-    <h2 style="font-size: 40px; font-weight: 700; color: #fff; letter-spacing: -0.03em; line-height: 1.2; margin: 0 0 16px 0;">
-      The market is <span style="color: #1d9e75;">wide open.</span>
-    </h2>
-    <p style="font-size: 16px; color: #8fa3b8; max-width: 520px; margin: 0 auto; line-height: 1.6;">
-      10,000 users out of 6 million Shopify sellers. This is not saturated — not even close.
-    </p>
-  </div>
-
-  <!-- 2-Column Layout -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; max-width: 1100px; margin: 0 auto;">
-
-    <!-- LEFT COLUMN: Animated Connection Flow -->
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0;">
-
-      <!-- Top Row: 3 Nodes -->
-      <div style="display: flex; gap: 14px; width: 100%; justify-content: center;">
-
-        <!-- Node 1: Shopify Stores -->
-        <div class="opp-node" id="opp-node-1" style="
-          flex: 1;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(29,158,117,0.4);
-          border-radius: 12px;
-          padding: 16px 12px;
-          text-align: center;
-          transition-delay: 0s;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        ">
-          <div style="width:38px;height:38px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:8px;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-          </div>
-          <div style="font-size: 11px; font-weight: 600; color: #8fa3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em;">Shopify stores</div>
-          <div class="countup-metric" data-countup="6000000" data-suffix="+" style="font-size: 22px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">6,000,000+</div>
-          <div style="font-size: 11px; color: #8fa3b8;">total sellers</div>
-        </div>
-
-        <!-- Node 2: New Stores Daily -->
-        <div class="opp-node" id="opp-node-2" style="
-          flex: 1;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(29,158,117,0.4);
-          border-radius: 12px;
-          padding: 16px 12px;
-          text-align: center;
-          transition-delay: 0.1s;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        ">
-          <div style="width:38px;height:38px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:8px;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </div>
-          <div style="font-size: 11px; font-weight: 600; color: #8fa3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em;">New stores daily</div>
-          <div class="countup-metric" data-prefix="~" data-countup="5000" style="font-size: 22px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">~5,000</div>
-          <div style="font-size: 11px; color: #8fa3b8;">launch every day</div>
-        </div>
-
-        <!-- Node 3: TrueProfit Users -->
-        <div class="opp-node" id="opp-node-3" style="
-          flex: 1;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(29,158,117,0.4);
-          border-radius: 12px;
-          padding: 16px 12px;
-          text-align: center;
-          transition-delay: 0.2s;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        ">
-          <div style="width:38px;height:38px;background:#fff;border:1.5px solid #0a2540;border-radius:8px;box-shadow:2px 2px 0 0 #cbd5e1;display:flex;align-items:center;justify-content:center;margin-bottom:8px;flex-shrink:0;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div style="font-size: 11px; font-weight: 600; color: #8fa3b8; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.06em;">TrueProfit users</div>
-          <div class="countup-metric" data-countup="10000" style="font-size: 22px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">10,000</div>
-          <div style="font-size: 11px; color: #8fa3b8;">currently active</div>
-        </div>
-      </div>
-
-      <!-- SVG Connector Lines -->
-      <div style="width: 100%; position: relative; height: 64px;">
-        <svg width="100%" height="64" viewBox="0 0 420 64" preserveAspectRatio="none" style="overflow: hidden;">
-          <defs>
-            <marker id="arr1" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-              <path d="M0,0 L6,3 L0,6 Z" fill="#1d9e75" opacity="0.7"/>
-            </marker>
-          </defs>
-          <!-- Left node → center -->
-          <path class="opp-flow-line" d="M70,0 C70,32 210,32 210,64" marker-end="url(#arr1)"/>
-          <!-- Center node → center (straight) -->
-          <path class="opp-flow-line" d="M210,0 L210,64" marker-end="url(#arr1)" style="animation-delay: 0.5s;"/>
-          <!-- Right node → center -->
-          <path class="opp-flow-line" d="M350,0 C350,32 210,32 210,64" marker-end="url(#arr1)" style="animation-delay: 1s;"/>
-
-          <!-- Animated travelling dots -->
-          <circle r="3" fill="#1d9e75" opacity="0.9">
-            <animateMotion dur="2s" repeatCount="indefinite" begin="0s">
-              <mpath href="#path-left"/>
-            </animateMotion>
-          </circle>
-          <circle r="3" fill="#1d9e75" opacity="0.9">
-            <animateMotion dur="2s" repeatCount="indefinite" begin="0.7s">
-              <mpath href="#path-center"/>
-            </animateMotion>
-          </circle>
-          <circle r="3" fill="#1d9e75" opacity="0.9">
-            <animateMotion dur="2s" repeatCount="indefinite" begin="1.4s">
-              <mpath href="#path-right"/>
-            </animateMotion>
-          </circle>
-          <!-- Hidden paths for animateMotion -->
-          <path id="path-left" d="M70,0 C70,32 210,32 210,64" fill="none"/>
-          <path id="path-center" d="M210,0 L210,64" fill="none"/>
-          <path id="path-right" d="M350,0 C350,32 210,32 210,64" fill="none"/>
-        </svg>
-      </div>
-
-      <!-- Center Node: 1% -->
-      <div class="opp-node opp-center-node" id="opp-node-center" style="
-        background: rgba(29,158,117,0.15);
-        border: 2px solid #1d9e75;
-        border-radius: 14px;
-        padding: 24px 32px;
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box;
-        transition-delay: 0.3s;
-      ">
-        <div class="countup-metric" data-countup="1" data-suffix="%" style="font-size: 52px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 6px;">1%</div>
-        <div style="font-size: 14px; color: #fff; font-weight: 500; margin-bottom: 16px;">of the market captured</div>
-
-        <!-- Progress Bar -->
-        <div style="position: relative; margin-bottom: 8px;">
-          <div style="width: 100%; height: 5px; background: rgba(255,255,255,0.1); border-radius: 99px; overflow: hidden;">
-            <div style="width: 1%; height: 100%; background: #1d9e75; border-radius: 99px;"></div>
-          </div>
-        </div>
-        <div style="font-size: 12px; color: #8fa3b8; text-align: right; margin-bottom: 16px;"><span class="countup-metric" data-countup="99" data-suffix="%">99%</span> still untapped</div>
-
-        <span style="display: inline-block; background: #1d9e75; color: #fff; border-radius: 20px; padding: 7px 18px; font-size: 12px; font-weight: 600; letter-spacing: 0.03em;">Your opportunity →</span>
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN: Enhanced Stats -->
-    <div style="padding-top: 4px;">
-
-      <!-- Stat 1: #1 -->
-      <div class="opp-stat-item" id="opp-s1" style="transition-delay: 0.1s; display: flex; align-items: center; gap: 16px;">
-        <div style="
-          width: 48px;
-          height: 48px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 8px;
-          box-shadow: 2px 2px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        ">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <div>
-          <div class="countup-metric" data-prefix="#" data-countup="1" style="font-size: 32px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">#1</div>
-          <div style="font-size: 14px; color: #8fa3b8; line-height: 1.5;">profit tracking app in its category</div>
-        </div>
-      </div>
-
-      <!-- Stat 2: 2x -->
-      <div class="opp-stat-item" id="opp-s2" style="transition-delay: 0.2s; display: flex; align-items: center; gap: 16px;">
-        <div style="
-          width: 48px;
-          height: 48px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 8px;
-          box-shadow: 2px 2px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        ">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <div>
-          <div class="countup-metric" data-countup="2" data-suffix="x" style="font-size: 32px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">2x</div>
-          <div style="font-size: 14px; color: #8fa3b8; line-height: 1.5;">revenue growth year over year</div>
-        </div>
-      </div>
-
-      <!-- Stat 3: ~1 year -->
-      <div class="opp-stat-item" id="opp-s3" style="transition-delay: 0.3s; display: flex; align-items: center; gap: 16px;">
-        <div style="
-          width: 48px;
-          height: 48px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 8px;
-          box-shadow: 2px 2px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        ">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <div>
-          <div class="countup-metric" data-prefix="~" data-countup="1" data-suffix=" year" style="font-size: 32px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;">~1 year</div>
-          <div style="font-size: 14px; color: #8fa3b8; line-height: 1.5;">since launch — already 1,000+ affiliate partners</div>
-        </div>
-      </div>
-
-      <!-- Stat 4: $800–$1,000 -->
-      <div class="opp-stat-item" id="opp-s4" style="transition-delay: 0.4s; margin-bottom: 32px; display: flex; align-items: center; gap: 16px;">
-        <div style="
-          width: 48px;
-          height: 48px;
-          background: #fff;
-          border: 1.5px solid #0a2540;
-          border-radius: 8px;
-          box-shadow: 2px 2px 0 0 #cbd5e1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        ">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a2540" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div>
-          <div style="font-size: 32px; font-weight: 700; color: #1d9e75; line-height: 1; margin-bottom: 4px;"><span class="countup-metric" data-prefix="$" data-countup="800">800</span>–<span class="countup-metric" data-prefix="$" data-countup="1000">1,000</span></div>
-          <div style="font-size: 14px; color: #8fa3b8; line-height: 1.5;">avg. monthly earnings for consistent affiliates</div>
-        </div>
-      </div>
-
-      <!-- Callout Card -->
-      <div class="opp-stat-item" id="opp-s5" style="
-        background: rgba(29,158,117,0.08);
-        border: 1px solid rgba(29,158,117,0.2);
-        border-top: 1px solid rgba(29,158,117,0.3);
-        border-radius: 12px;
-        padding: 20px 24px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        transition-delay: 0.5s;
-        margin-bottom: 0;
-      ">
-        <div style="flex-shrink: 0;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1d9e75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-            <polyline points="17 6 23 6 23 12"/>
-          </svg>
-        </div>
-        <div style="font-size: 15px; font-weight: 500; color: #fff; line-height: 1.5;">And yes — that growth is your opportunity too.</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Responsive -->
-  <style>
-    @media (max-width: 900px) {
-      #section-opportunity > div:last-of-type { grid-template-columns: 1fr !important; }
-      #section-opportunity { padding: 64px 24px !important; }
-    }
-  
-@media (max-width: 1200px) {
-  .mega-menu {
-    padding: 20px 16px;
-    gap: 16px;
-  }
-  .mega-zone-1 {
-    flex: 0 0 30%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 24%;
-  }
-  .mega-zone-3 {
-    flex: 1;
-  }
-  .mega-gem-img {
-    width: 64px !important;
-    height: 64px !important;
-  }
-  .mega-asset-name { font-size: 13px !important; }
-  .mega-asset-desc { font-size: 11px !important; }
-  .mega-gem-text { font-size: 12px !important; }
-  .mega-link-item { font-size: 13px !important; }
-  .mega-mcp-title { font-size: 15px !important; }
-}
-
-@media (max-width: 1024px) {
-  .mega-menu {
-    flex-wrap: wrap;
-  }
-  .mega-zone-1 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-2 {
-    flex: 0 0 48%;
-  }
-  .mega-zone-3 {
-    flex: 0 0 100%;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 16px;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
-  }
-  .mega-navy-title {
-    grid-column: 1 / -1;
-  }
-  .mega-asset-card {
-    margin-bottom: 0 !important;
-  }
-}
-
-</style>
-</section>
-
-<script>
-/* =========================================
-   OPPORTUNITY SECTION ANIMATIONS (v2)
-   ========================================= */
-(function() {
-  var sec = document.getElementById('section-opportunity');
-  if (!sec) return;
-
-  var fired = false;
-  var obs = new IntersectionObserver(function(entries) {
-    if (fired || !entries[0].isIntersecting) return;
-    fired = true;
-
-    // Headline
-    var hl = sec.querySelector('.opp-headline');
-    if (hl) { hl.style.opacity = '1'; hl.style.transform = 'translateY(0)'; }
-
-    // Node stagger (scale in)
-    ['opp-node-1','opp-node-2','opp-node-3','opp-node-center'].forEach(function(id, i) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      setTimeout(function() {
-        el.classList.add('visible');
-        if (window.startCountUp) {
-          el.querySelectorAll('.countup-metric').forEach(window.startCountUp);
-        }
-      }, i * 100);
-    });
-
-    // Right stats stagger
-    ['opp-s1','opp-s2','opp-s3','opp-s4','opp-s5'].forEach(function(id, i) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      setTimeout(function() {
-        el.classList.add('visible');
-        if (window.startCountUp) {
-          el.querySelectorAll('.countup-metric').forEach(window.startCountUp);
-        }
-      }, 100 + i * 100);
-    });
-
-    obs.disconnect();
-  }, { threshold: 0.15 });
-
-  // Init headline
-  var hl = sec.querySelector('.opp-headline');
-  if (hl) {
-    hl.style.opacity = '0';
-    hl.style.transform = 'translateY(30px)';
-    hl.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  }
-
-  obs.observe(sec);
-})();
-</script>
 
 <!-- ==============================
      DASHBOARD SETUP SECTION
@@ -3617,6 +2864,9 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 0 64px;
+  }
+  .ds-sticky .ds-header {
+    margin-bottom: 30px !important;
   }
   
   .ds-container {
@@ -4172,13 +3422,13 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="cta-section">
   <div class="section-inner">
     <h2 class="cta-h2">Ready to <span>start promoting</span> TrueProfit?</h2>
-    <p class="cta-sub">You have everything you need — scripts, angles, and guides. Now go create content that converts.</p>
+    <p class="cta-sub">Start with the guide that matches your channel, then use the hub to turn it into content faster.</p>
     <div class="cta-btns">
       <a href="guides.html" class="btn-cta-white" target="_blank" rel="noopener noreferrer">
-        Open the Playbook →
+        View Guides →
       </a>
-      <a href="#dashboard-setup" class="btn-cta-ghost-white">
-        Get My Affiliate Link →
+      <a href="https://affiliate.trueprofit.io/sign-up" class="btn-cta-ghost-white" target="_blank" rel="noopener noreferrer">
+        Get affiliate link →
       </a>
     </div>
   </div>
@@ -4215,25 +3465,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script>
-/* =========================================
-   CHART RENDER
-   ========================================= */
-(function() {
-  const heights = [35,55,45,70,50,65,80,60,75,55,85,70,60,90,75,65,80,55,70,85,60,75,50,65,80,70,90,75,55,85];
-  const colors = ['#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a',
-                  '#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a',
-                  '#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a','#23c48c','#1e3a8a'];
-  const area = document.getElementById('chartArea');
-  if(area) {
-    heights.forEach((h,i) => {
-      const bar = document.createElement('div');
-      bar.className = 'chart-bar';
-      bar.style.cssText = `height:${h}%;background:${colors[i]};opacity:${colors[i]==='#23c48c'?'0.7':'0.4'}`;
-      area.appendChild(bar);
-    });
-  }
-})();
-
 /* =========================================
    HAMBURGER MENU
    ========================================= */
@@ -4414,39 +3645,6 @@ document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
 
 </script>
 <script>
-/* =========================================
-   HERO TYPEWRITER ANIMATION
-   ========================================= */
-document.addEventListener('DOMContentLoaded', function() {
-  const words = ['Scripts', 'Discord hooks', 'TikTok angles', 'Ready-to-post content'];
-  const el = document.getElementById('typewriter-word');
-  if (!el) return;
-  let wordIndex = 0, charIndex = 0, isDeleting = false;
-
-  function tick() {
-    const current = words[wordIndex];
-    if (!isDeleting) {
-      el.textContent = current.slice(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        isDeleting = true;
-        setTimeout(tick, 1200);
-        return;
-      }
-    } else {
-      el.textContent = current.slice(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-    }
-    setTimeout(tick, isDeleting ? 50 : 80);
-  }
-
-  tick();
-});
-
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -4455,6 +3653,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('animated');
+
         obs.unobserve(entry.target);
         
         // Trigger CountUp if it's a number element
@@ -4466,7 +3665,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
 
   // Add .scroll-animate class to target elements
-  const scrollTargets = document.querySelectorAll('.calc-box, .opp-node, #playbook-card, .footer-col, .ds-anim-item, h2:not(.stagger-enter)');
+  const scrollTargets = document.querySelectorAll('.calc-box, .opp-node, #playbook-card, .footer-col, .ds-anim-item, .hub-directory-card, h2:not(.stagger-enter)');
   scrollTargets.forEach(el => {
     el.classList.add('scroll-animate');
     observer.observe(el);
