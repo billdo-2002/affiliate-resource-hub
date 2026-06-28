@@ -661,32 +661,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: 64px;
 }
 
-.comm-label-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 16px;
-}
-
-.comm-label-wrap::before,
-.comm-label-wrap::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: #1d9e75;
-  opacity: 0.4;
-}
-
-.comm-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #1d9e75;
-  line-height: 1;
-}
 
 .comm-h2 {
   font-size: clamp(36px, 5vw, 48px);
@@ -2920,8 +2894,8 @@ footer {
 <section id="commission">
   <div class="section-inner">
     <div class="comm-header">
-      <div class="comm-label-wrap">
-        <span class="comm-label">COMMISSION STRUCTURE</span>
+      <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 16px;">
+        <span>COMMISSION STRUCTURE</span>
       </div>
       <h2 class="comm-h2">Earn upfront, then keep earning monthly</h2>
     </div>
