@@ -2123,12 +2123,12 @@ footer {
     box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 20px rgba(35,196,140,0.1);
   }
   .feature-graphic {
-    width: 32%;
-    height: 68%;
+    width: 220px;
+    height: 220px;
     background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
     border: 1px solid rgba(35, 196, 140, 0.2);
     border-right: none;
-    border-radius: 24px 0 0 24px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2142,6 +2142,14 @@ footer {
     top: 50%;
     transform: translateY(-50%) rotate(-2deg) translate(6%, 0);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  .feature-graphic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .hub-directory-card {
@@ -2543,7 +2551,9 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic">
+        <img src="images/home_1.svg" alt="Who it’s for" width="1152" height="768" loading="eager">
+      </div>
     </div>
 
     <!-- Card 2: What’s inside -->
@@ -2557,7 +2567,9 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Playbooks, content angles, swipe copy, MCP promotion ideas, and creative assets.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic">
+        <img src="images/home_2.svg" alt="What’s inside" width="1152" height="768" loading="eager">
+      </div>
     </div>
 
     <!-- Card 3: How to use it -->
@@ -2571,7 +2583,9 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic">
+        <img src="images/home_3.svg" alt="How to use it" width="1152" height="768" loading="eager">
+      </div>
     </div>
 
     <!-- Card 4: Best starting point -->
@@ -2585,7 +2599,9 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic">
+        <img src="images/home_4.svg" alt="Best starting point" width="1152" height="768" loading="eager">
+      </div>
     </div>
   </div>
 
