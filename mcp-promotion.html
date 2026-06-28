@@ -1994,20 +1994,34 @@ footer {
 </style>
 </head>
 <body style="background: var(--primary-dark); color: var(--text-white);">
+<!-- ==============================
+     ANNOUNCEMENT BAR
+     ============================== -->
+<div id="announce-bar">
+  <span class="announce-star">✦</span>
+  <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
+  <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
+  <span class="announce-star">✦</span>
+  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">×</button>
+</div>
+
+<!-- ==============================
+     HEADER
+     ============================== -->
 <header id="header" class="stagger-enter" style="animation-delay: 0s;">
   <div class="header-inner">
     <a href="index.html" class="header-logo">
       <img src="logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
     </a>
     <nav class="header-nav" id="headerNav">
-      <a href="#section-start">Get Started</a>
-      <a href="#section-who">Who to Target</a>
-      <a href="#commission">Commission</a>
-      <a href="#section-opportunity">Opportunity</a>
-      <a href="#dashboard-setup">Dashboard Setup</a>
+      <a href="index.html#hero">Get Started</a>
+      <a href="index.html#hub-directory">Hub Directory</a>
+      <a href="index.html#why-trueprofit">About TrueProfit</a>
+      <a href="index.html#commission">Commission</a>
+      <a href="index.html#dashboard-setup">Dashboard Setup</a>
       <div class="nav-dropdown-wrapper">
-        <a href="#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-                        <div class="mega-menu">
+        <a href="index.html#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+        <div class="mega-menu">
           <!-- Zone 1: Guides & Angles (White) -->
           <div class="mega-zone mega-zone-1">
             <a class="mega-pill-badge" href="guides.html" target="_blank" rel="noopener noreferrer">
@@ -2121,7 +2135,7 @@ footer {
     </nav>
     <div class="header-actions" id="headerActions">
       <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-ghost">My Dashboard</a>
-      <a href="#dashboard-setup" class="btn-cta">Get affiliate link →</a>
+      <a href="index.html#dashboard-setup" class="btn-cta">Get affiliate link →</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
