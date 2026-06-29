@@ -2097,10 +2097,10 @@ footer {
     box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 20px rgba(35,196,140,0.1);
   }
   .feature-graphic {
-    width: 32%;
-    height: 68%;
+    width: 38%;
+    height: 80%;
     background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
-    border: 1px solid rgba(35, 196, 140, 0.2);
+    border: 2px solid rgba(35, 196, 140, 0.45);
     border-right: none;
     border-radius: 24px 0 0 24px;
     display: flex;
@@ -2115,7 +2115,14 @@ footer {
     right: 0;
     top: 50%;
     transform: translateY(-50%) rotate(-2deg) translate(6%, 0);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6), 0 0 15px rgba(35, 196, 140, 0.15);
+    overflow: hidden;
+  }
+  .feature-graphic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .hub-directory-card {
@@ -2196,6 +2203,12 @@ footer {
   .hub-directory-card:nth-child(even) .directory-graphic {
     border-left: none;
     border-right: 1px solid #e2e8f0;
+  }
+  .directory-graphic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .proof-chip {
@@ -2517,7 +2530,7 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Affiliates, creators, communities, agencies, and partners promoting ecommerce tools.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic"><img src="images/home_1.svg" alt="Who it's for"></div>
     </div>
 
     <!-- Card 2: What’s inside -->
@@ -2531,7 +2544,7 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Playbooks, content angles, swipe copy, MCP promotion ideas, and creative assets.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic"><img src="images/home_2.svg" alt="What's inside"></div>
     </div>
 
     <!-- Card 3: How to use it -->
@@ -2545,7 +2558,7 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">Pick a resource, customize the angle, add your affiliate link, and publish.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic"><img src="images/home_3.svg" alt="How to use it"></div>
     </div>
 
     <!-- Card 4: Best starting point -->
@@ -2559,7 +2572,7 @@ footer {
         </div>
         <p style="font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0;">New affiliates should start with the General Affiliate Guide.</p>
       </div>
-      <div class="feature-graphic">[ GRAPHIC ]</div>
+      <div class="feature-graphic"><img src="images/home_4.svg" alt="Best starting point"></div>
     </div>
   </div>
 
@@ -2590,7 +2603,7 @@ footer {
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Step-by-step playbooks for learning the product angle, choosing the right audience, and promoting without sounding salesy.</p>
           <a href="guides.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">View guides →</a>
         </div>
-        <div class="directory-graphic">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic"><img src="images/46.svg" alt="Affiliate Guides"></div>
       </div>
 
       <!-- Card 2: New Feature Promotion - TrueProfit MCP -->
@@ -2600,7 +2613,7 @@ footer {
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Ready-to-use content for promoting TrueProfit MCP across X/Twitter, Reddit, and short-form video.</p>
           <a href="mcp-promotion.html" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Explore MCP →</a>
         </div>
-        <div class="directory-graphic">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic"><img src="images/47.svg" alt="New Feature Promotion"></div>
       </div>
 
       <!-- Card 3: Creative Assets -->
@@ -2610,7 +2623,7 @@ footer {
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Logos, banners, screenshots, and app footage affiliates can use in content or campaigns.</p>
           <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open assets →</a>
         </div>
-        <div class="directory-graphic">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic"><img src="images/48.svg" alt="Creative Assets"></div>
       </div>
 
       <!-- Card 4: Affiliate Dashboard -->
@@ -2620,7 +2633,7 @@ footer {
           <p style="font-size: 16px; color: #64748b; line-height: 1.7; margin-bottom: 28px;">Set up your payout details, grab your affiliate link, and track performance from the dashboard.</p>
           <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #1d9e75; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">Open dashboard →</a>
         </div>
-        <div class="directory-graphic">[ Graphic Placeholder ]</div>
+        <div class="directory-graphic"><img src="images/49.svg" alt="Affiliate Dashboard"></div>
       </div>
 
     </div>
@@ -2655,27 +2668,26 @@ footer {
     z-index: 1;
     padding: 40px 24px;
   ">
-    <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 48px;">
+    <div class="section-title-badge dark scroll-animate" style="color: #1d9e75; margin-bottom: 48px;">
       <span>WHAT IS TRUEPROFIT</span>
     </div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;" class="why-tp-grid">
+    <div style="display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 60px; align-items: center;" class="why-tp-grid">
 
       <!-- Left Column: Dashboard Visual -->
-      <div class="tp-dashboard-visual-wrapper">
+      <div class="tp-dashboard-visual-wrapper scroll-animate slide-left">
         <div class="tp-dashboard-visual" style="position: relative; width: 100%;">
           <img src="images/dashboard-new.png" alt="TrueProfit Dashboard" style="
-            width: 115%;
+            width: 100%;
             height: auto;
             border-radius: 20px;
             display: block;
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-            margin-left: -7.5%;
           ">
         </div>
       </div>
 
       <!-- Right Column: Content -->
-      <div class="why-tp-content">
+      <div class="why-tp-content scroll-animate slide-right" style="transition-delay: 0.15s;">
         <h2 style="
           font-size: clamp(32px, 3.5vw, 38px);
           font-weight: 800;
@@ -2894,15 +2906,15 @@ footer {
 <section id="commission">
   <div class="section-inner">
     <div class="comm-header">
-      <div class="section-title-badge dark" style="color: #1d9e75; margin-bottom: 16px;">
+      <div class="section-title-badge dark scroll-animate" style="color: #1d9e75; margin-bottom: 16px;">
         <span>COMMISSION STRUCTURE</span>
       </div>
-      <h2 class="comm-h2">Earn upfront, then keep earning monthly</h2>
+      <h2 class="comm-h2 scroll-animate" style="transition-delay: 0.1s;">Earn upfront, then keep earning monthly</h2>
     </div>
 
     <div class="comm-top-row">
       <!-- Left Panel: Vertical Timeline -->
-      <div class="comm-card-glass">
+      <div class="comm-card-glass scroll-animate slide-left">
         <div class="comm-panel-title">HOW YOU EARN</div>
         <div class="comm-timeline">
           <div class="comm-tl-line"></div>
@@ -2943,7 +2955,7 @@ footer {
       </div>
 
       <!-- Right Panel: Calculator -->
-      <div class="comm-card-glass comm-calc-card">
+      <div class="comm-card-glass comm-calc-card scroll-animate slide-right" style="transition-delay: 0.1s;">
         <div class="comm-panel-title">CALCULATE YOUR EARNINGS</div>
         <div class="calc-box">
           <div class="calc-field">
@@ -2992,7 +3004,7 @@ footer {
     </div>
 
     <!-- Middle Insight Strip -->
-    <div class="comm-card-glass comm-insight-strip">
+    <div class="comm-card-glass comm-insight-strip scroll-animate" style="transition-delay: 0.2s;">
       <div class="comm-insight-label-panel">
         <div class="comm-insight-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
@@ -3025,7 +3037,7 @@ footer {
     </div>
 
     <!-- Bottom Payment Strip -->
-    <div class="comm-card-glass comm-payment-strip">
+    <div class="comm-card-glass comm-payment-strip scroll-animate" style="transition-delay: 0.3s;">
       <div class="comm-payment-label">PAYMENT DETAILS</div>
       <div class="comm-payment-grid">
         <div class="comm-payment-item">
@@ -4150,6 +4162,57 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<style>
+/* ===========================
+   SCROLL ANIMATIONS
+   =========================== */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-animate.slide-left {
+  transform: translateX(-40px);
+}
+.scroll-animate.slide-right {
+  transform: translateX(40px);
+}
+.scroll-animate.animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+</style>
+
+<script>
+/* ===========================
+   INTERSECTION OBSERVER
+   =========================== */
+(function() {
+  const animObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        animObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  function initAnimations() {
+    document.querySelectorAll('.scroll-animate').forEach(function(el) {
+      animObserver.observe(el);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAnimations);
+  } else {
+    initAnimations();
+  }
+})();
+</script>
+
 </body>
 </html>
 
