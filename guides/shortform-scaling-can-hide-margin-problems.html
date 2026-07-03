@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCP Guides for Short-Form Video — TrueProfit Affiliate Resource Hub</title>
-<meta name="description" content="Two ready-to-use short-form video hooks, visual scripts, and execution guidelines for promoting TrueProfit MCP.">
+<title>Scaling Can Hide Margin Problems — TrueProfit Affiliate Resource Hub</title>
+<meta name="description" content="Learn how to promote TrueProfit inside ecommerce communities in a way that feels natural, helpful, and easy to replicate.">
 
 <style>
 
@@ -17,16 +17,16 @@ body, h1, h2, h3, h4, h5, h6, input, button, select, textarea, span, p, a, div, 
    ========================================= */
 @font-face {
   font-family: 'Plus Jakarta Sans';
-  src: url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
-       url('../../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  src: url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
   font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Plus Jakarta Sans';
-  src: url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
-       url('../../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+  src: url('../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: 200 800;
   font-style: italic;
   font-display: swap;
@@ -605,7 +605,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 .guide-tag {
   display: inline-flex;
@@ -728,7 +728,7 @@ img { max-width: 100%; display: block; }
    BLOG ARTICLE LAYOUT
    ========================================= */
 .guide-content {
-  max-width: 900px;
+  max-width: 100%;
   font-size: 22px;
   font-weight: 400;
   color: #2D3748;
@@ -770,6 +770,7 @@ img { max-width: 100%; display: block; }
 
 .article-p {
   margin-bottom: 24px; /* reduced from 40px */
+  text-align: justify;
 }
 
 /* Unified Callout / Note Boxes in "Quick Recap" Style */
@@ -1189,7 +1190,7 @@ img { max-width: 100%; display: block; }
    ========================================= */
 .guide-cta-section {
   background-color: #051d29;
-  background-image: linear-gradient(rgba(5, 29, 41, 0.6), rgba(5, 29, 41, 0.6)), url('../../images/16.svg');
+  background-image: linear-gradient(rgba(5, 29, 41, 0.6), rgba(5, 29, 41, 0.6)), url('../images/14.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1921,235 +1922,68 @@ footer {
 
 
 
-/* Hook visual panels styling */
-.hook-visual-panel {
+/* Discord Guide specific styles */
+.grid-2-col {
   display: grid;
-  grid-template-columns: 40% 1fr;
-  gap: 40px;
-  background: #f0fdf4;
-  border-radius: 24px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  padding: 32px 40px;
-  margin: 32px 0;
-  overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
 }
-.hook-panel-img-col {
-  border-radius: 16px;
-  overflow: hidden;
+@media (max-width: 900px) {
+  .grid-2-col { grid-template-columns: 1fr; gap: 40px; }
+}
+.mockup-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+.mockup-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
 }
-.hook-panel-img-col img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-  max-height: 340px;
-}
-.hook-panel-text-col {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.hook-panel-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  color: #1d9e75;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.hook-panel-title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-}
-.hook-panel-body {
-  font-size: 16px;
-  color: #475569;
-  line-height: 1.7;
-  text-align: justify;
-}
-.hook-panel-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-.hook-panel-tag {
-  background: #fff;
-  border: 1px solid #d1fae5;
-  color: #065f46;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 100px;
-}
-@media (max-width: 768px) {
-  .hook-visual-panel {
-    grid-template-columns: 1fr;
-    padding: 24px;
-    gap: 24px;
-  }
-  .hook-panel-img-col img {
-    max-height: 240px;
-  }
-}
-
-/* Responsive and premium tables styling */
-.article-table-wrapper {
-  overflow-x: auto;
-  border-radius: 16px;
-  border: 1px solid #DDE4F0;
-  margin: 24px 0 40px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  background: #ffffff;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  max-width: 100%;
-}
-.article-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 16px;
-  min-width: 900px;
-}
-.article-table thead tr {
-  background: #E9EDF7 !important;
-}
-.article-table th {
-  background: #E9EDF7 !important;
-  color: #0f172a;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 18px 22px;
-  text-align: left;
-  border-bottom: 2px solid #DDE4F0;
-  white-space: nowrap;
-}
-.article-table td {
-  padding: 18px 22px;
-  border-bottom: 1px solid #f1f5f9;
-  vertical-align: top;
-  line-height: 1.65;
-  color: #374151;
-}
-.article-table tr:last-child td { border-bottom: none; }
-.article-table tbody tr:hover td { background: #f0fdf4; }
-.article-table td:first-child, .article-table th:first-child {
-  font-weight: 700;
-  color: #0f172a;
-}
-
-/* Scrollbar styling */
-.article-table-wrapper::-webkit-scrollbar {
-  height: 6px;
-}
-.article-table-wrapper::-webkit-scrollbar-track {
-  background: #f1f5f9;
-}
-.article-table-wrapper::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-
-/* TikTok Mockup iframe styling */
-.tiktok-video-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 36px auto;
-  max-width: 300px;
-}
-.tiktok-video-placeholder {
-  display: block;
-  position: relative;
-  width: 300px;
-  aspect-ratio: 9 / 16;
-  border-radius: 24px;
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  overflow: hidden;
-  background: transparent;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
-}
-.tiktok-video-placeholder:hover {
-  transform: scale(1.025);
-  border-color: rgba(16, 185, 129, 0.65);
-  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
-}
-.tiktok-video-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  filter: none;
-  border-radius: inherit;
-  object-fit: cover;
-  object-position: center;
-  transform: scale(1.03);
-}
-.tiktok-play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 64px;
-  height: 64px;
-  background: rgba(16, 185, 129, 0.8);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+.mockup-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--green-bright);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  transition: transform 0.25s ease, background 0.25s ease;
+  flex-shrink: 0;
 }
-.tiktok-video-placeholder:hover .tiktok-play-icon {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: rgba(16, 185, 129, 0.95);
+.mockup-name { font-weight: 700; color: var(--navy); font-size: 15px; }
+.mockup-time { font-size: 12px; color: var(--text-muted); }
+.mockup-body {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+  background: var(--light-alt);
+  padding: 16px;
+  border-radius: 8px;
+  font-style: italic;
+  margin-bottom: 16px;
 }
-.tiktok-caption-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 16px;
-  color: var(--green);
-  font-size: 16px;
+.mockup-footer {
+  font-size: 12px;
   font-weight: 700;
-  text-decoration: none;
-  transition: gap 0.2s ease;
+  text-transform: uppercase;
+  color: var(--green);
+  text-align: right;
 }
-.tiktok-caption-link:hover {
-  text-decoration: underline;
-  gap: 10px;
+.preview-card {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-.video-intro-line {
-  margin-bottom: 24px;
+.preview-card:hover {
+  border-color: var(--green-bright) !important;
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
 }
-@media (min-width: 1024px) {
-  .video-intro-line {
-    white-space: nowrap;
-    font-size: 19px;
-  }
-}
-@media (max-width: 1023px) {
-  .video-intro-line {
-    white-space: normal;
-  }
+.preview-card:hover .preview-card-link {
+  color: var(--green-bright) !important;
 }
 
-/* â”€â”€ Article reference / learn-more / back-to link â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* â”€â”€ Article reference / back-to link â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .article-reference-link {
   display: inline-flex;
   align-items: center;
@@ -2198,17 +2032,17 @@ footer {
      ============================== -->
 <header id="header" class="stagger-enter" style="animation-delay: 0s;">
   <div class="header-inner">
-    <a href="../../index.html" class="header-logo">
-      <img src="../../logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
+    <a href="../index.html" class="header-logo">
+      <img src="../logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
     </a>
     <nav class="header-nav" id="headerNav">
-        <a href="../../index.html#top">Start Here</a>
-        <a href="../../index.html#hub-overview">Hub Overview</a>
-        <a href="../../index.html#how-to-use">How to Use</a>
-        <a href="../../index.html#why-promote">Why Promote</a>
+        <a href="../index.html#top">Start Here</a>
+        <a href="../index.html#hub-overview">Hub Overview</a>
+        <a href="../index.html#how-to-use">How to Use</a>
+        <a href="../index.html#why-promote">Why Promote</a>
       </nav>
       <div class="header-actions" id="headerActions">
-        <a href="../../content-playbook.html" class="btn-ghost">Content Playbook</a>
+        <a href="../content-playbook.html" class="btn-ghost">Content Playbook</a>
         <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" class="btn-cta">Creative Assets</a>
       </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
@@ -2221,31 +2055,29 @@ footer {
 <!-- ==============================
      HERO SECTION
      ============================== -->
-<!-- ==============================
-     HERO SECTION
-     ============================== -->
 <section class="guide-hero">
   <div class="guide-hero-inner">
     <div class="guide-hero-left stagger-enter" style="animation-delay: 0.1s;">
       <!-- Breadcrumb -->
             <div class="guide-breadcrumb">
-        <a href="../../index.html">Home</a><span class="sep">&rsaquo;</span><a href="../../content-playbook.html">Content Playbook</a><span class="sep">&rsaquo;</span><span class="current">MCP Guides for Short-Form Video</span>
+        <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="../content-playbook.html">Content Playbook</a><span class="sep">&rsaquo;</span><span class="current">Scaling Can Hide Margin Problems</span>
       </div>
       <!-- Title -->
-      <h1 class="guide-hero-title">MCP Guides for Short-Form Video</h1>
+      <h1 class="guide-hero-title">Scaling Can Hide Margin Problems</h1>
       <!-- Subtitle -->
-      <p class="guide-hero-subtitle">Two ready-to-use short-form video hooks, visual scripts, and execution guidelines for promoting TrueProfit MCP.</p>
+      <p class="guide-hero-subtitle">A hook showing why higher revenue doesn't always mean higher profit.</p>
       <!-- Tags -->
       <div class="guide-tags">
-        <span class="guide-tag">Video</span>
-        <span class="guide-tag">Short-Form</span>
-        <span class="guide-tag">MCP Promotion</span>
-        <span class="guide-tag">Script Guides</span>
+        <span class="guide-tag">Short-form Video</span>
+        <span class="guide-tag">TikTok</span>
+        <span class="guide-tag">YouTube Shorts</span>
+        <span class="guide-tag">Hook</span>
       </div>
+      <!-- CTA Button Removed -->
     </div>
     <!-- Hero Illustration -->
     <div class="guide-hero-visual stagger-enter" style="animation-delay: 0.2s;">
-      <img src="../../images/28.svg" alt="Short-Form Video Guidelines" style="max-width: 440px; height: auto; object-fit: contain; background: transparent; border: none; box-shadow: none;">
+      <img src="../images/17.svg" alt="Scaling Can Hide Margin Problems" style="max-width: 440px; height: auto; object-fit: contain; background: transparent; border: none; box-shadow: none;">
     </div>
   </div>
 </section>
@@ -2256,180 +2088,112 @@ footer {
 <section class="guide-body">
   <div class="guide-body-inner">
     
-    <!-- Left Column: Article Content -->
     <div class="guide-content">
-      <article class="article-body">
-        <section class="article-section" id="why-promote" style="margin-top: 0;">
-          <h2 class="article-h2" style="margin-top: 0;">Why Promote TrueProfit MCP?</h2>
-          <p class="article-p">TrueProfit MCP connects a merchant's live profit data directly to AI tools like Claude and ChatGPT, so they can ask questions about profit, costs, and performance without opening dashboards or manually copying numbers.</p>
-          <ul class="article-list">
-            <li><strong>Instant answers:</strong> Merchants can ask about profit, costs, and performance in plain language.</li>
-            <li><strong>Live store context:</strong> Once connected, the AI can understand their numbers without repeated setup.</li>
-            <li><strong>Root-cause insights:</strong> MCP helps explain why profit changes by looking across COGS, ad spend, fees, refunds, and more.</li>
-            <li><strong>Works with AI tools they already use:</strong> Claude and ChatGPT become easier ways to explore store performance.</li>
-          </ul>
-          <p class="article-p">
-            <a href="https://trueprofit.io/solutions/mcp" target="_blank" class="article-reference-link"><span class="ref-icon">&#10022;</span>Learn more about TrueProfit MCP<span class="ref-arrow">&#8250;</span></a>
-          </p>
-        </section>
+      <!-- Section: Before You Use This Hook -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2" style="margin-top: 0;">Before You Use This Hook</h2>
+        <p class="article-p">This hook works best after you understand the overall strategy in our How to Promote TrueProfit in Short-Form Videos guide. Read the main guide first to learn about editing tips, sound usage, and how to structure your video bio to capture affiliate traffic.</p>
+        <p class="article-p" style="margin-top: 14px;"><a href="tiktok-youtube-shorts.html" class="article-reference-link"><span class="ref-icon">&#10022;</span>Back to How to Promote TrueProfit in Short-Form Videos<span class="ref-arrow">&#8250;</span></a></p>
+      </div>
 
-        <section class="article-section" id="how-to-promote">
-          <h2 class="article-h2">How to Promote TrueProfit MCP in Short-Form Video</h2>
-          <p class="article-p">Short-form video is perfect for showing, not just telling. The "AI already knows my store data" moment is highly visual and surprising. Focus your videos on the workflow of asking an ecommerce question and getting an instant, context-aware answer.</p>
-          <ul class="article-list">
-            <li>Use screen recordings of the AI chat answering a specific store question.</li>
-            <li>Hook viewers with a relatable pain point (e.g. manual spreadsheets, dashboard fatigue).</li>
-            <li>Keep the tone casual and helpful, like you're sharing a workflow hack.</li>
-            <li>Don't explain how the integration works technically'just show the result.</li>
-          </ul>
-        </section>
-
-        <section class="article-section" id="examples">
-          <h2 class="article-h2">Short-Form Video Post Examples</h2>
-          
-          <div class="hook-visual-panel" style="margin-top: 32px;">
-            <div class="hook-panel-img-col">
-              <img src="../../images/33.svg" alt="Hook 1 Visual" class="hook-panel-img" style="object-fit: contain;">
+      <!-- Section: When to Use This Angle -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2" style="margin-top: 0;">When to Use This Angle</h2>
+        <p class="article-p">This hook is perfect for paid ad operators who are actively scaling budgets. It appeals to sellers running ads on Meta, TikTok, or Google, who know how volatile ad costs can be and how quickly margins can vanish during scaling phases.</p>
+        
+        <!-- Hook 2 Panel -->
+        <div class="hook-visual-panel" style="background: #FBE4E1; margin: 32px 0; border-radius: 12px; display: flex; overflow: hidden; border: 1px solid rgba(180, 83, 74, 0.1);">
+          <div class="hook-panel-img-col" style="flex: 1; max-width: 300px; display: flex; align-items: center; justify-content: center; background: #FCF0EF; padding: 20px;">
+            <img alt="Scaling Doesn't Always Mean More Profit" class="hook-panel-img" src="../images/hook_2_ad_spend_margin.svg" style="width: 100%; height: auto; object-fit: contain;"/>
+          </div>
+          <div class="hook-panel-text-col" style="flex: 2; padding: 32px; display: flex; flex-direction: column; justify-content: center;">
+            <div class="hook-panel-title" style="font-size: 22px; font-weight: 800; color: #0F172A; margin-bottom: 12px; font-family: var(--font);">Scaling can hide margin problems</div>
+            <div class="hook-panel-body" style="font-size: 15px; color: #475569; line-height: 1.6; margin-bottom: 20px;">This hook works for merchants running ads because it connects growth with cost pressure and makes profit tracking feel like an operator habit.</div>
+            <div class="hook-panel-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span class="hook-panel-tag" style="background: #FCF0EF; border: 1px solid rgba(180, 83, 74, 0.2); color: #B4534A; font-size: 11px; padding: 5px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Paid ads operators</span>
+              <span class="hook-panel-tag" style="background: #FCF0EF; border: 1px solid rgba(180, 83, 74, 0.2); color: #B4534A; font-size: 11px; padding: 5px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">35–45s</span>
+              <span class="hook-panel-tag" style="background: #FCF0EF; border: 1px solid rgba(180, 83, 74, 0.2); color: #B4534A; font-size: 11px; padding: 5px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Analytical</span>
             </div>
-            <div class="hook-panel-text-col">
-              <div class="hook-panel-eyebrow">Hook 1</div>
-              <div class="hook-panel-title">“I Asked AI How My Store Was Doing. It Actually Knew.”</div>
-              <div class="hook-panel-body" style="margin-top: 0;">This angle reframes store performance tracking around the surprising moment where AI already understands the store's data with no setup or copy paste needed. It taps into the relatable late night “how is my store actually doing?” anxiety, making it especially effective for ecommerce audiences.</div>
-              <div class="hook-panel-tags">
-                <span class="hook-panel-tag">Merchants</span>
-                <span class="hook-panel-tag">30–40s</span>
-                <span class="hook-panel-tag">Casual, genuine surprise</span>
+          </div>
+        </div>
+
+        <div class="article-table-wrapper" style="margin: 32px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 16px; border: 1px solid var(--border-light);">
+            <thead>
+              <tr style="background: var(--light); border-bottom: 2px solid var(--border-light);">
+                <th style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); border-right: 1px solid var(--border-light); width: 20%;">Section</th>
+                <th style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); border-right: 1px solid var(--border-light); width: 40%;">What to Say</th>
+                <th style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); border-right: 1px solid var(--border-light); width: 20%;">What to Show</th>
+                <th style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); width: 20%;">Execution Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light); font-weight: 700;">Hook</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">"Scaling ads doesn't automatically mean you're making more money."</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Direct eye contact</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Deliver like a correction.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light); font-weight: 700;">Problem</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">"When ad spend increases, your hidden costs increase too: CPM swings, refunds, transaction fees."</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Text overlays appearing quickly</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Keep pacing slightly faster here.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light); font-weight: 700;">Insight</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">"If you're not tracking net profit properly, you could be celebrating revenue while losing margin."</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Margin example breakdown</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Make it feel like operator logic.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light); font-weight: 700;">Mention TrueProfit</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Primary: "Before I increase the budget, I check my net profit in one place - I use TrueProfit."<br><br>Softer: "It pulls everything into one dashboard so I can make smarter decisions."</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Product-level profit view</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Show decision-making context, not homepage.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-light);">
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light); font-weight: 700;">CTA</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">"If you're running ads, you should be tracking this too."</td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">Caption: <em>Link in bio</em></td>
+                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Position as best practice, not recommendation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Callout box Mistake 2 -->
+        <div class="callout-box mistake" style="border-left: 4px solid #ef4444; padding-left: 20px; margin: 32px 0;">
+          <div class="callout-title" style="color: #ef4444; font-weight: 700; margin-bottom: 12px;">Common Mistake:</div>
+          <div class="callout-bullets">
+            <div class="callout-row">
+              <div class="callout-icon" style="border-color: #ef4444; color: #ef4444;">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
+              <div class="callout-text"><strong>Leading with &#34;Let me show you an app&#34;</strong> — this immediately frames the video as an ad. Lead with the insight (scaling ads doesn't automatically mean more profit) and let TrueProfit appear as evidence, not the subject.</div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>Section</th>
-                  <th>What to Say (Script Guide)</th>
-                  <th>What to Show</th>
-                  <th>Execution Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Hook (0–3s)</strong></td>
-                  <td>"I asked Claude how my store was doing this week and it actually knew."</td>
-                  <td>Face-on. No caption needed.</td>
-                  <td>Slight pause after "actually knew." Let curiosity land before moving on.</td>
-                </tr>
-                <tr>
-                  <td><strong>Problem (3–12s)</strong></td>
-                  <td>"Usually I'd open TrueProfit, check revenue, cross-reference ad spend, do the math myself. Every. Single. Time."</td>
-                  <td>Quick cuts: Shopify tab &rarr; ads dashboard &rarr; spreadsheet</td>
-                  <td>Keep energy slightly frustrated. Relatable, not dramatic.</td>
-                </tr>
-                <tr>
-                  <td><strong>Insight (12–25s)</strong></td>
-                  <td>"TrueProfit has an MCP integration now. Connect once, and your AI already has your live profit data loaded: every conversation, automatically."</td>
-                  <td>Screen recording: Claude chat open, typing the question, answer appearing</td>
-                  <td>Show the actual AI response. Blur store name/revenue if needed. This is the proof moment, slow down slightly.</td>
-                </tr>
-                <tr>
-                  <td><strong>Mention TrueProfit MCP (25–35s)</strong></td>
-                  <td>Primary: "I've been using TrueProfit for profit tracking, this just made it way more useful."<br><br>Softer: "Didn't even know this was possible until I set it up."</td>
-                  <td>3–5s dashboard clip. Blur specific numbers.</td>
-                  <td>Don't zoom in on pricing or features. Just enough to show it's real.</td>
-                </tr>
-                <tr>
-                  <td><strong>CTA (35–40s)</strong></td>
-                  <td>"Install it from the Shopify App Store and the link's in the description, and connect it to whatever AI you're already using."</td>
-                  <td>Caption: <em>Link below</em></td>
-                  <td>Neutral tone. No urgency, no pressure.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <!-- Section: Why This Works -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2">Why This Works</h2>
+        <p class="article-p">This hook works because it targets a specific pain point that every media buyer struggles with: fluctuating ad costs eating up their margins. Presenting TrueProfit as the control panel that guides scaling decisions positions it as a operational necessity, not just another random dashboard utility.</p>
+      </div>
 
-          <div class="hook-visual-panel" style="background: #e0f2fe; margin-top: 48px;">
-            <div class="hook-panel-img-col">
-              <img src="../../images/34.svg" alt="Hook 2 Visual" class="hook-panel-img" style="object-fit: contain;">
-            </div>
-            <div class="hook-panel-text-col">
-              <div class="hook-panel-eyebrow" style="color: #1d4ed8;">Hook 2</div>
-              <div class="hook-panel-title">“My Revenue Was Up. My Profit Wasn't. Here's How I Found Out Why.”</div>
-              <div class="hook-panel-body" style="margin-top: 0;">This angle targets the specific pain of revenue-profit mismatch, one of the most common and frustrating ecom moments. The AI enters as the tool that found the root cause fast. Use real numbers from your store or believable estimates and specificity is what makes this hook land.</div>
-              <div class="hook-panel-tags">
-                <span class="hook-panel-tag" style="border-color: #bfdbfe; color: #1d4ed8;">Paid ads operators</span>
-                <span class="hook-panel-tag" style="border-color: #bfdbfe; color: #1d4ed8;">35–45s</span>
-                <span class="hook-panel-tag" style="border-color: #bfdbfe; color: #1d4ed8;">Analytical, operator mindset</span>
-              </div>
-            </div>
-          </div>
+      <!-- Section: How to Adapt It -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2">How to Adapt It</h2>
+        <p class="article-p">Customize this script by referring to the specific ad platforms you cover on your channel (e.g. Meta Ads, TikTok Ads, Google Shopping). Talk about a time your ROAS looked amazing but you actually lost money because you scaled too fast without knowing your product costs or shipping updates.</p>
+      </div>
 
-          <div class="article-table-wrapper">
-            <table class="article-table">
-              <thead>
-                <tr>
-                  <th>Section</th>
-                  <th>What to Say</th>
-                  <th>What to Show</th>
-                  <th>Execution Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Hook (0–3s)</strong></td>
-                  <td>"Last month my revenue was up 18%. My actual profit was down $600. And I had no idea why."</td>
-                  <td>Face-on. Bold caption: <strong>Revenue &ne; Profit</strong></td>
-                  <td>Say it matter-of-fact. The numbers do the work, don't over-emote.</td>
-                </tr>
-                <tr>
-                  <td><strong>Problem (3–15s)</strong></td>
-                  <td>"ROAS looked fine. Refunds were normal. Ad spend was actually lower. I went through everything manually and still couldn't find it."</td>
-                  <td>Text overlays: ROAS &check; Refunds &check; Ad spend &check; &rarr; then a question mark</td>
-                  <td>Faster pace. Keep the energy of someone genuinely confused, not panicking.</td>
-                </tr>
-                <tr>
-                  <td><strong>Insight (15–28s)</strong></td>
-                  <td>"I opened Claude, asked it why my margin dropped last month, it pulled my TrueProfit data and cross-referenced everything. Flagged a shipping cost I'd had wrong for weeks. $340 in avoidable losses."</td>
-                  <td>Screen recording: the actual AI response with root cause visible</td>
-                  <td>This is the <em>aha</em> moment. Slow down. Let the number ($340) land before moving on.</td>
-                </tr>
-                <tr>
-                  <td><strong>Mention TrueProfit MCP (28–38s)</strong></td>
-                  <td>Primary: "TrueProfit connects to Claude or ChatGPT directly before I touch the ad budget, I ask it first."<br><br>Softer: "It's like having someone who already knows all your numbers."</td>
-                  <td>Product-level profit view. Show one SKU breakdown.</td>
-                  <td>Position as your standard operating practice, not a recommendation.</td>
-                </tr>
-                <tr>
-                  <td><strong>CTA (38–45s)</strong></td>
-                  <td>"It's on the Shopify App Store, grab it and connect it to your AI. Link in the description."</td>
-                  <td>Caption: <em>Link in description</em></td>
-                  <td>Confident, not pushy. One sentence, no elaboration needed.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section class="article-section" id="key-notes">
-          <h2 class="article-h2">Key Notes for Short-Form Video</h2>
-          <ul class="article-list">
-            <li>Keep videos under 60 seconds (30-45s is ideal).</li>
-            <li>Text overlays are crucial for retention.</li>
-            <li>Ensure the screen recordings are readable on mobile devices.</li>
-          </ul>
-        </section>
-
-        <section class="article-section" id="final-thoughts">
-          <h2 class="article-h2">Final Thoughts</h2>
-          <p class="article-p">Short-form video thrives on visual proof. By demonstrating exactly how much faster and smarter the MCP workflow is, you can convert viewers who are tired of manual profit tracking and spreadsheet math.</p>
-        </section>
-      </article>
-
-
+      <!-- Section: Final Thoughts -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2">Final Thoughts</h2>
+        <p class="article-p">When targeting ad operators, lean into optimization and precision. Show them that TrueProfit helps them cut unprofitable products early and double down on true winners. Position the tool as the ultimate safeguard for their ad budget.</p>
+      </div>
     </div>
-
-    </div>
-
   </div>
 </section>
 
@@ -2441,21 +2205,31 @@ footer {
     <div class="related-header">
       <div class="related-label">Related Resources</div>
     </div>
-    <div class="related-grid" style="grid-template-columns: repeat(2, 1fr);">
-      <a class="related-card scroll-animate" href="../../resources/mcp/x-twitter-ready-to-post.html" style="transition-delay: 0.1s;">
-        <span class="related-card-tag">X</span>
-        <h3 class="related-card-title" title="MCP Posts for X/Twitter" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">MCP Posts for X/Twitter</h3>
-        <p class="related-card-desc">Promote TrueProfit MCP through concise X posts and threads.</p>
+    <div class="related-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <a class="related-card scroll-animate" href="../resources/mcp/short-form-video-guidelines.html" style="transition-delay: 0.1s;">
+        <span class="related-card-tag">Short-form video</span>
+        <h3 class="related-card-title" title="MCP Guides for Short-Form Video" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">MCP Guides for Short-Form Video</h3>
+        <p class="related-card-desc">Learn the broader MCP short-form strategy before adapting hooks.</p>
         <div class="related-card-footer">
           <div class="related-card-link">
             Read resource &rarr;
           </div>
         </div>
       </a>
-      <a class="related-card scroll-animate" href="../../resources/mcp/reddit-ready-to-post.html" style="transition-delay: 0.2s;">
-        <span class="related-card-tag">Reddit</span>
-        <h3 class="related-card-title" title="MCP Posts for Reddit" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">MCP Posts for Reddit</h3>
-        <p class="related-card-desc">Position MCP naturally inside Reddit discussions and recommendations.</p>
+      <a class="related-card scroll-animate" href="../guides/shortform-surface-metrics-vs-real-profit.html" style="transition-delay: 0.2s;">
+        <span class="related-card-tag">Short-form video</span>
+        <h3 class="related-card-title" title="Surface Metrics vs Real Profit" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">Surface Metrics vs Real Profit</h3>
+        <p class="related-card-desc">Use a hook that contrasts revenue metrics with real profit.</p>
+        <div class="related-card-footer">
+          <div class="related-card-link">
+            Read resource &rarr;
+          </div>
+        </div>
+      </a>
+      <a class="related-card scroll-animate" href="../guides/shortform-check-the-number-before-scaling.html" style="transition-delay: 0.3s;">
+        <span class="related-card-tag">Short-form video</span>
+        <h3 class="related-card-title" title="Check the Number Before Scaling" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">Check the Number Before Scaling</h3>
+        <p class="related-card-desc">Use a decision-led hook before scaling products or spend.</p>
         <div class="related-card-footer">
           <div class="related-card-link">
             Read resource &rarr;
@@ -2468,11 +2242,11 @@ footer {
 
 <section class="guide-cta-section">
   <div class="guide-cta-inner">
-    <h2 class="guide-cta-h2">Ready to turn MCP into <span>short-form</span> content?</h2>
-    <p class="guide-cta-sub">Use these hooks to show the “AI already knows my store data” moment, then introduce TrueProfit naturally once the value is clear.</p>
+    <h2 class="guide-cta-h2">Ready to promote TrueProfit on <span>Discord</span>?</h2>
+    <p class="guide-cta-sub">Create a dedicated channel, start sharing your experience, and watch your commissions grow.</p>
     <div class="guide-cta-btns">
       <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" class="btn-cta-white">Get affiliate link &rarr;</a>
-      <a href="../../mcp-promotion.html" class="btn-cta-ghost">Back to MCP Playbook &rarr;</a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-cta-ghost">Go to Dashboard</a>
     </div>
   </div>
 </section>
@@ -2483,13 +2257,13 @@ footer {
 <footer>
   <div class="footer-inner">
     <div>
-      <img src="../../images/white_horizontal (1).svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
+      <img src="../images/white_horizontal (1).svg" alt="TrueProfit Logo" style="height: 38px; width: auto; margin-bottom: 16px; display: block;">
       <div class="footer-tagline">Affiliate Resource Hub — everything you need to earn with TrueProfit.</div>
     </div>
     <div class="footer-links">
       <h5>Resources</h5>
-      <a href="../../general-knowledge.html">General Knowledge</a>
-      <a href="../../content-playbook.html">Content Playbook</a>
+      <a href="../general-knowledge.html">General Knowledge</a>
+      <a href="../content-playbook.html">Content Playbook</a>
       <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer">Creative Assets</a>
       <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer">Affiliate Dashboard</a>
     </div>
@@ -2523,37 +2297,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollTargets = document.querySelectorAll('.scroll-animate');
   scrollTargets.forEach(el => observer.observe(el));
-  
-  /* =========================================
-     STICKY TOC LINK HIGHLIGHTING
-     ========================================= */
-  const sections = document.querySelectorAll('.article-section');
-  const tocLinks = document.querySelectorAll('.sidebar-toc a');
-  
-  function highlightTOC() {
-    let scrollPos = window.scrollY || document.documentElement.scrollTop;
-    
-    // Add offset for sticky header
-    scrollPos += 150;
-    
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-      
-      if (scrollPos >= top && scrollPos < top + height) {
-        tocLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }
-  
-  window.addEventListener('scroll', highlightTOC);
-  highlightTOC();
 });
 </script>
 

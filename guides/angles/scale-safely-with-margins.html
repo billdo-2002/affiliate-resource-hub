@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -128,9 +128,9 @@ img { max-width: 100%; display: block; }
 /* =========================================
    HEADER
    ========================================= */
-#header {
-  position: sticky;
-  top: 0;
+#header { position: sticky; top: 0;
+  
+  
   z-index: 1000;
   background: rgba(255,255,255,0.96);
   backdrop-filter: blur(12px);
@@ -720,12 +720,8 @@ img { max-width: 100%; display: block; }
   padding: 48px 32px 96px; /* Hero -> Article space 80px, bottom padding 96px */
 }
 .guide-body-inner {
-  max-width: 1280px;
+  max-width: 860px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 60px;
-  align-items: start;
 }
 
 /* =========================================
@@ -1370,7 +1366,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1432,7 +1428,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1494,7 +1490,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1556,7 +1552,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1618,7 +1614,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1680,7 +1676,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1742,7 +1738,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1804,7 +1800,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -1866,7 +1862,7 @@ footer {
     display: none;
   }
   .hamburger::before {
-    content: "☰";
+    content: "?";
   }
 
   /* Hide "Get affiliate link" button in navbar on mobile */
@@ -2022,15 +2018,16 @@ footer {
 </head>
 <body>
 
+<div class="global-sticky-wrap" style="position: sticky; top: 0; z-index: 1001;">
 <!-- ==============================
      ANNOUNCEMENT BAR
      ============================== -->
 <div id="announce-bar">
-  <span class="announce-star">✦</span>
+  <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
   <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
   <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
-  <span class="announce-star">✦</span>
-  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">×</button>
+  <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
+  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">&#10005;</button>
 </div>
 
 <!-- ==============================
@@ -2042,134 +2039,21 @@ footer {
       <img src="../../logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
     </a>
     <nav class="header-nav" id="headerNav">
-      <a href="../../index.html#hero">Get Started</a>
-      <a href="../../index.html#hub-directory">Hub Directory</a>
-      <a href="../../index.html#why-trueprofit">About TrueProfit</a>
-      <a href="../../index.html#commission">Commission</a>
-      <a href="../../index.html#dashboard-setup">Dashboard Setup</a>
-      <div class="nav-dropdown-wrapper">
-        <a href="../../index.html#resources" class="nav-dropdown-trigger">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:4px; vertical-align:middle;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
-        <div class="mega-menu">
-          <!-- Zone 1: Guides & Angles (White) -->
-          <div class="mega-zone mega-zone-1">
-            <a class="mega-pill-badge" href="../../guides.html" target="_blank" rel="noopener noreferrer">
-              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-              GUIDES &rarr;
-            </a>
-            <div class="mega-links-grid">
-              <a class="mega-link-item" href="../../guides/general-guide.html" target="_blank" rel="noopener noreferrer">General Guide</a>
-              <a class="mega-link-item" href="../../guides/discord-blueprint.html" target="_blank" rel="noopener noreferrer">Discord Blueprint</a>
-              <a class="mega-link-item" href="../../guides/tiktok-youtube-shorts.html" target="_blank" rel="noopener noreferrer">TikTok &amp; YouTube Shorts</a>
-            </div>
-            <div class="mega-section-label" style="margin-top: 8px;">HIGH-CONVERTING ANGLES:</div>
-            <div class="mega-gems-list">
-              <a class="mega-gem-card" href="../../guides/angles/track-profit-like-a-pro.html" target="_blank" rel="noopener noreferrer">
-                <div class="mega-gem-img" style="background: #0B1D2E;">
-                  <img src="../../images/22.svg" alt="Track Profit Like A Pro">
-                </div>
-                <div class="mega-gem-text">Track Profit Like A Pro</div>
-              </a>
-              <a class="mega-gem-card" href="../../guides/angles/scale-safely-with-margins.html" target="_blank" rel="noopener noreferrer">
-                <div class="mega-gem-img" style="background: #62BBA2;">
-                  <img src="../../images/19.svg" alt="Scale Safely with Margins">
-                </div>
-                <div class="mega-gem-text">Scale Safely with Margins</div>
-              </a>
-              <a class="mega-gem-card" href="../../guides/angles/stop-losing-30-profit.html" target="_blank" rel="noopener noreferrer">
-                <div class="mega-gem-img" style="background: #FCE1DA;">
-                  <img src="../../images/21.svg" alt="Stop Losing 30% Profit">
-                </div>
-                <div class="mega-gem-text">Stop Losing 30% Profit</div>
-              </a>
-            </div>
-          </div>
-          <!-- Zone 2: MCP Promotion (Mint) -->
-          <div class="mega-zone mega-zone-2">
-            <a class="mega-pill-badge" href="../../mcp-promotion.html" style="border-color: #1d9e75; color: #1d9e75; background: #e6fbf1;" target="_blank" rel="noopener noreferrer">
-              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              MCP PROMOTION &rarr;
-              <svg fill="currentColor" height="10" style="color: #f59e0b; margin-left: 6px; vertical-align: middle;" viewbox="0 0 24 24" width="10"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </a>
-            <div class="mega-links-list" style="margin-top: 0; gap: 16px;">
-              <a class="mega-link-item" href="../../mcp-promotion.html" target="_blank" rel="noopener noreferrer">MCP Promotion Hub</a>
-              <a class="mega-link-item" href="../../resources/mcp/x-twitter-ready-to-post.html" target="_blank" rel="noopener noreferrer">X/Twitter Ready-to-Post</a>
-              <a class="mega-link-item" href="../../resources/mcp/reddit-ready-to-post.html" target="_blank" rel="noopener noreferrer">Reddit Ready-to-Post</a>
-              <a class="mega-link-item" href="../../resources/mcp/short-form-video-guidelines.html" target="_blank" rel="noopener noreferrer">Short-Form Video Guidelines</a>
-            </div>
-          </div>
-          <!-- Zone 3: Creative Assets (Navy) -->
-          <div class="mega-zone mega-zone-3">
-            <a class="mega-pill-badge mega-pill-badge-dark" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer">
-              <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="margin-right: 4px;" viewbox="0 0 24 24" width="14"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg>
-              CREATIVE ASSETS &rarr;
-            </a>
-
-            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681fb9db2000c532b98a0" target="_blank" rel="noopener noreferrer">
-              <div class="mega-asset-content">
-                <div class="mega-asset-name">Logo Kit</div>
-                <div class="mega-asset-desc">Download official TrueProfit logos and brand marks for affiliate posts, landing pages, guides, and promotional content.</div>
-              </div>
-              <div class="mega-asset-visual-wrap">
-                <div class="mega-asset-visual-bg">
-                  <svg width="100" height="82" viewBox="0 0 100 82" fill="none">
-                    <rect x="25" y="25" width="60" height="45" rx="6" fill="rgba(45,212,152,0.15)" stroke="#2dd498" stroke-width="1.5"/>
-                    <rect x="15" y="12" width="60" height="45" rx="6" fill="rgba(45,212,152,0.05)" stroke="#2dd498" stroke-width="1.5" stroke-dasharray="4 4"/>
-                  </svg>
-                </div>
-                <div class="mega-asset-visual-icon">
-                  <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-                </div>
-              </div>
-            </a>
-
-            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681dbb776000cb2feef3f" target="_blank" rel="noopener noreferrer">
-              <div class="mega-asset-content">
-                <div class="mega-asset-name">Campaign Banners</div>
-                <div class="mega-asset-desc">Ready-to-use banner creatives for social posts, resource pages, affiliate campaigns, and seasonal promotions.</div>
-              </div>
-              <div class="mega-asset-visual-wrap">
-                <div class="mega-asset-visual-bg">
-                  <svg width="100" height="82" viewBox="0 0 100 82" fill="none">
-                    <rect x="10" y="20" width="80" height="42" rx="4" fill="rgba(45,212,152,0.1)" stroke="#2dd498" stroke-width="1.5"/>
-                    <rect x="20" y="30" width="60" height="22" rx="3" fill="rgba(45,212,152,0.2)"/>
-                  </svg>
-                </div>
-                <div class="mega-asset-visual-icon">
-                  <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
-                </div>
-              </div>
-            </a>
-
-            <a class="mega-asset-card" href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c681eb8be9000c647955f8" target="_blank" rel="noopener noreferrer" style="margin-bottom: 0;">
-              <div class="mega-asset-content">
-                <div class="mega-asset-name">App Footages</div>
-                <div class="mega-asset-desc">Screen recordings and product visuals you can use for demos, tutorials, short-form videos, and content examples.</div>
-              </div>
-              <div class="mega-asset-visual-wrap">
-                <div class="mega-asset-visual-bg">
-                  <svg width="100" height="82" viewBox="0 0 100 82" fill="none">
-                    <rect x="15" y="15" width="70" height="52" rx="6" fill="rgba(45,212,152,0.1)" stroke="#2dd498" stroke-width="1.5"/>
-                    <polygon points="42,32 58,41 42,50" fill="rgba(45,212,152,0.3)" stroke="#2dd498" stroke-width="1.5" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <div class="mega-asset-visual-icon">
-                  <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect height="14" rx="2" ry="2" width="15" x="1" y="5"></rect></svg>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+        <a href="../../index.html#top">Start Here</a>
+        <a href="../../index.html#hub-overview">Hub Overview</a>
+        <a href="../../index.html#how-to-use">How to Use</a>
+        <a href="../../index.html#why-promote">Why Promote</a>
+      </nav>
+      <div class="header-actions" id="headerActions">
+        <a href="../../content-playbook.html" class="btn-ghost">Content Playbook</a>
+        <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" class="btn-cta">Creative Assets</a>
       </div>
-    </nav>
-    <div class="header-actions" id="headerActions">
-      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-ghost">My Dashboard</a>
-      <a href="../../index.html#dashboard-setup" class="btn-cta">Get affiliate link →</a>
-    </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
+  </div>
 
 <!-- ==============================
      HERO SECTION
@@ -2178,8 +2062,8 @@ footer {
   <div class="guide-hero-inner">
     <div class="guide-hero-left stagger-enter" style="animation-delay: 0.1s;">
       <!-- Breadcrumb -->
-      <div class="guide-breadcrumb">
-        <a href="../../index.html">Home</a><span class="sep">›</span><a href="../../guides.html">Guides</a><span class="sep">›</span><a href="../general-guide.html">General Guide</a><span class="sep">›</span><span class="current">Scale Safely With Margins</span>
+            <div class="guide-breadcrumb">
+        <a href="../../index.html">Home</a><span class="sep">&rsaquo;</span><a href="../../content-playbook.html">Content Playbook</a><span class="sep">&rsaquo;</span><span class="current">Scale Safely with Margins</span>
       </div>
       <!-- Title -->
       <h1 class="guide-hero-title">Scale Safely with Margins</h1>
@@ -2188,10 +2072,6 @@ footer {
       <!-- Tags -->
       <div class="guide-tags">
         <span class="guide-tag">Content Angle</span><span class="guide-tag">Scale Strategy</span><span class="guide-tag">Paid Ads</span>
-      </div>
-      <!-- CTA Button -->
-      <div class="guide-hero-btns">
-        <a class="hero-btn-angles" href="#why-does-this-happen">Read the angle below <svg class="hero-btn-arrow" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="16"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
     <!-- Hero Illustration -->
@@ -2211,14 +2091,14 @@ footer {
     <div class="guide-content">
       <!-- ======== SECTION 1 ======== -->
       <div id="why-does-this-happen" class="article-section scroll-animate">
-        <h2 class="article-h2" style="margin-top: 0;">1. Why does this happen? (The Pain Point)</h2>
+        <h2 class="article-h2" style="margin-top: 0;">Why does this happen? (The Pain Point)</h2>
         <p class="article-p">This angle works especially well for merchants who are scaling and aren't aware of the importance of tracking accurate net profit.</p>
-        <p class="article-p">Since we're talking about scaling merchants, these aren't newcomers to Shopify or dropshipping. They already have stores that are making money. Their issue is that they do track net profit, but not in the most efficient way (maybe they're still using spreadsheets). This isn't because they don't know TrueProfit is a better option—it's mainly because they don't have a strong enough reason to switch.</p>
+        <p class="article-p">Since we're talking about scaling merchants, these aren't newcomers to Shopify or dropshipping. They already have stores that are making money. Their issue is that they do track net profit, but not in the most efficient way (maybe they're still using spreadsheets). This isn't because they don't know TrueProfit is a better option'it's mainly because they don't have a strong enough reason to switch.</p>
       </div>
 
       <!-- ======== SECTION 2 ======== -->
       <div id="how-to-pitch" class="article-section scroll-animate">
-        <h2 class="article-h2">2. How to pitch TrueProfit (The Solution)</h2>
+        <h2 class="article-h2">How to pitch TrueProfit (The Solution)</h2>
         <p class="article-p">With this angle, it's better if you act like an expert and explain why it's critical for merchants to track their net profit accurately, especially when they're scaling. Here's a reference for educational content that can be shared on personal ecom blogs, sites, or newsletters.</p>
         
         <div class="callout-box warning">
@@ -2229,7 +2109,7 @@ footer {
                 <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
               <div class="callout-text">
-                Acknowledge that a few chargebacks won’t kill a good store. But remind them that in a bad month, spikes in these fees will skew margins.
+                Acknowledge that a few chargebacks won't kill a good store. But remind them that in a bad month, spikes in these fees will skew margins.
               </div>
             </div>
             <div class="callout-row">
@@ -2237,7 +2117,7 @@ footer {
                 <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
               </div>
               <div class="callout-text">
-                If they don’t know <strong>why</strong> the margin dropped (because a spreadsheet doesn’t show hidden fees), they will make decisions based on blind assumptions.
+                If they don't know <strong>why</strong> the margin dropped (because a spreadsheet doesn't show hidden fees), they will make decisions based on blind assumptions.
               </div>
             </div>
             <div class="callout-row">
@@ -2251,13 +2131,13 @@ footer {
           </div>
         </div>
 
-        <p class="article-p">Tell them TrueProfit is among the best solutions to eliminate such assumptions. It automatically pulls every hidden fee so they know exactly what’s happening and can make data-driven decisions. Then, drop your affiliate link.</p>
+        <p class="article-p">Tell them TrueProfit is among the best solutions to eliminate such assumptions. It automatically pulls every hidden fee so they know exactly what's happening and can make data-driven decisions. Then, drop your affiliate link.</p>
       </div>
 
       <!-- ======== SECTION 3 ======== -->
       <div id="example-content" class="article-section scroll-animate">
-        <h2 class="article-h2">3. Example Content</h2>
-        <p class="article-p">Did you know that 99% of dropshippers can't scale if they have less than 5% net profit margin?</p>
+        <h2 class="article-h2">Example Content</h2>
+        <p class="article-p">Here is an example post template you can use to promote this angle:</p>
         
         <div class="copy-post-btn-wrapper">
           <button class="copy-post-btn" onclick="copyPostText(this, 'copy-text-margins')">
@@ -2266,80 +2146,59 @@ footer {
           </button>
         </div>
         <div class="copy-post-box" id="copy-text-margins">
-          <p>There's no need to explain the difference between a $10M revenue store and a $10K one—scaling matters to any business. But I've worked with many merchants and found that although they can be extremely talented at finding winning products or designing ad strategies, their mindset around scaling is often too simple.</p>
+          <p><strong>Did you know that 99% of dropshippers can't scale if they have less than 5% net profit margin?</strong></p>
+          <p>There's no need to explain the difference between a $10M revenue store and a $10K one'scaling matters to any business. But I've worked with many merchants and found that although they can be extremely talented at finding winning products or designing ad strategies, their mindset around scaling is often too simple.</p>
           <p>Many merchants I've worked with said that as long as they see a good signal on their ROAS, they'll start investing more to scale up. Others said they'll look for ways to scale once they have steady traffic and orders for 2–3 months or more. Both approaches have fair points, but they're far from enough.</p>
           <p>The main issue is that ROAS, orders, or even revenue are never good benchmarks to decide whether it's time to scale up an ecom store. These metrics only tell you how effective your ads are or how much money you're generating (without factoring in costs). They don't reflect your store's financial health. Knowing your store's financial health is the key to scaling tactics, and the only way to know how healthy your store is is to track your net profit and net profit margin.</p>
-          <p>Net profit tells you exactly how profitable your business is. And profit margin gives you a basic benchmark to know whether it's time to scale up or reevaluate your numbers. Now back to the earlier question—why isn't 5% enough to scale? Because 5% is a very low profit margin compared to the 10–15% market benchmark. When your margin is too low, hidden costs can eat into your profit without you knowing. As a result, you keep scaling and keep losing money. That's why tracking net profit is so important.</p>
+          <p>Net profit tells you exactly how profitable your business is. And profit margin gives you a basic benchmark to know whether it's time to scale up or reevaluate your numbers. Now back to the earlier question'why isn't 5% enough to scale? Because 5% is a very low profit margin compared to the 10–15% market benchmark. When your margin is too low, hidden costs can eat into your profit without you knowing. As a result, you keep scaling and keep losing money. That's why tracking net profit is so important.</p>
           <p>You can set up a spreadsheet system to calculate net profit or use apps to auto-track this in real time. If you go with apps, TrueProfit <span class="affiliate-link-code-pill">[place your affiliate link here]</span> is my recommendation. It's very easy to get used to (they have a great onboarding flow) and the data is usually more accurate (compared to Google Sheets).</p>
         </div>
       </div>
-
-    </div>
-
-    <!-- Right Column: Sticky Sidebar -->
-    <div class="guide-sidebar">
-      <!-- Progress Bar -->
-      <div class="sidebar-progress">
-        <div class="sidebar-progress-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div class="sidebar-progress-text">
-          Scale Safely with Margins
-          <span>3 sections &middot; ~4 min read</span>
-        </div>
-      </div>
-
-      <!-- TOC Menu -->
-      <div class="sidebar-card">
-        <div class="sidebar-card-title">On this page</div>
-        <ul class="sidebar-toc">
-          <li><a href="#why-does-this-happen" class="active">Why does this happen?</a></li>
-          <li><a href="#how-to-pitch">How to pitch TrueProfit</a></li>
-          <li><a href="#example-content">Example Content</a></li>
-        </ul>
-      </div>
-
-      <!-- CTA Card -->
-      <div class="sidebar-card" style="background: #e6fbf1; border-color: rgba(35,196,140,0.3);">
-        <div class="sidebar-card-title" style="color: #047857;">Start Earning</div>
-        <p class="sidebar-cta-text">Get your affiliate link and start promoting TrueProfit today.</p>
-        <a href="../../index.html#dashboard-setup" class="sidebar-btn-primary">Get affiliate link</a>
-        <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="sidebar-link">Affiliate Dashboard &rarr;</a>
+      <!-- Section: Final Thoughts -->
+      <div class="article-section scroll-animate">
+        <h2 class="article-h2">Final Thoughts</h2>
+        <p class="article-p">This angle works because scaling only makes sense when margins stay healthy, and TrueProfit helps merchants check that before spending more. Helping your audience realize that scaling too fast without visibility can destroy their business makes them receptive to a real solution. TrueProfit becomes the safeguard for their ad budget.</p>
       </div>
     </div>
-    </div>
-
   </div>
 </section>
 
 <!-- ==============================
-     RELATED PLAYBOOKS
+     RELATED RESOURCES
      ============================= -->
 <section class="related-section">
   <div class="related-inner">
     <div class="related-header">
-      <div class="related-label">More Playbooks</div>
-      <h2 class="related-title">Continue with another angle</h2>
+      <div class="related-label">Related Resources</div>
     </div>
-    <div class="related-grid">
-      <a class="related-card scroll-animate" href="track-profit-like-a-pro.html" style="transition-delay: 0.1s;">
-        <span class="related-card-tag">Content Angle</span>
-        <h3 class="related-card-title">Track Profit Like A Pro</h3>
-        <p class="related-card-desc">Casually frame the profit automation workflow for all types of merchants.</p>
+    <div class="related-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <a class="related-card scroll-animate" href="../../guides/angles/track-profit-like-a-pro.html" style="transition-delay: 0.1s;">
+        <span class="related-card-tag">Reddit</span>
+        <h3 class="related-card-title" title="Track Profit Like A Pro" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">Track Profit Like A Pro</h3>
+        <p class="related-card-desc">A foundational angle around tracking profit beyond revenue.</p>
         <div class="related-card-footer">
           <div class="related-card-link">
-            Read playbook
-            <svg class="related-card-arrow" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            Read resource &rarr;
           </div>
         </div>
-      </a><a class="related-card scroll-animate" href="stop-losing-30-profit.html" style="transition-delay: 0.2s;">
-        <span class="related-card-tag">Content Angle</span>
-        <h3 class="related-card-title">Stop Losing 30% Profit</h3>
-        <p class="related-card-desc">Help dropshippers identify and cut the hidden fees that eat up their real margins.</p>
+      </a>
+      <a class="related-card scroll-animate" href="../../guides/angles/stop-losing-30-profit.html" style="transition-delay: 0.2s;">
+        <span class="related-card-tag">Reddit</span>
+        <h3 class="related-card-title" title="Stop Losing 30% Profit" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">Stop Losing 30% Profit</h3>
+        <p class="related-card-desc">A pain-point angle about hidden fees and margin leaks.</p>
         <div class="related-card-footer">
           <div class="related-card-link">
-            Read playbook
-            <svg class="related-card-arrow" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            Read resource &rarr;
+          </div>
+        </div>
+      </a>
+      <a class="related-card scroll-animate" href="../../guides/shortform-scaling-can-hide-margin-problems.html" style="transition-delay: 0.3s;">
+        <span class="related-card-tag">Short-form video</span>
+        <h3 class="related-card-title" title="Scaling Can Hide Margin Problems" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">Scaling Can Hide Margin Problems</h3>
+        <p class="related-card-desc">A short-form hook about scaling without checking margins.</p>
+        <div class="related-card-footer">
+          <div class="related-card-link">
+            Read resource &rarr;
           </div>
         </div>
       </a>
@@ -2356,7 +2215,7 @@ footer {
     <p class="guide-cta-sub">Show merchants why revenue growth means nothing if margins are unclear. Use this angle to position TrueProfit as the tool that keeps scaling decisions grounded in real profit.</p>
     <div class="guide-cta-btns">
       <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" class="btn-cta-white">Get affiliate link &rarr;</a>
-      <a href="../../guides.html" class="btn-cta-ghost">Back to Guides</a>
+      <a href="../../index.html" class="btn-cta-ghost">Back to Guides</a>
     </div>
   </div>
 </section>
@@ -2372,10 +2231,10 @@ footer {
     </div>
     <div class="footer-links">
       <h5>Resources</h5>
-      <a href="../../guides.html">Guides</a>
+      <a href="../../general-knowledge.html">General Knowledge</a>
+      <a href="../../content-playbook.html">Content Playbook</a>
       <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" rel="noopener noreferrer">Creative Assets</a>
-      <a href="../../index.html#commission">Commission Calculator</a>
-      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank">Affiliate Dashboard</a>
+      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer">Affiliate Dashboard</a>
     </div>
     <div class="footer-links">
       <h5>TrueProfit</h5>

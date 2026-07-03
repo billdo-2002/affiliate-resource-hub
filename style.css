@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    TrueProfit Affiliate Hub — style.css
    Dark theme aligned with TrueProfit homepage design
    ============================================================ */
@@ -84,7 +84,7 @@ body {
   color: var(--text-primary-dark);
   font-family: var(--font-sans);
   line-height: 1.6;
-  overflow-x: hidden;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -177,9 +177,9 @@ body {
 /* ============================================================
    HEADER (used in pages that import this CSS separately)
    ============================================================ */
-header {
-  position: fixed;
-  top: 0;
+header { position: sticky; top: 0; z-index: 1000;
+  
+  
   left: 0;
   width: 100%;
   height: 68px;
