@@ -818,13 +818,15 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 .usage-notes-callout {
-  max-width: 860px;
+  width: 100%;
+  max-width: 100%;
   background: transparent;
   border-left: 3px solid var(--green);
   padding: 4px 0 4px 24px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  box-sizing: border-box;
 }
 .usage-notes-title {
   font-size: 18px;
@@ -835,7 +837,7 @@ img { max-width: 100%; display: block; }
 .usage-notes-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
 }
 .usage-notes-icon {
   flex-shrink: 0;
@@ -854,6 +856,8 @@ img { max-width: 100%; display: block; }
   color: var(--navy);
   line-height: 1.65;
   margin: 0;
+  flex: 1;
+  max-width: none;
 }
 
 /* =========================================
