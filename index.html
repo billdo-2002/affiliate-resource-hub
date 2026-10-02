@@ -2013,8 +2013,32 @@ footer {
   transform: translateX(4px);
 }
 
+/*
+   Future-resource feature flag
+   Change data-show-future-resources on #hub-overview to "true" when
+   the placeholder cards are ready to publish. Until then, the three
+   live resources use a static grid and carousel controls stay hidden.
+*/
+#hub-overview[data-show-future-resources="false"] .guide-card--future,
+#hub-overview[data-show-future-resources="false"] .rc-arrows {
+  display: none;
+}
+#hub-overview[data-show-future-resources="false"] .rc-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  transform: none !important;
+  transition: none;
+  will-change: auto;
+}
+#hub-overview[data-show-future-resources="false"] .rc-track .guide-card {
+  width: auto !important;
+}
+
 /* ---- Mobile ---- */
 @media (max-width: 900px) {
+  #hub-overview[data-show-future-resources="false"] .rc-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .rc-header {
     flex-direction: column !important;
     align-items: center !important;
@@ -2046,6 +2070,9 @@ footer {
   }
 }
 @media (max-width: 540px) {
+  #hub-overview[data-show-future-resources="false"] .rc-track {
+    grid-template-columns: 1fr;
+  }
   .rc-outer {
     margin-left: 0;
     margin-right: 0;
@@ -2213,7 +2240,8 @@ footer {
 </div><!-- /#hero-band -->
 
   <!-- ===== EVERYTHING YOU NEED SECTION ===== -->
-  <section id="hub-overview" class="guides-section" style="padding-top: 60px; padding-bottom: 100px; background: #03111b; overflow: hidden;">
+  <!-- Set data-show-future-resources="true" to restore the saved placeholder cards and carousel arrows. -->
+  <section id="hub-overview" class="guides-section" data-show-future-resources="false" style="padding-top: 60px; padding-bottom: 100px; background: #03111b; overflow: hidden;">
     <div class="guides-inner">
 
       <!-- Header + Arrows row -->
@@ -2238,7 +2266,7 @@ footer {
           <div class="rc-track" id="rc-track">
 
             <!-- [PEEK LEFT] Upcoming Resource 1 -->
-            <div class="guide-card">
+            <div class="guide-card guide-card--future">
               <a href="upcoming-resource-1.html" class="full-link-overlay" aria-label="Preview Upcoming Resource" target="_blank" rel="noopener noreferrer"></a>
               <div class="guide-card-img">
                 <img src="images/50.svg" alt="Upcoming Resource">
@@ -2278,7 +2306,7 @@ footer {
                 <span class="guide-card-tag community">Playbook</span>
                 <h3 class="guide-card-title">Content Playbook</h3>
                 <p class="guide-card-desc">Access platform-specific playbooks for Reddit, X, Discord, and short-form video. Each includes ready-to-adapt templates.</p>
-                <div class="guide-card-link">Explore Playbooks
+                <div class="guide-card-link">Explore Playbook
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
                 </div>
               </div>
@@ -2301,7 +2329,7 @@ footer {
             </div>
 
             <!-- [PEEK RIGHT] Upcoming Resource 2 -->
-            <div class="guide-card">
+            <div class="guide-card guide-card--future">
               <a href="upcoming-resource-2.html" class="full-link-overlay" aria-label="Preview Upcoming Resource" target="_blank" rel="noopener noreferrer"></a>
               <div class="guide-card-img">
                 <img src="images/50.svg" alt="Upcoming Resource">
@@ -2563,6 +2591,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPrev  = document.getElementById('rc-prev');
   const btnNext  = document.getElementById('rc-next');
   if (!track || !viewport || !btnPrev || !btnNext) return;
+
+  const hubOverview = document.getElementById('hub-overview');
+  const showFutureResources = hubOverview?.dataset.showFutureResources === 'true';
+
+  // In the current three-resource state, CSS supplies a responsive static grid.
+  // Returning here keeps the saved carousel markup and logic dormant until the
+  // feature flag on #hub-overview is changed to "true".
+  if (!showFutureResources) return;
 
   const CARDS  = Array.from(track.querySelectorAll('.guide-card'));
   const TOTAL  = CARDS.length; // 5
