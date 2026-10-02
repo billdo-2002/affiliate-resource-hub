@@ -251,61 +251,6 @@
     }
 
     /* =========================================
-   ANNOUNCEMENT BAR
-   ========================================= */
-    #announce-bar {
-      background: #0a2a1e;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 12px 24px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      position: relative;
-      letter-spacing: 0.01em;
-    }
-
-    #announce-bar a {
-      background: var(--green-bright);
-      color: #071424;
-      font-weight: 700;
-      padding: 5px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-      transition: var(--transition);
-    }
-
-    #announce-bar a:hover {
-      background: #2dd498;
-    }
-
-    #announce-bar .close-btn {
-      position: absolute;
-      right: 16px;
-      background: none;
-      border: none;
-      color: rgba(255, 255, 255, 0.5);
-      cursor: pointer;
-      font-size: 18px;
-      line-height: 1;
-      padding: 2px 6px;
-      transition: var(--transition);
-    }
-
-    #announce-bar .close-btn:hover {
-      color: #fff;
-    }
-
-    .announce-star {
-      color: var(--green-bright);
-    }
-
-    /* =========================================
    HEADER
    ========================================= */
     #header {
@@ -2433,25 +2378,135 @@
         transition: none;
       }
     }
+    /* On-this-page navigation */
+    .page-toc {
+      min-width: 0;
+      margin: 0 0 48px;
+    }
+
+    .page-toc-inner {
+      width: 100%;
+    }
+
+    .page-toc-title {
+      margin: 0;
+      padding: 0 0 16px;
+      border-bottom: 1px solid #dfe5e3;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .page-toc-list,
+    .page-toc-list ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .page-toc-list > li {
+      border-bottom: 1px solid #dfe5e3;
+    }
+
+    .page-toc a {
+      display: block;
+      padding: 11px 0;
+      color: #66737c;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.32;
+      text-align: left;
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+
+    .page-toc-list ul {
+      padding: 0 0 8px 20px;
+    }
+
+    .page-toc-list ul a {
+      padding: 6px 0;
+      color: #8a969e;
+      font-size: 13.5px;
+    }
+
+    .page-toc a:hover,
+    .page-toc a:focus-visible {
+      color: var(--green);
+    }
+
+    .page-toc .page-toc-list a.is-active,
+    .page-toc .page-toc-list a[aria-current="location"] {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .page-toc a:focus-visible {
+      border-radius: 4px;
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
+
+    .article-section[id],
+    .article-h2[id],
+    .article-h3[id],
+    .placement-example[id],
+    .integration-reference[id] {
+      scroll-margin-top: 156px;
+    }
+
+    @media (min-width: 1100px) {
+      .guide-body-inner {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: clamp(48px, 5vw, 72px);
+        align-items: start;
+      }
+
+      .page-toc {
+        position: sticky;
+        top: 150px;
+        max-height: calc(100vh - 178px);
+        margin-bottom: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-width: thin;
+      }
+
+      .guide-content {
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 1099px) {
+      .page-toc {
+        max-width: 720px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-toc {
+        margin-bottom: 40px;
+      }
+
+      .page-toc a {
+        padding-block: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .page-toc a {
+        transition: none;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="global-sticky-wrap" style="position: sticky; top: 0; z-index: 1001;">
-    <!-- ==============================
-     ANNOUNCEMENT BAR
-     ============================== -->
-    <div id="announce-bar">
-      <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
-      <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
-      <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
-      <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
-      <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'"
-        aria-label="Close">&#10005;</button>
-    </div>
-
-    <!-- ==============================
+<!-- ==============================
      HEADER
      ============================== -->
     <header id="header">
@@ -2467,8 +2522,8 @@
         </nav>
         <div class="header-actions" id="headerActions">
           <a href="../content-playbook.html" class="btn-ghost">Content Playbook</a>
-          <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83"
-            target="_blank" class="btn-cta">Creative Assets</a>
+          <a href="https://affiliate.trueprofit.io/dashboard"
+            target="_blank" class="btn-cta" rel="noopener noreferrer">Go to Dashboard</a>
         </div>
         <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -2507,6 +2562,30 @@
      ============================== -->
   <section class="guide-body reddit-guide">
     <div class="guide-body-inner">
+      <aside class="page-toc" aria-label="On this page">
+        <nav class="page-toc-inner">
+          <h2 class="page-toc-title">On this page</h2>
+          <ul class="page-toc-list">
+            <li><a href="#audience-heading">Understanding Your Audience</a></li>
+            <li>
+              <a href="#reddit-approach-heading">Content Approach for Reddit</a>
+              <ul>
+                <li><a href="#expert-angle-heading">The Expert Angle</a></li>
+                <li><a href="#beginner-angle-heading">The Beginner Angle</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#x-approach-heading">Content Approach for X</a>
+              <ul>
+                <li><a href="#tweet-one-heading">Tweet 1</a></li>
+                <li><a href="#tweet-two-heading">Tweet 2</a></li>
+              </ul>
+            </li>
+            <li><a href="#dos-heading">Dos and Don’ts</a></li>
+            <li><a href="#takeaways-heading">Key Takeaways</a></li>
+          </ul>
+        </nav>
+      </aside>
       <main class="guide-content">
 
         <!-- Understanding your audience -->
@@ -2643,7 +2722,7 @@
             link into:</p>
 
           <div class="tweet-sample">
-            <h3 class="article-h3">Tweet 1</h3>
+            <h3 id="tweet-one-heading" class="article-h3">Tweet 1</h3>
             <div class="sample-box">
               <button class="copy-post-button" type="button" data-copy-target="tweet-one"
                 aria-label="Copy Tweet 1">
@@ -2667,7 +2746,7 @@
           </div>
 
           <div class="tweet-sample">
-            <h3 class="article-h3">Tweet 2</h3>
+            <h3 id="tweet-two-heading" class="article-h3">Tweet 2</h3>
             <div class="sample-box">
               <button class="copy-post-button" type="button" data-copy-target="tweet-two"
                 aria-label="Copy Tweet 2">
@@ -2740,10 +2819,8 @@
       <h2 class="guide-cta-h2">Ready to promote TrueProfit on <span>Reddit &amp; X</span>?</h2>
       <p class="guide-cta-sub">Pick a platform-native angle, share useful content, and add your affiliate link.</p>
       <div class="guide-cta-btns">
-        <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" rel="noopener noreferrer"
-          class="btn-cta-white">Get affiliate link &rarr;</a>
-        <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer"
-          class="btn-cta-ghost">Go to Dashboard</a>
+        <a href="https://affiliate-resources.trueprofit.io/creative-assets/" target="_blank" rel="noopener noreferrer" class="btn-cta-white">Creative Assets</a>
+        <a href="https://affiliate.trueprofit.io/dashboard" target="_blank" rel="noopener noreferrer" class="btn-cta-ghost">Go to Dashboard</a>
       </div>
     </div>
   </section>
@@ -2837,6 +2914,67 @@
     });
   </script>
 
+
+  <script>
+    (() => {
+      const links = Array.from(document.querySelectorAll('.page-toc a[href^="#"]'));
+      const entries = links
+        .map((link) => ({ link, target: document.getElementById(link.hash.slice(1)) }))
+        .filter((entry) => entry.target);
+
+      if (!entries.length) return;
+
+      let activeLink = null;
+      let ticking = false;
+
+      const setActive = (nextLink) => {
+        if (!nextLink || nextLink === activeLink) return;
+
+        entries.forEach(({ link }) => {
+          const isActive = link === nextLink;
+          link.classList.toggle('is-active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        activeLink = nextLink;
+      };
+
+      const updateActiveLink = () => {
+        ticking = false;
+        const readingLine = Math.min(window.innerHeight * 0.32, 240);
+        let current = entries[0];
+
+        for (const entry of entries) {
+          if (entry.target.getBoundingClientRect().top <= readingLine) {
+            current = entry;
+          } else {
+            break;
+          }
+        }
+
+        const atPageEnd = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+        setActive(atPageEnd ? entries[entries.length - 1].link : current.link);
+      };
+
+      const requestUpdate = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(updateActiveLink);
+      };
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => setActive(link));
+      });
+
+      window.addEventListener('scroll', requestUpdate, { passive: true });
+      window.addEventListener('resize', requestUpdate);
+      updateActiveLink();
+    })();
+  </script>
 </body>
 
 </html>

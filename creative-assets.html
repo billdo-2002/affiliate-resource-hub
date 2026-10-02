@@ -90,50 +90,6 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 
 /* =========================================
-   ANNOUNCEMENT BAR
-   ========================================= */
-#announce-bar {
-  background: #0a2a1e;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 24px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-  letter-spacing: 0.01em;
-}
-#announce-bar a {
-  background: var(--green-bright);
-  color: #071424;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 6px;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  transition: var(--transition);
-}
-#announce-bar a:hover { background: #2dd498; }
-#announce-bar .close-btn {
-  position: absolute;
-  right: 16px;
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.5);
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1;
-  padding: 2px 6px;
-  transition: var(--transition);
-}
-#announce-bar .close-btn:hover { color: #fff; }
-.announce-star { color: var(--green-bright); }
-
-/* =========================================
    HEADER
    ========================================= */
 #header { position: sticky; top: 0;
@@ -1032,17 +988,6 @@ footer {
 
 <div class="global-sticky-wrap" style="position: sticky; top: 0; z-index: 1001;">
 <!-- ==============================
-     ANNOUNCEMENT BAR
-     ============================== -->
-<div id="announce-bar">
-  <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
-  <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
-  <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
-  <span class="announce-star" style="font-size: 18px; line-height: 1;">&#10022;</span>
-  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">&#10005;</button>
-</div>
-
-<!-- ==============================
      HEADER
      ============================== -->
 <header id="header">
@@ -1058,7 +1003,7 @@ footer {
     </nav>
     <div class="header-actions" id="headerActions">
       <a href="content-playbook.html" class="btn-ghost">Content Playbook</a>
-      <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83" target="_blank" class="btn-cta">Creative Assets</a>
+      <a href="https://affiliate.trueprofit.io/dashboard" target="_blank" class="btn-cta" rel="noopener noreferrer">Go to Dashboard</a>
     </div>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -1273,7 +1218,7 @@ footer {
         <!-- Banner 1: 1600x900 -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/100k-sales-net-profit/1600x900-dark.png.png" alt="100k Sales Banner 1600x900">
+            <img src="Creative%20Assets/Banners/100k-sales-net-profit/1600x900-dark.webp" alt="100k Sales Banner 1600x900">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1600 × 900</h4>
@@ -1288,7 +1233,7 @@ footer {
         <!-- Banner 2: 1200x900 -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/100k-sales-net-profit/1200x900-dark.png.png" alt="100k Sales Banner 1200x900">
+            <img src="Creative%20Assets/Banners/100k-sales-net-profit/1200x900-dark.webp" alt="100k Sales Banner 1200x900">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1200 × 900</h4>
@@ -1303,7 +1248,7 @@ footer {
         <!-- Banner 3: 900x900 -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/100k-sales-net-profit/900x900-dark.png.png" alt="100k Sales Banner 900x900">
+            <img src="Creative%20Assets/Banners/100k-sales-net-profit/900x900-dark.webp" alt="100k Sales Banner 900x900">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">900 × 900</h4>
@@ -1325,7 +1270,7 @@ footer {
         <!-- 1600x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1600x900-dark.png.png" alt="Profit Numbers Banner 1600x900 Dark">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1600x900-dark.webp" alt="Profit Numbers Banner 1600x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1600 × 900 (Dark)</h4>
@@ -1340,7 +1285,7 @@ footer {
         <!-- 1600x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1600x900-bright.png.png" alt="Profit Numbers Banner 1600x900 Bright">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1600x900-bright.webp" alt="Profit Numbers Banner 1600x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1600 × 900 (Bright)</h4>
@@ -1355,7 +1300,7 @@ footer {
         <!-- 1200x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1200x900-dark.png.png" alt="Profit Numbers Banner 1200x900 Dark">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1200x900-dark.webp" alt="Profit Numbers Banner 1200x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1200 × 900 (Dark)</h4>
@@ -1370,7 +1315,7 @@ footer {
         <!-- 1200x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1200x900-bright.png.png" alt="Profit Numbers Banner 1200x900 Bright">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/1200x900-bright.webp" alt="Profit Numbers Banner 1200x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1200 × 900 (Bright)</h4>
@@ -1385,7 +1330,7 @@ footer {
         <!-- 900x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/900x900-dark.png.png" alt="Profit Numbers Banner 900x900 Dark">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/900x900-dark.webp" alt="Profit Numbers Banner 900x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">900 × 900 (Dark)</h4>
@@ -1400,7 +1345,7 @@ footer {
         <!-- 900x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/900x900-brightpng.png" alt="Profit Numbers Banner 900x900 Bright">
+            <img src="Creative%20Assets/Banners/profit-numbers-dont-feel-right/900x900-brightpng.webp" alt="Profit Numbers Banner 900x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">900 × 900 (Bright)</h4>
@@ -1422,7 +1367,7 @@ footer {
         <!-- 1600x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1600x900-dark.png.png" alt="Spreadsheet Banner 1600x900 Dark">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1600x900-dark.webp" alt="Spreadsheet Banner 1600x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1600 × 900 (Dark)</h4>
@@ -1437,7 +1382,7 @@ footer {
         <!-- 1600x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1600x900-bright.png.png" alt="Spreadsheet Banner 1600x900 Bright">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1600x900-bright.webp" alt="Spreadsheet Banner 1600x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1600 × 900 (Bright)</h4>
@@ -1452,7 +1397,7 @@ footer {
         <!-- 1200x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1200x900-dark.png.png" alt="Spreadsheet Banner 1200x900 Dark">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1200x900-dark.webp" alt="Spreadsheet Banner 1200x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1200 × 900 (Dark)</h4>
@@ -1467,7 +1412,7 @@ footer {
         <!-- 1200x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1200x900-bright.png.png" alt="Spreadsheet Banner 1200x900 Bright">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/1200x900-bright.webp" alt="Spreadsheet Banner 1200x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">1200 × 900 (Bright)</h4>
@@ -1482,7 +1427,7 @@ footer {
         <!-- 900x900 Dark -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/900x900-dark.png.png" alt="Spreadsheet Banner 900x900 Dark">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/900x900-dark.webp" alt="Spreadsheet Banner 900x900 Dark">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">900 × 900 (Dark)</h4>
@@ -1497,7 +1442,7 @@ footer {
         <!-- 900x900 Bright -->
         <div class="banner-card">
           <div class="banner-preview">
-            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/900x900-bright.png.png" alt="Spreadsheet Banner 900x900 Bright">
+            <img src="Creative%20Assets/Banners/spreadsheet-running-your-business/900x900-bright.webp" alt="Spreadsheet Banner 900x900 Bright">
           </div>
           <div class="banner-card-body">
             <h4 class="banner-resolution">900 × 900 (Bright)</h4>
@@ -1768,12 +1713,8 @@ footer {
     <h2 class="cta-h2">Ready to <span>start promoting</span> TrueProfit?</h2>
     <p class="cta-sub">You have everything you need — guides, angles, and scripts. Now go create content that converts.</p>
     <div class="cta-btns">
-      <a href="index.html" class="btn-cta-white">
-        Open the Playbook &rarr;
-      </a>
-      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-cta-ghost">
-        Go to Dashboard
-      </a>
+      <a href="https://affiliate-resources.trueprofit.io/creative-assets/" target="_blank" rel="noopener noreferrer" class="btn-cta-white">Creative Assets</a>
+      <a href="https://affiliate.trueprofit.io/dashboard" target="_blank" rel="noopener noreferrer" class="btn-cta-ghost">Go to Dashboard</a>
     </div>
   </div>
 </section>

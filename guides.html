@@ -91,50 +91,6 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 
 /* =========================================
-   ANNOUNCEMENT BAR
-   ========================================= */
-#announce-bar {
-  background: #0a2a1e;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 24px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  position: relative;
-  letter-spacing: 0.01em;
-}
-#announce-bar a {
-  background: var(--green-bright);
-  color: #071424;
-  font-weight: 700;
-  padding: 5px 16px;
-  border-radius: 6px;
-  font-size: 13px;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  transition: var(--transition);
-}
-#announce-bar a:hover { background: #2dd498; }
-#announce-bar .close-btn {
-  position: absolute;
-  right: 16px;
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.5);
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1;
-  padding: 2px 6px;
-  transition: var(--transition);
-}
-#announce-bar .close-btn:hover { color: #fff; }
-.announce-star { color: var(--green-bright); }
-
-/* =========================================
    HEADER
    ========================================= */
 #header {
@@ -1579,17 +1535,6 @@ footer {
 <body>
 
 <!-- ==============================
-     ANNOUNCEMENT BAR
-     ============================== -->
-<div id="announce-bar">
-  <span class="announce-star">✦</span>
-  <span>Earn 50% on your first month + 20% recurring for the year. Join 1,000+ affiliates.</span>
-  <a href="https://affiliate.trueprofit.io/sign-up" target="_blank">JOIN NOW</a>
-  <span class="announce-star">✦</span>
-  <button class="close-btn" onclick="document.getElementById('announce-bar').style.display='none'" aria-label="Close">×</button>
-</div>
-
-<!-- ==============================
      HEADER
      ============================== -->
 <header id="header" class="stagger-enter" style="animation-delay: 0s;">
@@ -2077,12 +2022,8 @@ footer {
     <h2 class="cta-h2">Ready to <span>start promoting</span> TrueProfit?</h2>
     <p class="cta-sub">You have everything you need — guides, angles, and scripts. Now go create content that converts.</p>
     <div class="cta-btns">
-      <a href="guides.html" class="btn-cta-white" target="_blank" rel="noopener noreferrer">
-        Open the Playbook →
-      </a>
-      <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-cta-ghost">
-        Go to Dashboard
-      </a>
+      <a href="https://affiliate-resources.trueprofit.io/creative-assets/" target="_blank" rel="noopener noreferrer" class="btn-cta-white">Creative Assets</a>
+      <a href="https://affiliate.trueprofit.io/dashboard" target="_blank" rel="noopener noreferrer" class="btn-cta-ghost">Go to Dashboard</a>
     </div>
   </div>
 </section>
