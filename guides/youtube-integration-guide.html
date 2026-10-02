@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How to Promote TrueProfit in Short-Form Videos - TrueProfit Affiliate Resource Hub</title>
+  <title>Promoting TrueProfit in YouTube Integrations - TrueProfit Affiliate Resource Hub</title>
   <meta name="description"
-    content="Learn how to create short-form content that drives views, builds trust, and converts without sounding promotional.">
+    content="Learn how to integrate TrueProfit naturally into YouTube content and turn useful videos into affiliate conversions.">
 
   <style>
     /* Global Font Override to enforce Plus Jakarta Sans */
@@ -1743,37 +1743,6 @@
     }
 
     /* =========================================
-   SCROLL ANIMATIONS
-   ========================================= */
-    .scroll-animate {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-
-    .scroll-animate.animated {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .stagger-enter {
-      opacity: 0;
-      animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-
-    @keyframes fadeInSlideUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* =========================================
    RESPONSIVE
    ========================================= */
     @media (max-width: 1100px) {
@@ -2930,6 +2899,388 @@
       font-size: 18px;
       flex-shrink: 0;
     }
+
+    /* YouTube Integration content — aligned with the polished Discord and Reddit guides */
+    :root {
+      --site-container: 1200px;
+      --site-gutter: 24px;
+    }
+
+    .guide-hero {
+      padding: 36px 0 44px;
+    }
+
+    .guide-hero-inner {
+      grid-template-columns: minmax(0, 1fr) 500px;
+      width: 100%;
+      max-width: var(--site-container);
+      min-height: 0;
+      margin-inline: auto;
+      padding-inline: var(--site-gutter);
+      gap: 20px 64px;
+    }
+
+    .guide-hero-subtitle {
+      max-width: 650px;
+      font-size: 18px;
+    }
+
+    .guide-hero-visual img {
+      width: 100%;
+      height: auto;
+      max-width: 500px;
+      object-fit: contain;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      filter: none;
+      transform: none;
+    }
+
+    .guide-body {
+      padding: 48px 0 80px;
+    }
+
+    .guide-body-inner {
+      width: 100%;
+      max-width: var(--site-container);
+      margin-inline: auto;
+      padding-inline: var(--site-gutter);
+    }
+
+    .guide-content {
+      width: 100%;
+      max-width: none;
+      color: var(--text-body);
+      font-size: clamp(17px, 0.25vw + 14.5px, 18px);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .article-section {
+      margin-bottom: 72px;
+    }
+
+    .article-h2 {
+      max-width: none;
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-size: clamp(30px, 2.7vw, 36px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      text-align: left;
+    }
+
+    .article-h3 {
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-size: clamp(24px, 2vw, 26px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+
+    .article-p {
+      width: 100%;
+      max-width: none;
+      margin: 0 0 16px;
+      color: var(--text-body);
+      font-size: inherit;
+      line-height: inherit;
+      text-align: justify;
+      text-justify: inter-character;
+      text-align-last: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    .integration-list {
+      width: 100%;
+      max-width: none;
+      margin: 24px 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .integration-list li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--text-body);
+      font-size: inherit;
+      line-height: 1.65;
+      text-align: left;
+    }
+
+    .integration-list li::before {
+      content: '\2713';
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .creative-assets-resource {
+      margin-top: 32px;
+    }
+
+    .creative-assets-link.article-reference-link {
+      max-width: 100%;
+      display: inline-grid;
+      grid-template-columns: auto minmax(0, auto) auto;
+      align-items: baseline;
+      gap: 8px;
+      color: #2563eb;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .creative-assets-link.article-reference-link .ref-icon {
+      color: #2563eb;
+    }
+
+    .creative-assets-link.article-reference-link .ref-arrow {
+      transition: transform 180ms ease;
+    }
+
+    .creative-assets-link.article-reference-link:hover {
+      color: #1d4ed8;
+      border-bottom-color: #1d4ed8;
+    }
+
+    .creative-assets-link.article-reference-link:hover .ref-arrow {
+      transform: translateX(2px);
+    }
+
+    .creative-assets-link.article-reference-link:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .integration-reference-list {
+      margin-top: 32px;
+      display: grid;
+      gap: 64px;
+    }
+
+    .integration-reference {
+      margin: 0;
+    }
+
+    .integration-thumbnail {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid #d6e3df;
+      border-radius: 14px;
+      background: #f7faf9;
+      box-shadow: 0 10px 24px rgba(6, 35, 50, 0.08);
+      transition: border-color 240ms ease, box-shadow 240ms ease, transform 240ms ease;
+    }
+
+    .integration-thumbnail img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .integration-thumbnail:hover,
+    .integration-thumbnail:focus-visible {
+      border-color: var(--green);
+      box-shadow: 0 18px 42px rgba(6, 35, 50, 0.15);
+      transform: translateY(-2px) scale(1.005);
+      outline: 3px solid transparent;
+    }
+
+    .integration-thumbnail:focus-visible {
+      outline-color: var(--green);
+      outline-offset: 4px;
+    }
+
+    .integration-caption {
+      margin: 16px 0 0;
+    }
+
+    .integration-reference-title {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(22px, 1.8vw, 24px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      text-align: left;
+    }
+
+    .integration-reference-copy {
+      margin: 0;
+      color: var(--text-body);
+      font-size: inherit;
+      line-height: inherit;
+      text-align: justify;
+      text-justify: inter-character;
+      text-align-last: left;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      overflow-wrap: break-word;
+    }
+
+    .reference-note {
+      margin: 40px 0 0;
+      padding-left: 32px;
+      border-left: 4px solid var(--green);
+    }
+
+    .reference-note-title {
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-align: left;
+    }
+
+    .reference-note-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .reference-note-icon {
+      width: 28px;
+      height: 28px;
+      margin-top: 2px;
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1.5px dashed var(--green);
+      border-radius: 50%;
+      color: var(--green);
+    }
+
+    .reference-note-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .reference-note-text {
+      margin: 0;
+      color: var(--text-body);
+      font-size: inherit;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    @media (max-width: 1024px) {
+      .guide-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .guide-hero-visual {
+        justify-self: center;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .guide-hero-visual img {
+        max-width: 500px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --site-gutter: 20px;
+      }
+
+      .guide-hero {
+        padding: 32px 0 40px;
+      }
+
+      .guide-hero-visual {
+        width: 100%;
+        max-width: 440px;
+        margin-inline: auto;
+      }
+
+      .guide-hero-visual img {
+        max-width: 100%;
+        transform: none;
+      }
+
+      .guide-body {
+        padding: 40px 0 64px;
+      }
+
+      .article-p {
+        text-align: left;
+        text-align-last: auto;
+        hyphens: none;
+        -webkit-hyphens: none;
+      }
+
+      .article-section {
+        margin-bottom: 64px;
+      }
+
+      .integration-list li {
+        padding-left: 28px;
+      }
+
+      .integration-caption {
+        margin-top: 16px;
+      }
+
+      .integration-reference-copy {
+        text-align: left;
+        text-align-last: auto;
+        hyphens: none;
+        -webkit-hyphens: none;
+      }
+
+      .reference-note {
+        margin-top: 32px;
+        padding-left: 20px;
+      }
+
+      .reference-note-title {
+        margin-bottom: 14px;
+      }
+
+      .reference-note-row {
+        gap: 12px;
+      }
+
+      .integration-reference-list {
+        gap: 56px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .integration-thumbnail:hover,
+      .integration-thumbnail:focus-visible {
+        transform: none;
+      }
+    }
   </style>
 </head>
 
@@ -2951,7 +3302,7 @@
     <!-- ==============================
      HEADER
      ============================== -->
-    <header id="header" class="stagger-enter" style="animation-delay: 0s;">
+    <header id="header">
       <div class="header-inner">
         <a href="../index.html" class="header-logo">
           <img src="../logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
@@ -2967,7 +3318,7 @@
           <a href="https://trueprofit.notion.site/2e265f0648c680b68a14ec66c712323b?v=2e265f0648c68131962b000cde6ded83"
             target="_blank" class="btn-cta">Creative Assets</a>
         </div>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -2985,28 +3336,18 @@
       <!-- Breadcrumb -->
       <div class="guide-breadcrumb">
         <a href="../index.html">Home</a><span class="sep">&rsaquo;</span><a href="../content-playbook.html">Content
-          Playbook</a><span class="sep">&rsaquo;</span><a href="../content-playbook.html#featured-guides">Featured
-          Guides</a><span class="sep">&rsaquo;</span><span class="current">How to Promote TrueProfit in Short-Form
-          Videos</span>
+          Playbook</a><span class="sep">&rsaquo;</span><span class="current">Promoting TrueProfit in YouTube Integrations</span>
       </div>
-      <div class="guide-hero-left stagger-enter" style="animation-delay: 0.1s;">
-        <!-- Title -->
-        <h1 class="guide-hero-title">How to Promote TrueProfit in Short-Form Videos</h1>
-        <!-- Subtitle -->
-        <p class="guide-hero-subtitle">Create short-form content that drives views, builds trust, and converts without
-          sounding promotional.</p>
-        <!-- Tags -->
-        <div class="guide-tags">
-          <span class="guide-tag">Video</span>
-          <span class="guide-tag">Short-Form</span>
-          <span class="guide-tag">Content Angles</span>
-          <span class="guide-tag">Creator Workflow</span>
-        </div>
+      <div class="guide-hero-left">
+        <h1 class="guide-hero-title">Promoting TrueProfit in YouTube Integrations</h1>
+        <p class="guide-hero-subtitle">Learn how to integrate TrueProfit naturally into YouTube content by using the
+          dashboard to support the story, verify results, and turn useful content into clicks and affiliate
+          conversions.</p>
       </div>
-      <!-- Hero Illustration -->
-      <div class="guide-hero-visual stagger-enter" style="animation-delay: 0.2s;">
-        <img src="../images/69.1.svg" alt="Hero Graphic"
-          style="width: 100%; max-width: 580px; max-height: 460px; object-fit: contain; background: transparent; box-shadow: none; border: none; border-radius: 0; transform: scale(1.8); transform-origin: center;">
+      <div class="guide-hero-visual">
+        <img src="../images/74.png"
+          alt="Illustration of a TrueProfit dashboard integrated into a YouTube video workflow" width="1672"
+          height="941" fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>
@@ -3019,299 +3360,166 @@
 
       <!-- Left Column: Article Content -->
       <div class="guide-content">
-        <!-- Section 1 -->
-        <div id="section-1" class="article-section scroll-animate">
-          <h2 class="article-h2" style="margin-top: 0;">Example</h2>
-          <p class="article-p">Short-form video is one of the most powerful free channels for affiliate promotion — if
-            you know how to structure it. The goal is not to promote TrueProfit directly. The goal is to surface a blind
-            spot your audience already has and introduce TrueProfit as the tool that fixes it.</p>
+        <!-- How to Integrate TrueProfit -->
+        <div id="section-1" class="article-section">
+          <h2 class="article-h2">How to Integrate TrueProfit</h2>
+          <p class="article-p">Start with a video topic people would watch even without TrueProfit.</p>
+          <ul class="integration-list">
+            <li>Introduce the dashboard when it adds useful context to the story.</li>
+            <li>Show the full dashboard with the TrueProfit logo visible.</li>
+            <li>Highlight only the numbers relevant to the video.</li>
+            <li>Share one useful takeaway.</li>
+            <li>Add a short CTA, then continue with the main content.</li>
+          </ul>
+          <p class="article-p">The integration should feel like part of the video rather than a separate sponsor
+            break.</p>
+        </div>
 
-          <p class="article-p video-intro-line">One of our partners created this video, and it earns him hundreds in
-            monthly commission.</p>
+        <!-- Content Approaches -->
+        <div id="section-2" class="article-section">
+          <h2 class="article-h2">Content Approaches</h2>
+          <p class="article-p">TrueProfit works naturally in:</p>
+          <ul class="integration-list">
+            <li>AI-run store videos</li>
+            <li>Challenges or experiments</li>
+            <li>Store progress updates</li>
+            <li>Product or advertising tests</li>
+            <li>Store breakdowns or case studies</li>
+            <li>E-commerce tool stack videos</li>
+          </ul>
+          <p class="article-p">Regardless of the angle, keep the story first and use TrueProfit as proof, a
+            checkpoint, or a supporting tool.</p>
+        </div>
 
-          <!-- TikTok-style vertical video placeholder -->
-          <div class="tiktok-video-wrapper">
-            <a class="tiktok-video-placeholder" href="https://www.tiktok.com/@whatifhoot/video/7601991913104755999"
-              rel="noopener noreferrer" target="_blank">
-              <img alt="TikTok thumbnail" class="tiktok-video-img" src="../images/15.svg" />
-              <div class="tiktok-play-icon">
-                <svg fill="currentColor" height="22" viewBox="0 0 24 24" width="22">
-                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        <div id="section-3" class="article-section">
+          <h2 class="article-h2">Placement and Length</h2>
+          <p class="article-p">There is no fixed timestamp for the integration. It can appear as:</p>
+          <ul class="integration-list">
+            <li>A mid-video progress check</li>
+            <li>A final results reveal</li>
+            <li>A decision point before the next step</li>
+            <li>Part of a tool-stack or workflow section</li>
+          </ul>
+          <p class="article-p">Aim for an integration of around 60 seconds or longer. This should provide enough time
+            to show the dashboard, explain the relevant numbers, share a takeaway, and mention the affiliate link or
+            audience offer.</p>
+          <p class="article-p">Avoid turning the segment into a full feature walkthrough unless the video specifically
+            focuses on E-commerce tools.</p>
+          <div class="creative-assets-resource">
+            <a class="article-reference-link creative-assets-link"
+              href="https://affiliate-resources.trueprofit.io/creative-assets/" target="_blank"
+              rel="noopener noreferrer">
+              <span class="ref-icon" aria-hidden="true">&#10022;</span>
+              <span>Download TrueProfit footage, screen recordings, and brand assets here</span>
+              <span class="ref-arrow" aria-hidden="true">&#8250;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="article-section">
+          <h2 class="article-h2">Reference Integrations</h2>
+          <p class="article-p">Review these videos before planning your integration. Each one follows a different
+            narrative, showing how TrueProfit can still fit naturally into different types of E-commerce content.</p>
+
+          <div class="integration-reference-list">
+            <figure class="integration-reference">
+              <h3 class="integration-reference-title">AI-Powered Store Experiment</h3>
+              <a class="integration-thumbnail" href="https://www.youtube.com/watch?v=xqJVzrhjqrc&amp;t=569s"
+                target="_blank" rel="noopener noreferrer" aria-label="Watch AC Hampton's AI-Powered Store Experiment on YouTube">
+                <img src="../images/AC Hampton.png" alt="AC Hampton's AI-Powered Store Experiment video thumbnail"
+                  width="1672" height="941" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="integration-caption">
+                <p class="integration-reference-copy">TrueProfit appears as proof inside the experiment rather than as a standalone product pitch. The dashboard helps validate the store's performance and makes the results easier for viewers to trust.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="integration-reference">
+              <h3 class="integration-reference-title">Facebook Product Testing Journey</h3>
+              <a class="integration-thumbnail" href="https://www.youtube.com/watch?v=GDKsy8m-tPM"
+                target="_blank" rel="noopener noreferrer" aria-label="Watch Taysthetic's Facebook Product Testing Journey on YouTube">
+                <img src="../images/Taysthetic.png" alt="Taysthetic's Facebook Product Testing Journey video thumbnail"
+                  width="1672" height="941" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="integration-caption">
+                <p class="integration-reference-copy">The dashboard fits naturally into the testing journey as a checkpoint for revenue, costs, and profitability. It supports the creator's progress without interrupting the main story.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="integration-reference">
+              <h3 class="integration-reference-title">Print-on-Demand Niche Breakdown</h3>
+              <a class="integration-thumbnail" href="https://www.youtube.com/watch?v=dGfauy--uy0"
+                target="_blank" rel="noopener noreferrer" aria-label="Watch Joe Robert's Print-on-Demand Niche Breakdown on YouTube">
+                <img src="../images/Joe Robert.png" alt="Joe Robert's Print-on-Demand Niche Breakdown video thumbnail"
+                  width="1672" height="941" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="integration-caption">
+                <p class="integration-reference-copy">TrueProfit can be introduced when the creator moves from product ideas into real performance and margins. The integration works as supporting evidence within the broader store breakdown.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <aside class="reference-note">
+            <h3 class="reference-note-title">Note:</h3>
+            <div class="reference-note-row">
+              <span class="reference-note-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
-              </div>
-            </a>
-            <a class="tiktok-caption-link" href="https://www.tiktok.com/@whatifhoot/video/7601991913104755999"
-              rel="noopener noreferrer" target="_blank">
-              Watch original TikTok <span class="arrow">&rarr;</span>
-            </a>
-          </div>
-
-          <p class="article-p">Notice what he does: he opens with a problem statement, not a product pitch. He explains
-            why the problem matters in concrete terms (revenue vs. actual profit). Then he shows TrueProfit as the tool
-            he personally uses to fix it — and the affiliate link is in the bio, mentioned naturally at the end.</p>
-          <p class="article-p">This structure is repeatable. You don't need a viral video. You need a clear hook, a real
-            problem, and a genuine recommendation.</p>
+              </span>
+              <p class="reference-note-text">Use these examples to understand placement, screen time, dashboard presentation, and how creators transition back into the main content. You do not need to copy their exact wording.</p>
+            </div>
+          </aside>
         </div>
 
-        <!-- Section 2 -->
-        <div id="section-2" class="article-section scroll-animate">
-          <h2 class="article-h2">Why Short-Form Works for TrueProfit</h2>
-          <p class="article-p">Short-form video surfaces problems fast. You have 3 seconds to hook someone — which
-            forces you to lead with the exact pain your audience feels. For TrueProfit, that pain is clear: most Shopify
-            merchants don't know their real net profit.</p>
-          <p class="article-p">Revenue looks good. Ads are running. Orders are coming in. But after COGS, shipping,
-            fees, refunds, and ad spend — the actual margin is a fraction of what people assume. This disconnect is
-            exactly what TrueProfit solves, and it's the kind of insight that stops someone mid-scroll.</p>
-
-          <!-- Callout box Quick Tip -->
-          <div class="callout-box emerald">
-            <div class="callout-title">Quick Tip:</div>
-            <div class="callout-bullets">
-              <div class="callout-row">
-                <div class="callout-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                </div>
-                <div class="callout-text">
-                  <strong>You don't need</strong> thousands of followers. A well-structured 30–45 second video with a
-                  strong hook and clear problem can reach thousands of ecommerce viewers organically — even on a new
-                  account — because the algorithm rewards watch time, not follower count.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p class="article-p">The other reason short-form works: the tool mention is brief. You're not doing a product
-            review. You're solving a problem in the video itself, and TrueProfit is the natural next step for anyone who
-            wants to go further. That positioning converts much better than a direct promotion.</p>
-        </div>
-
-        <!-- Section 3 -->
-        <div id="section-3" class="article-section scroll-animate">
-          <h2 class="article-h2">Content Angles You Could Use</h2>
-          <p class="article-p">These three hook structures give affiliates different ways to introduce TrueProfit in
-            short-form videos. Pick the angle that best matches your content style, then open the full guide for the
-            complete script, execution notes, and examples.</p>
-
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 32px 0;"
-            class="preview-grid-3">
-            <!-- Card 1 -->
-            <div
-              style="border: 1px solid var(--border-light); border-radius: 12px; padding: 24px; background: var(--white); display: flex; flex-direction: column; justify-content: space-between;"
-              class="preview-card">
-              <div>
-                <h4
-                  style="font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font);">
-                  Surface Metrics vs Real Profit</h4>
-                <p class="article-p"
-                  style="font-size: 14px; line-height: 1.6; color: var(--text-body); margin-bottom: 20px; text-align: left;">
-                  Challenge the gap between revenue and actual profit within the first few seconds.</p>
-              </div>
-              <a href="shortform-surface-metrics-vs-real-profit.html" class="article-reference-link"
-                style="font-size:14px;"><span class="ref-icon">&#10022;</span>View hook<span
-                  class="ref-arrow">&#8250;</span></a>
-            </div>
-
-            <!-- Card 2 -->
-            <div
-              style="border: 1px solid var(--border-light); border-radius: 12px; padding: 24px; background: var(--white); display: flex; flex-direction: column; justify-content: space-between;"
-              class="preview-card">
-              <div>
-                <h4
-                  style="font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font);">
-                  Scaling Can Hide Margin Problems</h4>
-                <p class="article-p"
-                  style="font-size: 14px; line-height: 1.6; color: var(--text-body); margin-bottom: 20px; text-align: left;">
-                  Perfect for creators talking about scaling, ads and hidden costs.</p>
-              </div>
-              <a href="shortform-scaling-can-hide-margin-problems.html" class="article-reference-link"
-                style="font-size:14px;"><span class="ref-icon">&#10022;</span>View hook<span
-                  class="ref-arrow">&#8250;</span></a>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-              style="border: 1px solid var(--border-light); border-radius: 12px; padding: 24px; background: var(--white); display: flex; flex-direction: column; justify-content: space-between;"
-              class="preview-card">
-              <div>
-                <h4
-                  style="font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font);">
-                  Check the Number Before Scaling</h4>
-                <p class="article-p"
-                  style="font-size: 14px; line-height: 1.6; color: var(--text-body); margin-bottom: 20px; text-align: left;">
-                  An educational angle positioning TrueProfit as part of a smarter workflow.</p>
-              </div>
-              <a href="shortform-check-the-number-before-scaling.html" class="article-reference-link"
-                style="font-size:14px;"><span class="ref-icon">&#10022;</span>View hook<span
-                  class="ref-arrow">&#8250;</span></a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Section: Universal Rule for Short-Form Promotion -->
-        <div class="article-section scroll-animate">
-          <h2 class="article-h2">Universal Rule for Short-Form Promotion</h2>
-          <p class="article-p">Regardless of the hook you use, the mechanics of how you mention TrueProfit stay the
-            same. Short-form video is unforgiving — your audience is scrolling at high speed and will skip the moment
-            they feel like they're watching an ad.</p>
-          <ul class="article-list">
-            <li><strong>Tool mention stays brief: 5–8 seconds maximum.</strong> You're not demoing software. You're
-              referencing something real in your workflow. Show a quick dashboard moment or a result — then move on.
-            </li>
-            <li><strong>Lead with their pain, not your tool.</strong> Never open with "Let me show you an app." Open
-              with the problem: "Most Shopify merchants don't know their actual net profit." Then use TrueProfit as the
-              natural proof that you solved it.</li>
-            <li><strong>Show clarity, not features.</strong> You don't need to name every feature. Show one number —
-              real profit after all costs — and let that moment do the work. The audience connects with results, not
-              specs.</li>
+        <div id="section-4" class="article-section">
+          <h2 class="article-h2">Integration Checklist</h2>
+          <ul class="integration-list">
+            <li>Introduce TrueProfit only when it fits naturally into the story.</li>
+            <li>Use your own words and focus on the most relevant dashboard numbers.</li>
+            <li>Keep the dashboard and TrueProfit logo clearly visible.</li>
+            <li>Avoid turning the segment into a full product review or walkthrough.</li>
+            <li>Add your affiliate link, audience offer, and a clear CTA.</li>
+            <li>Include a YouTube chapter if it fits the video structure.</li>
+            <li>Show and explain TrueProfit for around 60 seconds or longer.</li>
+            <li>End with a clear CTA and your unique affiliate link.</li>
           </ul>
         </div>
-        <!-- Section 4 -->
-        <div id="section-4" class="article-section scroll-animate">
-          <h2 class="article-h2">Creator Approaches</h2>
 
-          <h3 class="article-h3">Already have a channel</h3>
-          <p class="article-p">Keep your existing format. Don't change your style to accommodate TrueProfit — instead,
-            find the natural moment where profit tracking fits your existing content. If you already talk about Shopify,
-            scaling, or ecommerce tools, you can introduce one of the hooks above as a standalone video or weave it into
-            a broader "tools I use" type of content.</p>
-          <p class="article-p">The key is to show how you actually use TrueProfit to analyze real profit — not just name
-            the tool. Showing your dashboard, even briefly, adds far more credibility than describing it.</p>
-
-          <h3 class="article-h3">Building from scratch</h3>
-          <p class="article-p">Stay niche: focus on Shopify and dropshipping. This audience is large, active, and
-            constantly looking for practical insights. You don't need to be an expert — you need to be one step ahead of
-            your viewer on a specific problem they're dealing with right now.</p>
-          <p class="article-p">Start with short insight-driven content: one problem, one insight, one solution per
-            video. If you're not comfortable on camera, start faceless — screen recordings with a voiceover work just as
-            well for this type of content, and sometimes better because the focus stays on the data.</p>
-
-          <!-- Callout box Quick Tip -->
-          <div class="callout-box emerald">
-            <div class="callout-title">Quick Tip:</div>
-            <div class="callout-bullets">
-              <div class="callout-row">
-                <div class="callout-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
-                </div>
-                <div class="callout-text">
-                  <strong>Post consistently</strong> for at least 30–60 days before evaluating results. Short-form video
-                  compounds slowly at first, then accelerates. One video earning steady commissions is worth more than
-                  10 videos that spike once and fade.
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="article-section">
+          <h2 class="article-h2">Why YouTube Integrations Work</h2>
+          <p class="article-p">Viewers trust results they can see. When the TrueProfit dashboard appears naturally
+            within a store journey, challenge, or experiment, it helps verify the creator's story and makes the results
+            more credible.</p>
+          <p class="article-p">Because TrueProfit supports content viewers already want to watch, the integration
+            feels like useful evidence rather than an interruption.</p>
         </div>
 
-        <!-- Section: Dos and Don'ts for Video -->
-        <div class="article-section scroll-animate">
-          <h2 class="article-h2">Dos and Don'ts for Video</h2>
-          <table
-            style="width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 16px; border: 1px solid var(--border-light);">
-            <thead>
-              <tr style="background: var(--light); border-bottom: 2px solid var(--border-light);">
-                <th
-                  style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); width: 50%; border-right: 1px solid var(--border-light);">
-                  What to Do</th>
-                <th style="padding: 16px; text-align: left; font-weight: 700; color: var(--navy); width: 50%;">What to
-                  Avoid</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td
-                  style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">
-                  Focus on one clear insight per video.</td>
-                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Don't give a
-                  dashboard tour.</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td
-                  style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">
-                  Show short blurred dashboard footage.</td>
-                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Don't sound
-                  like a salesperson.</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--border-light);">
-                <td
-                  style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body); border-right: 1px solid var(--border-light);">
-                  Put your affiliate link naturally in bio/description.</td>
-                <td style="padding: 16px; vertical-align: top; line-height: 1.6; color: var(--text-body);">Don't finish
-                  with a hard sales CTA.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Section: Key Takeaways -->
-        <div class="article-section scroll-animate">
+        <div class="article-section">
           <h2 class="article-h2">Key Takeaways</h2>
-          <ul class="article-list">
-            <li class="article-p">Short-form is visual. Use dashboards to create curiosity.</li>
-            <li class="article-p">Mention the product briefly and naturally.</li>
-            <li class="article-p">Lead with a problem, not the app.</li>
+          <ul class="integration-list">
+            <li>TrueProfit can be used as proof, a checkpoint, or part of your normal workflow.</li>
+            <li>The integration does not need to begin with a profit-tracking problem.</li>
+            <li>Keep the main story first and connect the dashboard to the content.</li>
+            <li>Show and explain TrueProfit for around 60 seconds or longer.</li>
+            <li>End with a clear CTA and your unique affiliate link.</li>
           </ul>
         </div>
 
       </div>
     </div>
 
-    </div>
-  </section>
-
-  <!-- ==============================
-     RELATED RESOURCES
-     ============================= -->
-  <section class="related-section">
-    <div class="related-inner">
-      <div class="related-header">
-        <div class="related-label">Related Resources</div>
-      </div>
-      <div class="related-grid" style="grid-template-columns: repeat(2, 1fr);">
-        <a class="related-card scroll-animate" href="../guides/general-guide.html" style="transition-delay: 0.1s;">
-          <span class="related-card-tag">General</span>
-          <h3 class="related-card-title" title="General Affiliate Guide"
-            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">General Affiliate
-            Guide</h3>
-          <p class="related-card-desc">Learn the core TrueProfit value and affiliate program basics.</p>
-          <div class="related-card-footer">
-            <div class="related-card-link">
-              Read resource &rarr;
-            </div>
-          </div>
-        </a>
-        <a class="related-card scroll-animate" href="../guides/discord-blueprint.html" style="transition-delay: 0.2s;">
-          <span class="related-card-tag">Community</span>
-          <h3 class="related-card-title" title="How to Promote TrueProfit in Discord & Private Communities"
-            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block;">How to Promote
-            TrueProfit in Discord & Private Communities</h3>
-          <p class="related-card-desc">Promote TrueProfit through community-first discussions and recommendations.</p>
-          <div class="related-card-footer">
-            <div class="related-card-link">
-              Read resource &rarr;
-            </div>
-          </div>
-        </a>
-      </div>
     </div>
   </section>
 
   <section class="guide-cta-section">
     <div class="guide-cta-inner">
-      <h2 class="guide-cta-h2">Ready to create your first <span>short-form</span> affiliate content?</h2>
-      <p class="guide-cta-sub">Start with one clear problem, turn it into a simple hook, and introduce TrueProfit
-        naturally.</p>
+      <h2 class="guide-cta-h2">Ready to integrate TrueProfit into your <span>YouTube content</span>?</h2>
+      <p class="guide-cta-sub">Keep the story first, use the dashboard as proof, and make your affiliate link easy to find.</p>
       <div class="guide-cta-btns">
-        <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" class="btn-cta-white">Get affiliate link
+        <a href="https://affiliate.trueprofit.io/sign-up" target="_blank" rel="noopener noreferrer" class="btn-cta-white">Get affiliate link
           &rarr;</a>
-        <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" class="btn-cta-ghost">Go to Dashboard</a>
+        <a href="https://trueprofit.trackdesk.com/dashboard" target="_blank" rel="noopener noreferrer" class="btn-cta-ghost">Go to Dashboard</a>
       </div>
     </div>
   </section>
@@ -3337,9 +3545,9 @@
       </div>
       <div class="footer-links">
         <h5>TrueProfit</h5>
-        <a href="https://trueprofit.io" target="_blank">Homepage</a>
-        <a href="https://trueprofit.io/blog" target="_blank">Blog</a>
-        <a href="https://trueprofit.io/partner/affiliate-program" target="_blank">Affiliate Program</a>
+        <a href="https://trueprofit.io" target="_blank" rel="noopener noreferrer">Homepage</a>
+        <a href="https://trueprofit.io/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+        <a href="https://trueprofit.io/partner/affiliate-program" target="_blank" rel="noopener noreferrer">Affiliate Program</a>
         <a href="mailto:partners@trueprofit.io">Contact</a>
       </div>
     </div>
@@ -3350,52 +3558,17 @@
   </footer>
 
   <script>
-    /* =========================================
-       SCROLL INTERSECTION OBSERVER
-       ========================================= */
     document.addEventListener('DOMContentLoaded', () => {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+      const hamburger = document.getElementById('hamburgerBtn');
+      const header = document.getElementById('header');
 
-      const scrollTargets = document.querySelectorAll('.scroll-animate');
-      scrollTargets.forEach(el => observer.observe(el));
+      if (!hamburger || !header) return;
 
-      /* =========================================
-         STICKY TOC LINK HIGHLIGHTING
-         ========================================= */
-      const sections = document.querySelectorAll('.article-section');
-      const tocLinks = document.querySelectorAll('.sidebar-toc a');
-
-      function highlightTOC() {
-        let scrollPos = window.scrollY || document.documentElement.scrollTop;
-
-        // Add offset for sticky header
-        scrollPos += 150;
-
-        sections.forEach(sec => {
-          const top = sec.offsetTop;
-          const height = sec.offsetHeight;
-          const id = sec.getAttribute('id');
-
-          if (scrollPos >= top && scrollPos < top + height) {
-            tocLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === '#' + id) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      }
-
-      window.addEventListener('scroll', highlightTOC);
-      highlightTOC();
+      hamburger.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
     });
   </script>
 

@@ -480,21 +480,9 @@ img { max-width: 100%; display: block; }
    ========================================= */
 .playbook-hero {
   background: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
-  padding: 90px 24px 70px;
+  padding: 64px 24px 32px;
   text-align: center;
   position: relative;
-}
-.playbook-hero-badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--green);
-  background: var(--green-light);
-  padding: 6px 14px;
-  border-radius: 100px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
 }
 .playbook-hero-title {
   font-size: clamp(38px, 5.5vw, 52px);
@@ -513,61 +501,107 @@ img { max-width: 100%; display: block; }
 }
 
 /* =========================================
-   FEATURED GUIDES SECTION
+   UNIFIED GUIDE GRID
    ========================================= */
-.featured-section {
-  padding: 60px 24px 80px;
+.guide-grid-section {
+  padding: 24px 24px 88px;
   background: #ffffff;
 }
-.featured-container {
+.guide-grid {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-}
-.featured-title {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 32px;
-  letter-spacing: -0.02em;
-}
-.featured-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 30px;
+  align-items: stretch;
 }
-.featured-card {
+.guide-grid-contents {
+  display: contents;
+}
+.guide-card {
+  height: 100%;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  border-radius: 16px 16px 10px 10px;
+  outline: 3px solid transparent;
+  outline-offset: 5px;
 }
-.featured-card-image {
-  height: 240px;
+
+.guide-card[hidden] {
+  display: none !important;
+}
+.guide-card-image {
   width: 100%;
+  aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
   background: #f1f5f9;
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 24px rgba(5, 29, 41, 0.06);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
   margin-bottom: 20px;
 }
-.featured-card:hover .featured-card-image {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: var(--shadow-md);
+.guide-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 240ms ease;
 }
-.featured-card-content {
+.guide-card-image--community img {
+  object-fit: contain;
+  transform: none;
+}
+.guide-card-image--natural {
+  aspect-ratio: 1672 / 941;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guide-card-image--natural img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  image-rendering: auto;
+}
+.guide-card:hover .guide-card-image {
+  transform: translateY(-3px);
+  border-color: rgba(26, 122, 94, 0.42);
+  box-shadow: 0 16px 36px rgba(5, 29, 41, 0.12);
+}
+.guide-card:hover .guide-card-image img {
+  transform: scale(1.01);
+}
+.guide-card:hover .guide-card-image--community img {
+  transform: none;
+}
+.guide-card:hover .guide-card-image--natural img {
+  transform: none;
+}
+.guide-card:focus-visible {
+  outline-color: var(--green);
+}
+.guide-card-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
-.card-tags {
+.guide-card-tags {
+  min-height: 28px;
   display: flex;
   gap: 6px;
   margin-bottom: 12px;
   flex-wrap: wrap;
 }
-.tag {
+.guide-tag {
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 700;
   padding: 6px 10px;
   border-radius: 8px;
   background: #E8F5F2;
@@ -575,184 +609,17 @@ img { max-width: 100%; display: block; }
   display: inline-block;
 }
 
-.featured-card-title {
+.guide-card-title {
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--navy);
-  margin-bottom: 0;
+  margin: 0;
   line-height: 1.35;
   transition: color 0.2s ease;
 }
-.featured-card:hover .featured-card-title {
+.guide-card:hover .guide-card-title,
+.guide-card:focus-visible .guide-card-title {
   color: var(--green);
-}
-
-/* =========================================
-   FILTERABLE LIBRARY SECTION
-   ========================================= */
-.library-section {
-  padding: 80px 24px 100px;
-  background: #ffffff;
-  border-top: 1px solid var(--border-light);
-}
-.library-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
-}
-.library-sidebar {
-  position: sticky;
-  top: 96px;
-  align-self: start;
-}
-.sidebar-title {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 24px;
-}
-.filter-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.filter-btn-side {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 4px 0;
-  font-size: 14.5px;
-  font-weight: 500;
-  color: var(--navy);
-  background: transparent;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  gap: 14px;
-}
-.filter-btn-side:hover {
-  background: transparent;
-  color: var(--green);
-}
-.filter-btn-side.active {
-  background: transparent;
-  color: var(--navy);
-}
-
-.filter-checkbox {
-  width: 20px;
-  height: 20px;
-  border-radius: 3px;
-  border: 1px solid #111;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
-}
-.filter-checkbox svg {
-  width: 12px;
-  height: 12px;
-  color: #ffffff;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-.filter-btn-side.active .filter-checkbox {
-  background: var(--green-bright);
-  border-color: #111;
-}
-.filter-btn-side.active .filter-checkbox svg {
-  opacity: 1;
-}
-
-.library-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.library-card {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  box-shadow: none;
-  opacity: 1;
-}
-.library-card.hidden {
-  display: none !important;
-}
-.library-card-image {
-  height: 240px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background: #f1f5f9;
-  border-radius: 16px;
-  margin-bottom: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  display: block;
-}
-.library-card-image:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-.library-card-content {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1;
-}
-.library-card-title {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 0;
-  line-height: 1.4;
-  cursor: pointer;
-  transition: color 0.2s ease;
-  text-decoration: none;
-}
-.library-card-title:hover {
-  color: var(--green);
-}
-.library-card-tag {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 6px 12px;
-  border-radius: 100px;
-  background: #E8F5F2;
-  color: #007F62;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-.library-empty-state {
-  display: none;
-  text-align: center;
-  padding: 80px 20px;
-  grid-column: 1 / -1;
-  background: #f8fafc;
-  border-radius: 16px;
-  border: 1px dashed #cbd5e1;
-}
-.library-empty-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-.library-empty-desc {
-  font-size: 15px;
-  color: var(--text-body);
 }
 
 /* =========================================
@@ -845,26 +712,6 @@ footer {
   color: rgba(255,255,255,0.25);
 }
 
-/* Animations */
-.stagger-enter {
-  opacity: 0;
-  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-.scroll-animate {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.scroll-animate.animated {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes fadeInSlideUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
 /* =========================================
    RESPONSIVE LAYOUTS
    ========================================= */
@@ -889,31 +736,17 @@ footer {
   }
   #header.nav-open .header-actions { display: flex; flex-direction: column; padding: 0 28px 28px; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); border-top: 1px solid var(--border-light); padding-top: 16px; z-index: 1000; }
   
-  .featured-grid { grid-template-columns: repeat(2, 1fr); }
-  .library-container { grid-template-columns: 1fr; gap: 32px; }
-  .library-sidebar { position: relative; top: 0; }
+  .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
-  .featured-grid { grid-template-columns: 1fr; }
-  .library-grid { grid-template-columns: 1fr; }
+  .playbook-hero { padding: 48px 20px 24px; }
+  .playbook-hero-title { margin-bottom: 16px; }
+  .guide-grid-section { padding: 24px 20px 64px; }
+  .guide-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-inner { flex-direction: column; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .cta-btns { flex-direction: column; }
-  
-  .filter-list {
-    flex-direction: row;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 8px;
-    gap: 8px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .filter-btn-side {
-    width: auto;
-    white-space: nowrap;
-    padding: 8px 16px;
-  }
 }
 
 /* Hover Micro-interactions - Navbar Links */
@@ -941,193 +774,16 @@ footer {
   width: 100%;
 }
 
-/* Pagination Styling */
-.library-pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-top: 40px;
-}
-.pagination-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40px;
-  height: 40px;
-  padding: 0 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  user-select: none;
-}
-.pagination-btn.active {
-  background: var(--navy, #0b1826);
-  color: var(--white, #ffffff);
-  border: 1px solid var(--navy, #0b1826);
-}
-.pagination-btn.inactive {
-  background: var(--white, #ffffff);
-  color: var(--text-dark, #0f1724);
-  border: 1px solid var(--border-light, #e5e7eb);
-}
-.pagination-btn.inactive:hover {
-  border-color: #9ca3af;
-  background: var(--light, #f7f8fa);
-}
-.pagination-btn.disabled {
-  background: var(--light, #f7f8fa);
-  color: var(--text-light, #94a3b8);
-  border: 1px solid var(--border-light, #e5e7eb);
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-.pagination-ellipsis {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40px;
-  height: 40px;
-  font-size: 14px;
-  color: var(--text-muted, #6b7280);
-  user-select: none;
-}
+@media (prefers-reduced-motion: reduce) {
+  .guide-card,
+  .guide-card-image,
+  .guide-card-image img {
+    transition: none;
+  }
 
-/* =========================================
-   FEATURED GUIDES CAROUSEL
-   ========================================= */
-.featured-container {
-  position: relative;
-}
-.fg-header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 32px;
-  width: 100%;
-}
-.fg-header .featured-title {
-  margin-bottom: 0;
-  text-align: center;
-}
-.fg-arrows {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.fg-arrow-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border-light);
-  background: #ffffff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
-  color: var(--navy);
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.fg-arrow-btn:hover {
-  background: var(--light);
-  border-color: #9ca3af;
-  transform: translateY(-1px);
-}
-.fg-arrow-btn:active {
-  transform: scale(0.93);
-}
-.fg-arrow-btn:disabled {
-  opacity: 0.35;
-  cursor: default;
-  transform: none !important;
-  box-shadow: none;
-}
-.fg-arrow-btn svg {
-  display: block;
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  pointer-events: none;
-}
-.fg-outer {
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 12px;
-  padding-bottom: 20px;
-  margin-top: -12px;
-  margin-bottom: -20px;
-  overflow: hidden;
-}
-.fg-viewport {
-  padding-left: 0;
-  padding-right: 0;
-  box-sizing: border-box;
-  width: 100%;
-}
-.fg-track {
-  display: flex;
-  gap: 30px;
-  transition: transform 0.46s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
-}
-.fg-track .featured-card {
-  flex-shrink: 0;
-  min-width: 0;
-}
-
-@media (max-width: 900px) {
-  .fg-header {
-    flex-direction: column !important;
-    align-items: center !important;
-    position: static !important;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .fg-header .featured-title {
-    text-align: center !important;
-    width: 100%;
-  }
-  .fg-arrows {
-    position: static !important;
-    width: 100%;
-    justify-content: center !important;
-  }
-  .fg-outer {
-    margin-left: 0;
-    margin-right: 0;
-    padding-top: 12px;
-    padding-bottom: 20px;
-    margin-top: -12px;
-    margin-bottom: -20px;
-  }
-  .fg-viewport {
-    padding-left: 0;
-    padding-right: 0;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 540px) {
-  .fg-outer {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .fg-viewport {
-    padding-left: 0;
-    padding-right: 0;
+  .guide-card:hover .guide-card-image,
+  .guide-card:hover .guide-card-image img {
+    transform: none;
   }
 }
 </style>
@@ -1149,7 +805,7 @@ footer {
 <!-- ==============================
      HEADER
      ============================== -->
-<header id="header" class="stagger-enter" style="animation-delay: 0s;">
+<header id="header">
   <div class="header-inner">
     <a href="index.html" class="header-logo">
       <img src="logo.svg" alt="TrueProfit Affiliate Program" class="logo-img">
@@ -1174,306 +830,172 @@ footer {
 <!-- ==============================
      HERO SECTION
      ============================== -->
-<section class="playbook-hero stagger-enter" style="animation-delay: 0.1s;">
-  <div class="playbook-hero-badge">Promotion Guides</div>
+<section class="playbook-hero">
   <h1 class="playbook-hero-title">Content Playbook</h1>
   <p class="playbook-hero-subtitle">A collection of platform-specific guides designed to help you promote TrueProfit effectively. Select a channel to read the guide and get ready-to-adapt content templates.</p>
 </section>
 
 <!-- ==============================
-     FEATURED GUIDES SECTION
+     UNIFIED GUIDE GRID
      ============================== -->
-<section class="featured-section scroll-animate" style="overflow: hidden;">
-  <div class="featured-container">
-    
-    <!-- Header + Arrows row -->
-    <div class="fg-header scroll-animate">
-      <h2 class="featured-title">Featured Guides</h2>
-      <div class="fg-arrows" role="group" aria-label="Carousel navigation">
-        <button class="fg-arrow-btn" id="fg-prev" aria-label="Previous guide" disabled>
-          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="fg-arrow-btn" id="fg-next" aria-label="Next guide">
-          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-      </div>
-    </div>
-    
-    <!-- Carousel -->
-    <div class="fg-outer" id="fg-outer">
-      <div class="fg-viewport" id="fg-viewport">
-        <div class="fg-track" id="fg-track">
+<section class="guide-grid-section">
+  <div class="guide-grid">
+    <div class="guide-grid-contents">
 
-          <!-- [PEEK LEFT] Cloned Card 1 -->
-          <a href="tiktok-youtube-shorts-1.html" class="featured-card" target="_blank" rel="noopener noreferrer">
-            <div class="featured-card-image">
-              <img src="images/69.svg" alt="How to Promote TrueProfit in Short-Form Videos" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="featured-card-content">
-              <div class="card-tags">
-                <span class="tag tag-featured">Featured Guide</span>
-                <span class="tag">TikTok</span>
-                <span class="tag">YouTube</span>
-              </div>
-              <h3 class="featured-card-title">How to Promote TrueProfit in Short-Form Videos</h3>
-            </div>
-          </a>
-
-          <!-- Card 1 (Reddit & X) -->
-          <a href="guides/reddit-x-guide.html" class="featured-card" target="_blank" rel="noopener noreferrer">
-            <div class="featured-card-image">
-              <img src="images/68.svg" alt="How to Promote TrueProfit on Reddit &amp; X" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="featured-card-content">
-              <div class="card-tags">
-                <span class="tag tag-featured">Featured Guide</span>
-                <span class="tag tag-reddit">Reddit</span>
-                <span class="tag tag-x">X</span>
-              </div>
-              <h3 class="featured-card-title">How to Promote TrueProfit on Reddit &amp; X</h3>
-            </div>
-          </a>
-
-          <!-- Card 2 (Discord Blueprint) -->
-          <a href="guides/discord-blueprint.html" class="featured-card" target="_blank" rel="noopener noreferrer">
-            <div class="featured-card-image">
-              <img src="images/70.svg" alt="How to Promote TrueProfit in Discord &amp; Private Communities" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="featured-card-content">
-              <div class="card-tags">
-                <span class="tag tag-featured">Featured Guide</span>
-                <span class="tag tag-community">Community</span>
-              </div>
-              <h3 class="featured-card-title">How to Promote TrueProfit in Discord &amp; Private Communities</h3>
-            </div>
-          </a>
-
-          <!-- Card 3 (Short-Form Videos) -->
-          <a href="guides/tiktok-youtube-shorts.html" class="featured-card" target="_blank" rel="noopener noreferrer">
-            <div class="featured-card-image">
-              <img src="images/69.svg" alt="How to Promote TrueProfit in Short-Form Videos" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="featured-card-content">
-              <div class="card-tags">
-                <span class="tag tag-featured">Featured Guide</span>
-                <span class="tag">TikTok</span>
-                <span class="tag">YouTube</span>
-              </div>
-              <h3 class="featured-card-title">How to Promote TrueProfit in Short-Form Videos</h3>
-            </div>
-          </a>
-
-          <!-- [PEEK RIGHT] Cloned Card 2 -->
-          <a href="tiktok-youtube-shorts-2.html" class="featured-card" target="_blank" rel="noopener noreferrer">
-            <div class="featured-card-image">
-              <img src="images/69.svg" alt="How to Promote TrueProfit in Short-Form Videos" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="featured-card-content">
-              <div class="card-tags">
-                <span class="tag tag-featured">Featured Guide</span>
-                <span class="tag">TikTok</span>
-                <span class="tag">YouTube</span>
-              </div>
-              <h3 class="featured-card-title">How to Promote TrueProfit in Short-Form Videos</h3>
-            </div>
-          </a>
-
+      <!-- Guide 1: Discord & Private Communities -->
+      <a href="guides/discord-blueprint.html" class="guide-card" target="_blank" rel="noopener noreferrer">
+        <div class="guide-card-image guide-card-image--community">
+          <img src="images/75.png" width="1536" height="1024" alt="Promoting TrueProfit in Private Communities across Discord, Whop, and Skool">
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="guide-card-content">
+          <div class="guide-card-tags"><span class="guide-tag">Private Communities</span></div>
+          <h3 class="guide-card-title">Promoting TrueProfit in Private Communities</h3>
+        </div>
+      </a>
 
-<!-- ==============================
-     FILTERABLE CONTENT LIBRARY
-     ============================== -->
-<section class="library-section scroll-animate">
-  <div class="library-container">
-    
-    <!-- Sidebar Filter -->
-    <div class="library-sidebar">
-      <h4 class="sidebar-title">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -3px; margin-right: 8px;">
-          <path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6z"/>
-        </svg>Channels
-      </h4>
-      <div class="filter-list">
-        <button class="filter-btn-side" data-filter="x">
-          <div class="filter-checkbox">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span>X</span>
-        </button>
-        <button class="filter-btn-side" data-filter="reddit">
-          <div class="filter-checkbox">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span>Reddit</span>
-        </button>
-        <button class="filter-btn-side" data-filter="short-form-video">
-          <div class="filter-checkbox">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span>Short-form video</span>
-        </button>
-        <button class="filter-btn-side" data-filter="community">
-          <div class="filter-checkbox">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span>Community</span>
-        </button>
-        <button class="filter-btn-side" data-filter="newsletter">
-          <div class="filter-checkbox">
-            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L5.5 10L11 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span>Newsletter</span>
-        </button>
-      </div>
+      <!-- Guide 2: Reddit & X -->
+      <a href="guides/reddit-x-guide.html" class="guide-card" target="_blank" rel="noopener noreferrer">
+        <div class="guide-card-image">
+          <img src="images/68.svg" alt="Promoting TrueProfit on Reddit and X">
+        </div>
+        <div class="guide-card-content">
+          <div class="guide-card-tags"><span class="guide-tag">Reddit &amp; X</span></div>
+          <h3 class="guide-card-title">Promoting TrueProfit on Reddit &amp; X</h3>
+        </div>
+      </a>
+
+      <!-- Guide 3: YouTube Integration -->
+      <a href="guides/youtube-integration-guide.html" class="guide-card" target="_blank" rel="noopener noreferrer">
+        <div class="guide-card-image guide-card-image--natural">
+          <img src="images/74.png" width="1672" height="941" alt="Promoting TrueProfit in YouTube Integrations">
+        </div>
+        <div class="guide-card-content">
+          <div class="guide-card-tags"><span class="guide-tag">YouTube Integrations</span></div>
+          <h3 class="guide-card-title">Promoting TrueProfit in YouTube Integrations</h3>
+        </div>
+      </a>
+
+      <!-- Guide 4: Short-Form Video -->
+      <a href="guides/tiktok-youtube-shorts.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+        <div class="guide-card-image">
+          <img src="images/69.svg" alt="How to Promote TrueProfit in Short-Form Videos">
+        </div>
+        <div class="guide-card-content">
+          <div class="guide-card-tags"><span class="guide-tag">TikTok</span><span class="guide-tag">YouTube</span></div>
+          <h3 class="guide-card-title">How to Promote TrueProfit in Short-Form Videos</h3>
+        </div>
+      </a>
     </div>
 
-    <!-- Content Grid -->
-    <div class="library-content">
-      <div class="library-grid" id="libraryGrid">
-        
-        <!-- Empty State -->
-        <div id="newsletter-empty-state" class="library-empty-state">
-          <h4 class="library-empty-title">Newsletter content coming soon</h4>
-          <p class="library-empty-desc">We're preparing newsletter-ready angles and templates for this channel.</p>
-        </div>
-
-        <!-- Card 1 -->
-        <div class="library-card" data-channel="x">
-          <a href="resources/mcp/x-twitter-ready-to-post.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/57.svg" alt="MCP Posts for X/Twitter" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">X</span>
-            <a href="resources/mcp/x-twitter-ready-to-post.html" class="library-card-title" target="_blank" rel="noopener noreferrer">MCP Posts for X/Twitter</a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="library-card" data-channel="reddit">
-          <a href="resources/mcp/reddit-ready-to-post.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/58.svg" alt="MCP Posts for Reddit" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Reddit</span>
-            <a href="resources/mcp/reddit-ready-to-post.html" class="library-card-title" target="_blank" rel="noopener noreferrer">MCP Posts for Reddit</a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="library-card" data-channel="reddit">
-          <a href="guides/angles/track-profit-like-a-pro.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/59.svg" alt="Track Profit Like A Pro" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Reddit</span>
-            <a href="guides/angles/track-profit-like-a-pro.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Track Profit Like A Pro</a>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="library-card" data-channel="reddit">
-          <a href="guides/angles/stop-losing-30-profit.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/60.svg" alt="Stop Losing 30% Profit" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Reddit</span>
-            <a href="guides/angles/stop-losing-30-profit.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Stop Losing 30% Profit</a>
-          </div>
-        </div>
+    <div class="guide-grid-contents">
 
         <!-- Card 5 -->
-        <div class="library-card" data-channel="reddit">
-          <a href="guides/angles/scale-safely-with-margins.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/61.svg" alt="Scale Safely with Margins" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Reddit</span>
-            <a href="guides/angles/scale-safely-with-margins.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Scale Safely with Margins</a>
+        <a href="resources/mcp/x-twitter-ready-to-post.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/57.svg" alt="MCP Posts for X and Twitter"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">X</span></div>
+            <h3 class="guide-card-title">MCP Posts for X/Twitter</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 6 -->
-        <div class="library-card" data-channel="short-form-video">
-          <a href="resources/mcp/short-form-video-guidelines.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/62.svg" alt="MCP Guides for Short-Form Video" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Short-form video</span>
-            <a href="resources/mcp/short-form-video-guidelines.html" class="library-card-title" target="_blank" rel="noopener noreferrer">MCP Guides for Short-Form Video</a>
+        <a href="resources/mcp/reddit-ready-to-post.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/58.svg" alt="MCP Posts for Reddit"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Reddit</span></div>
+            <h3 class="guide-card-title">MCP Posts for Reddit</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 7 -->
-        <div class="library-card" data-channel="short-form-video">
-          <a href="guides/shortform-check-the-number-before-scaling.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/63.svg" alt="Check the Number Before Scaling" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Short-form video</span>
-            <a href="guides/shortform-check-the-number-before-scaling.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Check the Number Before Scaling</a>
+        <a href="guides/angles/track-profit-like-a-pro.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/59.svg" alt="Track Profit Like A Pro"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Reddit</span></div>
+            <h3 class="guide-card-title">Track Profit Like A Pro</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 8 -->
-        <div class="library-card" data-channel="short-form-video">
-          <a href="guides/shortform-scaling-can-hide-margin-problems.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/64.svg" alt="Scaling Can Hide Margin Problems" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Short-form video</span>
-            <a href="guides/shortform-scaling-can-hide-margin-problems.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Scaling Can Hide Margin Problems</a>
+        <a href="guides/angles/stop-losing-30-profit.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/60.svg" alt="Stop Losing 30 percent Profit"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Reddit</span></div>
+            <h3 class="guide-card-title">Stop Losing 30% Profit</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 9 -->
-        <div class="library-card" data-channel="short-form-video">
-          <a href="guides/shortform-surface-metrics-vs-real-profit.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/65.svg" alt="Surface Metrics vs Real Profit" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Short-form video</span>
-            <a href="guides/shortform-surface-metrics-vs-real-profit.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Surface Metrics vs Real Profit</a>
+        <a href="guides/angles/scale-safely-with-margins.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/61.svg" alt="Scale Safely with Margins"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Reddit</span></div>
+            <h3 class="guide-card-title">Scale Safely with Margins</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 10 -->
-        <div class="library-card" data-channel="community">
-          <a href="guides/discord-educational-problem-first-post.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/66.svg" alt="Educational Discussion" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Community</span>
-            <a href="guides/discord-educational-problem-first-post.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Educational Discussion</a>
+        <a href="resources/mcp/short-form-video-guidelines.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/62.svg" alt="MCP Guides for Short-Form Video"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Short-form video</span></div>
+            <h3 class="guide-card-title">MCP Guides for Short-Form Video</h3>
           </div>
-        </div>
+        </a>
 
         <!-- Card 11 -->
-        <div class="library-card" data-channel="community">
-          <a href="guides/discord-personal-experience-result-first-post.html" class="library-card-image" target="_blank" rel="noopener noreferrer">
-            <img src="images/67.svg" alt="Personal Success Story" style="width: 100%; height: 100%; object-fit: cover;">
-          </a>
-          <div class="library-card-content">
-            <span class="library-card-tag">Community</span>
-            <a href="guides/discord-personal-experience-result-first-post.html" class="library-card-title" target="_blank" rel="noopener noreferrer">Personal Success Story</a>
+        <a href="guides/shortform-check-the-number-before-scaling.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/63.svg" alt="Check the Number Before Scaling"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Short-form video</span></div>
+            <h3 class="guide-card-title">Check the Number Before Scaling</h3>
           </div>
-        </div>
+        </a>
+
+        <!-- Card 12 -->
+        <a href="guides/shortform-scaling-can-hide-margin-problems.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/64.svg" alt="Scaling Can Hide Margin Problems"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Short-form video</span></div>
+            <h3 class="guide-card-title">Scaling Can Hide Margin Problems</h3>
+          </div>
+        </a>
+
+        <!-- Card 13 -->
+        <a href="guides/shortform-surface-metrics-vs-real-profit.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/65.svg" alt="Surface Metrics vs Real Profit"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Short-form video</span></div>
+            <h3 class="guide-card-title">Surface Metrics vs Real Profit</h3>
+          </div>
+        </a>
+
+        <!-- Card 14 -->
+        <a href="guides/discord-educational-problem-first-post.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/66.svg" alt="Educational Discussion"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Community</span></div>
+            <h3 class="guide-card-title">Educational Discussion</h3>
+          </div>
+        </a>
+
+        <!-- Card 15 -->
+        <a href="guides/discord-personal-experience-result-first-post.html" class="guide-card" target="_blank" rel="noopener noreferrer" hidden>
+          <div class="guide-card-image"><img src="images/67.svg" alt="Personal Success Story"></div>
+          <div class="guide-card-content">
+            <div class="guide-card-tags"><span class="guide-tag">Community</span></div>
+            <h3 class="guide-card-title">Personal Success Story</h3>
+          </div>
+        </a>
 
       </div>
-      <!-- Pagination -->
-      <div class="library-pagination" id="libraryPagination"></div>
-    </div>
-
   </div>
 </section>
 
 <!-- ==============================
      BOTTOM CTA
      ============================== -->
-<section class="cta-section scroll-animate">
+<section class="cta-section">
   <div class="cta-inner">
     <h2 class="cta-h2">Ready to <span>start promoting</span> TrueProfit?</h2>
     <p class="cta-sub">You have everything you need — guides, angles, and scripts. Now go create content that converts.</p>
@@ -1558,304 +1080,6 @@ document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
   });
 });
 
-/* =========================================
-   SCROLL ANIMATIONS
-   ========================================= */
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
-
-  const scrollTargets = document.querySelectorAll('.scroll-animate');
-  scrollTargets.forEach(el => observer.observe(el));
-});
-
-/* =========================================
-   FILTER LIBRARY LOGIC & PAGINATION
-   ========================================= */
-document.addEventListener('DOMContentLoaded', () => {
-  const filterButtons = document.querySelectorAll('.filter-btn-side');
-  const cards = document.querySelectorAll('.library-card');
-  const paginationContainer = document.getElementById('libraryPagination');
-  const libraryGrid = document.getElementById('libraryGrid');
-
-  const POSTS_PER_PAGE = 8;
-  let currentPage = 1;
-  let filteredCards = [];
-
-  function updateLibrary() {
-    const activeFilters = Array.from(filterButtons)
-      .filter(btn => btn.classList.contains('active'))
-      .map(btn => btn.getAttribute('data-filter'));
-
-    const emptyState = document.getElementById('newsletter-empty-state');
-    const showEmpty = activeFilters.length === 1 && activeFilters[0] === 'newsletter';
-
-    if (emptyState) {
-      emptyState.style.display = showEmpty ? 'block' : 'none';
-    }
-
-    if (showEmpty) {
-      cards.forEach(card => card.classList.add('hidden'));
-      filteredCards = [];
-      renderPagination(0);
-      return;
-    }
-
-    filteredCards = Array.from(cards).filter(card => {
-      const cardChannel = card.getAttribute('data-channel');
-      return activeFilters.length === 0 || activeFilters.includes(cardChannel);
-    });
-
-    const totalItems = filteredCards.length;
-    const totalPages = Math.ceil(totalItems / POSTS_PER_PAGE);
-
-    if (currentPage > totalPages) {
-      currentPage = Math.max(1, totalPages);
-    }
-
-    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-    const endIndex = startIndex + POSTS_PER_PAGE;
-
-    libraryGrid.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
-    libraryGrid.style.opacity = '0';
-    libraryGrid.style.transform = 'translateY(10px)';
-
-    setTimeout(() => {
-      cards.forEach(card => card.classList.add('hidden'));
-
-      const pageCards = filteredCards.slice(startIndex, endIndex);
-      pageCards.forEach(card => {
-        card.classList.remove('hidden');
-        card.style.opacity = '1';
-        card.style.transform = 'none';
-      });
-
-      libraryGrid.style.opacity = '1';
-      libraryGrid.style.transform = 'translateY(0)';
-    }, 200);
-
-    renderPagination(totalPages);
-  }
-
-  function renderPagination(totalPages) {
-    if (!paginationContainer) return;
-    paginationContainer.innerHTML = '';
-
-    if (totalPages <= 1) {
-      paginationContainer.style.display = 'none';
-      return;
-    }
-    paginationContainer.style.display = 'flex';
-
-    for (let i = 1; i <= totalPages; i++) {
-      let shouldShow = false;
-      if (totalPages <= 3) {
-        shouldShow = true;
-      } else {
-        if (i === 1 || i === totalPages || i === currentPage || i === currentPage - 1 || i === currentPage + 1) {
-          shouldShow = true;
-        }
-      }
-
-      if (shouldShow) {
-        const btn = document.createElement('div');
-        btn.className = `pagination-btn ${i === currentPage ? 'active' : 'inactive'}`;
-        btn.textContent = i;
-        btn.addEventListener('click', () => {
-          if (i !== currentPage) {
-            currentPage = i;
-            updateLibrary();
-            scrollToGridTop();
-          }
-        });
-        paginationContainer.appendChild(btn);
-      } else {
-        if (paginationContainer.lastChild && paginationContainer.lastChild.className !== 'pagination-ellipsis') {
-          const ellipsis = document.createElement('div');
-          ellipsis.className = 'pagination-ellipsis';
-          ellipsis.textContent = '...';
-          paginationContainer.appendChild(ellipsis);
-        }
-      }
-    }
-
-    const nextBtn = document.createElement('div');
-    nextBtn.className = `pagination-btn ${currentPage === totalPages ? 'disabled' : 'inactive'}`;
-    nextBtn.textContent = 'Next';
-    if (currentPage < totalPages) {
-      nextBtn.addEventListener('click', () => {
-        currentPage++;
-        updateLibrary();
-        scrollToGridTop();
-      });
-    }
-    paginationContainer.appendChild(nextBtn);
-  }
-
-  function scrollToGridTop() {
-    const gridTop = document.querySelector('.library-container');
-    if (gridTop) {
-      gridTop.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('active');
-      currentPage = 1;
-      updateLibrary();
-    });
-  });
-
-  updateLibrary();
-});
-
-/* =========================================
-   FEATURED GUIDES CAROUSEL
-   ========================================= */
-(function () {
-  'use strict';
-
-  const track    = document.getElementById('fg-track');
-  const viewport = document.getElementById('fg-viewport');
-  const btnPrev  = document.getElementById('fg-prev');
-  const btnNext  = document.getElementById('fg-next');
-  if (!track || !viewport || !btnPrev || !btnNext) return;
-
-  const CARDS  = Array.from(track.querySelectorAll('.featured-card'));
-  const TOTAL  = CARDS.length; // 5
-  const GAP    = 30; // px
-
-  let currentIdx = 1; // show cards 1-3 by default
-  let cardW      = 0;
-
-  function visibleCount() {
-    const innerW = viewport.offsetWidth
-      - parseFloat(getComputedStyle(viewport).paddingLeft || 0)
-      - parseFloat(getComputedStyle(viewport).paddingRight || 0);
-    if (innerW <= 540) return 1;
-    if (innerW <= 900) return 1;
-    return 3;
-  }
-
-  function sizeCards() {
-    const vis = visibleCount();
-    const paddingL = parseFloat(getComputedStyle(viewport).paddingLeft)  || 0;
-    const paddingR = parseFloat(getComputedStyle(viewport).paddingRight) || 0;
-    const availW   = viewport.offsetWidth - paddingL - paddingR;
-
-    cardW = Math.floor((availW - (GAP * (vis - 1))) / vis);
-
-    CARDS.forEach(card => {
-      card.style.width      = cardW + 'px';
-      card.style.flexShrink = '0';
-      card.style.flexGrow   = '0';
-      card.style.flexBasis  = 'auto';
-    });
-  }
-
-  function stepPx() {
-    return cardW + GAP;
-  }
-
-  function applyTransform(animate) {
-    if (!animate) {
-      track.style.transition = 'none';
-    }
-    track.style.transform = 'translateX(-' + (currentIdx * stepPx()) + 'px)';
-    if (!animate) {
-      track.offsetHeight; // force reflow
-      track.style.transition = '';
-    }
-  }
-
-  function updateArrows() {
-    const vis    = visibleCount();
-    const maxIdx = TOTAL - vis;
-    btnPrev.disabled = currentIdx <= 0;
-    btnNext.disabled = currentIdx >= maxIdx;
-  }
-
-  function init() {
-    sizeCards();
-    currentIdx = 1;
-    applyTransform(false);
-    updateArrows();
-  }
-
-  function layout() {
-    sizeCards();
-    const vis    = visibleCount();
-    const maxIdx = TOTAL - vis;
-    currentIdx = Math.max(0, Math.min(currentIdx, maxIdx));
-    applyTransform(false);
-    updateArrows();
-  }
-
-  btnPrev.addEventListener('click', function () {
-    if (currentIdx <= 0) return;
-    currentIdx -= 1;
-    applyTransform(true);
-    updateArrows();
-  });
-
-  btnNext.addEventListener('click', function () {
-    const vis    = visibleCount();
-    const maxIdx = TOTAL - vis;
-    if (currentIdx >= maxIdx) return;
-    currentIdx += 1;
-    applyTransform(true);
-    updateArrows();
-  });
-
-  // Touch / swipe support
-  var touchStartX = 0;
-  var touchStartY = 0;
-  var swiping     = false;
-
-  viewport.addEventListener('touchstart', function (e) {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-    swiping     = true;
-  }, { passive: true });
-
-  viewport.addEventListener('touchmove', function (e) {
-    if (!swiping) return;
-    var dx = e.touches[0].clientX - touchStartX;
-    var dy = e.touches[0].clientY - touchStartY;
-    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
-      e.preventDefault();
-    }
-  }, { passive: false });
-
-  viewport.addEventListener('touchend', function (e) {
-    if (!swiping) return;
-    swiping = false;
-    var dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) {
-      if (dx < 0) btnNext.click();
-      else        btnPrev.click();
-    }
-  });
-
-  var resizeTimer;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(layout, 80);
-  });
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-}());
 </script>
 
 </body>
